@@ -5,13 +5,21 @@
 ### Product decision
 
 - Established the repository's first product-level directive: define Alistaire as a female-presenting, QSO-composed agent architecture with explicit evidence, safety, lifecycle, evaluation, and inter-repository contract boundaries.
-- Classified the first candidate as documentation-only (`0.0.1-charter`). No executable AGI, consciousness, sentience, autonomy, or production-readiness claim is supported by the current repository state.
-- Set P0 to creation and approval of the product/architecture charter.
-- Preserved the existing portfolio sequence: QSO-GENOMES contract completion and the QuantumStateObjects runnable baseline remain upstream priorities; Alistaire runtime work must not displace them without a documented decision.
-- Deferred runtime implementation, external data access, persistent learning, autonomous tools, deployment, and user-facing production claims until product identity, QSO ownership, privacy, freeze/rollback behavior, and first-MVP operating mode receive approval.
+- Classified the first candidate as documentation-only. No executable AGI, consciousness, sentience, autonomy, or production-readiness claim is supported by the repository state.
+- Preserved the existing portfolio sequence: QSO-GENOMES contract completion and the QuantumStateObjects runnable baseline remain upstream priorities.
+
+### Scope conflict
+
+- A second overlapping repository, `aevespers2/Alistaire-agi`, was created with the same product identity and a broad placeholder documentation tree.
+- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection so parallel charters, duplicated implementation, contradictory package identity, and provenance loss are avoided.
+- Required approval of the canonical repository, package/display name, migration and redirect/archive plan, and preserved history before substantive charter or runtime decomposition continues.
 
 ### Evidence state
 
-- Repository state before this entry: empty; no implementation, tests, deployment configuration, release evidence, or operational capability was present.
-- Implemented in this change: product directive and task sequencing documentation only.
-- Validation result: `PASS` for establishing a reviewable product directive; `UNKNOWN` for all proposed runtime capabilities.
+- `ALISTAIRE-` contains the established product-level directive and sequencing documentation.
+- `Alistaire-agi` contains a README and broad documentation path scaffold; sampled pages are empty and do not establish completed architecture or capability.
+- Runtime, tests, deployment configuration, release evidence, AGI capability, autonomous learning, and operational readiness remain `UNKNOWN` or not implemented.
+
+### Release
+
+- No release was promoted. The only eligible near-term candidate is a documentation-only repository-consolidation and product-charter decision.
