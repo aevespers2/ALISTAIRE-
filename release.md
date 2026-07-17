@@ -32,8 +32,10 @@ Runtime code, external data ingestion, persistent learning, autonomous tool use,
 
 ## Selected completed work
 
-- `ALISTAIRE-/taskchain.md` and `changelog.md` define the evidence-bounded charter direction and current duplicate-repository hold.
-- `Alistaire-agi` contains a README and placeholder documentation path scaffold.
+- `taskchain.md` defines the evidence-bounded charter direction and current duplicate-repository hold.
+- `punchlist.md` now decomposes canonical-repository selection, charter work, documentation validation, security/privacy review, provenance, artifact, and rollback requirements.
+- `changelog.md` records the current product coordination state.
+- `Alistaire-agi` contains a README and placeholder documentation path scaffold that must be inventoried during consolidation.
 
 These are coordination and inventory artifacts, not a completed charter or release evidence bundle.
 
@@ -42,12 +44,12 @@ These are coordination and inventory artifacts, not a completed charter or relea
 | Gate | Status | Requirement |
 |---|---|---|
 | Canonical repository | BLOCKED | Select canonical repository/package/name and approve migration, provenance, redirect/archive, and ownership plan. |
-| Task completion | FAIL | Consolidation and charter work are decomposed in `punchlist.md`, completed, evidenced, and marked `DONE`. |
+| Task completion | FAIL | Complete and evidence every blocking item in `punchlist.md`; mark the corresponding task-chain work `DONE`. |
 | Charter completeness | FAIL | Purpose, users, product mode, non-goals, QSO responsibilities, lifecycle, and ownership are approved. |
 | Dependency contracts | NO EVIDENCE | Upstream repositories and immutable candidate versions are identified without overlapping ownership. |
 | Tests and validation | NO EVIDENCE | Documentation/link/schema/terminology/diagram/dependency checks and evaluation fixtures pass reproducibly. |
 | Security and privacy | NO EVIDENCE | Secret scan and review cover credentials, private data, learning, persistence, network/tool authority, injection, exfiltration, self-modification, and shutdown bypass. |
-| Documentation | PARTIAL | Directives and placeholder paths exist; a substantive consolidated charter and Pages site are absent or unverified. |
+| Documentation | PARTIAL | Directives, a punch list, and placeholder paths exist; a substantive consolidated charter and verified Pages site do not. |
 | Provenance | NO EVIDENCE | Both histories, migration map, commits, tools, commands, outputs, artifact hashes, and approval record are retained. |
 | Rollback and shutdown | NO EVIDENCE | Freeze, stop, restore, data-retention, failed-candidate withdrawal, and repository-consolidation rollback are explicit. |
 | Approval | PENDING | Explicit approval is recorded only after all blocking gates pass. |
@@ -73,11 +75,12 @@ Withdraw the candidate if two repositories continue publishing competing identit
 
 - Canonical Alistaire repository and package identity are not approved.
 - Migration, redirect/archive, and provenance plan are absent.
-- `punchlist.md` is absent.
+- The existing `punchlist.md` is entirely incomplete and has no immutable evidence entries.
 - No completed charter, tests, security/privacy review, documentation verification, dependency pinning, provenance, checksums, rollback evidence, or approval exists.
 - Runtime remains blocked behind QSO-GENOMES and QuantumStateObjects baselines.
 - Product mode, QSO ownership, learning/persistence/privacy, freeze/shutdown behavior, and first executable operating mode require approval.
 
 ## Release log
 
+- 2026-07-16: Reconciled the newly added punch list; the documentation-only candidate remains blocked with no release promoted.
 - 2026-07-16: Added the canonical-repository consolidation gate after creation of overlapping `Alistaire-agi`; no release or runtime work approved.
