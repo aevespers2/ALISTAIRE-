@@ -1,0 +1,33 @@
+site_name: Alistaire Charter
+site_description: Evidence-bounded product, architecture, safety, and repository-consolidation documentation for the Alistaire QSO system.
+repo_name: aevespers2/ALISTAIRE-
+repo_url: https://github.com/aevespers2/ALISTAIRE-
+edit_uri: edit/main/docs/
+strict: true
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Repository consolidation: repository-consolidation.md
+  - Security and governance: security-and-governance.md
+  - Developer onboarding: development.md
+  - Diagrams: diagrams.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
