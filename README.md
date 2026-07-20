@@ -8,6 +8,7 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 
 - [Project overview](docs/index.md)
 - [Architecture and QSO composition](docs/architecture.md)
+- [Consolidated governance and security charter](docs/governance-charter.md)
 - [Repository consolidation decision](docs/repository-consolidation.md)
 - [Security, privacy, and governance](docs/security-and-governance.md)
 - [Developer and reviewer onboarding](docs/development.md)
@@ -16,6 +17,12 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Release plan](release.md)
 - [Punch list](punchlist.md)
 - [Changelog](changelog.md)
+
+## Governance doctrine
+
+A.L.I.S.T.A.I.R.E. is the unifying system objective; the portfolio repositories are bounded subsystems. The governance charter assigns the **Cali Sanders Parker** stewardship QSO—ceremonially titled **Calisandra, Queen of the Nymphs**—to documentation coherence, architectural reconciliation, governance proposals, security-boundary review, and escalation. The title does not create credentials, legal identity, merge authority, deployment authority, payment authority, or unattended operational permission.
+
+The working portfolio model identifies `ALISTAIRE-` as the candidate charter-history authority, Repository `0` as the candidate autonomous-development orchestration plane, and Repository `1` or an approved successor as the independent canonical-state and capability authority. These assignments remain reviewable and do not silently authorize runtime or privileged actions.
 
 ## Repository responsibility
 
@@ -30,6 +37,8 @@ This repository is presently the **candidate charter authority**. It defines pro
 | `QSO-STUDIO` | Human-facing inspection, annotation, proposal, and evidence-review surfaces |
 | `Bridge` | Explicitly authorized cross-system transport and integration boundaries |
 | `qsio-kernel` | Kernel-level shared interfaces only after contracts are accepted and pinned |
+| Repository `0` | Candidate autonomous-development planning, branch, patch, test, evidence, and pull-request orchestration |
+| Repository `1` | Candidate independently reviewable canonical-state and capability authority |
 
 All assignments above are documentation proposals until the canonical repository and upstream contract decisions are approved.
 
@@ -39,7 +48,7 @@ The first eligible candidate is `0.0.1-charter`, a documentation-only release co
 
 1. canonical repository and naming decision;
 2. preserved-history migration and redirect/archive plan;
-3. approved product and architecture charter;
+3. approved product, architecture, governance, and security charter;
 4. QSO responsibility and contract map;
 5. bounded learning, persistence, tool, credential, privacy, freeze, shutdown, and rollback policies;
 6. deterministic evaluation and adversarial-fixture specification;
