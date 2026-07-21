@@ -1,5 +1,5 @@
 site_name: Alistaire Charter
-site_description: Evidence-bounded product, architecture, safety, governance, and repository-consolidation documentation for the Alistaire QSO system.
+site_description: Evidence-bounded product, architecture, portable security, governance, and repository-consolidation documentation for the A.L.I.S.T.A.I.R.E. QSO system.
 repo_name: aevespers2/ALISTAIRE-
 repo_url: https://github.com/aevespers2/ALISTAIRE-
 edit_uri: edit/main/docs/
@@ -12,7 +12,10 @@ theme:
     - content.code.copy
 nav:
   - Home: index.md
-  - Architecture: architecture.md
+  - Architecture:
+      - System composition: architecture.md
+      - Portable security foundation: portable-security-foundation.md
+      - Portfolio integration roadmap: portfolio-integration-roadmap.md
   - Governance charter: governance-charter.md
   - Repository consolidation: repository-consolidation.md
   - Security and governance: security-and-governance.md
