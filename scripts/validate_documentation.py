@@ -26,6 +26,7 @@ REQUIRED_FILES = (
     "requirements-docs.txt",
     "docs/index.md",
     "docs/architecture.md",
+    "docs/portfolio-contract-authority-matrix.md",
     "docs/portable-security-foundation.md",
     "docs/portfolio-integration-roadmap.md",
     "docs/governance-charter.md",
@@ -45,6 +46,13 @@ REQUIRED_PHRASES = {
         "D5 — Portfolio incident command",
         "Unknown is not secure",
         "Execution is not acceptance",
+    ),
+    "docs/portfolio-contract-authority-matrix.md": (
+        "The matrix is documentation and governance evidence only",
+        "Every record family has its own identity",
+        "Pairwise compatibility is insufficient",
+        "This is an engineering method, not a claim that a formal homology or cohomology computation has been completed",
+        "A repository-local document may narrow its own scope but may not silently broaden constitutional authority",
     ),
     "docs/portable-security-foundation.md": (
         "Repository `0`",
