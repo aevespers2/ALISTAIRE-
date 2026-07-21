@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-21 — Added a constitutional portfolio contract and authority matrix so repository roles, record identities, contract edges, and non-authority boundaries can be reviewed from one source.
 - 2026-07-21 — Clarified Repositories `0` and `1` as A.L.I.S.T.A.I.R.E.'s candidate portable first-install security and recovery foundation for new, recovered, replaced, reset, or suspect owned devices.
 - 2026-07-21 — Preserved the safest first executable mode as a local, no-network, no-real-device simulation using fixed identity, contract, capability, observation, receipt, correction, revocation, and recovery fixtures.
 - 2026-07-20 — Prepared an evidence-bounded Alistaire charter candidate while preserving the canonical-repository hold and all runtime non-goals.
@@ -14,6 +15,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-21 — Added `docs/portfolio-contract-authority-matrix.md`, covering the active repository responsibility map, independent record-family identities, pairwise contract edges, triple-overlap witnesses, obstruction classes, current blockers, and a minimum synthetic acceptance slice.
+- 2026-07-21 — Added practical homology-like gluing checks for edge completeness, cycle detection, path independence, triple-overlap consistency, orphaned records, unsatisfied consumer requirements, boundary preservation, rollback, and invalidation propagation; explicitly recorded that this is an engineering analogy rather than a completed formal topology computation.
 - 2026-07-21 — Added the Portable Security Foundation covering Repository `0` bootstrap/maintenance responsibilities, Repository `1` quarantine/capability/recovery responsibilities, candidate JusticeForMe/PhantomBlock adapter split, device-loss and replacement lifecycle, required contract families, and compatibility witnesses.
 - 2026-07-21 — Added the Portfolio Integration and Contract Acceptance Roadmap with seven systemic cycles, D1–D5 minimal decision cut, an acceptance DAG, sequenced phases 0–8, invalidation rules, and rollback.
 - 2026-07-21 — Expanded the architecture responsibility matrix across constitutional charter, neutral contracts, portable trust, host observations, QSO semantics, source evidence, temporal and domain interpretation, transport, review, payments, engineering execution, conformance, and public documentation.
@@ -24,6 +27,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-21 — Added matrix controls preventing one identifier from collapsing charter, source, proposal, capability, execution, receipt, disposition, review, correction, revocation, recovery, or publication records.
+- 2026-07-21 — Added release-blocking obstruction classes for self-authorizing contracts, route bifurcation, serialization mismatch, time/replay ambiguity, privacy downgrade, duplicate confidence, lossy projection, correction divergence, revocation gaps, circular recovery, public/private boundary failure, rollback without an inverse, and claims exceeding evidence.
 - 2026-07-21 — Added a constitutional hierarchy preventing repository-local documents, model output, interfaces, signatures, successful execution, or dependencies from silently expanding authority.
 - 2026-07-21 — Defined D1 canonical identity, D2 neutral contract stewardship, D3 canonical bytes and identity primitives, D4 independent authority and recovery roots, and D5 portfolio incident command as the minimum decision cut before consequential implementation.
 - 2026-07-21 — Added portable device-trust doctrine, explicit `UNKNOWN` handling, execution-versus-acceptance separation, device-loss/replacement rules, common-contract stewardship requirements, and adapter non-authority boundaries.
@@ -35,6 +40,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-21 — Added the portfolio matrix to MkDocs navigation and the strict documentation validator's required-file and authority-boundary checks.
 - 2026-07-21 — Added an offline rendered-HTML validator with regression tests for local targets and fragments, duplicate IDs, language metadata, image alternative text, and rendered-site boundary escapes.
 - 2026-07-21 — Added normalized `tar` plus timestamp-free `gzip` packaging and per-file rendered-site SHA-256 manifests so the validation artifact is reproducible without enabling Pages publication.
 - 2026-07-21 — Added `docs/portable-security-foundation.md`.
@@ -46,6 +52,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-21 — Added the portfolio contract and authority matrix as an explicit `REVIEW` release gate requiring exact-head repository reconciliation and accepted ownership before `0.0.1-charter`.
 - 2026-07-21 — Expanded `0.0.1-charter` gates to require D1–D5, neutral contracts, canonical-byte fixtures, Repository `1` authority, portable trust, pairwise/triple-overlap evidence, incident command, privacy, provenance, and publication rollback.
 - 2026-07-21 — No contract, device, credential, adapter, monitoring, remediation, payment, runtime, merge, release, publication, deployment, or canonical-state authority was activated.
 - 2026-07-20 — Reconciled coordination files with the governance and documentation candidate. No canonical identity, package, Pages publication, runtime, or release was approved.
