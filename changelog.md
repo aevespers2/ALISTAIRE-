@@ -35,6 +35,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-21 — Added an offline rendered-HTML validator with regression tests for local targets and fragments, duplicate IDs, language metadata, image alternative text, and rendered-site boundary escapes.
+- 2026-07-21 — Added normalized `tar` plus timestamp-free `gzip` packaging and per-file rendered-site SHA-256 manifests so the validation artifact is reproducible without enabling Pages publication.
 - 2026-07-21 — Added `docs/portable-security-foundation.md`.
 - 2026-07-21 — Added `docs/portfolio-integration-roadmap.md`.
 - 2026-07-21 — Updated the root README and Pages home with the D1–D5 sequence, Repository `0`/`1` portable-trust route, portfolio responsibility map, evidence states, and explicit non-capabilities.
