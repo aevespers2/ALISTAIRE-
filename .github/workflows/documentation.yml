@@ -5,6 +5,7 @@ on:
     paths:
       - "README.md"
       - "docs/**"
+      - "scripts/validate_documentation.py"
       - "mkdocs.yml"
       - "requirements-docs.txt"
       - "taskchain.md"
@@ -49,6 +50,9 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-docs.txt
 
+      - name: Validate charter documentation surface
+        run: python scripts/validate_documentation.py
+
       - name: Install pinned documentation dependencies
         run: python -m pip install --requirement requirements-docs.txt
 
@@ -72,7 +76,17 @@ jobs:
           if command -v mkdocs >/dev/null 2>&1; then
             mkdocs --version > reports/documentation/mkdocs-version.txt 2>&1
           fi
-          sha256sum mkdocs.yml requirements-docs.txt > reports/documentation/SHA256SUMS
+          find docs -type f -print0 | sort -z | xargs -0 sha256sum > reports/documentation/DOCS_SHA256SUMS
+          sha256sum \
+            README.md \
+            taskchain.md \
+            punchlist.md \
+            release.md \
+            changelog.md \
+            mkdocs.yml \
+            requirements-docs.txt \
+            scripts/validate_documentation.py \
+            > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
             sha256sum reports/documentation/site.tar.gz >> reports/documentation/SHA256SUMS
           fi
