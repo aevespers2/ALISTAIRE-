@@ -27,6 +27,19 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [ ] Approve the immutable governance-charter commit.
 - [ ] Conduct and retain a portfolio freeze, evidence-preservation, bounded-restart, rollback, and claim-withdrawal tabletop exercise.
 
+## P0M — Portfolio contract and authority matrix
+
+- [x] Consolidate all active repositories into one narrow responsibility and non-authority matrix.
+- [x] Define independent identities for charter, contract, device, workspace, observation, interpretation, proposal, capability, genome, runtime, experiment, transport, receipt, disposition, review, financial, engineering, correction, revocation, recovery, and publication records.
+- [x] Record pairwise contract edges and required minimum witnesses.
+- [x] Record triple-overlap witnesses for portable trust, QSO semantics, source evidence, review, financial authority, engineering execution, incidents, correction, and recovery.
+- [x] Define obstruction classes covering identity, authority, state, route, serialization, time, privacy, duplication, projection, correction, revocation, recovery, publication, rollback, and unsupported claims.
+- [x] Define a practical homology-like gluing method while explicitly avoiding a claim of completed formal topology.
+- [ ] Compare every matrix row and edge against the exact current head of each repository-local documentation candidate.
+- [ ] Resolve conflicting ownership or route claims and record dissent rather than silently choosing one.
+- [ ] Assign a semantic owner, independent reviewer, correction authority, revoker, incident owner, recovery owner, and retirement path for every accepted record family.
+- [ ] Accept the matrix at an immutable charter commit.
+
 ## D2 — Neutral contract steward
 
 - [ ] Select a neutral repository, package, or governed registry for common contracts.
@@ -128,18 +141,28 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 ## P6 — Documentation, evaluation, and publication evidence
 
 - [x] Add a substantive Pages-ready overview and documentation map.
-- [x] Add architecture, governance, portable security, integration sequencing, consolidation, security/privacy, onboarding, and diagrams.
+- [x] Add architecture, governance, portable security, integration sequencing, portfolio contract/authority matrix, consolidation, security/privacy, onboarding, and diagrams.
 - [x] Add strict MkDocs and pinned documentation dependencies.
 - [x] Add exact-head read-only validation and checksummed artifact workflow.
 - [ ] Validate this exact pull-request head with `mkdocs build --strict` and retain artifact/digest.
-- [ ] Review links, terminology, diagrams, accessibility, authority references, repository names, and evidence classifications.
-- [ ] Specify deterministic constitutional, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
+- [ ] Review links, terminology, diagrams, accessibility, authority references, repository names, matrix ownership claims, and evidence classifications.
+- [ ] Specify deterministic constitutional, matrix, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
 - [ ] Complete independent security/privacy, governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered documentation archives, provenance manifest, contract registry snapshot, approval record, and SHA-256 manifests.
 - [ ] Verify Pages settings, public/private boundaries, rollback, cache invalidation, and claim withdrawal.
 - [ ] Record explicit human approval for `0.0.1-charter`.
 
 ## Evidence log
+
+### 2026-07-21 — Portfolio contract and authority matrix milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Branch: `docs/consolidation-charter-20260720`
+- Result: `REVIEW`
+- Added: constitutional repository matrix, independent record-family catalog, pairwise contract edges, triple-overlap witnesses, obstruction taxonomy, homology-like gluing checks, current obstruction summary, and minimum synthetic acceptance slice.
+- Authority effect: none; the matrix does not accept an owner, activate a registry, issue credentials, admit a runtime, inspect a device, authorize a payment, merge, release, publish, deploy, or create canonical state.
+- Limitations: exact-head reconciliation across repository candidates, D1–D5 approval, record-family owners, shared fixtures, named incident/recovery roles, and protected-branch acceptance remain incomplete.
+- Rollback: revert the matrix and coordination commits or close the candidate; no operational or canonical state changes.
 
 ### 2026-07-21 — Portable security and integration sequencing milestone
 
