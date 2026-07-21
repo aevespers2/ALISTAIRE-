@@ -6,6 +6,8 @@ on:
       - "README.md"
       - "docs/**"
       - "scripts/validate_documentation.py"
+      - "scripts/validate_rendered_site.py"
+      - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
       - "taskchain.md"
@@ -26,21 +28,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
     steps:
       - name: Check out exact submitted source
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ env.EXPECTED_HEAD }}
+          fetch-depth: 1
           persist-credentials: false
+          show-progress: false
 
-      - name: Assert exact source identity
+      - name: Assert exact clean source
         shell: bash
-        env:
-          EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
         run: |
           set -euo pipefail
           actual="$(git rev-parse HEAD)"
           test "$actual" = "$EXPECTED_HEAD"
+          test -z "$(git status --porcelain)"
           printf 'verified_head=%s\n' "$actual"
 
       - name: Set up Python
@@ -53,11 +58,22 @@ jobs:
       - name: Validate charter documentation surface
         run: python scripts/validate_documentation.py
 
+      - name: Run rendered-site validator regression tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+
       - name: Install pinned documentation dependencies
         run: python -m pip install --requirement requirements-docs.txt
 
       - name: Build documentation strictly
         run: mkdocs build --strict --site-dir site
+
+      - name: Validate rendered HTML offline
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports/documentation
+          python scripts/validate_rendered_site.py site \
+            2>&1 | tee reports/documentation/rendered-site-validation.txt
 
       - name: Create deterministic evidence
         if: always()
@@ -66,17 +82,22 @@ jobs:
           set -euo pipefail
           mkdir -p reports/documentation
           if [ -d site ]; then
+            find site -type f -print0 | sort -z | xargs -0 sha256sum \
+              > reports/documentation/SITE_SHA256SUMS
             tar --sort=name \
-                --mtime='UTC 1970-01-01' \
+                --mtime='@0' \
                 --owner=0 --group=0 --numeric-owner \
-                -czf reports/documentation/site.tar.gz site
+                --format=ustar \
+                -cf - site \
+              | gzip -n > reports/documentation/site.tar.gz
           fi
           git rev-parse HEAD > reports/documentation/exact-head.txt
           python --version > reports/documentation/python-version.txt 2>&1
           if command -v mkdocs >/dev/null 2>&1; then
             mkdocs --version > reports/documentation/mkdocs-version.txt 2>&1
           fi
-          find docs -type f -print0 | sort -z | xargs -0 sha256sum > reports/documentation/DOCS_SHA256SUMS
+          find docs -type f -print0 | sort -z | xargs -0 sha256sum \
+            > reports/documentation/DOCS_SHA256SUMS
           sha256sum \
             README.md \
             taskchain.md \
@@ -86,16 +107,20 @@ jobs:
             mkdocs.yml \
             requirements-docs.txt \
             scripts/validate_documentation.py \
+            scripts/validate_rendered_site.py \
+            tests/test_validate_rendered_site.py \
             > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
-            sha256sum reports/documentation/site.tar.gz >> reports/documentation/SHA256SUMS
+            sha256sum reports/documentation/site.tar.gz \
+              >> reports/documentation/SHA256SUMS
           fi
+          git diff --exit-code
 
       - name: Upload review evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: alistaire-charter-${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          name: alistaire-charter-${{ env.EXPECTED_HEAD }}
           path: reports/documentation
           if-no-files-found: error
           retention-days: 30
