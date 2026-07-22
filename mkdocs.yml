@@ -17,7 +17,9 @@ nav:
       - Portfolio contract and authority matrix: portfolio-contract-authority-matrix.md
       - Portable security foundation: portable-security-foundation.md
       - Portfolio integration roadmap: portfolio-integration-roadmap.md
-  - Governance charter: governance-charter.md
+  - Governance:
+      - Consolidated charter: governance-charter.md
+      - Constitutional sovereignty and system participation: constitutional-sovereignty-and-system-participation.md
   - Repository consolidation: repository-consolidation.md
   - Security and governance: security-and-governance.md
   - Developer onboarding: development.md
