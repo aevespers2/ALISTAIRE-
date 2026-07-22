@@ -6,9 +6,11 @@ on:
       - "README.md"
       - "docs/**"
       - "fixtures/constitutional-appointment-lifecycle-v1.json"
+      - "fixtures/constitutional-lifecycle-transaction-journal-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
+      - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -23,9 +25,11 @@ on:
       - "README.md"
       - "docs/**"
       - "fixtures/constitutional-appointment-lifecycle-v1.json"
+      - "fixtures/constitutional-lifecycle-transaction-journal-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
+      - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -49,6 +53,7 @@ jobs:
     timeout-minutes: 10
     env:
       EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+      EXPECTED_LIFECYCLE_JOURNAL_SHA256: 514ff45d55ae889a534a005465f71c1c74997585e10a53de89094d7f07583dd9
     steps:
       - name: Check out exact submitted source
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
@@ -84,6 +89,16 @@ jobs:
           mkdir -p reports/documentation
           python scripts/check_constitutional_appointment_lifecycle.py \
             2>&1 | tee reports/documentation/appointment-lifecycle-validation.json
+
+      - name: Validate synthetic lifecycle transaction journal
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports/documentation
+          actual="$(sha256sum fixtures/constitutional-lifecycle-transaction-journal-v1.json | cut -d' ' -f1)"
+          test "$actual" = "$EXPECTED_LIFECYCLE_JOURNAL_SHA256"
+          python scripts/check_constitutional_lifecycle_transaction_journal.py \
+            2>&1 | tee reports/documentation/lifecycle-transaction-journal-validation.json
 
       - name: Run documentation and lifecycle regression tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
@@ -134,11 +149,14 @@ jobs:
             mkdocs.yml \
             requirements-docs.txt \
             fixtures/constitutional-appointment-lifecycle-v1.json \
+            fixtures/constitutional-lifecycle-transaction-journal-v1.json \
             scripts/validate_documentation.py \
             scripts/validate_rendered_site.py \
             scripts/check_constitutional_appointment_lifecycle.py \
+            scripts/check_constitutional_lifecycle_transaction_journal.py \
             tests/test_validate_rendered_site.py \
             tests/test_check_constitutional_appointment_lifecycle.py \
+            tests/test_check_constitutional_lifecycle_transaction_journal.py \
             > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
             sha256sum reports/documentation/site.tar.gz \
