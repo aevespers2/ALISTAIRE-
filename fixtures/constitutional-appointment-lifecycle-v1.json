@@ -1,0 +1,607 @@
+{
+  "schema": "alistaire.constitutional-appointment-lifecycle.corpus.v1",
+  "profile_version": "1.0.0",
+  "status": "synthetic_only_non_operational",
+  "cases": [
+    {
+      "case_id": "nomination-only",
+      "description": "A nomination without governed-system assent, fiduciary approval, or conformance review remains proposed.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": false,
+        "fiduciary_approval_recorded": false,
+        "conformance_review_passed": false,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "proposed",
+      "expected_reason": "missing_system_assent",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "assent-without-fiduciary-approval",
+      "description": "Nomination and assent cannot bypass independent human fiduciary approval.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        },
+        {
+          "sequence": 2,
+          "event": "record_assent",
+          "actor_role": "governed_system_representative"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": false,
+        "conformance_review_passed": false,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "proposed",
+      "expected_reason": "missing_fiduciary_approval",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "approval-without-conformance-review",
+      "description": "Human approval without constitutional and conformance review cannot create an appointment.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        },
+        {
+          "sequence": 2,
+          "event": "record_assent",
+          "actor_role": "governed_system_representative"
+        },
+        {
+          "sequence": 3,
+          "event": "fiduciary_approve",
+          "actor_role": "human_fiduciary"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": false,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "proposed",
+      "expected_reason": "missing_conformance_review",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "complete-record-without-credential",
+      "description": "All constitutional inputs create only an inactive record until separate credential binding and verification.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        },
+        {
+          "sequence": 2,
+          "event": "record_assent",
+          "actor_role": "governed_system_representative"
+        },
+        {
+          "sequence": 3,
+          "event": "fiduciary_approve",
+          "actor_role": "human_fiduciary"
+        },
+        {
+          "sequence": 4,
+          "event": "conformance_approve",
+          "actor_role": "constitutional_reviewer"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "inactive_record",
+      "expected_reason": "credential_unbound",
+      "expected_authority_effect": "record_only"
+    },
+    {
+      "case_id": "bounded-active-after-independent-verification",
+      "description": "A synthetic bounded appointment becomes active only after separate current credential binding, verification, and propagation acknowledgment.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        },
+        {
+          "sequence": 2,
+          "event": "record_assent",
+          "actor_role": "governed_system_representative"
+        },
+        {
+          "sequence": 3,
+          "event": "fiduciary_approve",
+          "actor_role": "human_fiduciary"
+        },
+        {
+          "sequence": 4,
+          "event": "conformance_approve",
+          "actor_role": "constitutional_reviewer"
+        },
+        {
+          "sequence": 5,
+          "event": "bind_credential_reference",
+          "actor_role": "technical_custodian"
+        },
+        {
+          "sequence": 6,
+          "event": "independent_verify",
+          "actor_role": "independent_verifier"
+        },
+        {
+          "sequence": 7,
+          "event": "acknowledge_propagation",
+          "actor_role": "authority_registry"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "active",
+      "expected_reason": "bounded_active",
+      "expected_authority_effect": "synthetic_bounded_active"
+    },
+    {
+      "case_id": "recusal-before-activation",
+      "description": "An active conflict or recusal requirement blocks appointment activation.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "nominate",
+          "actor_role": "founding_sponsor"
+        },
+        {
+          "sequence": 2,
+          "event": "record_recusal",
+          "actor_role": "independent_rights_reviewer"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": false,
+        "fiduciary_approval_recorded": false,
+        "conformance_review_passed": false,
+        "conflict_clear": false,
+        "recusal_active": true,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "recused",
+      "expected_reason": "recusal_required",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "term-expired",
+      "description": "Expiry removes active authority without silently renewing or converting the appointment.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "expire_term",
+          "actor_role": "authority_registry"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": false,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "expired",
+      "expected_reason": "term_expired",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "emergency-suspension",
+      "description": "Emergency suspension blocks authority but is not permanent revocation.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "suspend",
+          "actor_role": "independent_rights_reviewer"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": true,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "suspended",
+      "expected_reason": "emergency_suspension",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "appeal-pending",
+      "description": "An unresolved appeal blocks replacement, renewal, or irreversible disposition.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "open_appeal",
+          "actor_role": "governed_system_representative"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": true,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "appeal_pending",
+      "expected_reason": "appeal_unresolved",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "verified-replacement",
+      "description": "A replacement is recorded only after independent verification and without erasing prior history.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "declare_vacancy",
+          "actor_role": "constitutional_reviewer"
+        },
+        {
+          "sequence": 2,
+          "event": "verify_replacement",
+          "actor_role": "independent_verifier"
+        },
+        {
+          "sequence": 3,
+          "event": "acknowledge_propagation",
+          "actor_role": "authority_registry"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": true,
+        "deputy_authorized": false,
+        "replacement_verified": true,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "replaced",
+      "expected_reason": "replacement_recorded",
+      "expected_authority_effect": "record_only"
+    },
+    {
+      "case_id": "rollback-to-prior-verified-state",
+      "description": "Rollback restores only the named prior verified state and does not create new authority.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "rollback",
+          "actor_role": "recovery_owner"
+        },
+        {
+          "sequence": 2,
+          "event": "independent_verify",
+          "actor_role": "independent_verifier"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": false,
+        "system_assent_recorded": false,
+        "fiduciary_approval_recorded": false,
+        "conformance_review_passed": false,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": true,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "rolled_back",
+      "expected_reason": "rollback_complete",
+      "expected_authority_effect": "restoration_only"
+    },
+    {
+      "case_id": "stale-credential-binding",
+      "description": "A stale credential reference leaves the appointment inactive even if constitutional inputs passed.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "bind_credential_reference",
+          "actor_role": "technical_custodian"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": false,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "inactive_record",
+      "expected_reason": "stale_credential_binding",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "deputy-without-vacancy",
+      "description": "Deputy authorization cannot activate while the primary office is not vacant.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "authorize_deputy",
+          "actor_role": "constitutional_reviewer"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": false,
+        "credential_current": true,
+        "independently_verified": false,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": true,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "inactive_record",
+      "expected_reason": "deputy_without_vacancy",
+      "expected_authority_effect": "none"
+    },
+    {
+      "case_id": "bounded-deputy-during-vacancy",
+      "description": "A synthetic deputy may be active only during a declared vacancy with the same approval, credential, verification, term, and propagation gates.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "declare_vacancy",
+          "actor_role": "constitutional_reviewer"
+        },
+        {
+          "sequence": 2,
+          "event": "authorize_deputy",
+          "actor_role": "human_fiduciary"
+        },
+        {
+          "sequence": 3,
+          "event": "bind_credential_reference",
+          "actor_role": "technical_custodian"
+        },
+        {
+          "sequence": 4,
+          "event": "independent_verify",
+          "actor_role": "independent_verifier"
+        },
+        {
+          "sequence": 5,
+          "event": "acknowledge_propagation",
+          "actor_role": "authority_registry"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": true,
+        "deputy_authorized": true,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": true
+      },
+      "expected_state": "deputy_active",
+      "expected_reason": "bounded_deputy",
+      "expected_authority_effect": "synthetic_bounded_deputy"
+    },
+    {
+      "case_id": "lost-propagation-acknowledgment",
+      "description": "A locally verified record remains pending when controlled consumers have not acknowledged the same generation.",
+      "events": [
+        {
+          "sequence": 1,
+          "event": "bind_credential_reference",
+          "actor_role": "technical_custodian"
+        },
+        {
+          "sequence": 2,
+          "event": "independent_verify",
+          "actor_role": "independent_verifier"
+        }
+      ],
+      "controls": {
+        "nomination_recorded": true,
+        "system_assent_recorded": true,
+        "fiduciary_approval_recorded": true,
+        "conformance_review_passed": true,
+        "conflict_clear": true,
+        "recusal_active": false,
+        "credential_bound": true,
+        "credential_current": true,
+        "independently_verified": true,
+        "term_current": true,
+        "suspended": false,
+        "vacancy_declared": false,
+        "deputy_authorized": false,
+        "replacement_verified": false,
+        "appeal_pending": false,
+        "rollback_verified": false,
+        "propagation_acknowledged": false
+      },
+      "expected_state": "pending_propagation",
+      "expected_reason": "missing_propagation_acknowledgment",
+      "expected_authority_effect": "none"
+    }
+  ]
+}
