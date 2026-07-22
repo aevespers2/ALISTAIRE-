@@ -15,6 +15,21 @@ on:
       - "punchlist.md"
       - "changelog.md"
       - ".github/workflows/documentation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "scripts/validate_documentation.py"
+      - "scripts/validate_rendered_site.py"
+      - "tests/**"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+      - "taskchain.md"
+      - "release.md"
+      - "punchlist.md"
+      - "changelog.md"
+      - ".github/workflows/documentation.yml"
   workflow_dispatch:
 
 permissions:
