@@ -140,6 +140,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p reports/documentation
+          cp fixtures/constitutional-lifecycle-snapshot-compaction-v1.json \
+            reports/documentation/snapshot-compaction-fixture.json
           if [ -d site ]; then
             find site -type f -print0 | sort -z | xargs -0 sha256sum \
               > reports/documentation/SITE_SHA256SUMS
