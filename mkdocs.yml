@@ -20,6 +20,7 @@ nav:
   - Governance:
       - Consolidated charter: governance-charter.md
       - Constitutional sovereignty and system participation: constitutional-sovereignty-and-system-participation.md
+      - Constitutional appointment lifecycle conformance: constitutional-appointment-lifecycle-conformance.md
   - Repository consolidation: repository-consolidation.md
   - Security and governance: security-and-governance.md
   - Developer onboarding: development.md
