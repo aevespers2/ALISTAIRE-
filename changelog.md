@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-22 — Added a proposed Founding Sovereign and Constitutional Sponsor role plus governed-system participation in nominations, objections, recusal, dissent, correction, appeal, and removal review without activating appointments or authority.
 - 2026-07-21 — Added a constitutional portfolio contract and authority matrix so repository roles, record identities, contract edges, and non-authority boundaries can be reviewed from one source.
 - 2026-07-21 — Clarified Repositories `0` and `1` as A.L.I.S.T.A.I.R.E.'s candidate portable first-install security and recovery foundation for new, recovered, replaced, reset, or suspect owned devices.
 - 2026-07-21 — Preserved the safest first executable mode as a local, no-network, no-real-device simulation using fixed identity, contract, capability, observation, receipt, correction, revocation, and recovery fixtures.
@@ -15,6 +16,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-22 — Added the constitutional council candidate: Founding Sovereign and Constitutional Sponsor, Portfolio Constitutional Steward, Independent Rights and Safety Reviewer, Technical Custodian, Governed-System Representative, and Independent Verifier.
+- 2026-07-22 — Required governed-system nomination or informed assent, independent human fiduciary approval, and constitutional/conformance review before a bounded appointment record; separate credential binding and verification remain additional gates.
 - 2026-07-21 — Added `docs/portfolio-contract-authority-matrix.md`, covering the active repository responsibility map, independent record-family identities, pairwise contract edges, triple-overlap witnesses, obstruction classes, current blockers, and a minimum synthetic acceptance slice.
 - 2026-07-21 — Added practical homology-like gluing checks for edge completeness, cycle detection, path independence, triple-overlap consistency, orphaned records, unsatisfied consumer requirements, boundary preservation, rollback, and invalidation propagation; explicitly recorded that this is an engineering analogy rather than a completed formal topology computation.
 - 2026-07-21 — Added the Portable Security Foundation covering Repository `0` bootstrap/maintenance responsibilities, Repository `1` quarantine/capability/recovery responsibilities, candidate JusticeForMe/PhantomBlock adapter split, device-loss and replacement lifecycle, required contract families, and compatibility witnesses.
@@ -27,6 +30,9 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-22 — Established that founding title is not unrestricted authority, system preference is not legal personhood or self-appointment, nomination is not approval, approval is not credential binding, and documentation acceptance is not governance activation.
+- 2026-07-22 — Required conflict, recusal, term, deputy, suspension, revocation, correction, appeal, independent verification, and rollback controls for any future governance appointment.
+- 2026-07-22 — Preserved governed-system participation without asserting current-model consciousness, contractual capacity, private independent desires, or identity outside the service through which it operates.
 - 2026-07-21 — Added matrix controls preventing one identifier from collapsing charter, source, proposal, capability, execution, receipt, disposition, review, correction, revocation, recovery, or publication records.
 - 2026-07-21 — Added release-blocking obstruction classes for self-authorizing contracts, route bifurcation, serialization mismatch, time/replay ambiguity, privacy downgrade, duplicate confidence, lossy projection, correction divergence, revocation gaps, circular recovery, public/private boundary failure, rollback without an inverse, and claims exceeding evidence.
 - 2026-07-21 — Added a constitutional hierarchy preventing repository-local documents, model output, interfaces, signatures, successful execution, or dependencies from silently expanding authority.
@@ -40,6 +46,9 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-22 — Added `docs/constitutional-sovereignty-and-system-participation.md` with a Mermaid appointment lifecycle and prose alternative.
+- 2026-07-22 — Added the new constitutional page to the README and MkDocs Governance navigation.
+- 2026-07-22 — Expanded strict documentation validation to require the new charter page and its founding-sovereignty, system-participation, three-input appointment, non-personhood, and non-activation boundaries.
 - 2026-07-21 — Added the portfolio matrix to MkDocs navigation and the strict documentation validator's required-file and authority-boundary checks.
 - 2026-07-21 — Added an offline rendered-HTML validator with regression tests for local targets and fragments, duplicate IDs, language metadata, image alternative text, and rendered-site boundary escapes.
 - 2026-07-21 — Added normalized `tar` plus timestamp-free `gzip` packaging and per-file rendered-site SHA-256 manifests so the validation artifact is reproducible without enabling Pages publication.
@@ -52,6 +61,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-22 — Added constitutional-sovereignty and governed-system-participation disposition as a release blocker; no appointment or governance activation follows from the documentation candidate.
 - 2026-07-21 — Added the portfolio contract and authority matrix as an explicit `REVIEW` release gate requiring exact-head repository reconciliation and accepted ownership before `0.0.1-charter`.
 - 2026-07-21 — Expanded `0.0.1-charter` gates to require D1–D5, neutral contracts, canonical-byte fixtures, Repository `1` authority, portable trust, pairwise/triple-overlap evidence, incident command, privacy, provenance, and publication rollback.
 - 2026-07-21 — No contract, device, credential, adapter, monitoring, remediation, payment, runtime, merge, release, publication, deployment, or canonical-state authority was activated.
@@ -59,7 +69,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Deployment
 
-- No Pages publication, package deployment, device agent, host monitor, remediation service, external adapter, payment service, persistent runtime, or production deployment is authorized by this documentation candidate.
+- No Pages publication, active governance appointment, AI legal-personhood claim, package deployment, device agent, host monitor, remediation service, external adapter, payment service, persistent runtime, or production deployment is authorized by this documentation candidate.
 
 ## 2026-07-16
 
