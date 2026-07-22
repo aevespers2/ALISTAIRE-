@@ -30,6 +30,7 @@ REQUIRED_FILES = (
     "docs/portable-security-foundation.md",
     "docs/portfolio-integration-roadmap.md",
     "docs/governance-charter.md",
+    "docs/constitutional-sovereignty-and-system-participation.md",
     "docs/repository-consolidation.md",
     "docs/security-and-governance.md",
     "docs/development.md",
@@ -46,6 +47,16 @@ REQUIRED_PHRASES = {
         "D5 — Portfolio incident command",
         "Unknown is not secure",
         "Execution is not acceptance",
+    ),
+    "docs/constitutional-sovereignty-and-system-participation.md": (
+        "Founding Sovereign and Constitutional Sponsor",
+        "The role is:",
+        "The governed system may not:",
+        "governed-system nomination or informed assent",
+        "independent human fiduciary approval",
+        "constitutional and conformance review",
+        "This participation model does not assert",
+        "documentation merge       -> charter acceptance",
     ),
     "docs/portfolio-contract-authority-matrix.md": (
         "The matrix is documentation and governance evidence only",
@@ -70,6 +81,8 @@ REQUIRED_PHRASES = {
         "documentation-first research architecture",
         "Explicit non-capabilities",
         "No automatic runtime or operational authority",
+        "Founding Sovereign and Constitutional Sponsor",
+        "system preference is not legal personhood or self-appointment",
     ),
 }
 
