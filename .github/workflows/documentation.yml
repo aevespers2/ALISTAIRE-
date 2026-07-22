@@ -58,7 +58,7 @@ jobs:
     env:
       EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       EXPECTED_LIFECYCLE_JOURNAL_SHA256: 514ff45d55ae889a534a005465f71c1c74997585e10a53de89094d7f07583dd9
-      EXPECTED_SNAPSHOT_COMPACTION_SHA256: eafdb1ab129f707b4959cb47c60aaf6c500a7dbb448dbe9eeaf2378278958634
+      EXPECTED_SNAPSHOT_COMPACTION_SHA256: 6b1e0177e73145572286d66e662bf498755cdbf685c05534f6e99a0d903bf140
     steps:
       - name: Check out exact submitted source
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
