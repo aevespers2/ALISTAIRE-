@@ -5,8 +5,10 @@ on:
     paths:
       - "README.md"
       - "docs/**"
+      - "fixtures/constitutional-appointment-lifecycle-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
+      - "scripts/check_constitutional_appointment_lifecycle.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -20,8 +22,10 @@ on:
     paths:
       - "README.md"
       - "docs/**"
+      - "fixtures/constitutional-appointment-lifecycle-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
+      - "scripts/check_constitutional_appointment_lifecycle.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -73,7 +77,15 @@ jobs:
       - name: Validate charter documentation surface
         run: python scripts/validate_documentation.py
 
-      - name: Run rendered-site validator regression tests
+      - name: Validate synthetic appointment lifecycle
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports/documentation
+          python scripts/check_constitutional_appointment_lifecycle.py \
+            2>&1 | tee reports/documentation/appointment-lifecycle-validation.json
+
+      - name: Run documentation and lifecycle regression tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
 
       - name: Install pinned documentation dependencies
@@ -121,9 +133,12 @@ jobs:
             changelog.md \
             mkdocs.yml \
             requirements-docs.txt \
+            fixtures/constitutional-appointment-lifecycle-v1.json \
             scripts/validate_documentation.py \
             scripts/validate_rendered_site.py \
+            scripts/check_constitutional_appointment_lifecycle.py \
             tests/test_validate_rendered_site.py \
+            tests/test_check_constitutional_appointment_lifecycle.py \
             > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
             sha256sum reports/documentation/site.tar.gz \
