@@ -9,12 +9,14 @@ on:
       - "fixtures/constitutional-lifecycle-transaction-journal-v1.json"
       - "fixtures/constitutional-lifecycle-snapshot-compaction-v1.json"
       - "fixtures/constitutional-lifecycle-backup-restore-v1.json"
+      - "fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
       - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "scripts/check_constitutional_lifecycle_snapshot_compaction.py"
       - "scripts/check_constitutional_lifecycle_backup_restore.py"
+      - "scripts/check_constitutional_lifecycle_restore_staging_multicopy.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -32,12 +34,14 @@ on:
       - "fixtures/constitutional-lifecycle-transaction-journal-v1.json"
       - "fixtures/constitutional-lifecycle-snapshot-compaction-v1.json"
       - "fixtures/constitutional-lifecycle-backup-restore-v1.json"
+      - "fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
       - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "scripts/check_constitutional_lifecycle_snapshot_compaction.py"
       - "scripts/check_constitutional_lifecycle_backup_restore.py"
+      - "scripts/check_constitutional_lifecycle_restore_staging_multicopy.py"
       - "tests/**"
       - "mkdocs.yml"
       - "requirements-docs.txt"
@@ -64,6 +68,7 @@ jobs:
       EXPECTED_LIFECYCLE_JOURNAL_SHA256: 514ff45d55ae889a534a005465f71c1c74997585e10a53de89094d7f07583dd9
       EXPECTED_SNAPSHOT_COMPACTION_SHA256: 6b1e0177e73145572286d66e662bf498755cdbf685c05534f6e99a0d903bf140
       EXPECTED_BACKUP_RESTORE_SHA256: 1da592ac85a1880e7b3701860e5c360260622bf4ca36f8eb6c14693a7201a83b
+      EXPECTED_RESTORE_STAGING_MULTICOPY_SHA256: 812f1e5580caa687d30e96e9efed8214d47a131337f82577cfcaa1c27d1e46a2
     steps:
       - name: Check out exact submitted source
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
@@ -134,6 +139,18 @@ jobs:
             --expected-sha256 "$EXPECTED_BACKUP_RESTORE_SHA256" \
             --report reports/documentation/backup-restore-validation.json
 
+      - name: Validate synthetic restore staging and multi-copy reconciliation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports/documentation
+          actual="$(sha256sum fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json | cut -d' ' -f1)"
+          test "$actual" = "$EXPECTED_RESTORE_STAGING_MULTICOPY_SHA256"
+          python scripts/check_constitutional_lifecycle_restore_staging_multicopy.py \
+            --fixture fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json \
+            --expected-sha256 "$EXPECTED_RESTORE_STAGING_MULTICOPY_SHA256" \
+            --report reports/documentation/restore-staging-multicopy-validation.json
+
       - name: Run documentation and lifecycle regression tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
 
@@ -161,6 +178,8 @@ jobs:
             reports/documentation/snapshot-compaction-fixture.json
           cp fixtures/constitutional-lifecycle-backup-restore-v1.json \
             reports/documentation/backup-restore-fixture.json
+          cp fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json \
+            reports/documentation/restore-staging-multicopy-fixture.json
           if [ -d site ]; then
             find site -type f -print0 | sort -z | xargs -0 sha256sum \
               > reports/documentation/SITE_SHA256SUMS
@@ -190,17 +209,20 @@ jobs:
             fixtures/constitutional-lifecycle-transaction-journal-v1.json \
             fixtures/constitutional-lifecycle-snapshot-compaction-v1.json \
             fixtures/constitutional-lifecycle-backup-restore-v1.json \
+            fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json \
             scripts/validate_documentation.py \
             scripts/validate_rendered_site.py \
             scripts/check_constitutional_appointment_lifecycle.py \
             scripts/check_constitutional_lifecycle_transaction_journal.py \
             scripts/check_constitutional_lifecycle_snapshot_compaction.py \
             scripts/check_constitutional_lifecycle_backup_restore.py \
+            scripts/check_constitutional_lifecycle_restore_staging_multicopy.py \
             tests/test_validate_rendered_site.py \
             tests/test_check_constitutional_appointment_lifecycle.py \
             tests/test_check_constitutional_lifecycle_transaction_journal.py \
             tests/test_check_constitutional_lifecycle_snapshot_compaction.py \
             tests/test_check_constitutional_lifecycle_backup_restore.py \
+            tests/test_check_constitutional_lifecycle_restore_staging_multicopy.py \
             > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
             sha256sum reports/documentation/site.tar.gz \
