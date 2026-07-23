@@ -59,7 +59,7 @@ Neither state is complete until every controlled route agrees. Canonical bytes a
 
 ## Decision source-generation rebind state
 
-The D2A and D3 embedded source tuples remain immutable historical evidence. The [source-generation rebind](docs/decision-source-generation-rebind.md) records their integration into exact charter-candidate parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` and requires every focused or resulting validation head to prove that exact first-parent relationship.
+The D2A and D3 embedded source tuples remain immutable historical evidence. The [source-generation rebind](docs/decision-source-generation-rebind.md) records their integration into exact charter-candidate parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` and requires every focused or resulting validation head to prove that this anchor remains on its first-parent ancestry.
 
 The rebind remains `REBOUND_TO_PARENT_NON_AUTHORIZING`. It must be replaced whenever the integration parent, embedded packet sources, D2A ALISTAIRE candidate observation, packet scope, ancestry rule, correction route, withdrawal route, or rollback rule changes. Passing validation does not accept D1–D3, update the portfolio observation date, resolve ownership, select canonical bytes, or authorize merge to `main`, release, publication, deployment, credentials, or runtime authority.
 
