@@ -2,7 +2,7 @@
 
 Alistaire is a **documentation-first research architecture** for composing a bounded agent system from interoperable Quantum State Objects (QSOs). This repository is the candidate product, architecture, governance, and security charter authority; it does **not** contain or claim a verified AGI runtime, consciousness, autonomous learning, production deployment, or unrestricted tool authority.
 
-> **Current status: blocked on constitutional identity and contract acceptance.** `aevespers2/ALISTAIRE-` and `aevespers2/Alistaire-agi` overlap. One canonical repository, package/display direction, migration plan, and non-canonical disposition must be approved. The portfolio also requires a neutral contract steward, canonical byte/identity rules, independent authority and recovery roots, portfolio incident command, and explicit disposition of the proposed founding-sovereignty and governed-system-participation model before consequential implementation can be promoted.
+> **Current status: blocked on constitutional identity and contract acceptance.** `aevespers2/ALISTAIRE-` and `aevespers2/Alistaire-agi` overlap. One canonical repository, package/display direction, migration plan, and non-canonical disposition must be approved. The portfolio also requires a neutral contract steward, canonical byte/identity rules, a runtime/Fabric semantic partition, independent authority and recovery roots, portfolio incident command, and explicit disposition of the proposed founding-sovereignty and governed-system-participation model before consequential implementation can be promoted.
 
 ## Documentation
 
@@ -13,6 +13,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Portfolio contract and authority matrix](docs/portfolio-contract-authority-matrix.md)
 - [D2A common-contract ownership graph](docs/d2a-common-contract-ownership-graph.md)
 - [Machine-readable D2A graph](docs/d2a-common-contract-ownership-graph-v1.json)
+- [Runtime/Fabric namespace partition](docs/runtime-fabric-namespace-partition.md)
+- [Machine-readable runtime/Fabric partition](docs/runtime-fabric-namespace-partition-v1.json)
 - [Consolidated governance and security charter](docs/governance-charter.md)
 - [Constitutional sovereignty and governed-system participation](docs/constitutional-sovereignty-and-system-participation.md)
 - [Repository consolidation decision](docs/repository-consolidation.md)
@@ -60,6 +62,12 @@ D2A and D3 retain immutable historical source tuples. Their integration into the
 
 The rebind is valid only when exact parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` remains on the checked-out submitted commit's first-parent ancestry, the historical source tuples still match the packet files, the D2A ALISTAIRE PR #1 candidate observation still matches, hostile regressions pass, the documentation builds strictly, and retained exact-head evidence is produced. The record is non-authorizing and must be replaced when its parent, packet sources, candidate observation, or ancestry rules move.
 
+## Runtime/Fabric namespace partition
+
+The current portfolio graph records `BLOCKED_ROLE_COLLISION`: `QuantumStateObjects` requires runtime-local event and execution records, while `QSO-FABRIC` requires projection, collaboration, experiment, and aggregate-evidence records. Reusing `qso-event-ledger` or `qso-runtime-report` across those semantic levels can collapse producer identity, source sets, ordering, correction, rollback, and authority effects.
+
+The review packet separates runtime event, runtime execution report, Fabric projection receipt, Fabric collaboration event, Fabric aggregate report, and Repository `1` disposition. It compares three unselected partition profiles and defines mandatory fields, pairwise and triple-overlap witnesses, mixed-generation migration, correction and revocation propagation, rollback, and failed-rollback handling. It selects no namespace, schema, owner, consumer, runtime admission, Fabric activation, Repository `1` authority, release, publication, or deployment.
+
 ## Governance doctrine
 
 A.L.I.S.T.A.I.R.E. is the unifying system objective; portfolio repositories are bounded subsystems. The governance charter assigns the **Cali Sanders Parker** stewardship QSO—ceremonially titled **Calisandra, Queen of the Nymphs**—to documentation coherence, architectural reconciliation, governance proposals, security-boundary review, and escalation. The title does not create credentials, legal identity, merge authority, deployment authority, payment authority, or unattended operational permission.
@@ -100,8 +108,8 @@ Execution success is evidence, not automatic canonical acceptance. Unsupported o
 | `JusticeForMe` | Candidate general host-observation adapter | Read-only evidence; no remediation or authority |
 | `Misc` / PhantomBlock | Candidate specialist hardware, firmware, kernel, management-plane, and offline-capture adapter | No privileged collection, interception, remediation, or authority |
 | `QSO-GENOMES` | Declarative identity, lineage, immutable policy, projection, and compatibility | No credential, capability, or operational approval authority |
-| `QuantumStateObjects` | Bounded local runtime semantics and evidence production | Local success is not canonical acceptance |
-| `QSO-FABRIC` | Bounded multi-QSO composition, experiment orchestration, contradiction, and evidence | No canonical state, merge, credential, or release authority |
+| `QuantumStateObjects` | Bounded local runtime semantics and evidence production | Local success is not Fabric success or canonical acceptance |
+| `QSO-FABRIC` | Bounded multi-QSO projection, composition, experiment orchestration, contradiction, and aggregate evidence | Projection or aggregation is not independent evidence, canonical state, or approval |
 | `qsio-kernel` | Candidate reference conformance and replay implementation | Must not duplicate portfolio runtime or authority ownership |
 | `QSO-SEEKER` | Source acquisition, sanitization, attribution, and inert observation records | No silent trust promotion or canonical disposition |
 | `datarepo-temporal-invariants` | Temporal subject, freshness, replay, supersession, and ordering interpretation candidate | No source acquisition or canonical authority |
@@ -123,15 +131,16 @@ The first eligible candidate is `0.0.1-charter`, a documentation-only release co
 2. approved governance and security charter;
 3. approved or revised founding-sovereignty and governed-system-participation model;
 4. neutral contract-steward and canonical-byte decisions;
-5. Repository `0`/`1` portable-security boundary and acceptance sequence;
-6. QSO, evidence, review, payment, and adapter responsibility map;
-7. bounded learning, persistence, tool, credential, privacy, freeze, shutdown, recovery, and rollback policies;
-8. deterministic pairwise and triple-overlap fixture specification;
-9. validated documentation and provenance evidence.
+5. approved runtime/Fabric semantic partition and migration plan;
+6. Repository `0`/`1` portable-security boundary and acceptance sequence;
+7. QSO, evidence, review, payment, and adapter responsibility map;
+8. bounded learning, persistence, tool, credential, privacy, freeze, shutdown, recovery, and rollback policies;
+9. deterministic pairwise and triple-overlap fixture specification;
+10. validated documentation and provenance evidence.
 
 ## Explicit non-capabilities
 
-Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, repository dependencies, canonical bytes, digests, signatures, source-generation rebinds, and passing CI are not operational authorization.
+Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, repository dependencies, canonical bytes, digests, signatures, namespaces, projection receipts, aggregate reports, source-generation rebinds, and passing CI are not operational authorization.
 
 ## Local documentation preview
 
