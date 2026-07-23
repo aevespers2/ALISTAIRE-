@@ -15,6 +15,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Repository consolidation decision](docs/repository-consolidation.md)
 - [D1 canonical identity decision packet](docs/d1-canonical-identity-decision-packet.md)
 - [Machine-readable D1 decision packet](docs/d1-canonical-identity-decision-packet-v1.json)
+- [D2 neutral contract steward decision packet](docs/d2-neutral-contract-steward-decision-packet.md)
+- [Machine-readable D2 decision packet](docs/d2-neutral-contract-steward-decision-packet-v1.json)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
 - [Machine-readable repository provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
@@ -30,6 +32,12 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 The D1 packet closes the review vocabulary, source observations, decision options, required immutable fields, readiness gates, controlled routes, and rollback conditions without silently choosing a repository. Its present disposition is `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`.
 
 `D1_REBIND_REQUIRED` means an observed repository head, documentation candidate, provenance record, migration input, or recommendation changed and every controlled route must be reconciled. `D1_PACKET_WITHDRAWN` means this packet generation is no longer current and must not be represented as an active decision basis.
+
+## D2 decision readiness
+
+The D2 packet compares three neutral stewardship models, closes twenty required decision fields and ten readiness gates, records gluing obstructions, and preserves the separation between contract stewardship and operational authority. Its present disposition is `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE`; it does not select a repository, package, registry, steward, signing key, or accepted contract generation.
+
+`D2_REBIND_REQUIRED` means D1, the common-contract inventory, candidate models, ownership graph, readiness evidence, or recommendation changed. `D2_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn. Neither state is complete until README, Pages, task chain, release plan, punch list, and changelog agree.
 
 ## Governance doctrine
 
