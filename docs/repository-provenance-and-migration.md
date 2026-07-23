@@ -63,6 +63,8 @@ flowchart TD
 
 Neither repository exposes a `LICENSE` file at the observed generations. No reuse, redistribution, package publication, or migration license is inferred.
 
+Sensitive-review disposition: **`LIMITED_PASS_WITH_RESIDUAL_RISK`**.
+
 Repository code searches for private-key markers and common secret-assignment terms returned no matches. This is a limited review, not a complete history-aware secret scan. Binary content, deleted objects, unindexed branches, inaccessible artifacts, and false negatives remain residual risks. A dedicated history-aware scan and human privacy review are required before migration, publication, or archive conversion.
 
 ## Current obstructions
