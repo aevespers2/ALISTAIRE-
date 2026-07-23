@@ -23,6 +23,8 @@ nav:
       - Consolidated charter: governance-charter.md
       - Constitutional sovereignty and system participation: constitutional-sovereignty-and-system-participation.md
       - Constitutional appointment lifecycle conformance: constitutional-appointment-lifecycle-conformance.md
+      - D2 neutral contract steward decision packet: d2-neutral-contract-steward-decision-packet.md
+      - Machine-readable D2 packet: d2-neutral-contract-steward-decision-packet-v1.json
   - Repository consolidation:
       - Decision and options: repository-consolidation.md
       - D1 canonical identity decision packet: d1-canonical-identity-decision-packet.md
