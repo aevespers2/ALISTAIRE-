@@ -69,6 +69,14 @@ The [runtime/Fabric namespace-partition packet](docs/runtime-fabric-namespace-pa
 
 The packet defines six independent semantic classes, three unselected partition profiles, mandatory envelope fields, pairwise and triple-overlap witnesses, mixed-generation migration, correction/revocation propagation, rollback, failed-rollback handling, and review gates. It remains a non-authorizing proposal. No namespace, schema, owner, producer, consumer, runtime admission, Fabric activation, Repository `1` authority, release, publication, or deployment is selected.
 
+## Runtime/Fabric producer-consumer inventory state
+
+The [runtime/Fabric producer-consumer inventory](docs/runtime-fabric-producer-consumer-inventory.md) records six exact candidate generations spanning `ALISTAIRE-`, `QSO-FABRIC`, `QuantumStateObjects`, Repository `1`, `qsio-kernel`, and `qso-field.github.io`. Its controlled disposition is `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
+
+The inventory distinguishes declaration producers, runtime documentation, synthetic consumers, portfolio registry references, and unmapped internal QSIO ledger records. It confirms two independent synthetic consumers of the reviewed Fabric fixture while explicitly withholding live compatibility, namespace ownership, semantic ownership, producer or consumer admission, portfolio disposition authority, and operational activation. The route remains discontinuous at kernel→runtime mapping, runtime→Fabric projection receipts, Fabric→Repository `1` source-set and authority contracts, correction/revocation propagation, mixed-generation migration, and restored-state rollback.
+
+The inventory generation must be replaced or rebound when any observed exact head, path, candidate role, legacy-label use, semantic classification, graph edge, consumer set, review gate, controlled route, or disposition changes. Passing validation does not accept any binding or authorize implementation.
+
 ## MVP scope
 
 The first candidate is documentation-only and must define:
@@ -88,7 +96,7 @@ The first candidate is documentation-only and must define:
 
 **P0 — BLOCKED on D1 and governance adoption.**
 
-The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, an exact-parent source-generation rebind, and a runtime/Fabric semantic-partition packet. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
+The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, an exact-parent source-generation rebind, a runtime/Fabric semantic-partition packet, and an exact-head producer-consumer inventory. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
 
 ## Success criteria
 
@@ -132,7 +140,7 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 | P0-D4 | Charter independent authority and recovery roots | P0-D3 | PROPOSED | Repository `1` or successor, issuer/revoker, approvals, key custody, quarantine, correction, checkpoint, and recovery tests |
 | P0-D5 | Establish portfolio incident command | P0-D1, P0-D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery owners with tabletop evidence |
 | P1 | Approve portable device trust contracts | P0-D3, P0-D4, P0-D5 | PROPOSED | Shared device-to-recovery fixtures pass |
-| P2A | Resolve runtime/Fabric namespace and semantic-role collision | P0-D2, P0-D3, P0-D4 | REVIEW / BLOCKED | Select independent semantic classes and namespaces; bind producers, source sets, projection and aggregation receipts, ordering, replay, correction, revocation, migration, rollback, and Repository `1` disposition witnesses |
+| P2A | Resolve runtime/Fabric namespace and semantic-role collision | P0-D2, P0-D3, P0-D4 | REVIEW / BLOCKED | Preserve the exact-head inventory; select independent semantic classes and namespaces; bind producers, source sets, projection and aggregation receipts, ordering, replay, correction, revocation, migration, rollback, and Repository `1` disposition witnesses |
 | P2 | Approve declarative and runtime contracts | P0-D3, P0-D4, P2A | PROPOSED | Genome/runtime/Fabric/kernel mappings and triple-overlap fixtures pass |
 | P3 | Approve source evidence and transport contracts | P0-D3, P0-D4 | PROPOSED | Source/temporal/interpretation/transport/disposition/correction fixtures pass |
 | P4 | Approve review and independent approval contracts | P1–P3, P0-D4 | PROPOSED | UI interactions cannot create approval and lifecycle states render consistently |
@@ -151,6 +159,7 @@ For every task, record observations, source commits, contracts, commands, tests,
 
 ## Builder log
 
+- 2026-07-23 — Synchronized the exact-head runtime/Fabric producer-consumer inventory into task, punch-list, release, and changelog control routes; bound six observed candidate generations, two synthetic consumers, five graph edges, unresolved gluing routes, and the non-authorizing disposition `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`. No producer, consumer, namespace, semantic owner, registry, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
 - 2026-07-23 — Added the runtime/Fabric namespace-partition decision packet and machine-readable profile, separating runtime event, runtime execution, Fabric projection, Fabric collaboration, Fabric aggregate, and Repository `1` disposition semantics; defined three unselected partition profiles, mandatory fields, pairwise/triple-overlap witnesses, migration, correction, revocation, rollback, failed rollback, accessibility, and FYSA-120 mapping. No namespace, schema, owner, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
 - 2026-07-23 — Integrated the validated D3 documentation into the non-default charter candidate and added a separate first-parent source-generation rebind, machine-readable manifest, fail-closed validator, hostile regressions, Pages guide, and retained-evidence workflow. Historical packet tuples were preserved; no canonical decision or authority was created.
 - 2026-07-23 — Added the D3 canonical bytes and identity decision-readiness packet, three unselected profile candidates, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, cross-language witness requirements, controlled propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical profile, registry, identity, digest, signature scheme, or authority was selected.
