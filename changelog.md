@@ -6,6 +6,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-23 — Added a review-ready but decision-blocked D3 canonical bytes and identity packet that compares three profile families and closes primitives, fields, gates, hostile fixtures, cross-language witness requirements, migration, correction, and rollback without selecting canonicalization.
+- 2026-07-23 — Added a review-ready observed D2A common-contract ownership and consumer graph across all nineteen repositories without accepting owners or contract generations.
 - 2026-07-23 — Added a review-ready but decision-blocked D2 neutral contract steward packet that compares three governance models and closes required fields and gates without selecting a steward, repository, package, registry, or accepted contract generation.
 - 2026-07-23 — Added a review-ready but decision-blocked D1 canonical identity packet that closes source observations, options, required fields, readiness gates, and prohibited authority promotions without selecting a canonical repository.
 - 2026-07-23 — Bound the two overlapping Alistaire repositories to exact observed default-branch and active-candidate heads without selecting canonical authority.
@@ -19,6 +21,11 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-23 — Added D3 candidates for a strict canonical JSON subset, deterministic CBOR profile, and typed abstract model with a canonical JSON envelope; no profile was selected.
+- 2026-07-23 — Closed sixteen D3 primitive classes covering UTF-8, Unicode, ordering, duplicate keys, numbers, null/missing, time, binary values, digests, signatures, namespaces, record identities, extensions, and replay domains.
+- 2026-07-23 — Added nineteen required D3 hostile fixture classes and a two-independent-implementation witness comparing disposition, normalized model, canonical bytes, digest, record identity, and reason code.
+- 2026-07-23 — Added D3 controlled-route propagation using `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN`; every controlled route must agree before currentness or withdrawal completion is claimed.
+- 2026-07-23 — Added D2A exact-head graphing for nineteen default heads, active candidates, common contract families, required edges, triple-overlap witnesses, and material gluing obstructions.
 - 2026-07-23 — Added D2 candidate models for a dedicated neutral contract repository, split source/evidence custody, and federated stewardship with a neutral release gate; no model was selected.
 - 2026-07-23 — Added D2 obstruction classes for self-authorizing custody, route bifurcation, semantic alias collision, evidence/source divergence, orphaned correction, rollback dead ends, and circular recovery.
 - 2026-07-23 — Added D2 controlled-route propagation using `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN`; every controlled route must agree before currentness or withdrawal completion is claimed.
@@ -38,6 +45,9 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-23 — Required canonical bytes, digest domains, semantic namespaces, profile versions, replay domains, reason codes, and consumer expectations to remain independently bound rather than inferred from parser success or payload shape.
+- 2026-07-23 — Prohibited same bytes or digests from implying the same semantic class, signature presence from implying valid authorization, and canonical bytes from implying truth, currentness, compatibility, or consumer admission.
+- 2026-07-23 — Required canonicalization changes to create versioned migrations with source/target bytes, loss classification, consumer disposition, correction/withdrawal propagation, rollback, and restored-state verification.
 - 2026-07-23 — Required D2 stewardship, source custody, review, release, signing, semantic ownership, operational approval, correction, continuity, and rollback to remain separately identified.
 - 2026-07-23 — Prohibited dependency use, schema publication, passing CI, release signing, registry inclusion, portfolio summaries, or skill mapping from creating canonical, operational, device, runtime, capability, or competence authority.
 - 2026-07-23 — Required recommendation, passing CI, mergeability, package naming, copied content, and documentation candidates to remain non-authorizing inputs rather than canonical selection, license, package, or release authority.
@@ -58,6 +68,10 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-23 — Added `docs/d3-canonical-bytes-identity-decision-packet.md`, its machine-readable profile, strict validator, positive and hostile regressions, Pages navigation, and exact-head conformance workflow.
+- 2026-07-23 — Added D3 links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
+- 2026-07-23 — Proposed non-authoritative subdivision `031-Q — Cross-language canonical-byte and identity-primitive conformance` for canonical serialization profiles, independent vectors, transcoding analysis, domain-separated identity, replay/collision testing, and migration/rollback closure.
+- 2026-07-23 — Added `docs/d2a-common-contract-ownership-graph.md`, its machine-readable profile, strict validator, hostile regressions, Pages navigation, and exact-head workflow.
 - 2026-07-23 — Added `docs/d2-neutral-contract-steward-decision-packet.md`, its machine-readable profile, strict validator, nineteen hostile/positive regressions, Pages navigation, and exact-head conformance workflow.
 - 2026-07-23 — Added D2 links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
 - 2026-07-23 — Proposed non-authoritative subdivision `013-F — Contract-governance graph stewardship` for ownership graphs, source precedence, consumer-registration integrity, supersession/withdrawal propagation, and cross-repository obstruction closure.
@@ -81,6 +95,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-23 — Improved D3 from an unstructured proposed task to a validated review-ready packet while preserving `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` and every external approval gate.
 - 2026-07-23 — Improved D2 from an unstructured proposed task to a validated review-ready packet while preserving `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and every external approval gate.
 - 2026-07-23 — Improved D1 from an unstructured hold to a validated review-ready packet while preserving `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL` and all external approval gates.
 - 2026-07-23 — Improved the provenance gate from unstructured observation to a validated documentation-only review manifest; D1, license, full history-aware security review, migration approval, and resulting-state verification remain blocked.
