@@ -1,0 +1,217 @@
+name: Kernel to Runtime Crosswalk Options
+
+on:
+  pull_request:
+    paths:
+      - "docs/kernel-runtime-crosswalk-options.md"
+      - "docs/kernel-runtime-crosswalk-options-v1.json"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+      - "scripts/check_kernel_runtime_crosswalk_options.py"
+      - "scripts/validate_documentation.py"
+      - "tests/test_check_kernel_runtime_crosswalk_options.py"
+      - ".github/workflows/kernel-runtime-crosswalk-options.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kernel-runtime-crosswalk-${{ github.event.pull_request.number || github.ref }}-${{ github.event.pull_request.head.sha || github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  validate-crosswalk-options:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - name: Check out exact submitted source
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          ref: ${{ env.EXPECTED_HEAD }}
+          fetch-depth: 1
+          persist-credentials: false
+          show-progress: false
+
+      - name: Assert exact clean source
+        id: source
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          mkdir -p "$evidence"
+          status=0
+          actual="$(git rev-parse HEAD 2>> "$evidence/source-errors.txt")"
+          if [ "$actual" != "$EXPECTED_HEAD" ]; then
+            printf 'expected %s but checked out %s\n' "$EXPECTED_HEAD" "$actual" >> "$evidence/source-errors.txt"
+            status=1
+          fi
+          if [ -n "$(git status --porcelain)" ]; then
+            printf 'working tree is not clean\n' >> "$evidence/source-errors.txt"
+            status=1
+          fi
+          {
+            printf 'repository=%s\n' "$GITHUB_REPOSITORY"
+            printf 'submitted_sha=%s\n' "$EXPECTED_HEAD"
+            printf 'actual_sha=%s\n' "$actual"
+            printf 'workflow_run=%s\n' "$GITHUB_RUN_ID"
+            printf 'workflow_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
+            printf 'source_status=%s\n' "$status"
+          } | tee "$evidence/source-identity.txt"
+          cat "$evidence/source-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Validate machine-readable crosswalk packet
+        id: packet
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          python scripts/check_kernel_runtime_crosswalk_options.py \
+            --submitted-sha "$EXPECTED_HEAD" \
+            > "$evidence/crosswalk-report.json" \
+            2> "$evidence/crosswalk-errors.txt"
+          status=$?
+          cat "$evidence/crosswalk-report.json" || true
+          cat "$evidence/crosswalk-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Run hostile crosswalk regressions
+        id: tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          python -m unittest tests.test_check_kernel_runtime_crosswalk_options -v \
+            > "$evidence/crosswalk-tests.txt" 2>&1
+          status=$?
+          cat "$evidence/crosswalk-tests.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Validate complete documentation surface
+        id: docs
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          python scripts/validate_documentation.py \
+            > "$evidence/documentation-validation.txt" 2>&1
+          status=$?
+          cat "$evidence/documentation-validation.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Install pinned documentation dependencies
+        id: install
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          python -m pip install --requirement requirements-docs.txt \
+            > "$evidence/dependency-install.txt" 2>&1
+          status=$?
+          cat "$evidence/dependency-install.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Build documentation strictly
+        id: build
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          mkdocs build --strict --site-dir "$RUNNER_TEMP/kernel-runtime-crosswalk-site" \
+            > "$evidence/mkdocs-build.txt" 2>&1
+          status=$?
+          cat "$evidence/mkdocs-build.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Record deterministic evidence and clean-tree assurance
+        id: integrity
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/kernel-runtime-crosswalk-evidence"
+          status=0
+          sha256sum \
+            docs/kernel-runtime-crosswalk-options.md \
+            docs/kernel-runtime-crosswalk-options-v1.json \
+            mkdocs.yml requirements-docs.txt \
+            scripts/check_kernel_runtime_crosswalk_options.py \
+            tests/test_check_kernel_runtime_crosswalk_options.py \
+            .github/workflows/kernel-runtime-crosswalk-options.yml \
+            > "$evidence/input-sha256.txt" \
+            2> "$evidence/integrity-errors.txt"
+          if [ $? -ne 0 ]; then status=1; fi
+          if [ -d "$RUNNER_TEMP/kernel-runtime-crosswalk-site" ]; then
+            find "$RUNNER_TEMP/kernel-runtime-crosswalk-site" -type f -print0 \
+              | sort -z | xargs -0 sha256sum \
+              > "$evidence/site-sha256.txt" \
+              2>> "$evidence/integrity-errors.txt"
+            if [ $? -ne 0 ]; then status=1; fi
+          else
+            printf 'rendered site missing\n' >> "$evidence/integrity-errors.txt"
+            status=1
+          fi
+          git diff --exit-code >> "$evidence/integrity-errors.txt" 2>&1
+          if [ $? -ne 0 ]; then status=1; fi
+          git diff --cached --exit-code >> "$evidence/integrity-errors.txt" 2>&1
+          if [ $? -ne 0 ]; then status=1; fi
+          if [ -n "$(git status --porcelain)" ]; then
+            printf 'working tree changed during validation\n' >> "$evidence/integrity-errors.txt"
+            status=1
+          fi
+          cat "$evidence/integrity-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload retained crosswalk evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: alistaire-kernel-runtime-crosswalk-${{ env.EXPECTED_HEAD }}
+          path: ${{ runner.temp }}/kernel-runtime-crosswalk-evidence
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Fail closed on unsuccessful validation
+        if: always()
+        shell: bash
+        env:
+          SOURCE_STATUS: ${{ steps.source.outputs.status }}
+          PACKET_STATUS: ${{ steps.packet.outputs.status }}
+          TEST_STATUS: ${{ steps.tests.outputs.status }}
+          DOCS_STATUS: ${{ steps.docs.outputs.status }}
+          INSTALL_STATUS: ${{ steps.install.outputs.status }}
+          BUILD_STATUS: ${{ steps.build.outputs.status }}
+          INTEGRITY_STATUS: ${{ steps.integrity.outputs.status }}
+        run: |
+          set -euo pipefail
+          test "$SOURCE_STATUS" = "0"
+          test "$PACKET_STATUS" = "0"
+          test "$TEST_STATUS" = "0"
+          test "$DOCS_STATUS" = "0"
+          test "$INSTALL_STATUS" = "0"
+          test "$BUILD_STATUS" = "0"
+          test "$INTEGRITY_STATUS" = "0"
