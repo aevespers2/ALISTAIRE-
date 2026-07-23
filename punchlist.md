@@ -1,6 +1,6 @@
 # Punch List
 
-Checked items require reviewable evidence tied to immutable commits. Filenames, diagrams, ceremonial language, repository references, successful commands, signatures, interfaces, or workflow configuration without an exact-head successful run are not completion or authority evidence.
+Checked items require reviewable evidence tied to immutable commits. Filenames, diagrams, ceremonial language, repository references, successful commands, signatures, interfaces, canonical bytes, digests, or workflow configuration without an exact-head successful run are not completion or authority evidence.
 
 ## P0A — Constitutional identity and migration evidence
 
@@ -35,6 +35,7 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Record triple-overlap witnesses for portable trust, QSO semantics, source evidence, review, financial authority, engineering execution, incidents, correction, and recovery.
 - [x] Define obstruction classes covering identity, authority, state, route, serialization, time, privacy, duplication, projection, correction, revocation, recovery, publication, rollback, and unsupported claims.
 - [x] Define a practical homology-like gluing method while explicitly avoiding a claim of completed formal topology.
+- [x] Bind all nineteen owned repositories and active candidate heads into the D2A observed ownership and consumer graph without selecting authority.
 - [ ] Compare every matrix row and edge against the exact current head of each repository-local documentation candidate.
 - [ ] Resolve conflicting ownership or route claims and record dissent rather than silently choosing one.
 - [ ] Assign a semantic owner, independent reviewer, correction authority, revoker, incident owner, recovery owner, and retirement path for every accepted record family.
@@ -49,8 +50,8 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Record self-authorizing custody, route bifurcation, semantic alias collision, source/evidence divergence, orphaned correction, rollback dead ends, and circular recovery as D2 gluing obstructions.
 - [x] Add `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` controlled propagation.
 - [x] Add strict packet validation, hostile regressions, exact-head CI, deterministic evidence, and fail-closed artifact retention.
+- [x] Inventory common contract families and candidate owners in the D2A exact-head graph.
 - [ ] Resolve D1 at an immutable head before selecting D2.
-- [ ] Inventory every common contract family and exact current candidate owner.
 - [ ] Reconcile conflicting ownership and source-precedence claims.
 - [ ] Select a neutral repository, package, or governed registry for common contracts.
 - [ ] Approve identifier, namespace, schema, reason-code, fixture, compatibility, migration, deprecation, correction, withdrawal, and rollback governance.
@@ -59,13 +60,20 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 ## D3 — Canonical bytes and identity primitives
 
-- [ ] Select canonical JSON, CBOR, or other encoding status by contract family.
-- [ ] Define Unicode normalization, number representation, map ordering, null/missing semantics, timestamps, durations, clocks, digests, and extension fields.
-- [ ] Define namespace, subject, device/environment, proposal, capability, receipt, correction, revocation, checkpoint, and replay-domain identity.
-- [ ] Define signature-reference and attestation semantics without embedding secret material.
-- [ ] Produce cross-language positive, malformed, adversarial, unsupported-version, lossy-mapping, and collision-resistance fixtures.
-- [ ] Verify two independent implementations produce identical canonical bytes and digests.
-- [ ] Define migration, compatibility, deprecation, correction, and claim-withdrawal behavior when canonicalization changes.
+- [x] Prepare a non-authorizing [D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet.md) and machine-readable profile.
+- [x] Compare strict canonical JSON, deterministic CBOR, and typed-model/canonical-envelope profiles without selecting one.
+- [x] Close sixteen primitive classes and twenty required decision fields for encoding, Unicode, numbers, ordering, time, digests, namespaces, identities, signature references, extensions, replay, migration, correction, and rollback.
+- [x] Define twelve readiness gates and nineteen hostile fixture classes.
+- [x] Define two-implementation independence and exact accepted/rejected, model, byte, digest, identity, and reason-code comparison requirements.
+- [x] Add `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` controlled propagation.
+- [x] Add strict packet validation, hostile regressions, exact-head CI, deterministic evidence, and fail-closed artifact retention.
+- [ ] Obtain a successful exact-head D3 workflow run and retained artifact for the final candidate head.
+- [ ] Resolve D1 and D2 before selecting a canonical profile or fixture custodian.
+- [ ] Map each accepted contract family to one profile generation and primitive set.
+- [ ] Produce positive, malformed, adversarial, unsupported-version, lossy-mapping, migration, correction, and rollback vectors.
+- [ ] Verify two independently authored language implementations produce identical accepted/rejected results, canonical bytes, digests, identities, and reason codes.
+- [ ] Complete digest-domain, namespace, identifier, confusable, replay, signature-reference, privacy, license, and accessibility review.
+- [ ] Approve migration, compatibility, deprecation, correction, withdrawal, rollback, and resulting-state verification.
 
 ## D4 — Independent authority and recovery roots
 
@@ -154,7 +162,7 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Add exact-head read-only validation and checksummed artifact workflow.
 - [ ] Validate this exact pull-request head with `mkdocs build --strict` and retain artifact/digest.
 - [ ] Review links, terminology, diagrams, accessibility, authority references, repository names, matrix ownership claims, and evidence classifications.
-- [ ] Specify deterministic constitutional, matrix, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
+- [ ] Specify deterministic constitutional, matrix, canonical-byte, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
 - [ ] Complete independent security/privacy, governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered documentation archives, provenance manifest, contract registry snapshot, approval record, and SHA-256 manifests.
 - [ ] Verify Pages settings, public/private boundaries, rollback, cache invalidation, and claim withdrawal.
@@ -162,15 +170,26 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 ## Evidence log
 
+### 2026-07-23 — D3 canonical bytes and identity readiness milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Branch: `docs/d3-canonical-bytes-readiness`
+- Result: `REVIEW` pending exact-head workflow evidence.
+- Added: three unselected canonicalization profiles, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, independent cross-language witness requirements, migration and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
+- Propagation: `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` must reach every controlled route.
+- Authority effect: none; no canonical encoding, digest, namespace, identifier, signature scheme, registry, consumer, compatibility decision, merge, release, publication, deployment, or operational authority is selected.
+- Limitations: D1, D2, profile selection, neutral fixture custody, two independent implementations, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
+- Rollback: close or revert the focused candidate; preserve the failed or superseded packet as historical evidence without changing operational or canonical state.
+
 ### 2026-07-23 — D2 neutral contract steward readiness milestone
 
 - Repository: `aevespers2/ALISTAIRE-`
 - Branch: `docs/d2-neutral-contract-steward-readiness`
-- Result: `REVIEW` pending exact-head workflow evidence.
+- Result: `REVIEW` with focused and resulting-head evidence retained.
 - Added: three neutral stewardship models, twenty required decision fields, ten gates, non-operational authority boundary, obstruction and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
 - Propagation: `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` must reach every controlled route.
 - Authority effect: none; no steward, contract, registry, key, signature, capability, device/runtime disposition, merge, release, publication, deployment, or recovery authority is selected.
-- Limitations: D1, exact contract inventory, ownership reconciliation, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
+- Limitations: D1, ownership reconciliation, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
 - Rollback: close or revert the focused candidate; preserve the failed or superseded packet as historical evidence without changing operational or canonical state.
 
 ### 2026-07-21 — Portfolio contract and authority matrix milestone
