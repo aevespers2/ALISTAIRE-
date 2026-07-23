@@ -46,6 +46,20 @@ class RuntimeFabricInventoryValidatorTests(unittest.TestCase):
         )
         self.assertEqual(report["repository_count"], 6)
         self.assertEqual(report["synthetic_consumer_count"], 2)
+        self.assertEqual(report["controlled_route_count"], 6)
+
+    def test_planning_routes_are_controlled(self) -> None:
+        self.assertEqual(
+            EXPECTED_ROUTES,
+            {
+                "docs/runtime-fabric-producer-consumer-inventory.md",
+                "mkdocs.yml",
+                "taskchain.md",
+                "punchlist.md",
+                "release.md",
+                "changelog.md",
+            },
+        )
 
     def test_duplicate_json_key_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
