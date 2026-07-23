@@ -206,7 +206,11 @@
   ],
   "controlled_routes": [
     "docs/runtime-fabric-producer-consumer-inventory.md",
-    "mkdocs.yml"
+    "mkdocs.yml",
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md"
   ],
   "fysa_120": {
     "categories": [

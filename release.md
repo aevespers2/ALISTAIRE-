@@ -20,6 +20,7 @@ The candidate now includes:
 - exact-head D2A common-contract ownership and consumer graph;
 - first-parent decision source-generation rebind;
 - runtime/Fabric namespace and semantic-role partition packet;
+- exact-head runtime/Fabric producer-consumer inventory with controlled disposition `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`;
 - contract acceptance DAG and sequenced integration phases;
 - portfolio responsibility and authority boundaries.
 
@@ -29,7 +30,7 @@ These are documentation and architecture candidates only. They do not create cre
 
 - Scheme: Semantic Versioning after D1 canonical identity approval.
 - First eligible candidate: `0.0.1-charter` in the approved canonical repository.
-- `charter` denotes documentation, governance, contract sequencing, authority matrices, canonicalization proposals, namespace-partition proposals, and fixture specifications only.
+- `charter` denotes documentation, governance, contract sequencing, authority matrices, canonicalization proposals, namespace-partition proposals, inventories, and fixture specifications only.
 - The label must not imply executable AGI, consciousness, sentience, autonomous learning, device security, host monitoring, payment authority, or production readiness.
 - The non-canonical repository must not publish a competing charter or package identity.
 - `alistaire-qso` remains proposed until D1 disposition.
@@ -65,13 +66,14 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 - `docs/portfolio-contract-authority-matrix.md` consolidates repository responsibilities, independent record families, pairwise edges, triple overlaps, obstruction classes, practical gluing analysis, current blockers, and the minimum synthetic acceptance slice.
 - `docs/d2a-common-contract-ownership-graph.md` records the exact-head observed producer/consumer graph across all nineteen repositories, conflicting ownership, triple-overlap obligations, and material gluing obstructions.
 - `docs/runtime-fabric-namespace-partition.md` converts `BLOCKED_ROLE_COLLISION` into a bounded review packet with six semantic classes, three unselected profiles, mandatory envelope fields, pairwise and triple-overlap witnesses, migration, correction, revocation, and rollback requirements.
+- `docs/runtime-fabric-producer-consumer-inventory.md` records six exact candidate generations, two independent synthetic consumers, five blocked or non-authorizing graph edges, one unmapped internal QSIO ledger, review gates, controlled routes, and rollback-sensitive currentness without accepting a binding.
 - `docs/portable-security-foundation.md` defines the Repository `0`/`1` mission, candidate adapter split, contract families, fixtures, loss/replacement lifecycle, and safety boundary.
 - `docs/portfolio-integration-roadmap.md` defines seven systemic cycles, D1–D5, acceptance DAG, phases 0–8, invalidation, and rollback.
 - `docs/governance-charter.md` defines hierarchy, stewardship, authority map, portable trust, decision classes, security invariants, compatibility requirements, incident command, and governance records.
 - `docs/repository-consolidation.md` records identity inventory, decision criteria, options, recommendation, migration map, and approval template.
 - D1, D2, and D3 decision packets convert open-ended decisions into closed, review-ready but unapproved surfaces.
 - `docs/decision-source-generation-rebind.md` preserves historical packet tuples while binding current validation generations through first-parent ancestry.
-- `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` align active work and evidence state.
+- `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` align active work and evidence state, including the runtime/Fabric inventory disposition.
 - `mkdocs.yml`, pinned documentation requirements, and least-permission workflows provide strict exact-head site validation and checksummed artifacts.
 
 These items do not complete D1–D5, accept the portfolio matrix, accept an owner, validate common contracts, select canonicalization or namespace partition, activate Repository `1`, establish device trust, or satisfy release gates.
@@ -91,8 +93,9 @@ The recommendation requires explicit approval and may be replaced by another dis
 - `D3_REBIND_REQUIRED` marks a moved D1/D2 dependency, canonicalization profile, primitive inventory, contract-family mapping, fixture corpus, expected result, consumer set, migration rule, or readiness input.
 - `D3_PACKET_WITHDRAWN` marks a replaced or withdrawn D3 packet.
 - A runtime/Fabric partition generation must be replaced when semantic classes, candidate profiles, producer/consumer inventories, migration rules, correction/revocation routes, or rollback requirements change.
+- The runtime/Fabric producer-consumer inventory must be replaced or rebound when an observed head, path, candidate role, legacy-label use, semantic classification, graph edge, consumer closure, review gate, controlled route, or disposition changes.
 
-A release candidate cannot describe a packet or partition as current or withdrawn while controlled routes disagree. Canonical bytes, digests, signatures, namespaces, projection receipts, aggregate reports, or registry entries do not establish truth, currentness, compatibility, authorization, consumer admission, or operational authority.
+A release candidate cannot describe a packet, partition, or inventory as current or withdrawn while controlled routes disagree. Canonical bytes, digests, signatures, namespaces, projection receipts, aggregate reports, registry entries, synthetic consumer agreement, or inventory inclusion do not establish truth, currentness, compatibility, authorization, consumer admission, or operational authority.
 
 ## Acceptance gates
 
@@ -106,6 +109,7 @@ A release candidate cannot describe a packet or partition as current or withdraw
 | D3 canonical bytes readiness | REVIEW | Candidate profiles, primitives, fields, gates, hostile classes, independent-language witness requirements, controlled propagation, strict validation, and retained exact-head evidence |
 | D3 canonical bytes and identity decision | BLOCKED | Accepted profile per contract family; two independent implementations agree on disposition, model, bytes, digest, identity, and reason code; migration and rollback verified |
 | Runtime/Fabric namespace partition readiness | REVIEW | Six semantic classes, three unselected profiles, mandatory fields, pairwise/triple-overlap witnesses, migration and rollback requirements documented |
+| Runtime/Fabric producer-consumer inventory | REVIEW / BLOCKED | Exact candidate generations, paths, roles, label uses, semantic classifications, synthetic consumers, graph edges, currentness rules, and controlled-route agreement are recorded; current default-head verification and accepted bindings remain absent |
 | Runtime/Fabric namespace partition decision | BLOCKED | D1–D3 accepted; exact producer/consumer inventory; selected namespace profile; independent validators; security/privacy/accessibility/license review; migration, correction, revocation, rollback, approval, and resulting-state verification |
 | D4 independent authority | BLOCKED | Repository `1` or successor, issuer/revoker, key custody, approvals, quarantine, capability, correction, checkpoint, recovery |
 | D5 portfolio incident command | BLOCKED | Named freeze, evidence, bounded-restart, rollback, invalidation, claim-withdrawal, and recovery owners; tabletop evidence |
@@ -114,7 +118,7 @@ A release candidate cannot describe a packet or partition as current or withdraw
 | Source evidence and transport | NO EVIDENCE | Accepted source/temporal/interpretation/transport/disposition/correction/revocation route and fixtures |
 | Review and approval | NO EVIDENCE | Accepted QSO-STUDIO/AionUi/independent approval boundary and fixtures |
 | Optional adapters | BLOCKED | Independent financial and engineering authority, privacy, credentials, incident, rollback, disabled-by-default activation |
-| Documentation validation | PENDING | Updated exact head passes strict build, links, diagrams, terminology, required pages, decision packets, matrix, partition packet, and artifact validation |
+| Documentation validation | PENDING | Updated exact head passes strict build, links, diagrams, terminology, required pages, decision packets, matrix, partition packet, producer-consumer inventory, coordination-route consistency, and artifact validation |
 | Security and privacy | PARTIAL | Proposed controls exist; independent review, owners, threat evidence, privacy/retention decisions, and exercises remain absent |
 | Provenance and reproducibility | PARTIAL | Candidate source identities exist; complete migration/contract/approval manifests, clean reproduction, and attestations remain |
 | Publication | BLOCKED | Accepted source versions, public/private review, licenses, accessibility, Pages settings, artifacts, checksums, rollback, explicit approval |
@@ -126,6 +130,7 @@ A release candidate cannot describe a packet or partition as current or withdraw
 - D2 neutral contract-steward packet, exact contract-family inventory, accepted governance, non-authority statement, and resulting-state verification.
 - D3 canonical-byte and identity packet, positive and hostile fixture corpus, independent implementation evidence, exact bytes/digests/identities/reason codes, migration, and rollback records.
 - Runtime/Fabric semantic partition decision, legacy-use inventory, accepted namespace and class registry, source-set and projection receipts, independent consumer evidence, mixed-generation fixtures, and rollback records.
+- Runtime/Fabric inventory evidence binding repository, ref, exact head, observed path, label use, role, semantic classification, consumer closure, graph edge, review gate, controlled route, disposition, correction, withdrawal, and rollback.
 - D4 authority/recovery charter, key-custody record, negative tests, and recovery evidence.
 - D5 incident command, freeze/restart, evidence preservation, invalidation, rollback, and tabletop evidence.
 - Approved product, architecture, governance, and security charter.
@@ -143,14 +148,14 @@ The documentation workflows must:
 1. check out and assert the exact submitted head;
 2. use read-only repository permission and no persisted credentials;
 3. install only pinned documentation dependencies;
-4. require architecture, matrix, D2A graph, runtime/Fabric partition packet, portable-security foundation, roadmap, governance charter, D1/D2/D3 packets, consolidation, security, onboarding, and diagrams;
+4. require architecture, matrix, D2A graph, runtime/Fabric partition packet, producer-consumer inventory, portable-security foundation, roadmap, governance charter, D1/D2/D3 packets, consolidation, security, onboarding, and diagrams;
 5. run `mkdocs build --strict`;
-6. validate local links, navigation, terminology, prohibited claims, public/private boundaries, record-family distinctions, controlled propagation, and generated-site safety;
+6. validate local links, navigation, terminology, prohibited claims, public/private boundaries, record-family distinctions, controlled propagation, planning-route consistency, and generated-site safety;
 7. hash rendered site, source documentation, requirements, and configuration;
 8. retain review artifacts tied to the exact head;
 9. fail closed if evidence generation or upload fails.
 
-A passing workflow validates documentation construction only. It does not approve Pages publication, the matrix, a contract steward, canonicalization, namespace partition, contracts, runtime, devices, credentials, capabilities, remediation, merge, release, deployment, or payments.
+A passing workflow validates documentation construction only. It does not approve Pages publication, the matrix, a contract steward, canonicalization, namespace partition, producer or consumer bindings, contracts, runtime, devices, credentials, capabilities, remediation, merge, release, deployment, or payments.
 
 ## Rollback criteria
 
@@ -163,6 +168,7 @@ Withdraw the candidate if:
 - the portfolio matrix hides a repository conflict, collapses distinct record identities, or assigns an owner without evidence;
 - canonical bytes, semantic namespaces, identities, clocks, replay, correction, or revocation remain ambiguous;
 - runtime-local, projection, aggregate, and disposition records cannot be distinguished;
+- an inventory silently treats declaration, documentation, fixture consumption, registry reference, internal records, or successful validation as accepted live binding;
 - projection or aggregation inflates evidence, changes authority, or hides source-set loss;
 - two independent implementations disagree on disposition, normalized model, canonical bytes, digest, identity, semantic class, source set, or reason code;
 - a migration broadens scope, authority, precision, or certainty or lacks a restored-state witness;
@@ -186,7 +192,7 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 - D2 lacks D1 resolution, reconciled ownership, selected steward, independent review, approval, and resulting-state verification.
 - D3 lacks D2 acceptance, profile selection, contract-family mapping, neutral fixture custody, independent language implementations, collision review, migration/rollback verification, approval, and resulting-state verification.
 - No accepted canonical-byte profile, semantic namespace partition, or live registry exists.
-- Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition producers and consumers have not been inventoried and accepted at exact heads.
+- The candidate runtime/Fabric producer-consumer inventory is recorded, but current default-head generations, semantic owners or vacancies, accepted payloads, live registrations, correction/revocation routes, migration, rollback fixtures, approval, and resulting-state verification remain absent.
 - Repository `1` or successor is not chartered or independently validated.
 - Device identity, adapter disposition, privacy, retention, key custody, and portable-trust fixtures remain unresolved.
 - QSO, source/evidence, transport, review, payment, engineering, and publication contracts remain proposed.
@@ -194,6 +200,7 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 
 ## Release log
 
+- 2026-07-23: Synchronized the exact-head runtime/Fabric producer-consumer inventory into taskchain, punch list, release plan, and changelog; bound six candidate generations, two synthetic consumers, five graph edges, explicit unmapped kernel records, controlled currentness, and non-authorizing rollback without accepting any live binding.
 - 2026-07-23: Added the runtime/Fabric namespace and semantic-role partition packet, six independent record classes, three unselected profiles, mandatory envelope fields, projection and aggregation receipts, pairwise/triple-overlap witnesses, migration, correction, revocation, rollback, failed-rollback, accessibility, and FYSA-120 mapping. No namespace, schema, owner, producer, consumer, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
 - 2026-07-23: Added the decision source-generation rebind preserving historical D2A and D3 tuples and requiring exact first-parent ancestry; repaired resulting-head evidence retention under `pipefail`.
 - 2026-07-23: Added the D3 canonical bytes and identity decision-readiness packet, unselected profiles, primitives, fields, gates, hostile fixture classes, independent cross-language witness requirements, controlled propagation, strict validation, hostile regressions, and exact-head workflow.
