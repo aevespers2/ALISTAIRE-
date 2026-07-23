@@ -56,9 +56,9 @@ Canonical bytes establish a deterministic representation only. They do not estab
 
 ## Decision source-generation rebind
 
-D2A and D3 retain immutable historical source tuples. Their integration into the current non-default charter candidate is represented by a separate first-parent rebind record rather than by impossible self-referential commit SHAs or silent source rewriting.
+D2A and D3 retain immutable historical source tuples. Their integration into the current non-default charter candidate is represented by a separate first-parent-ancestry rebind record rather than by impossible self-referential commit SHAs or silent source rewriting.
 
-The rebind is valid only when the checked-out submitted commit has exact first parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1`, the historical source tuples still match the packet files, the D2A ALISTAIRE PR #1 candidate observation still matches, hostile regressions pass, the documentation builds strictly, and retained exact-head evidence is produced. The record is non-authorizing and must be replaced when its parent, packet sources, candidate observation, or ancestry rules move.
+The rebind is valid only when exact parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` remains on the checked-out submitted commit's first-parent ancestry, the historical source tuples still match the packet files, the D2A ALISTAIRE PR #1 candidate observation still matches, hostile regressions pass, the documentation builds strictly, and retained exact-head evidence is produced. The record is non-authorizing and must be replaced when its parent, packet sources, candidate observation, or ancestry rules move.
 
 ## Governance doctrine
 
