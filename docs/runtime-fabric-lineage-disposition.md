@@ -28,6 +28,19 @@ The immediate source generation is the non-default `ALISTAIRE-` charter candidat
 
 That generation already records current default heads, explicit owner vacancies, and the material route obstruction. The SHA above is a historical input to this packet; it is not a self-reference to the commit that contains this page.
 
+## Bound repository identifiers
+
+The machine-readable profile and this guide bind the following complete repository identities:
+
+- `aevespers2/ALISTAIRE-`;
+- `aevespers2/QSO-FABRIC`;
+- `aevespers2/QuantumStateObjects`;
+- `aevespers2/1`;
+- `aevespers2/qso-field.github.io`;
+- `aevespers2/qsio-kernel`.
+
+Short display names elsewhere on the page are labels only and do not replace these identities.
+
 ## Candidate and repository-use classification
 
 | Repository surface | Exact generation | Observed use | Current disposition | Required next action |
