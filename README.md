@@ -13,6 +13,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Consolidated governance and security charter](docs/governance-charter.md)
 - [Constitutional sovereignty and governed-system participation](docs/constitutional-sovereignty-and-system-participation.md)
 - [Repository consolidation decision](docs/repository-consolidation.md)
+- [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
+- [Machine-readable repository provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
 - [Developer and reviewer onboarding](docs/development.md)
 - [Architecture diagrams](docs/diagrams.md)
