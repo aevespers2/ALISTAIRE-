@@ -17,6 +17,8 @@ nav:
       - Orchestration mode: orchestration-mode.md
       - Portfolio contract standard: portfolio-contract-standard.md
       - Portfolio contract and authority matrix: portfolio-contract-authority-matrix.md
+      - D2A common-contract ownership graph: d2a-common-contract-ownership-graph.md
+      - Machine-readable D2A graph: d2a-common-contract-ownership-graph-v1.json
       - Portable security foundation: portable-security-foundation.md
       - Portfolio integration roadmap: portfolio-integration-roadmap.md
   - Governance:
