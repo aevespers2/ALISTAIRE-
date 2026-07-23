@@ -30,14 +30,14 @@ class DecisionSourceGenerationRebindTests(unittest.TestCase):
             copy.deepcopy(self.d3),
         )
 
-    def validate(self, rebind, d2a, d3, *, submitted="2" * 40, parent=None):
+    def validate(self, rebind, d2a, d3, *, submitted="2" * 40, anchor=None):
         return validator.validate_rebind(
             rebind,
             d2a,
             d3,
             rebind_path=self.rebind_path,
             submitted_sha=submitted,
-            first_parent=parent or rebind["rebind_parent"],
+            ancestry_anchor=anchor or rebind["rebind_parent"],
         )
 
     def reject(self, rebind, d2a, d3, **kwargs):
@@ -51,16 +51,16 @@ class DecisionSourceGenerationRebindTests(unittest.TestCase):
             report["disposition"],
             "DECISION_SOURCE_GENERATION_REBOUND_NON_AUTHORIZING",
         )
-        self.assertEqual(report["first_parent"], rebind["rebind_parent"])
+        self.assertEqual(report["ancestry_anchor"], rebind["rebind_parent"])
 
-    def test_wrong_first_parent_fails(self):
+    def test_wrong_ancestry_anchor_fails(self):
         rebind, d2a, d3 = self.fresh()
-        self.reject(rebind, d2a, d3, parent="3" * 40)
+        self.reject(rebind, d2a, d3, anchor="3" * 40)
 
-    def test_submitted_equal_to_parent_fails(self):
+    def test_submitted_equal_to_anchor_fails(self):
         rebind, d2a, d3 = self.fresh()
-        parent = rebind["rebind_parent"]
-        self.reject(rebind, d2a, d3, submitted=parent, parent=parent)
+        anchor = rebind["rebind_parent"]
+        self.reject(rebind, d2a, d3, submitted=anchor, anchor=anchor)
 
     def test_invalid_submitted_sha_fails(self):
         rebind, d2a, d3 = self.fresh()
@@ -74,6 +74,11 @@ class DecisionSourceGenerationRebindTests(unittest.TestCase):
     def test_status_promotion_fails(self):
         rebind, d2a, d3 = self.fresh()
         rebind["status"] = "ACCEPTED"
+        self.reject(rebind, d2a, d3)
+
+    def test_ancestry_rule_drift_fails(self):
+        rebind, d2a, d3 = self.fresh()
+        rebind["ancestry_rule"] = "any ancestor is acceptable"
         self.reject(rebind, d2a, d3)
 
     def test_recorded_d2a_source_drift_fails(self):
