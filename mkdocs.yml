@@ -23,7 +23,10 @@ nav:
       - Consolidated charter: governance-charter.md
       - Constitutional sovereignty and system participation: constitutional-sovereignty-and-system-participation.md
       - Constitutional appointment lifecycle conformance: constitutional-appointment-lifecycle-conformance.md
-  - Repository consolidation: repository-consolidation.md
+  - Repository consolidation:
+      - Decision and options: repository-consolidation.md
+      - Provenance and migration guide: repository-provenance-and-migration.md
+      - Machine-readable provenance manifest: repository-provenance-manifest-v1.json
   - Security and governance: security-and-governance.md
   - Developer onboarding: development.md
   - Diagrams: diagrams.md
