@@ -88,10 +88,7 @@
     "README.md",
     "docs/repository-consolidation.md",
     "docs/d1-canonical-identity-decision-packet.md",
-    "taskchain.md",
-    "punchlist.md",
-    "release.md",
-    "changelog.md"
+    "taskchain.md"
   ],
   "propagation_markers": {
     "stale": "D1_REBIND_REQUIRED",
