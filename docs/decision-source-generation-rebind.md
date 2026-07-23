@@ -4,7 +4,7 @@
 
 The D2A common-contract graph and D3 canonical-bytes packet were created at exact historical candidate heads. After the D3 packet was merged into the non-default charter candidate, those embedded source tuples became historical evidence rather than a complete statement of the current candidate generation.
 
-This page defines a **non-authorizing, first-parent rebind**. It preserves the original packet bytes and source tuples, records the exact candidate parent into which they were integrated, and requires every validating commit to prove that the recorded parent is its first parent. The rebind does not rewrite history, select a canonical repository, accept a contract owner, choose canonical bytes, publish Pages, release software, or grant operational authority.
+This page defines a **non-authorizing, first-parent-ancestry rebind**. It preserves the original packet bytes and source tuples, records the exact candidate parent into which they were integrated, and requires every validating descendant to prove that the recorded parent remains on its first-parent ancestry. The rebind does not rewrite history, select a canonical repository, accept a contract owner, choose canonical bytes, publish Pages, release software, or grant operational authority.
 
 Current rebind parent:
 
@@ -22,30 +22,29 @@ The bounded solution separates three identities:
 
 1. **Historical packet source** — the exact head originally recorded inside D2A or D3.
 2. **Integration parent** — the exact charter-candidate head after the validated packet was integrated.
-3. **Validation head** — the exact focused commit or merge commit whose first parent must equal the integration parent.
+3. **Validation head** — the exact focused or resulting descendant whose first-parent ancestry must contain the integration parent.
 
 ```mermaid
 flowchart LR
     A[Historical D2A and D3 source tuples] --> B[Validated D3 integration]
     B --> C[Exact integration parent]
-    C --> D[Focused rebind commit]
-    C --> E[Resulting charter merge commit]
-    D --> F[First-parent validation]
-    E --> F
+    C --> D[Focused rebind history]
+    D --> E[Resulting charter merge history]
+    E --> F[First-parent ancestry validation]
     F --> G[Non-authorizing evidence artifact]
 ```
 
 ### Diagram alternative
 
-The D2A and D3 packets retain their original source tuples. The validated D3 work is integrated into one exact non-default charter head. A focused rebind commit and the later merge commit are acceptable only when their first parent is that exact integration head. Validation produces retained evidence but no authority.
+The D2A and D3 packets retain their original source tuples. The validated D3 work is integrated into one exact non-default charter head. A focused rebind descendant and a later charter merge descendant are acceptable only while that exact integration head remains on their first-parent ancestry. Validation produces retained evidence but no authority.
 
 ## Binding rules
 
-The rebind validator fails closed unless all of the following are true:
+The rebind validator and workflow fail closed unless all of the following are true:
 
-- the submitted and first-parent values are lowercase 40-character Git SHAs;
-- the submitted head is different from its first parent;
-- the manifest's `rebind_parent` equals the checked-out commit's first parent;
+- the submitted head and observed ancestry anchor are lowercase 40-character Git SHAs;
+- the submitted head is different from the ancestry anchor;
+- the manifest's `rebind_parent` occurs on the checked-out commit's first-parent ancestry;
 - the D2A and D3 profile identifiers match their closed identities;
 - the historical source heads in the manifest equal the source tuples still embedded in the packet files;
 - the historical ALISTAIRE PR #1 candidate head in the manifest equals the D2A candidate-head observation;
@@ -53,7 +52,7 @@ The rebind validator fails closed unless all of the following are true:
 - authority effect remains `none`;
 - stale evidence, passing CI, mergeability, canonical bytes, digests, signatures, documentation, or skill mapping are never promoted into authority.
 
-The workflow uses a two-commit checkout, records the submitted head and first parent, runs hostile regressions, builds the documentation strictly, hashes its inputs, preserves an artifact, and fails closed if any validation or evidence step fails.
+The workflow performs a full read-only checkout, finds the manifest's parent on the submitted head's first-parent ancestry, records both the submitted head and immediate parent, runs hostile regressions, builds the documentation strictly, hashes its inputs, preserves an artifact, and fails closed if any validation or evidence step fails.
 
 ## Current interpretation
 
@@ -111,4 +110,4 @@ Proposed non-authoritative subdivision:
 
 **`017-F — First-parent source-generation rebind and stale-evidence invalidation`**
 
-This subdivision covers immutable historical source tuples, first-parent integration binding, self-reference avoidance, exact-head evidence lineage, stale-generation detection, controlled replacement, and rollback without authority expansion.
+This subdivision covers immutable historical source tuples, first-parent ancestry binding, self-reference avoidance, exact-head evidence lineage, stale-generation detection, controlled replacement, and rollback without authority expansion.
