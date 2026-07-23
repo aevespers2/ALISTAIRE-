@@ -1,0 +1,122 @@
+{
+  "packet_id": "ALISTAIRE-D1-CANONICAL-IDENTITY-DECISION-READINESS-001",
+  "version": "1.0.0-proposed",
+  "status": "REVIEW_READY_BLOCKED",
+  "authority_effect": "none",
+  "decision_id": "D1",
+  "decision_title": "Canonical charter and repository identity",
+  "observed_sources": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "default_branch": "main",
+      "observed_default_head": "7adbbf963616d09b4ebafea7c0963a2fac5688a9",
+      "documentation_candidate": {
+        "pull_request": 1,
+        "base_head": "f3cd97c2418c87f6c4aa7cac7731460ed57f13b7"
+      },
+      "evidence_role": "candidate_charter_history_authority"
+    },
+    {
+      "repository": "aevespers2/Alistaire-agi",
+      "default_branch": "main",
+      "observed_default_head": "504222dbecb1e1e49c01d74e536de5b6fa93c39a",
+      "documentation_candidate": {
+        "pull_request": 2,
+        "base_head": "0ede0c6a796fe9f16c10d25fc79ba6962875ba82"
+      },
+      "evidence_role": "compatibility_migration_and_taxonomy_candidate"
+    }
+  ],
+  "decision_options": [
+    {
+      "option_id": "A",
+      "canonical_repository": "aevespers2/ALISTAIRE-",
+      "disposition": "RECOMMENDED_NOT_SELECTED",
+      "rationale": "strongest substantive charter, release-control, governance, and provenance history"
+    },
+    {
+      "option_id": "B",
+      "canonical_repository": "aevespers2/Alistaire-agi",
+      "disposition": "AVAILABLE_NOT_SELECTED",
+      "rationale": "cleaner repository name and broad taxonomy, with greater migration and provenance cost"
+    },
+    {
+      "option_id": "C",
+      "canonical_repository": null,
+      "disposition": "NOT_RECOMMENDED_NOT_SELECTED",
+      "rationale": "split authority would preserve identity ambiguity before distinct implementation responsibilities exist"
+    }
+  ],
+  "required_decision_fields": [
+    "canonical_repository",
+    "final_repository_name",
+    "display_name",
+    "package_identifier",
+    "package_identifier_disposition",
+    "license_or_explicit_no_reuse_status",
+    "canonical_documentation_authority",
+    "canonical_release_authority",
+    "noncanonical_repository_disposition",
+    "path_level_migration_manifest",
+    "attribution_and_history_preservation",
+    "compatibility_window",
+    "public_notice",
+    "support_route",
+    "security_reporting_route",
+    "redirect_archive_or_bounded_role_plan",
+    "post_transition_monitoring",
+    "rollback_plan",
+    "approver_identity",
+    "approval_date",
+    "approved_source_head"
+  ],
+  "readiness_gates": {
+    "repository_inventory": "SATISFIED",
+    "provenance_manifest": "SATISFIED_DOCUMENTATION_ONLY",
+    "reciprocal_source_binding": "SATISFIED_DOCUMENTATION_ONLY",
+    "decision_options_and_recommendation": "SATISFIED_DOCUMENTATION_ONLY",
+    "complete_path_level_migration_manifest": "MISSING",
+    "license_decision": "MISSING",
+    "history_aware_secret_and_privacy_review": "MISSING",
+    "support_security_and_rollback_owners": "MISSING",
+    "compatibility_and_redirect_plan": "MISSING",
+    "rollback_drill": "MISSING",
+    "explicit_human_approval": "MISSING"
+  },
+  "current_disposition": "BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL",
+  "controlled_routes": [
+    "README.md",
+    "docs/repository-consolidation.md",
+    "docs/d1-canonical-identity-decision-packet.md",
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md"
+  ],
+  "propagation_markers": {
+    "stale": "D1_REBIND_REQUIRED",
+    "withdrawn": "D1_PACKET_WITHDRAWN"
+  },
+  "prohibited_promotions": [
+    "recommendation_to_canonical_selection",
+    "passing_ci_to_decision_approval",
+    "mergeability_to_authority",
+    "package_name_to_package_authority",
+    "copied_content_to_license_permission",
+    "documentation_candidate_to_release_authority"
+  ],
+  "skill_tree_mapping": [
+    "CAT-012",
+    "CAT-013",
+    "CAT-017",
+    "CAT-018",
+    "CAT-031",
+    "CAT-040",
+    "CAT-052"
+  ],
+  "proposed_skill_gap": {
+    "id": "040-G",
+    "name": "Canonical-source decision readiness and reversible dual-authority cutover",
+    "status": "PROPOSED_NON_AUTHORITATIVE"
+  }
+}
