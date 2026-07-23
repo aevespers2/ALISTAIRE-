@@ -63,6 +63,12 @@ The D2A and D3 embedded source tuples remain immutable historical evidence. The 
 
 The rebind remains `REBOUND_TO_PARENT_NON_AUTHORIZING`. It must be replaced whenever the integration parent, embedded packet sources, D2A ALISTAIRE candidate observation, packet scope, ancestry rule, correction route, withdrawal route, or rollback rule changes. Passing validation does not accept D1–D3, update the portfolio observation date, resolve ownership, select canonical bytes, or authorize merge to `main`, release, publication, deployment, credentials, or runtime authority.
 
+## Runtime/Fabric namespace-partition state
+
+The [runtime/Fabric namespace-partition packet](docs/runtime-fabric-namespace-partition.md) narrows `BLOCKED_ROLE_COLLISION` between runtime-local event and execution records in `QuantumStateObjects` and projection, collaboration, and aggregate records in `QSO-FABRIC`.
+
+The packet defines six independent semantic classes, three unselected partition profiles, mandatory envelope fields, pairwise and triple-overlap witnesses, mixed-generation migration, correction/revocation propagation, rollback, failed-rollback handling, and review gates. It remains a non-authorizing proposal. No namespace, schema, owner, producer, consumer, runtime admission, Fabric activation, Repository `1` authority, release, publication, or deployment is selected.
+
 ## MVP scope
 
 The first candidate is documentation-only and must define:
@@ -82,7 +88,7 @@ The first candidate is documentation-only and must define:
 
 **P0 — BLOCKED on D1 and governance adoption.**
 
-The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, and an exact-parent source-generation rebind. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
+The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, an exact-parent source-generation rebind, and a runtime/Fabric semantic-partition packet. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
 
 ## Success criteria
 
@@ -92,6 +98,7 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 - The portfolio contract and authority matrix is reconciled against every repository-local charter.
 - A neutral non-operational contract steward is assigned through an immutable D2 decision.
 - Canonical bytes, identities, digests, clocks, replay domains, reason codes, and extension rules pass cross-language fixtures.
+- Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition records have independently accepted semantic classes and identities.
 - Repository `1` or successor is independently chartered.
 - Incident, freeze, correction, invalidation, claim withdrawal, and rollback command are assigned.
 - Every repository and record family has a narrow responsibility, semantic owner, correction/revocation rules, unsupported-state behavior, and rollback obligation.
@@ -104,7 +111,7 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 - Inspecting or controlling devices without ownership or explicit permission.
 - Traffic interception, exploitation, retaliation, counter-intrusion, or surveillance.
 - Silent self-modification, credential discovery, remote writes, remediation, deployment, publication, or payments.
-- Allowing prompts, ceremony, roleplay, relationships, signatures, interfaces, successful commands, dependencies, recommendations, canonical bytes, digests, source-generation rebinds, or passing CI to grant authority.
+- Allowing prompts, ceremony, roleplay, relationships, signatures, interfaces, successful commands, dependencies, recommendations, canonical bytes, digests, source-generation rebinds, namespace labels, projection receipts, aggregates, or passing CI to grant authority.
 - Reimplementing subsystem responsibilities inside the charter repository.
 - Shipping production before contracts, fixtures, security review, incident command, and rollback evidence exist.
 
@@ -125,7 +132,8 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 | P0-D4 | Charter independent authority and recovery roots | P0-D3 | PROPOSED | Repository `1` or successor, issuer/revoker, approvals, key custody, quarantine, correction, checkpoint, and recovery tests |
 | P0-D5 | Establish portfolio incident command | P0-D1, P0-D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery owners with tabletop evidence |
 | P1 | Approve portable device trust contracts | P0-D3, P0-D4, P0-D5 | PROPOSED | Shared device-to-recovery fixtures pass |
-| P2 | Approve declarative and runtime contracts | P0-D3, P0-D4 | PROPOSED | Genome/runtime/Fabric/kernel mappings and triple-overlap fixtures pass |
+| P2A | Resolve runtime/Fabric namespace and semantic-role collision | P0-D2, P0-D3, P0-D4 | REVIEW / BLOCKED | Select independent semantic classes and namespaces; bind producers, source sets, projection and aggregation receipts, ordering, replay, correction, revocation, migration, rollback, and Repository `1` disposition witnesses |
+| P2 | Approve declarative and runtime contracts | P0-D3, P0-D4, P2A | PROPOSED | Genome/runtime/Fabric/kernel mappings and triple-overlap fixtures pass |
 | P3 | Approve source evidence and transport contracts | P0-D3, P0-D4 | PROPOSED | Source/temporal/interpretation/transport/disposition/correction fixtures pass |
 | P4 | Approve review and independent approval contracts | P1–P3, P0-D4 | PROPOSED | UI interactions cannot create approval and lifecycle states render consistently |
 | P5 | Review optional high-consequence adapters | P4, P0-D5 | PROPOSED | Financial and engineering authority remain separate, disabled, revocable, and evidence-bound |
@@ -143,6 +151,7 @@ For every task, record observations, source commits, contracts, commands, tests,
 
 ## Builder log
 
+- 2026-07-23 — Added the runtime/Fabric namespace-partition decision packet and machine-readable profile, separating runtime event, runtime execution, Fabric projection, Fabric collaboration, Fabric aggregate, and Repository `1` disposition semantics; defined three unselected partition profiles, mandatory fields, pairwise/triple-overlap witnesses, migration, correction, revocation, rollback, failed rollback, accessibility, and FYSA-120 mapping. No namespace, schema, owner, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
 - 2026-07-23 — Integrated the validated D3 documentation into the non-default charter candidate and added a separate first-parent source-generation rebind, machine-readable manifest, fail-closed validator, hostile regressions, Pages guide, and retained-evidence workflow. Historical packet tuples were preserved; no canonical decision or authority was created.
 - 2026-07-23 — Added the D3 canonical bytes and identity decision-readiness packet, three unselected profile candidates, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, cross-language witness requirements, controlled propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical profile, registry, identity, digest, signature scheme, or authority was selected.
 - 2026-07-23 — Added the D2A exact-head common-contract ownership and consumer graph across all nineteen repositories, preserving conflicting roles and material gluing obstructions without selecting authority.
