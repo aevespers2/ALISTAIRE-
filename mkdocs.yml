@@ -4,6 +4,8 @@ repo_name: aevespers2/ALISTAIRE-
 repo_url: https://github.com/aevespers2/ALISTAIRE-
 edit_uri: edit/main/docs/
 strict: true
+extra:
+  runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
 theme:
   name: material
   features:
