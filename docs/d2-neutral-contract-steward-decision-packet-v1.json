@@ -1,0 +1,128 @@
+{
+  "profile_id": "ALISTAIRE-D2-NEUTRAL-CONTRACT-STEWARD-001",
+  "version": "0.1.0-proposed",
+  "status": "BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE",
+  "authority_effect": "none",
+  "source_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "pull_request": 1,
+    "head": "6b05ae9bbb9964c97fbefddcdbfca70b33034918",
+    "decision": "D2"
+  },
+  "dependencies": [
+    {"decision": "D1", "required_state": "ACCEPTED_AT_IMMUTABLE_HEAD", "current_state": "BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL"},
+    {"decision": "D3", "relationship": "D2_STEWARD_GOVERNS_BUT_DOES_NOT_DEFINE_CANONICAL_BYTES_UNILATERALLY", "current_state": "PROPOSED"}
+  ],
+  "purpose": "Prepare a non-authorizing decision basis for neutral stewardship of common portfolio contracts without assigning operational authority or selecting a steward.",
+  "candidate_models": [
+    {
+      "id": "DEDICATED_NEUTRAL_CONTRACT_REPOSITORY",
+      "summary": "A dedicated repository and versioned package hold common schemas, identifiers, reason codes, fixtures, migration records, and deprecation notices.",
+      "principal_risk": "The repository could become self-authorizing if release, signing, compatibility, and operational approval are not independently separated."
+    },
+    {
+      "id": "SPLIT_SOURCE_AND_EVIDENCE_CUSTODY",
+      "summary": "One bounded source repository maintains contract text while an independent evidence repository retains exact-head validation, fixture, and compatibility evidence.",
+      "principal_risk": "Source and evidence generations can diverge or create dual authority without exact tuple binding and correction propagation."
+    },
+    {
+      "id": "FEDERATED_STEWARDSHIP_WITH_NEUTRAL_RELEASE_GATE",
+      "summary": "Owning repositories retain contract families while a neutral release gate validates identity, compatibility, migration, and supersession across the portfolio.",
+      "principal_risk": "Distributed ownership can create route bifurcation, inconsistent semantics, and unresolved conflicts unless precedence and dispute resolution are explicit."
+    }
+  ],
+  "required_decision_fields": [
+    "selected_model",
+    "steward_identity",
+    "repository_and_package_location",
+    "contract_family_scope",
+    "explicit_non_operational_authority",
+    "source_precedence",
+    "identifier_and_namespace_governance",
+    "schema_and_reason_code_governance",
+    "fixture_and_conformance_custody",
+    "review_and_release_quorum",
+    "signing_and_key_custody",
+    "compatibility_and_consumer_registry",
+    "migration_and_deprecation_policy",
+    "correction_withdrawal_and_supersession",
+    "compromise_and_emergency_freeze",
+    "backup_restore_and_continuity",
+    "dispute_appeal_and_recusal",
+    "license_privacy_and_public_private_boundary",
+    "audit_evidence_and_retention",
+    "rollback_and_failed_rollback"
+  ],
+  "readiness_gates": [
+    {"id": "D2-G01", "name": "D1 dependency resolved", "status": "BLOCKED"},
+    {"id": "D2-G02", "name": "candidate model comparison complete", "status": "REVIEW"},
+    {"id": "D2-G03", "name": "exact contract-family inventory complete", "status": "BLOCKED"},
+    {"id": "D2-G04", "name": "conflicting ownership claims reconciled", "status": "BLOCKED"},
+    {"id": "D2-G05", "name": "non-operational authority boundary approved", "status": "BLOCKED"},
+    {"id": "D2-G06", "name": "release signing and key custody separated", "status": "BLOCKED"},
+    {"id": "D2-G07", "name": "compatibility migration and deprecation policy approved", "status": "BLOCKED"},
+    {"id": "D2-G08", "name": "correction withdrawal and rollback routes verified", "status": "BLOCKED"},
+    {"id": "D2-G09", "name": "independent security privacy license and accessibility review complete", "status": "BLOCKED"},
+    {"id": "D2-G10", "name": "explicit human approval and resulting-state verification complete", "status": "BLOCKED"}
+  ],
+  "governance_scope": [
+    "common_identifier_profiles",
+    "namespace_registries",
+    "schema_generations",
+    "reason_code_registries",
+    "fixture_manifests",
+    "compatibility_claims",
+    "consumer_registration",
+    "migration_records",
+    "deprecation_and_retirement",
+    "correction_and_withdrawal",
+    "evidence_retention",
+    "rollback_records"
+  ],
+  "prohibited_promotions": [
+    "dependency_use_to_canonical_authority",
+    "schema_publication_to_operational_approval",
+    "passing_ci_to_contract_acceptance",
+    "stewardship_to_capability_issuance",
+    "stewardship_to_device_or_runtime_disposition",
+    "release_signing_to_semantic_ownership",
+    "portfolio_summary_to_repository_local_acceptance",
+    "skill_mapping_to_competence_or_permission"
+  ],
+  "controlled_routes": [
+    "README.md",
+    "docs/index.md",
+    "docs/d2-neutral-contract-steward-decision-packet.md",
+    "taskchain.md",
+    "release.md",
+    "punchlist.md",
+    "changelog.md"
+  ],
+  "propagation": {
+    "rebind_marker": "D2_REBIND_REQUIRED",
+    "withdrawal_marker": "D2_PACKET_WITHDRAWN",
+    "completion_rule": "Every controlled route must reconcile the same source generation, status, and disposition before currentness or withdrawal completion is claimed."
+  },
+  "skill_tree_mapping": [
+    {"category": "CAT-012", "subdivisions": ["012-A", "012-B", "012-D", "012-E"]},
+    {"category": "CAT-013", "subdivisions": ["013-A", "013-C", "013-D", "013-E"]},
+    {"category": "CAT-017", "subdivisions": ["017-A", "017-C", "017-D", "017-E"]},
+    {"category": "CAT-018", "subdivisions": ["018-A", "018-B", "018-C", "018-E"]},
+    {"category": "CAT-031", "subdivisions": ["031-A", "031-D", "031-E"]},
+    {"category": "CAT-040", "subdivisions": ["040-B", "040-D", "040-E"]},
+    {"category": "CAT-060", "subdivisions": ["060-A", "060-B", "060-D", "060-E"]},
+    {"category": "CAT-070", "subdivisions": ["070-A", "070-C", "070-D", "070-E"]}
+  ],
+  "proposed_subdivision_gap": {
+    "id": "013-F",
+    "name": "Contract-governance graph stewardship",
+    "skills": [
+      "contract-family ownership graphing",
+      "source-precedence governance",
+      "consumer-registration integrity",
+      "supersession and withdrawal propagation",
+      "cross-repository dispute and obstruction closure"
+    ],
+    "authority_effect": "none"
+  }
+}
