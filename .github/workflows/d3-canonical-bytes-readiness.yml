@@ -1,0 +1,179 @@
+name: D3 Canonical Bytes and Identity Decision Readiness
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "docs/index.md"
+      - "docs/d3-canonical-bytes-identity-decision-packet.md"
+      - "docs/d3-canonical-bytes-identity-decision-packet-v1.json"
+      - "scripts/check_d3_canonical_bytes_identity_packet.py"
+      - "tests/test_check_d3_canonical_bytes_identity_packet.py"
+      - "scripts/validate_documentation.py"
+      - "taskchain.md"
+      - "release.md"
+      - "punchlist.md"
+      - "changelog.md"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+      - ".github/workflows/d3-canonical-bytes-readiness.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: d3-canonical-bytes-readiness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-d3-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - name: Check out exact submitted source
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          ref: ${{ env.EXPECTED_HEAD }}
+          fetch-depth: 1
+          persist-credentials: false
+          show-progress: false
+
+      - name: Assert immutable clean source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
+          test -z "$(git status --porcelain)"
+          required=(
+            docs/d3-canonical-bytes-identity-decision-packet.md
+            docs/d3-canonical-bytes-identity-decision-packet-v1.json
+            scripts/check_d3_canonical_bytes_identity_packet.py
+            tests/test_check_d3_canonical_bytes_identity_packet.py
+          )
+          for path in "${required[@]}"; do test -f "$path"; done
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          mkdir -p "$evidence"
+          {
+            printf 'repository=%s\n' "$GITHUB_REPOSITORY"
+            printf 'source_sha=%s\n' "$EXPECTED_HEAD"
+            printf 'workflow_run=%s\n' "$GITHUB_RUN_ID"
+            printf 'workflow_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
+          } | tee "$evidence/source-identity.txt"
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Validate D3 decision readiness
+        id: packet
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          python scripts/check_d3_canonical_bytes_identity_packet.py \
+            --submitted-sha "$EXPECTED_HEAD" \
+            > "$evidence/d3-readiness-report.json" \
+            2> "$evidence/d3-readiness-errors.txt"
+          status=$?
+          cat "$evidence/d3-readiness-report.json" || true
+          cat "$evidence/d3-readiness-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Run D3 hostile regressions
+        id: tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          python -m unittest tests.test_check_d3_canonical_bytes_identity_packet -v \
+            > "$evidence/d3-readiness-tests.txt" 2>&1
+          status=$?
+          cat "$evidence/d3-readiness-tests.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Validate complete documentation surface
+        id: docs
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          python scripts/validate_documentation.py \
+            > "$evidence/documentation-validation.txt" 2>&1
+          status=$?
+          cat "$evidence/documentation-validation.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Install pinned documentation dependencies
+        run: python -m pip install --requirement requirements-docs.txt
+
+      - name: Build documentation strictly
+        id: build
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          mkdocs build --strict --site-dir "$RUNNER_TEMP/d3-site" \
+            > "$evidence/mkdocs-build.txt" 2>&1
+          status=$?
+          cat "$evidence/mkdocs-build.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Record deterministic inputs and clean-tree assurance
+        shell: bash
+        run: |
+          set -euo pipefail
+          evidence="$RUNNER_TEMP/d3-canonical-bytes-evidence"
+          sha256sum \
+            README.md docs/index.md taskchain.md punchlist.md release.md changelog.md \
+            docs/d3-canonical-bytes-identity-decision-packet.md \
+            docs/d3-canonical-bytes-identity-decision-packet-v1.json \
+            scripts/check_d3_canonical_bytes_identity_packet.py \
+            tests/test_check_d3_canonical_bytes_identity_packet.py \
+            scripts/validate_documentation.py mkdocs.yml requirements-docs.txt \
+            .github/workflows/d3-canonical-bytes-readiness.yml \
+            > "$evidence/input-sha256.txt"
+          if [ -d "$RUNNER_TEMP/d3-site" ]; then
+            find "$RUNNER_TEMP/d3-site" -type f -print0 | sort -z | xargs -0 sha256sum \
+              > "$evidence/site-sha256.txt"
+          fi
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git status --porcelain)"
+
+      - name: Upload retained D3 evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: alistaire-d3-readiness-${{ env.EXPECTED_HEAD }}
+          path: ${{ runner.temp }}/d3-canonical-bytes-evidence
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Fail closed on unsuccessful validation
+        shell: bash
+        env:
+          PACKET_STATUS: ${{ steps.packet.outputs.status }}
+          TEST_STATUS: ${{ steps.tests.outputs.status }}
+          DOCS_STATUS: ${{ steps.docs.outputs.status }}
+          BUILD_STATUS: ${{ steps.build.outputs.status }}
+        run: |
+          set -euo pipefail
+          test "$PACKET_STATUS" = "0"
+          test "$TEST_STATUS" = "0"
+          test "$DOCS_STATUS" = "0"
+          test "$BUILD_STATUS" = "0"

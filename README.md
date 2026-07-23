@@ -10,6 +10,9 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Architecture and QSO composition](docs/architecture.md)
 - [Portable security foundation](docs/portable-security-foundation.md)
 - [Portfolio integration and contract acceptance roadmap](docs/portfolio-integration-roadmap.md)
+- [Portfolio contract and authority matrix](docs/portfolio-contract-authority-matrix.md)
+- [D2A common-contract ownership graph](docs/d2a-common-contract-ownership-graph.md)
+- [Machine-readable D2A graph](docs/d2a-common-contract-ownership-graph-v1.json)
 - [Consolidated governance and security charter](docs/governance-charter.md)
 - [Constitutional sovereignty and governed-system participation](docs/constitutional-sovereignty-and-system-participation.md)
 - [Repository consolidation decision](docs/repository-consolidation.md)
@@ -17,6 +20,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Machine-readable D1 decision packet](docs/d1-canonical-identity-decision-packet-v1.json)
 - [D2 neutral contract steward decision packet](docs/d2-neutral-contract-steward-decision-packet.md)
 - [Machine-readable D2 decision packet](docs/d2-neutral-contract-steward-decision-packet-v1.json)
+- [D3 canonical bytes and identity decision packet](docs/d3-canonical-bytes-identity-decision-packet.md)
+- [Machine-readable D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet-v1.json)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
 - [Machine-readable repository provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
@@ -38,6 +43,14 @@ The D1 packet closes the review vocabulary, source observations, decision option
 The D2 packet compares three neutral stewardship models, closes twenty required decision fields and ten readiness gates, records gluing obstructions, and preserves the separation between contract stewardship and operational authority. Its present disposition is `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE`; it does not select a repository, package, registry, steward, signing key, or accepted contract generation.
 
 `D2_REBIND_REQUIRED` means D1, the common-contract inventory, candidate models, ownership graph, readiness evidence, or recommendation changed. `D2_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn. Neither state is complete until README, Pages, task chain, release plan, punch list, and changelog agree.
+
+## D3 decision readiness
+
+The D3 packet compares strict canonical JSON, deterministic CBOR, and typed-model-with-canonical-envelope candidates without selecting one. It closes the primitive vocabulary for Unicode, numbers, ordering, time, digests, namespaces, record identity, signature references, extensions, replay domains, cross-language evidence, migration, correction, withdrawal, and rollback. Its present disposition is `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE`.
+
+`D3_REBIND_REQUIRED` means a D1/D2 dependency, candidate profile, primitive inventory, contract-family mapping, fixture corpus, expected result, consumer, or migration rule moved. `D3_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn. Neither state is complete until every controlled documentation route agrees.
+
+Canonical bytes establish a deterministic representation only. They do not establish truth, currentness, semantic compatibility, authorization, consumer admission, or operational authority.
 
 ## Governance doctrine
 
@@ -110,7 +123,7 @@ The first eligible candidate is `0.0.1-charter`, a documentation-only release co
 
 ## Explicit non-capabilities
 
-Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, and repository dependencies are not operational authorization.
+Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, repository dependencies, canonical bytes, digests, and signatures are not operational authorization.
 
 ## Local documentation preview
 
