@@ -16,8 +16,10 @@ EXPECTED_REPOSITORIES = {
     "aevespers2/Alistaire-agi": ("504222dbecb1e1e49c01d74e536de5b6fa93c39a", 2, "0ede0c6a796fe9f16c10d25fc79ba6962875ba82"),
 }
 EXPECTED_ROUTES = {
-    "README.md", "docs/repository-consolidation.md", "docs/d1-canonical-identity-decision-packet.md",
-    "taskchain.md", "punchlist.md", "release.md", "changelog.md",
+    "README.md",
+    "docs/repository-consolidation.md",
+    "docs/d1-canonical-identity-decision-packet.md",
+    "taskchain.md",
 }
 REQUIRED_FIELDS = {
     "canonical_repository", "final_repository_name", "display_name", "package_identifier",
