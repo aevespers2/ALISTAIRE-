@@ -78,6 +78,8 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 ## P2A — Runtime/Fabric namespace and semantic-role partition
 
+Current inventory disposition: `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
+
 - [x] Convert `BLOCKED_ROLE_COLLISION` into a bounded [decision packet](docs/runtime-fabric-namespace-partition.md) and machine-readable profile.
 - [x] Distinguish runtime event, runtime execution report, Fabric projection receipt, Fabric collaboration event, Fabric aggregate report, and portfolio disposition.
 - [x] Compare fully separate namespaces, mandatory semantic qualifiers, and separate canonical classes with bounded compatibility views without selecting a profile.
@@ -85,7 +87,11 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Define runtime→Fabric, Fabric→Repository `1`, and runtime→Fabric→Repository `1` witnesses.
 - [x] Define mixed-generation migration, ambiguous legacy-record quarantine, compatibility withdrawal, rollback, and failed-rollback handling.
 - [x] Add accessible Mermaid and prose-equivalent architecture explanation.
-- [ ] Inventory every exact-head producer and consumer of `qso-event-ledger` and `qso-runtime-report`.
+- [x] Inventory the exact candidate generations and reviewed paths for producers, consumers, registry references, and internal records related to `qso-event-ledger` and `qso-runtime-report`.
+- [x] Record that the reviewed Fabric declaration has two independent synthetic consumers while live compatibility and accepted bindings remain absent.
+- [x] Record `qsio-kernel` as an unmapped internal ledger/outcome source rather than silently assigning either legacy label.
+- [ ] Extend the inventory to current repository-local and resulting-default-head generations and rebind or withdraw stale candidate observations.
+- [ ] Confirm semantic owners or explicit vacancies for every class and route.
 - [ ] Resolve D1, D2, and D3 before selecting namespace ownership or canonical identity rules.
 - [ ] Select one semantic partition profile and immutable class registry through explicit human approval.
 - [ ] Produce positive, hostile, duplicate, replay, conflict, partial-source, privacy, correction, revocation, mixed-generation, migration, rollback, and failed-rollback fixtures.
@@ -188,6 +194,15 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [ ] Record explicit human approval for `0.0.1-charter`.
 
 ## Evidence log
+
+### 2026-07-23 — Runtime/Fabric producer-consumer inventory alignment milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Result: `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS` pending focused and resulting-head validation for the synchronized coordination routes.
+- Added: six exact candidate-generation observations, two independent synthetic consumers, five graph edges, an explicit unmapped `qsio-kernel` internal ledger, controlled-route alignment, and fail-closed consistency validation across Pages, task chain, punch list, release plan, and changelog.
+- Authority effect: none; no live producer, consumer, namespace, semantic owner, registry, canonical payload, runtime, Fabric, Repository `1`, release, publication, or deployment authority is selected.
+- Limitations: current default-head observations, semantic owners or vacancies, accepted schemas and canonical bytes, live registrations, security/privacy/accessibility/license review, migrations, correction/revocation propagation, rollback fixtures, approval, and resulting-state verification remain blocked.
+- Rollback: revert or close this coordination-only generation; preserve the exact candidate inventory as historical evidence without changing operational state.
 
 ### 2026-07-23 — Runtime/Fabric namespace partition milestone
 
