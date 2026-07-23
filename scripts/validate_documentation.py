@@ -3,15 +3,18 @@
 
 This script intentionally uses only the Python standard library. It checks the
 required documentation set, local Markdown links, publication-sensitive marker
-patterns, and the presence of core authority-boundary language. It does not
-validate implementation, operational security, or architectural acceptance.
+patterns, authority-boundary language, and the repository-provenance manifest.
+It does not validate implementation, operational security, migration approval,
+or architectural acceptance.
 """
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
+from typing import Any
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,6 +35,8 @@ REQUIRED_FILES = (
     "docs/governance-charter.md",
     "docs/constitutional-sovereignty-and-system-participation.md",
     "docs/repository-consolidation.md",
+    "docs/repository-provenance-and-migration.md",
+    "docs/repository-provenance-manifest-v1.json",
     "docs/security-and-governance.md",
     "docs/development.md",
     "docs/diagrams.md",
@@ -77,14 +82,33 @@ REQUIRED_PHRASES = {
         "Acceptance DAG",
         "A downstream success cannot retroactively satisfy an upstream gate",
     ),
+    "docs/repository-provenance-and-migration.md": (
+        "Exact observed generations",
+        "The empty topic tree remains useful as a **taxonomy proposal**",
+        "Neither repository exposes a `LICENSE` file",
+        "LIMITED_PASS_WITH_RESIDUAL_RISK",
+        "040-F — Repository-identity consolidation and provenance-preserving retirement",
+        "creates no canonical authority",
+    ),
     "README.md": (
         "documentation-first research architecture",
         "Explicit non-capabilities",
         "No automatic runtime or operational authority",
         "Founding Sovereign and Constitutional Sponsor",
         "system preference is not legal personhood or self-appointment",
+        "repository-provenance-manifest-v1.json",
     ),
 }
+
+EXPECTED_REPOSITORIES = {
+    "aevespers2/ALISTAIRE-",
+    "aevespers2/Alistaire-agi",
+}
+EXPECTED_MAIN_HEADS = {
+    "aevespers2/ALISTAIRE-": "7adbbf963616d09b4ebafea7c0963a2fac5688a9",
+    "aevespers2/Alistaire-agi": "504222dbecb1e1e49c01d74e536de5b6fa93c39a",
+}
+SHA40 = re.compile(r"^[0-9a-f]{40}$")
 
 SENSITIVE_PATTERNS = (
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"),
@@ -101,8 +125,21 @@ def fail(message: str) -> None:
     print(f"ERROR: {message}", file=sys.stderr)
 
 
+def reject_constant(value: str) -> None:
+    raise ValueError(f"non-finite JSON value is prohibited: {value}")
+
+
+def reject_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
 def iter_text_files() -> list[Path]:
-    files = [ROOT / name for name in REQUIRED_FILES]
+    files = [ROOT / name for name in REQUIRED_FILES if name.endswith((".md", ".yml", ".txt"))]
     files.extend((ROOT / "docs").rglob("*.md"))
     return sorted({path for path in files if path.is_file()})
 
@@ -180,12 +217,85 @@ def check_sensitive_patterns() -> int:
     return errors
 
 
+def check_provenance_manifest() -> int:
+    errors = 0
+    path = ROOT / "docs/repository-provenance-manifest-v1.json"
+    try:
+        raw = path.read_bytes().decode("utf-8", errors="strict")
+        manifest = json.loads(raw, object_pairs_hook=reject_duplicate_keys, parse_constant=reject_constant)
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
+        fail(f"invalid provenance manifest: {exc}")
+        return 1
+
+    if not isinstance(manifest, dict):
+        fail("provenance manifest root must be an object")
+        return 1
+    if manifest.get("manifest_id") != "ALISTAIRE-REPOSITORY-PROVENANCE-001":
+        fail("unexpected provenance manifest_id")
+        errors += 1
+    if manifest.get("status") != "DOCUMENTATION_ONLY_REVIEW" or manifest.get("authority_effect") != "none":
+        fail("provenance manifest must remain documentation-only and non-authorizing")
+        errors += 1
+
+    repositories = manifest.get("repositories")
+    if not isinstance(repositories, list) or len(repositories) != 2:
+        fail("provenance manifest must contain exactly two repository records")
+        return errors + 1
+
+    observed: set[str] = set()
+    for record in repositories:
+        if not isinstance(record, dict):
+            fail("repository record must be an object")
+            errors += 1
+            continue
+        repository = record.get("repository")
+        observed.add(repository)
+        main_head = record.get("observed_main_head")
+        if main_head != EXPECTED_MAIN_HEADS.get(repository) or not SHA40.fullmatch(str(main_head)):
+            fail(f"unexpected or invalid observed main head for {repository}")
+            errors += 1
+        candidate = record.get("active_candidate")
+        if not isinstance(candidate, dict) or not SHA40.fullmatch(str(candidate.get("head", ""))):
+            fail(f"invalid active candidate for {repository}")
+            errors += 1
+        commits = record.get("observed_commits_newest_first")
+        if not isinstance(commits, list) or not commits or len(commits) != len(set(commits)):
+            fail(f"invalid or duplicate commit history for {repository}")
+            errors += 1
+        elif not all(isinstance(sha, str) and SHA40.fullmatch(sha) for sha in commits):
+            fail(f"invalid commit SHA in history for {repository}")
+            errors += 1
+        license_record = record.get("license")
+        if not isinstance(license_record, dict) or license_record.get("status") != "MISSING":
+            fail(f"license status must remain explicit for {repository}")
+            errors += 1
+
+    if observed != EXPECTED_REPOSITORIES:
+        fail(f"repository closure mismatch: {sorted(observed)}")
+        errors += 1
+
+    scan = manifest.get("sensitive_data_review")
+    if not isinstance(scan, dict) or scan.get("status") != "LIMITED_PASS_WITH_RESIDUAL_RISK":
+        fail("sensitive-data review must preserve its limited-pass qualification")
+        errors += 1
+    if not manifest.get("current_obstructions"):
+        fail("provenance manifest must retain current obstructions")
+        errors += 1
+    gap = manifest.get("proposed_skill_gap")
+    if not isinstance(gap, dict) or gap.get("status") != "PROPOSED_NON_AUTHORITATIVE":
+        fail("proposed skill gap must remain non-authoritative")
+        errors += 1
+
+    return errors
+
+
 def main() -> int:
     errors = 0
     errors += check_required_files()
     errors += check_required_phrases()
     errors += check_local_links()
     errors += check_sensitive_patterns()
+    errors += check_provenance_manifest()
 
     if errors:
         fail(f"documentation validation failed with {errors} error(s)")
@@ -195,6 +305,7 @@ def main() -> int:
     print("validated authority-boundary phrases")
     print("validated local Markdown links")
     print("validated publication-sensitive marker patterns")
+    print("validated repository provenance manifest")
     return 0
 
 
