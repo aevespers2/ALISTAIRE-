@@ -16,6 +16,7 @@ The candidate now includes:
 - obstruction taxonomy and practical homology-like gluing checks;
 - systemic obstruction and circular-dependency analysis;
 - D1–D5 constitutional decision cut;
+- validated D1 and D2 decision-readiness packet designs;
 - contract acceptance DAG and sequenced integration phases;
 - portfolio responsibility and authority boundaries.
 
@@ -55,7 +56,7 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 
 ## Selected completed work
 
-- `README.md` presents the charter status, D1–D5 sequence, portable-security foundation, portfolio responsibility matrix, scope, and non-capabilities.
+- `README.md` presents the charter status, D1–D5 sequence, D1 and D2 review states, portable-security foundation, portfolio responsibility matrix, scope, and non-capabilities.
 - `docs/index.md` provides the Pages landing page and evidence vocabulary.
 - `docs/architecture.md` defines constitutional dependency order, subsystem composition, portable and QSO lifecycles, envelopes, gluing witnesses, freeze, recovery, and first simulation.
 - `docs/portfolio-contract-authority-matrix.md` consolidates repository responsibilities, 23 independent record families, pairwise edges, triple overlaps, 16 obstruction classes, practical gluing analysis, current blockers, and the minimum synthetic acceptance slice.
@@ -64,8 +65,10 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 - `docs/governance-charter.md` defines hierarchy, stewardship, authority map, portable trust, decision classes, security invariants, compatibility requirements, incident command, and governance records.
 - `docs/adr/0001-governance-consolidation-and-cali-sanders-parker.md` records the original governance consolidation and bounded stewardship identity.
 - `docs/repository-consolidation.md` records identity inventory, decision criteria, options, recommendation, migration map, and approval template.
+- `docs/d1-canonical-identity-decision-packet.md` converts D1 into a closed, validated, review-ready but unapproved decision surface.
+- `docs/d2-neutral-contract-steward-decision-packet.md` converts D2 into a closed, validated, review-ready but unapproved stewardship decision surface.
 - `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` align the active work and evidence state.
-- `mkdocs.yml`, pinned documentation requirements, and least-permission workflow provide strict exact-head site validation and a checksummed artifact.
+- `mkdocs.yml`, pinned documentation requirements, and least-permission workflows provide strict exact-head site validation and checksummed artifacts.
 
 These items do not complete D1–D5, accept the portfolio matrix, accept an owner, validate common contracts, activate Repository `1`, establish device trust, or satisfy release gates.
 
@@ -77,6 +80,10 @@ The candidate continues to recommend `ALISTAIRE-` as the charter-history authori
 
 The recommendation requires explicit approval and may be replaced by another disposition with equivalent provenance, compatibility, public notice, and rollback.
 
+## D2 propagation control
+
+`D2_REBIND_REQUIRED` marks a moved D1 source, contract-family inventory, candidate model, ownership graph, readiness input, or recommendation. `D2_PACKET_WITHDRAWN` marks a replaced or withdrawn packet. A release candidate cannot describe D2 as current or withdrawn while any controlled route disagrees.
+
 ## Acceptance gates
 
 | Gate | Status | Requirement |
@@ -84,7 +91,8 @@ The recommendation requires explicit approval and may be replaced by another dis
 | D1 canonical identity | BLOCKED | Immutable canonical repository/name/package, migration, provenance, license, compatibility, non-canonical disposition, rollback |
 | Governance charter | REVIEW | Accept or revise hierarchy, Cali boundaries, authority map, portable trust, decision classes, security invariants, incident command, recovery |
 | Portfolio contract and authority matrix | REVIEW | Reconcile every repository role, non-role, record family, edge, overlap, correction/revocation path, obstruction, and rollback obligation against exact candidate heads |
-| D2 neutral contract steward | BLOCKED | Non-operational owner for common IDs, envelopes, canonicalization, reason codes, compatibility, migration, deprecation, fixtures |
+| D2 neutral contract steward readiness | REVIEW | Three candidate models, twenty required fields, ten gates, non-authority boundary, controlled propagation, strict validation, and retained exact-head evidence |
+| D2 neutral contract steward decision | BLOCKED | Accepted non-operational steward, source precedence, repository/package location, compatibility, migration, deprecation, correction, fixtures, continuity, and rollback |
 | D3 canonical bytes and identity | BLOCKED | Cross-language canonical bytes/digests and identity/replay rules with adversarial fixtures |
 | D4 independent authority | BLOCKED | Repository `1` or successor, issuer/revoker, key custody, approvals, quarantine, capability, correction, checkpoint, recovery |
 | D5 portfolio incident command | BLOCKED | Named freeze, evidence, bounded-restart, rollback, invalidation, claim-withdrawal, and recovery owners; tabletop evidence |
@@ -93,7 +101,7 @@ The recommendation requires explicit approval and may be replaced by another dis
 | Source evidence and transport | NO EVIDENCE | Accepted source/temporal/interpretation/transport/disposition/correction/revocation route and fixtures |
 | Review and approval | NO EVIDENCE | Accepted QSO-STUDIO/AionUi/independent approval boundary and fixtures |
 | Optional adapters | BLOCKED | Independent financial and engineering authority, privacy, credentials, incident, rollback, disabled-by-default activation |
-| Documentation validation | PENDING | Updated exact head passes strict build, links, diagrams, terminology, required-page, matrix, and artifact validation |
+| Documentation validation | PENDING | Updated exact head passes strict build, links, diagrams, terminology, required-page, D1/D2 packet, matrix, and artifact validation |
 | Security and privacy | PARTIAL | Proposed controls exist; independent review, owners, threat evidence, privacy/retention decisions, and exercises remain absent |
 | Provenance and reproducibility | PARTIAL | Candidate source identities exist; complete migration/contract/approval manifests, clean reproduction, and attestations remain |
 | Publication | BLOCKED | Accepted source versions, public/private review, licenses, accessibility, Pages settings, artifacts, checksums, rollback, explicit approval |
@@ -102,7 +110,7 @@ The recommendation requires explicit approval and may be replaced by another dis
 
 - D1 immutable decision and migration/provenance/compatibility manifest.
 - Accepted portfolio contract and authority matrix with exact source-head reconciliation and recorded conflicts.
-- D2 neutral contract-steward governance and non-authority statement.
+- D2 neutral contract-steward packet, exact contract-family inventory, accepted governance, non-authority statement, and resulting-state verification.
 - D3 canonical-byte, identity, digest, clock, replay, reason-code, and extension fixtures.
 - D4 authority/recovery charter, key-custody record, negative tests, and recovery evidence.
 - D5 incident command, freeze/restart, evidence preservation, invalidation, rollback, and tabletop evidence.
@@ -116,19 +124,19 @@ The recommendation requires explicit approval and may be replaced by another dis
 
 ## Validation target
 
-The documentation workflow must:
+The documentation workflows must:
 
 1. check out and assert the exact submitted head;
 2. use read-only repository permission and no persisted credentials;
 3. install only pinned documentation dependencies;
-4. require the architecture, portfolio contract/authority matrix, portable-security foundation, portfolio roadmap, governance charter, consolidation, security, onboarding, and diagrams;
+4. require the architecture, portfolio contract/authority matrix, portable-security foundation, portfolio roadmap, governance charter, D1 packet, D2 packet, consolidation, security, onboarding, and diagrams;
 5. run `mkdocs build --strict`;
-6. validate local links, navigation, terminology, prohibited claims, public/private boundaries, record-family distinctions, and generated-site safety;
+6. validate local links, navigation, terminology, prohibited claims, public/private boundaries, record-family distinctions, D1/D2 propagation, and generated-site safety;
 7. hash the rendered site, source documentation, requirements, and configuration;
-8. retain a review artifact tied to the exact head;
+8. retain review artifacts tied to the exact head;
 9. fail closed if evidence generation or upload fails.
 
-A passing documentation workflow validates documentation construction only. It does not approve Pages publication, the matrix, contracts, runtime, devices, credentials, capabilities, remediation, merge, release, deployment, or payments.
+A passing documentation or D2 workflow validates documentation construction only. It does not approve Pages publication, the matrix, a contract steward, contracts, runtime, devices, credentials, capabilities, remediation, merge, release, deployment, or payments.
 
 ## Rollback criteria
 
@@ -137,6 +145,7 @@ Withdraw the candidate if:
 - competing identities or package claims remain without an accepted compatibility rule;
 - migration loses history, attribution, license, or rollback;
 - a component defines the contract granting its own authority;
+- the D2 steward, source, release, signing, evidence, and operational-approval roles collapse into self-authorizing custody;
 - the portfolio matrix hides a repository conflict, collapses distinct record identities, or assigns an owner without evidence;
 - canonical bytes, identities, clocks, replay, correction, or revocation remain ambiguous;
 - Repository `0`, Repository `1`, an adapter, runtime, interface, transport, or payment component becomes self-authorizing;
@@ -156,7 +165,8 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 - Canonical Alistaire repository, final name, package direction, license, compatibility period, migration, and public notice remain unresolved.
 - The governance charter and portfolio contract/authority matrix remain review candidates.
 - Matrix entries have not been reconciled against all exact repository heads and accepted owners.
-- No neutral contract steward, accepted canonical-byte profile, or live registry exists.
+- D2 lacks D1 resolution, exact contract-family inventory, reconciled ownership, selected steward, independent review, approval, and resulting-state verification.
+- No accepted canonical-byte profile or live registry exists.
 - Repository `1` or successor is not chartered or independently validated.
 - Device identity, adapter disposition, privacy, retention, key custody, and portable-trust fixtures remain unresolved.
 - QSO, source/evidence, transport, review, payment, engineering, and publication contracts remain proposed.
@@ -164,6 +174,7 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 
 ## Release log
 
+- 2026-07-23: Added the D2 neutral contract steward decision-readiness packet, candidate-model comparison, closed fields and gates, non-authority boundary, obstruction analysis, controlled propagation, strict validation, hostile regressions, and exact-head workflow. No steward, contract, key, registry, release, or operational authority was selected.
 - 2026-07-21: Added the portfolio contract and authority matrix, independent record-family catalog, pairwise edges, triple-overlap witnesses, obstruction taxonomy, homology-like gluing checks, and matrix release gate. No operational authority or release was created.
 - 2026-07-21: Added portable security foundation, systemic obstruction analysis, D1–D5 decision cut, contract acceptance DAG, phases 0–8, gluing-witness requirements, incident/invalidation rules, and aligned charter documentation. No operational authority or release was created.
 - 2026-07-20: Added governance and security charter, bounded Cali Sanders Parker stewardship identity, authority model, decision classes, autonomous-development lifecycle, and emergency governance.

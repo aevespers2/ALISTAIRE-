@@ -23,7 +23,7 @@ A researcher or Architect can identify one constitutional source and understand:
 | Decision | Status | Acceptance requirement |
 |---|---|---|
 | D1 — Canonical charter and repository identity | BLOCKED / REVIEW READY | Complete and approve the [D1 decision packet](docs/d1-canonical-identity-decision-packet.md) at an immutable head: canonical source, display/package direction, migration, provenance, license, compatibility, non-canonical disposition, owners, monitoring, and rollback |
-| D2 — Neutral contract steward | PROPOSED | Assign a non-operational steward for common IDs, envelopes, canonicalization, reason codes, compatibility, migration, deprecation, and fixtures |
+| D2 — Neutral contract steward | BLOCKED / REVIEW READY | Complete and approve the [D2 decision packet](docs/d2-neutral-contract-steward-decision-packet.md): non-operational steward model, location, scope, precedence, identifiers, schemas, reason codes, fixtures, review/release separation, compatibility, migration, correction, continuity, and rollback |
 | D3 — Canonical bytes and identity primitives | PROPOSED | Accept serialization, Unicode, number, timestamp, digest, signature-reference, namespace, extension, and replay-domain rules with cross-language fixtures |
 | D4 — Independent authority and recovery roots | PROPOSED | Charter Repository `1` or successor; assign issuers, revokers, approval sources, key custody, emergency stop, recovery quorum, and evidence preservation |
 | D5 — Portfolio incident command | PROPOSED | Name incident, freeze, bounded-restart, rollback, cache invalidation, correction propagation, and claim-withdrawal owners |
@@ -32,12 +32,21 @@ No downstream implementation can mark these decisions accepted retroactively.
 
 ## D1 review state
 
-The D1 packet now closes the source observations, options, required decision fields, readiness gates, prohibited promotions, controlled routes, and rollback conditions. Its current disposition remains `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`.
+The D1 packet closes the source observations, options, required decision fields, readiness gates, prohibited promotions, controlled routes, and rollback conditions. Its current disposition remains `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`.
 
 - `D1_REBIND_REQUIRED` — an observed source, candidate, provenance input, migration input, recommendation, or readiness gate moved.
 - `D1_PACKET_WITHDRAWN` — the packet generation was replaced or withdrawn.
 
 Neither state is complete until every controlled route is reconciled.
+
+## D2 review state
+
+The D2 packet closes three neutral stewardship models, twenty required immutable fields, ten readiness gates, non-operational authority boundaries, contract-graph obstructions, controlled routes, and rollback conditions without selecting a steward. Its current disposition remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE`.
+
+- `D2_REBIND_REQUIRED` — D1, the contract-family inventory, candidate model, ownership graph, readiness evidence, or recommendation moved.
+- `D2_PACKET_WITHDRAWN` — the packet generation was replaced or withdrawn.
+
+Neither state is complete until README, Pages, task chain, release plan, punch list, and changelog agree.
 
 ## MVP scope
 
@@ -58,7 +67,7 @@ The first candidate is documentation-only and must define:
 
 **P0 — BLOCKED on D1 and governance adoption.**
 
-The candidate supplies consolidation evidence, a D1 review packet, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, and diagrams. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge, release, publish, or deploy.
+The candidate supplies consolidation evidence, D1 and D2 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, and diagrams. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge, release, publish, or deploy.
 
 ## Success criteria
 
@@ -66,7 +75,7 @@ The candidate supplies consolidation evidence, a D1 review packet, governance do
 - Useful history from both repositories is preserved with attribution and rollback.
 - The D1 packet is complete, validated, explicitly approved, and resulting repository settings are independently verified.
 - The portfolio contract and authority matrix is reconciled against every repository-local charter.
-- A neutral non-operational contract steward is assigned.
+- A neutral non-operational contract steward is assigned through an immutable D2 decision.
 - Canonical bytes, identities, digests, clocks, replay domains, reason codes, and extension rules pass cross-language fixtures.
 - Repository `1` or successor is independently chartered.
 - Incident, freeze, correction, invalidation, claim withdrawal, and rollback command are assigned.
@@ -93,7 +102,8 @@ The candidate supplies consolidation evidence, a D1 review packet, governance do
 | P0G | Review and adopt governance and security charter | P0A | REVIEW | Hierarchy, Cali boundaries, authority map, portable trust, decision classes, security invariants, emergency governance, and recovery are accepted |
 | P0M | Reconcile and accept portfolio contract and authority matrix | P0G | REVIEW | Every repository and record family has one accepted role, non-role, owner, edge contract, correction/revocation rule, rollback obligation, and witness |
 | P0-D1 | Select canonical charter and repository identity | P0-D1R, P0G, P0M, human approval | BLOCKED | Immutable D1 decision, package/display direction, migration/provenance, license, non-canonical disposition, compatibility, monitoring, and rollback |
-| P0-D2 | Assign neutral contract steward | P0-D1 | PROPOSED | Non-operational owner, namespace, package/repository location, compatibility, migration, deprecation, and fixtures |
+| P0-D2R | Validate D2 neutral stewardship readiness | P0M | REVIEW | Closed candidate models, fields, readiness gates, non-authority rules, controlled routes, obstruction analysis, hostile regressions, exact-head workflow, and retained artifact pass without selecting a steward |
+| P0-D2 | Assign neutral contract steward | P0-D1, P0-D2R | BLOCKED | Non-operational owner, namespace, package/repository location, compatibility, migration, deprecation, fixtures, correction, continuity, and rollback |
 | P0-D3 | Accept canonical bytes and identity primitives | P0-D2 | PROPOSED | Cross-language positive/adversarial fixtures produce identical bytes/digests; unsupported mappings fail closed |
 | P0-D4 | Charter independent authority and recovery roots | P0-D3 | PROPOSED | Repository `1` or successor, issuer/revoker, approvals, key custody, quarantine, correction, checkpoint, and recovery tests |
 | P0-D5 | Establish portfolio incident command | P0-D1, P0-D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery owners with tabletop evidence |
@@ -116,6 +126,7 @@ For every task, record observations, source commits, contracts, commands, tests,
 
 ## Builder log
 
+- 2026-07-23 — Added the D2 neutral contract steward decision-readiness packet, machine-readable profile, three candidate models, twenty required fields, ten readiness gates, controlled propagation, obstruction analysis, strict validation, hostile regressions, and exact-head evidence workflow. No steward or contract authority was selected.
 - 2026-07-23 — Added the D1 canonical identity decision-readiness packet, machine-readable profile, closed review fields, readiness gates, controlled-route propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical repository or migration authority was selected.
 - 2026-07-23 — Added repository provenance and migration conformance across the two overlapping Alistaire repositories.
 - 2026-07-21 — Added the portfolio contract and authority matrix, portable security foundation, systemic-cycle analysis, D1–D5 decision cut, acceptance DAG, and sequenced integration phases.
