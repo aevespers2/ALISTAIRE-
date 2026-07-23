@@ -40,14 +40,28 @@ jobs:
           persist-credentials: false
           show-progress: false
 
-      - name: Assert exact clean source and record ancestry
+      - name: Record and validate exact source ancestry
+        id: ancestry
         shell: bash
         run: |
-          set -euo pipefail
-          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
-          test -z "$(git status --porcelain)"
+          set +e
+          evidence="$RUNNER_TEMP/decision-source-generation-rebind-evidence"
+          mkdir -p "$evidence"
+          status=0
+
+          actual_head="$(git rev-parse HEAD 2>> "$evidence/ancestry-errors.txt")"
+          if [ "$actual_head" != "$EXPECTED_HEAD" ]; then
+            printf 'expected head %s but checked out %s\n' "$EXPECTED_HEAD" "$actual_head" \
+              >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+          if [ -n "$(git status --porcelain)" ]; then
+            printf 'working tree is not clean\n' >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+
           rebind_parent="$(
-            python - <<'PY'
+            python - <<'PY' 2>> "$evidence/ancestry-errors.txt"
           import json
           from pathlib import Path
           data = json.loads(
@@ -56,11 +70,30 @@ jobs:
           print(data["rebind_parent"])
           PY
           )"
-          test "$rebind_parent" != "$EXPECTED_HEAD"
-          git rev-list --first-parent "$EXPECTED_HEAD" | grep -Fxq "$rebind_parent"
-          immediate_parent="$(git rev-parse HEAD^1)"
-          echo "ANCESTRY_ANCHOR=$rebind_parent" >> "$GITHUB_ENV"
-          echo "IMMEDIATE_PARENT=$immediate_parent" >> "$GITHUB_ENV"
+          if [ $? -ne 0 ] || [ -z "$rebind_parent" ]; then
+            printf 'could not read rebind_parent\n' >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+          if [ "$rebind_parent" = "$EXPECTED_HEAD" ]; then
+            printf 'submitted head equals rebind parent\n' >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+
+          git rev-list --first-parent "$EXPECTED_HEAD" \
+            > "$evidence/first-parent-ancestry.txt" \
+            2>> "$evidence/ancestry-errors.txt"
+          if [ $? -ne 0 ] || ! grep -Fxq "$rebind_parent" "$evidence/first-parent-ancestry.txt"; then
+            printf 'rebind parent is absent from submitted-head first-parent ancestry\n' \
+              >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+
+          immediate_parent="$(git rev-parse HEAD^1 2>> "$evidence/ancestry-errors.txt")"
+          if [ $? -ne 0 ] || [ -z "$immediate_parent" ]; then
+            printf 'could not resolve immediate parent\n' >> "$evidence/ancestry-errors.txt"
+            status=1
+          fi
+
           required=(
             docs/decision-source-generation-rebind.md
             docs/decision-source-generation-rebind-v1.json
@@ -69,9 +102,15 @@ jobs:
             scripts/check_decision_source_generation_rebind.py
             tests/test_check_decision_source_generation_rebind.py
           )
-          for path in "${required[@]}"; do test -f "$path"; done
-          evidence="$RUNNER_TEMP/decision-source-generation-rebind-evidence"
-          mkdir -p "$evidence"
+          for path in "${required[@]}"; do
+            if [ ! -f "$path" ]; then
+              printf 'required path missing: %s\n' "$path" >> "$evidence/ancestry-errors.txt"
+              status=1
+            fi
+          done
+
+          echo "ANCESTRY_ANCHOR=$rebind_parent" >> "$GITHUB_ENV"
+          echo "IMMEDIATE_PARENT=$immediate_parent" >> "$GITHUB_ENV"
           {
             printf 'repository=%s\n' "$GITHUB_REPOSITORY"
             printf 'submitted_sha=%s\n' "$EXPECTED_HEAD"
@@ -79,7 +118,11 @@ jobs:
             printf 'ancestry_anchor=%s\n' "$rebind_parent"
             printf 'workflow_run=%s\n' "$GITHUB_RUN_ID"
             printf 'workflow_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
+            printf 'ancestry_status=%s\n' "$status"
           } | tee "$evidence/source-identity.txt"
+          cat "$evidence/ancestry-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Set up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
@@ -152,9 +195,11 @@ jobs:
           exit 0
 
       - name: Record deterministic inputs and clean-tree assurance
+        id: integrity
+        continue-on-error: true
         shell: bash
         run: |
-          set -euo pipefail
+          set +e
           evidence="$RUNNER_TEMP/decision-source-generation-rebind-evidence"
           sha256sum \
             README.md taskchain.md mkdocs.yml requirements-docs.txt \
@@ -165,16 +210,24 @@ jobs:
             scripts/check_decision_source_generation_rebind.py \
             tests/test_check_decision_source_generation_rebind.py \
             .github/workflows/decision-source-generation-rebind.yml \
-            > "$evidence/input-sha256.txt"
+            > "$evidence/input-sha256.txt" 2> "$evidence/integrity-errors.txt"
+          status=$?
           if [ -d "$RUNNER_TEMP/rebind-site" ]; then
             find "$RUNNER_TEMP/rebind-site" -type f -print0 | sort -z | xargs -0 sha256sum \
-              > "$evidence/site-sha256.txt"
+              > "$evidence/site-sha256.txt" 2>> "$evidence/integrity-errors.txt"
+            if [ $? -ne 0 ]; then status=1; fi
           fi
-          git diff --exit-code
-          git diff --cached --exit-code
-          test -z "$(git status --porcelain)"
+          git diff --exit-code >> "$evidence/integrity-errors.txt" 2>&1
+          if [ $? -ne 0 ]; then status=1; fi
+          git diff --cached --exit-code >> "$evidence/integrity-errors.txt" 2>&1
+          if [ $? -ne 0 ]; then status=1; fi
+          if [ -n "$(git status --porcelain)" ]; then status=1; fi
+          cat "$evidence/integrity-errors.txt" >&2 || true
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Upload retained rebind evidence
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: alistaire-source-generation-rebind-${{ env.EXPECTED_HEAD }}
@@ -183,15 +236,20 @@ jobs:
           retention-days: 30
 
       - name: Fail closed on unsuccessful validation
+        if: always()
         shell: bash
         env:
+          ANCESTRY_STATUS: ${{ steps.ancestry.outputs.status }}
           REBIND_STATUS: ${{ steps.rebind.outputs.status }}
           TEST_STATUS: ${{ steps.tests.outputs.status }}
           DOCS_STATUS: ${{ steps.docs.outputs.status }}
           BUILD_STATUS: ${{ steps.build.outputs.status }}
+          INTEGRITY_STATUS: ${{ steps.integrity.outputs.status }}
         run: |
           set -euo pipefail
+          test "$ANCESTRY_STATUS" = "0"
           test "$REBIND_STATUS" = "0"
           test "$TEST_STATUS" = "0"
           test "$DOCS_STATUS" = "0"
           test "$BUILD_STATUS" = "0"
+          test "$INTEGRITY_STATUS" = "0"
