@@ -19,6 +19,12 @@ The immediate work is not runtime implementation. It is acceptance or revision o
 
 These decisions break circular dependencies without activating credentials, online services, enrolled devices, autonomous execution, or deployment.
 
+## D2 neutral stewardship readiness
+
+The D2 decision packet now compares three bounded governance models and identifies the fields, evidence, review, correction, withdrawal, continuity, and rollback conditions needed before a neutral contract steward can be selected. The packet remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and does not select a repository, package, steward, registry, key, or accepted contract generation.
+
+`D2_REBIND_REQUIRED` marks a moved D1 source, common-contract inventory, candidate model, ownership graph, readiness input, or recommendation. `D2_PACKET_WITHDRAWN` marks a replaced or withdrawn packet generation. Both states must propagate through every controlled documentation route.
+
 ## Intended outcome
 
 After approval, a researcher or Architect should be able to answer:
@@ -65,6 +71,8 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 | [Portable security foundation](portable-security-foundation.md) | Repository `0`/`1` device-trust mission, adapter boundaries, contracts, fixtures, loss, replacement, and recovery |
 | [Portfolio integration roadmap](portfolio-integration-roadmap.md) | Systemic cycles, D1–D5 decision cut, acceptance DAG, sequenced phases, invalidation, and rollback |
 | [Governance and security charter](governance-charter.md) | Constitutional hierarchy, authority map, decision classes, stewardship boundaries, portable trust, security invariants, incident command, and recovery |
+| [D2 neutral contract steward packet](d2-neutral-contract-steward-decision-packet.md) | Candidate governance models, required immutable fields, readiness gates, obstruction analysis, controlled propagation, and non-authority boundaries |
+| [Machine-readable D2 packet](d2-neutral-contract-steward-decision-packet-v1.json) | Closed D2 source tuple, models, gates, routes, prohibited promotions, rollback, and skill-tree mapping |
 | [ADR-0001](adr/0001-governance-consolidation-and-cali-sanders-parker.md) | Governance-consolidation decision, alternatives, consequences, and bounded Cali Sanders Parker identity |
 | [Repository consolidation](repository-consolidation.md) | Inventory findings, decision criteria, migration options, compatibility, and recommendation |
 | [Repository provenance and migration](repository-provenance-and-migration.md) | Exact observed heads, commit histories, substance/placeholder classification, license and sensitive-data status, migration classes, rollback, and FYSA-120 mapping |
@@ -91,7 +99,7 @@ Repository names, documentation, empty pages, ceremonial titles, successful comm
 
 ## FYSA-120 capability map
 
-The repository-consolidation work applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040 for multimodal explanation, technical documentation, duplicate consolidation, provenance, institutional memory, accessibility, assurance, migration, and rollback. The proposed subdivision `040-F — Repository-identity consolidation and provenance-preserving retirement` remains a non-authoritative taxonomy gap rather than a competence or permission claim.
+Repository consolidation applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040. D2 decision readiness additionally applies CAT-060 and CAT-070 for trust modeling, least privilege, continuity, authority mapping, procedure engineering, participation, oversight, and repair. Proposed subdivisions `040-F`, `040-G`, and `013-F — Contract-governance graph stewardship` remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
 
 ## Release posture
 
