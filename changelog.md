@@ -6,6 +6,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-23 — Added a review-ready but decision-blocked runtime/Fabric namespace-partition packet that separates runtime-local, projection, collaboration, aggregate, and portfolio-disposition semantics without selecting a namespace, owner, consumer, or operational authority.
+- 2026-07-23 — Added a first-parent decision source-generation rebind that preserves historical D2A and D3 source tuples without impossible self-referential commit identities or silent provenance rewriting.
 - 2026-07-23 — Added a review-ready but decision-blocked D3 canonical bytes and identity packet that compares three profile families and closes primitives, fields, gates, hostile fixtures, cross-language witness requirements, migration, correction, and rollback without selecting canonicalization.
 - 2026-07-23 — Added a review-ready observed D2A common-contract ownership and consumer graph across all nineteen repositories without accepting owners or contract generations.
 - 2026-07-23 — Added a review-ready but decision-blocked D2 neutral contract steward packet that compares three governance models and closes required fields and gates without selecting a steward, repository, package, registry, or accepted contract generation.
@@ -21,6 +23,11 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-23 — Separated six candidate semantic classes: runtime event, runtime execution report, Fabric projection receipt, Fabric collaboration event, Fabric aggregate report, and Repository `1` portfolio disposition.
+- 2026-07-23 — Added three unselected runtime/Fabric partition profiles: fully separate namespaces, a common envelope with mandatory semantic qualifiers, and separate canonical classes with bounded compatibility views.
+- 2026-07-23 — Defined producer and semantic-class binding, source sets, projection and aggregation receipts, local and causal ordering, duplicate/replay/conflict handling, correction/revocation propagation, mixed-generation migration, rollback, and failed-rollback closure.
+- 2026-07-23 — Added runtime→Fabric, Fabric→Repository `1`, and runtime→Fabric→Repository `1` witnesses that prevent local success from becoming aggregate success or portfolio disposition through transport, projection, aggregation, or fixture agreement.
+- 2026-07-23 — Bound integrated D2A/D3 generations to a historical first-parent anchor while retaining embedded packet source tuples as immutable evidence.
 - 2026-07-23 — Added D3 candidates for a strict canonical JSON subset, deterministic CBOR profile, and typed abstract model with a canonical JSON envelope; no profile was selected.
 - 2026-07-23 — Closed sixteen D3 primitive classes covering UTF-8, Unicode, ordering, duplicate keys, numbers, null/missing, time, binary values, digests, signatures, namespaces, record identities, extensions, and replay domains.
 - 2026-07-23 — Added nineteen required D3 hostile fixture classes and a two-independent-implementation witness comparing disposition, normalized model, canonical bytes, digest, record identity, and reason code.
@@ -45,6 +52,11 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified; transport, rendering, hashing, signing, or successful processing cannot collapse semantic class or authority effect.
+- 2026-07-23 — Required projection and aggregation to preserve source identities, transformations, losses, privacy, duplicate treatment, correction, revocation, withdrawal, and rollback state; projected evidence is not independent corroboration.
+- 2026-07-23 — Required ambiguous legacy `qso-event-ledger` and `qso-runtime-report` records to remain `UNKNOWN` or quarantined rather than being silently mapped or promoted.
+- 2026-07-23 — Required failed rollback to freeze promotion, preserve attempted states, mark affected consumers, and prohibit silent fallback to ambiguous legacy labels.
+- 2026-07-23 — Repaired source-generation ancestry validation so a valid longer first-parent history cannot fail from `git rev-list | grep -q` SIGPIPE under `pipefail`; retained evidence is uploaded before the final fail-closed gate.
 - 2026-07-23 — Required canonical bytes, digest domains, semantic namespaces, profile versions, replay domains, reason codes, and consumer expectations to remain independently bound rather than inferred from parser success or payload shape.
 - 2026-07-23 — Prohibited same bytes or digests from implying the same semantic class, signature presence from implying valid authorization, and canonical bytes from implying truth, currentness, compatibility, or consumer admission.
 - 2026-07-23 — Required canonicalization changes to create versioned migrations with source/target bytes, loss classification, consumer disposition, correction/withdrawal propagation, rollback, and restored-state verification.
@@ -68,11 +80,15 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-23 — Added `docs/runtime-fabric-namespace-partition.md` and `docs/runtime-fabric-namespace-partition-v1.json` with an accessible Mermaid diagram, prose equivalent, semantic-class table, candidate profiles, witnesses, migration, rollback, review gates, and authority boundaries.
+- 2026-07-23 — Added runtime/Fabric links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
+- 2026-07-23 — Proposed non-authoritative subdivision `032-F — Semantic-level partition and projection integrity` for local/projected/aggregate/authority-record separation, source-set and transformation receipts, duplicate-confidence prevention, correction and revocation propagation, mixed-generation migration, rollback, and restored-state closure.
+- 2026-07-23 — Added `docs/decision-source-generation-rebind.md`, its machine-readable profile, first-parent validator, hostile regressions, Pages navigation, and exact-head retained-evidence workflow.
 - 2026-07-23 — Added `docs/d3-canonical-bytes-identity-decision-packet.md`, its machine-readable profile, strict validator, positive and hostile regressions, Pages navigation, and exact-head conformance workflow.
 - 2026-07-23 — Added D3 links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
 - 2026-07-23 — Proposed non-authoritative subdivision `031-Q — Cross-language canonical-byte and identity-primitive conformance` for canonical serialization profiles, independent vectors, transcoding analysis, domain-separated identity, replay/collision testing, and migration/rollback closure.
 - 2026-07-23 — Added `docs/d2a-common-contract-ownership-graph.md`, its machine-readable profile, strict validator, hostile regressions, Pages navigation, and exact-head workflow.
-- 2026-07-23 — Added `docs/d2-neutral-contract-steward-decision-packet.md`, its machine-readable profile, strict validator, nineteen hostile/positive regressions, Pages navigation, and exact-head conformance workflow.
+- 2026-07-23 — Added `docs/d2-neutral-contract-steward-decision-packet.md`, its machine-readable profile, strict validator, hostile/positive regressions, Pages navigation, and exact-head conformance workflow.
 - 2026-07-23 — Added D2 links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
 - 2026-07-23 — Proposed non-authoritative subdivision `013-F — Contract-governance graph stewardship` for ownership graphs, source precedence, consumer-registration integrity, supersession/withdrawal propagation, and cross-repository obstruction closure.
 - 2026-07-23 — Added `docs/d1-canonical-identity-decision-packet.md`, its machine-readable profile, strict validator, hostile regressions, Pages navigation, and exact-head conformance workflow.
@@ -86,8 +102,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 - 2026-07-21 — Added the portfolio matrix to MkDocs navigation and the strict documentation validator's required-file and authority-boundary checks.
 - 2026-07-21 — Added an offline rendered-HTML validator with regression tests for local targets and fragments, duplicate IDs, language metadata, image alternative text, and rendered-site boundary escapes.
 - 2026-07-21 — Added normalized `tar` plus timestamp-free `gzip` packaging and per-file rendered-site SHA-256 manifests so the validation artifact is reproducible without enabling Pages publication.
-- 2026-07-21 — Added `docs/portable-security-foundation.md`.
-- 2026-07-21 — Added `docs/portfolio-integration-roadmap.md`.
+- 2026-07-21 — Added `docs/portable-security-foundation.md` and `docs/portfolio-integration-roadmap.md`.
 - 2026-07-21 — Updated the root README and Pages home with the D1–D5 sequence, Repository `0`/`1` portable-trust route, portfolio responsibility map, evidence states, and explicit non-capabilities.
 - 2026-07-21 — Reconciled `docs/architecture.md`, `docs/governance-charter.md`, `taskchain.md`, `punchlist.md`, `release.md`, and `mkdocs.yml` with the portfolio's current repository-local documentation and gluing findings.
 - 2026-07-20 — Added the polished root README, project overview, consolidation record, architecture, security/governance, onboarding, diagrams, pinned toolchain, and exact-head validation workflow.
@@ -95,6 +110,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-23 — Converted the runtime/Fabric role collision from an unstructured obstruction into a bounded review-ready packet while preserving `BLOCKED_ROLE_COLLISION` and all D1–D5, security, privacy, accessibility, migration, rollback, approval, and resulting-state gates.
+- 2026-07-23 — Added the non-authorizing source-generation rebind and resulting-head evidence repair; neither action accepts D1–D3 or authorizes merge to `main`, release, publication, or deployment.
 - 2026-07-23 — Improved D3 from an unstructured proposed task to a validated review-ready packet while preserving `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` and every external approval gate.
 - 2026-07-23 — Improved D2 from an unstructured proposed task to a validated review-ready packet while preserving `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and every external approval gate.
 - 2026-07-23 — Improved D1 from an unstructured hold to a validated review-ready packet while preserving `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL` and all external approval gates.
