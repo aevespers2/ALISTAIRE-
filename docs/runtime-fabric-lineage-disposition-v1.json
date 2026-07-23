@@ -1,0 +1,265 @@
+{
+  "profile_id": "ALISTAIRE-RUNTIME-FABRIC-LINEAGE-DISPOSITION-001",
+  "profile_version": "1.0.0-candidate",
+  "status": "CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED",
+  "authority_effect": "NONE",
+  "observed_at": "2026-07-23",
+  "scope": "Documentation-only classification of current runtime/Fabric candidate lineages, repository-local uses, preservation duties, and candidate-to-default reconciliation requirements.",
+  "source_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "pull_request": 1,
+    "head_sha": "22b6c93ad48a0c3aeaa492b1ba97338bbcbddfd5",
+    "source_profile": "docs/runtime-fabric-default-head-owner-inventory-v1.json",
+    "relation": "HISTORICAL_PARENT_INPUT_NOT_SELF_REFERENCE"
+  },
+  "legacy_labels": [
+    "qso-event-ledger",
+    "qso-runtime-report"
+  ],
+  "lineages": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "surface_kind": "PULL_REQUEST",
+      "pull_request": 1,
+      "branch": "docs/consolidation-charter-20260720",
+      "exact_head_sha": "22b6c93ad48a0c3aeaa492b1ba97338bbcbddfd5",
+      "observed_use_classes": [
+        "CHARTER_GOVERNANCE",
+        "NAMESPACE_PARTITION_REVIEW",
+        "PRODUCER_CONSUMER_INVENTORY",
+        "OWNER_VACANCY_INVENTORY"
+      ],
+      "current_state": "ACTIVE_NONDEFAULT_CANDIDATE",
+      "disposition": "PRESERVE_AND_REBIND",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Integrate only into the non-default charter candidate, bind the resulting exact head, rerun validation, and preserve this predecessor as provenance."
+    },
+    {
+      "repository": "aevespers2/QSO-FABRIC",
+      "surface_kind": "PULL_REQUEST",
+      "pull_request": 21,
+      "branch": "ecosystem/conformance-foundation",
+      "exact_head_sha": "25036a5cfcea79e204a4660ddd1af09c054935b1",
+      "observed_use_classes": [
+        "DECLARATION_PRODUCER",
+        "COMPATIBILITY_FIXTURE_SOURCE"
+      ],
+      "current_state": "ACTIVE_NONDEFAULT_CANDIDATE",
+      "disposition": "PRESERVE_PENDING_ARCHITECTURE",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Retain exact producer evidence and rebind, supersede, or withdraw it if the head, fixture, role, or interface declaration moves."
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "surface_kind": "PULL_REQUEST",
+      "pull_request": 12,
+      "branch": "docs/pages-architecture-onboarding",
+      "exact_head_sha": "cc9b9c7b06a1a48bbc052b8d6bacd11782285288",
+      "observed_use_classes": [
+        "RUNTIME_SEMANTICS_DOCUMENTATION",
+        "INDEPENDENT_SYNTHETIC_CONSUMER"
+      ],
+      "current_state": "ACTIVE_NONDEFAULT_CANDIDATE",
+      "disposition": "PRESERVE_PENDING_ARCHITECTURE",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Keep runtime-local semantics distinct from Fabric semantics and rebind, supersede, or withdraw the evidence if the candidate moves."
+    },
+    {
+      "repository": "aevespers2/1",
+      "surface_kind": "PULL_REQUEST",
+      "pull_request": 2,
+      "branch": "muse/docs-2026-07-19-trust-core",
+      "exact_head_sha": "47b58fa49c8dda7f44234dab68f78673bb02d269",
+      "observed_use_classes": [
+        "INDEPENDENT_SYNTHETIC_CONSUMER",
+        "CANDIDATE_PORTFOLIO_DISPOSITION_AUTHORITY"
+      ],
+      "current_state": "ACTIVE_NONDEFAULT_CANDIDATE",
+      "disposition": "PRESERVE_PENDING_ARCHITECTURE",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Preserve independent consumer evidence without activating authority and rebind, supersede, or withdraw it if the candidate moves."
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "surface_kind": "PULL_REQUEST",
+      "pull_request": 24,
+      "branch": "governance/consent-capacity-lock",
+      "exact_head_sha": "a56b1fa93f151ee14f3cdd4183b89a10e268e352",
+      "observed_use_classes": [
+        "REGISTRY_REFERENCE",
+        "NAMESPACE_PARTITION_GOVERNANCE",
+        "REPOSITORY_HANDOFF_GOVERNANCE"
+      ],
+      "current_state": "ACTIVE_NONDEFAULT_CANDIDATE",
+      "disposition": "PRESERVE_PENDING_ARCHITECTURE",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Preserve governance and handoff evidence without treating the candidate as an adopted registry."
+    },
+    {
+      "repository": "aevespers2/qsio-kernel",
+      "surface_kind": "DEFAULT_BRANCH",
+      "pull_request": null,
+      "branch": "main",
+      "exact_head_sha": "6468254d7703e5f771e610ed3f76bac1b7205ddb",
+      "observed_use_classes": [
+        "INTERNAL_KERNEL_LEDGER",
+        "OUTCOME_RECORDS",
+        "HASH_BOUND_WITNESSES",
+        "REPLAY_BEHAVIOR"
+      ],
+      "current_state": "DEFAULT_ONLY_UNMAPPED",
+      "disposition": "NO_CANDIDATE_MAPPING",
+      "accepted_binding": false,
+      "authority_effect": "NONE",
+      "required_next_action": "Create a versioned kernel-to-runtime semantic crosswalk or record the route as intentionally unsupported."
+    }
+  ],
+  "disposition_vocabulary": [
+    {
+      "id": "PRESERVE_AND_REBIND",
+      "meaning": "Retain the predecessor as immutable evidence and bind a newly validated resulting generation without inferring acceptance."
+    },
+    {
+      "id": "PRESERVE_PENDING_ARCHITECTURE",
+      "meaning": "Retain exact-head evidence while architecture, ownership, review, migration, rollback, or approval gates remain unresolved."
+    },
+    {
+      "id": "WITHDRAW_IF_SUPERSEDED",
+      "meaning": "Invalidate currentness, preserve history and reason, identify the replacement, and propagate withdrawal when a later generation replaces the role or evidence."
+    },
+    {
+      "id": "NO_CANDIDATE_MAPPING",
+      "meaning": "Record that an implementation or default-head use exists without a reviewed semantic mapping into the candidate graph."
+    }
+  ],
+  "graph_edges": [
+    {
+      "id": "kernel_to_runtime",
+      "source": "aevespers2/qsio-kernel",
+      "target": "aevespers2/QuantumStateObjects",
+      "status": "BLOCKED_NO_VERSIONED_SEMANTIC_CROSSWALK"
+    },
+    {
+      "id": "runtime_to_fabric",
+      "source": "aevespers2/QuantumStateObjects",
+      "target": "aevespers2/QSO-FABRIC",
+      "status": "BLOCKED_ROLE_COLLISION_AND_NO_ACCEPTED_PROJECTION_CONTRACT"
+    },
+    {
+      "id": "fabric_to_repository_1",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/1",
+      "status": "BLOCKED_NO_ACCEPTED_SOURCE_SET_CORRECTION_OR_AUTHORITY_CONTRACT"
+    },
+    {
+      "id": "fabric_to_registry",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/qso-field.github.io",
+      "status": "BLOCKED_NO_ADOPTED_REGISTRY"
+    },
+    {
+      "id": "governance_to_portfolio",
+      "source": "aevespers2/ALISTAIRE-",
+      "target": "runtime_fabric_portfolio",
+      "status": "REVIEW_ONLY_NO_AUTHORITY_EFFECT"
+    }
+  ],
+  "invariants": [
+    "every_lineage_binds_one_exact_commit",
+    "candidate_state_is_distinct_from_default_branch_state",
+    "historical_workflow_success_does_not_validate_a_moved_head",
+    "preservation_does_not_mean_acceptance_or_merge",
+    "synthetic_consumer_evidence_does_not_create_live_registration",
+    "repository_name_or_documentation_does_not_assign_semantic_ownership",
+    "kernel_internal_records_are_not_runtime_or_fabric_bindings_without_a_crosswalk",
+    "supersession_requires_replacement_identity_reason_and_propagation",
+    "withdrawal_preserves_history_and_rollback_target",
+    "authority_effect_remains_none"
+  ],
+  "review_gates": [
+    "CURRENT_CANDIDATE_AND_DEFAULT_HEADS_RECONCILED",
+    "PREDECESSOR_PROVENANCE_AND_ROLLBACK_TARGETS_PRESERVED",
+    "SEMANTIC_AND_ROUTE_OWNERS_APPOINTED_OR_VACANCIES_FORMALLY_ACCEPTED",
+    "D1_D2_D3_ACCEPTED_OR_BLOCK_STATUS_RECORDED",
+    "CANONICAL_PAYLOADS_BYTES_IDENTITIES_NAMESPACES_AND_SOURCE_SETS_ACCEPTED",
+    "LIVE_PRODUCER_AND_CONSUMER_REGISTRATION_GOVERNANCE_ACCEPTED",
+    "PAIRWISE_AND_TRIPLE_OVERLAP_FIXTURES_PASS",
+    "MIXED_GENERATION_CORRECTION_REVOCATION_ROLLBACK_AND_RESTORATION_PASS",
+    "INDEPENDENT_SECURITY_PRIVACY_ACCESSIBILITY_LICENSE_AND_ARCHITECTURE_REVIEW_COMPLETE",
+    "EXPLICIT_HUMAN_APPROVAL",
+    "RESULTING_DEFAULT_HEADS_AND_RETAINED_EVIDENCE_VERIFIED"
+  ],
+  "controlled_routes": [
+    "docs/runtime-fabric-lineage-disposition.md",
+    "docs/runtime-fabric-lineage-disposition-v1.json",
+    "mkdocs.yml"
+  ],
+  "planning_alignment": {
+    "taskchain.md": "P2A remains review-blocked; lineage classification and rebinding are bounded documentation work.",
+    "release.md": "Moved exact heads invalidate currentness; preservation does not authorize release.",
+    "punchlist.md": "Candidate reconciliation, owner vacancies, kernel mapping, and rollback witnesses remain open.",
+    "changelog.md": "This generation is documentation and governance only."
+  },
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-059",
+      "CAT-070"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-A",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "018-B",
+      "018-C",
+      "018-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-B",
+      "032-D",
+      "040-A",
+      "040-B",
+      "040-C",
+      "040-D",
+      "040-E",
+      "052-B",
+      "052-E",
+      "059-E",
+      "070"
+    ],
+    "proposed_gap": {
+      "id": "040-M",
+      "name": "Candidate-lineage disposition, exact-head rebinding, and withdrawal propagation",
+      "status": "NON_AUTHORITATIVE_PROPOSAL"
+    }
+  }
+}
