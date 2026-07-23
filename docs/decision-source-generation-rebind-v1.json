@@ -6,7 +6,7 @@
   "repository": "aevespers2/ALISTAIRE-",
   "pull_request": 1,
   "rebind_parent": "b12d1c0b02b8b9fffd639ad996c8e5008debfba1",
-  "ancestry_rule": "submitted commit first parent must equal rebind_parent",
+  "ancestry_rule": "rebind_parent must appear on submitted commit first-parent ancestry",
   "historical_sources": {
     "d2a_packet_source_head": "796c6fcb7d1b3706563aa21b7a1b1c728e9866de",
     "d2a_alistaire_candidate_head": "796c6fcb7d1b3706563aa21b7a1b1c728e9866de",
