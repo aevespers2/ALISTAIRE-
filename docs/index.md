@@ -67,6 +67,8 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 | [Governance and security charter](governance-charter.md) | Constitutional hierarchy, authority map, decision classes, stewardship boundaries, portable trust, security invariants, incident command, and recovery |
 | [ADR-0001](adr/0001-governance-consolidation-and-cali-sanders-parker.md) | Governance-consolidation decision, alternatives, consequences, and bounded Cali Sanders Parker identity |
 | [Repository consolidation](repository-consolidation.md) | Inventory findings, decision criteria, migration options, compatibility, and recommendation |
+| [Repository provenance and migration](repository-provenance-and-migration.md) | Exact observed heads, commit histories, substance/placeholder classification, license and sensitive-data status, migration classes, rollback, and FYSA-120 mapping |
+| [Machine-readable provenance manifest](repository-provenance-manifest-v1.json) | Structured source generations, histories, classifications, obstructions, rollback, and skill-tree references |
 | [Security and governance](security-and-governance.md) | Assets, threats, trust boundaries, consent, privacy, learning limits, and stop conditions |
 | [Developer onboarding](development.md) | Documentation workflow, evidence discipline, contribution boundaries, and review checklist |
 | [Diagrams](diagrams.md) | Component, lifecycle, trust-boundary, dependency, authority, and rollback diagrams |
@@ -86,6 +88,10 @@ Every statement should be classified as:
 - **Withdrawn:** a public claim or candidate is no longer supported.
 
 Repository names, documentation, empty pages, ceremonial titles, successful commands, signatures, interfaces, dependencies, and architecture diagrams are not implementation or authorization evidence.
+
+## FYSA-120 capability map
+
+The repository-consolidation work applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040 for multimodal explanation, technical documentation, duplicate consolidation, provenance, institutional memory, accessibility, assurance, migration, and rollback. The proposed subdivision `040-F — Repository-identity consolidation and provenance-preserving retirement` remains a non-authoritative taxonomy gap rather than a competence or permission claim.
 
 ## Release posture
 
