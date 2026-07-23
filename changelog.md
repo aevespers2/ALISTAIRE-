@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-23 — Synchronized the exact-head runtime/Fabric producer-consumer inventory into the controlled planning routes while preserving `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`; no live producer, consumer, namespace, semantic owner, registry, runtime, Fabric, Repository `1`, release, publication, or deployment authority was accepted.
 - 2026-07-23 — Added a review-ready but decision-blocked runtime/Fabric namespace-partition packet that separates runtime-local, projection, collaboration, aggregate, and portfolio-disposition semantics without selecting a namespace, owner, consumer, or operational authority.
 - 2026-07-23 — Added a first-parent decision source-generation rebind that preserves historical D2A and D3 source tuples without impossible self-referential commit identities or silent provenance rewriting.
 - 2026-07-23 — Added a review-ready but decision-blocked D3 canonical bytes and identity packet that compares three profile families and closes primitives, fields, gates, hostile fixtures, cross-language witness requirements, migration, correction, and rollback without selecting canonicalization.
@@ -23,6 +24,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-23 — Bound six candidate generations, two independent synthetic consumers, and five graph edges in the runtime/Fabric inventory while keeping `qsio-kernel` explicitly unmapped and the kernel→runtime→Fabric→Repository `1` route discontinuous.
 - 2026-07-23 — Separated six candidate semantic classes: runtime event, runtime execution report, Fabric projection receipt, Fabric collaboration event, Fabric aggregate report, and Repository `1` portfolio disposition.
 - 2026-07-23 — Added three unselected runtime/Fabric partition profiles: fully separate namespaces, a common envelope with mandatory semantic qualifiers, and separate canonical classes with bounded compatibility views.
 - 2026-07-23 — Defined producer and semantic-class binding, source sets, projection and aggregation receipts, local and causal ordering, duplicate/replay/conflict handling, correction/revocation propagation, mixed-generation migration, rollback, and failed-rollback closure.
@@ -40,7 +42,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 - 2026-07-23 — Added a reversible repository migration flow separating source observation, substantive/placeholder classification, attribution, D1 disposition, resulting-route verification, and rollback.
 - 2026-07-22 — Added the constitutional council candidate: Founding Sovereign and Constitutional Sponsor, Portfolio Constitutional Steward, Independent Rights and Safety Reviewer, Technical Custodian, Governed-System Representative, and Independent Verifier.
 - 2026-07-22 — Required governed-system nomination or informed assent, independent human fiduciary approval, and constitutional/conformance review before a bounded appointment record; separate credential binding and verification remain additional gates.
-- 2026-07-21 — Added `docs/portfolio-contract-authority-matrix.md`, covering the active repository responsibility map, independent record-family identities, pairwise contract edges, triple-overlap witnesses, obstruction classes, current blockers, and a minimum synthetic acceptance slice.
+- 2026-07-21 — Added `docs/portfolio-contract-authority-matrix.md`, covering the active repository responsibility map, independent record-family identities, pairwise contract edges, triple overlaps, obstruction classes, current blockers, and a minimum synthetic acceptance slice.
 - 2026-07-21 — Added practical homology-like gluing checks for edge completeness, cycle detection, path independence, triple-overlap consistency, orphaned records, unsatisfied consumer requirements, boundary preservation, rollback, and invalidation propagation; explicitly recorded that this is an engineering analogy rather than a completed formal topology computation.
 - 2026-07-21 — Added the Portable Security Foundation covering Repository `0` bootstrap/maintenance responsibilities, Repository `1` quarantine/capability/recovery responsibilities, candidate JusticeForMe/PhantomBlock adapter split, device-loss and replacement lifecycle, required contract families, and compatibility witnesses.
 - 2026-07-21 — Added the Portfolio Integration and Contract Acceptance Roadmap with seven systemic cycles, D1–D5 minimal decision cut, an acceptance DAG, sequenced phases 0–8, invalidation rules, and rollback.
@@ -52,6 +54,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-23 — Required declaration, documentation, synthetic fixture consumption, registry reference, internal-record implementation, passing CI, and inventory inclusion to remain non-authorizing evidence classes rather than accepted live producer or consumer bindings.
+- 2026-07-23 — Required controlled planning routes to carry the same runtime/Fabric inventory status and fail closed when task, punch-list, release, changelog, Pages, or navigation currentness diverges.
 - 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified; transport, rendering, hashing, signing, or successful processing cannot collapse semantic class or authority effect.
 - 2026-07-23 — Required projection and aggregation to preserve source identities, transformations, losses, privacy, duplicate treatment, correction, revocation, withdrawal, and rollback state; projected evidence is not independent corroboration.
 - 2026-07-23 — Required ambiguous legacy `qso-event-ledger` and `qso-runtime-report` records to remain `UNKNOWN` or quarantined rather than being silently mapped or promoted.
@@ -80,6 +84,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-23 — Added `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` to the runtime/Fabric inventory's controlled-route closure and expanded fail-closed validation so planning documents cannot silently contradict the Pages inventory or navigation.
+- 2026-07-23 — Recorded completed candidate-generation inventory work separately from pending current-default-head verification, semantic-owner confirmation, accepted payload and canonical-byte selection, live registration, migration, correction, revocation, rollback, approval, and resulting-state verification.
 - 2026-07-23 — Added `docs/runtime-fabric-namespace-partition.md` and `docs/runtime-fabric-namespace-partition-v1.json` with an accessible Mermaid diagram, prose equivalent, semantic-class table, candidate profiles, witnesses, migration, rollback, review gates, and authority boundaries.
 - 2026-07-23 — Added runtime/Fabric links and state alignment to README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
 - 2026-07-23 — Proposed non-authoritative subdivision `032-F — Semantic-level partition and projection integrity` for local/projected/aggregate/authority-record separation, source-set and transformation receipts, duplicate-confidence prevention, correction and revocation propagation, mixed-generation migration, rollback, and restored-state closure.
@@ -110,6 +116,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-23 — Added runtime/Fabric producer-consumer inventory alignment as a `REVIEW / BLOCKED` release gate: exact candidate observations are documented, but current default-head closure, semantic ownership, accepted schemas, live registration, independent review, migration, rollback, approval, and resulting-state verification remain required.
 - 2026-07-23 — Converted the runtime/Fabric role collision from an unstructured obstruction into a bounded review-ready packet while preserving `BLOCKED_ROLE_COLLISION` and all D1–D5, security, privacy, accessibility, migration, rollback, approval, and resulting-state gates.
 - 2026-07-23 — Added the non-authorizing source-generation rebind and resulting-head evidence repair; neither action accepts D1–D3 or authorizes merge to `main`, release, publication, or deployment.
 - 2026-07-23 — Improved D3 from an unstructured proposed task to a validated review-ready packet while preserving `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` and every external approval gate.
