@@ -57,6 +57,12 @@ The D3 packet closes three candidate canonicalization profiles, sixteen primitiv
 
 Neither state is complete until every controlled route agrees. Canonical bytes and digests do not establish truth, compatibility, currentness, authorization, consumer admission, or operational authority.
 
+## Decision source-generation rebind state
+
+The D2A and D3 embedded source tuples remain immutable historical evidence. The [source-generation rebind](docs/decision-source-generation-rebind.md) records their integration into exact charter-candidate parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` and requires every focused or resulting validation head to prove that this anchor remains on its first-parent ancestry.
+
+The rebind remains `REBOUND_TO_PARENT_NON_AUTHORIZING`. It must be replaced whenever the integration parent, embedded packet sources, D2A ALISTAIRE candidate observation, packet scope, ancestry rule, correction route, withdrawal route, or rollback rule changes. Passing validation does not accept D1–D3, update the portfolio observation date, resolve ownership, select canonical bytes, or authorize merge to `main`, release, publication, deployment, credentials, or runtime authority.
+
 ## MVP scope
 
 The first candidate is documentation-only and must define:
@@ -76,7 +82,7 @@ The first candidate is documentation-only and must define:
 
 **P0 — BLOCKED on D1 and governance adoption.**
 
-The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, and diagrams. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge, release, publish, or deploy.
+The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, and an exact-parent source-generation rebind. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
 
 ## Success criteria
 
@@ -98,7 +104,7 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 - Inspecting or controlling devices without ownership or explicit permission.
 - Traffic interception, exploitation, retaliation, counter-intrusion, or surveillance.
 - Silent self-modification, credential discovery, remote writes, remediation, deployment, publication, or payments.
-- Allowing prompts, ceremony, roleplay, relationships, signatures, interfaces, successful commands, dependencies, recommendations, canonical bytes, digests, or passing CI to grant authority.
+- Allowing prompts, ceremony, roleplay, relationships, signatures, interfaces, successful commands, dependencies, recommendations, canonical bytes, digests, source-generation rebinds, or passing CI to grant authority.
 - Reimplementing subsystem responsibilities inside the charter repository.
 - Shipping production before contracts, fixtures, security review, incident command, and rollback evidence exist.
 
@@ -114,6 +120,7 @@ The candidate supplies consolidation evidence, D1, D2, and D3 review packets, go
 | P0-D2R | Validate D2 neutral stewardship readiness | P0M | REVIEW | Closed candidate models, fields, readiness gates, non-authority rules, controlled routes, obstruction analysis, hostile regressions, exact-head workflow, and retained artifact pass without selecting a steward |
 | P0-D2 | Assign neutral contract steward | P0-D1, P0-D2R | BLOCKED | Non-operational owner, namespace, package/repository location, compatibility, migration, deprecation, fixtures, correction, continuity, and rollback |
 | P0-D3R | Validate D3 canonical-byte decision readiness | P0-D2R, D2A graph | REVIEW | Closed candidate profiles, primitives, fields, gates, hostile fixtures, cross-language witness requirements, controlled routes, exact-head workflow, and retained artifact pass without selecting a profile |
+| P0-D3B | Validate decision source-generation rebind | D2A and D3 integration parent | REVIEW | Historical packet sources match, ALISTAIRE candidate observation matches, exact first-parent ancestry passes, hostile regressions and strict documentation validation pass, retained artifact exists, and no authority is promoted |
 | P0-D3 | Accept canonical bytes and identity primitives | P0-D2, P0-D3R | BLOCKED | Two independent implementations agree on accepted/rejected disposition, normalized model, bytes, digest, identity, and reason code; migrations and rollback are verified |
 | P0-D4 | Charter independent authority and recovery roots | P0-D3 | PROPOSED | Repository `1` or successor, issuer/revoker, approvals, key custody, quarantine, correction, checkpoint, and recovery tests |
 | P0-D5 | Establish portfolio incident command | P0-D1, P0-D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery owners with tabletop evidence |
@@ -136,6 +143,7 @@ For every task, record observations, source commits, contracts, commands, tests,
 
 ## Builder log
 
+- 2026-07-23 — Integrated the validated D3 documentation into the non-default charter candidate and added a separate first-parent source-generation rebind, machine-readable manifest, fail-closed validator, hostile regressions, Pages guide, and retained-evidence workflow. Historical packet tuples were preserved; no canonical decision or authority was created.
 - 2026-07-23 — Added the D3 canonical bytes and identity decision-readiness packet, three unselected profile candidates, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, cross-language witness requirements, controlled propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical profile, registry, identity, digest, signature scheme, or authority was selected.
 - 2026-07-23 — Added the D2A exact-head common-contract ownership and consumer graph across all nineteen repositories, preserving conflicting roles and material gluing obstructions without selecting authority.
 - 2026-07-23 — Added the D2 neutral contract steward decision-readiness packet, machine-readable profile, three candidate models, twenty required fields, ten readiness gates, controlled propagation, obstruction analysis, strict validation, hostile regressions, and exact-head evidence workflow. No steward or contract authority was selected.

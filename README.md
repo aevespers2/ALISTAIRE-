@@ -22,6 +22,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Machine-readable D2 decision packet](docs/d2-neutral-contract-steward-decision-packet-v1.json)
 - [D3 canonical bytes and identity decision packet](docs/d3-canonical-bytes-identity-decision-packet.md)
 - [Machine-readable D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet-v1.json)
+- [Decision source-generation rebind](docs/decision-source-generation-rebind.md)
+- [Machine-readable source-generation rebind](docs/decision-source-generation-rebind-v1.json)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
 - [Machine-readable repository provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
@@ -51,6 +53,12 @@ The D3 packet compares strict canonical JSON, deterministic CBOR, and typed-mode
 `D3_REBIND_REQUIRED` means a D1/D2 dependency, candidate profile, primitive inventory, contract-family mapping, fixture corpus, expected result, consumer, or migration rule moved. `D3_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn. Neither state is complete until every controlled documentation route agrees.
 
 Canonical bytes establish a deterministic representation only. They do not establish truth, currentness, semantic compatibility, authorization, consumer admission, or operational authority.
+
+## Decision source-generation rebind
+
+D2A and D3 retain immutable historical source tuples. Their integration into the current non-default charter candidate is represented by a separate first-parent-ancestry rebind record rather than by impossible self-referential commit SHAs or silent source rewriting.
+
+The rebind is valid only when exact parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` remains on the checked-out submitted commit's first-parent ancestry, the historical source tuples still match the packet files, the D2A ALISTAIRE PR #1 candidate observation still matches, hostile regressions pass, the documentation builds strictly, and retained exact-head evidence is produced. The record is non-authorizing and must be replaced when its parent, packet sources, candidate observation, or ancestry rules move.
 
 ## Governance doctrine
 
@@ -123,7 +131,7 @@ The first eligible candidate is `0.0.1-charter`, a documentation-only release co
 
 ## Explicit non-capabilities
 
-Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, repository dependencies, canonical bytes, digests, and signatures are not operational authorization.
+Until later implementation and evidence gates pass, Alistaire has no authorized network access, credentials, external-tool execution, private-data ingestion, persistent self-modification, autonomous publication, device-control service, payment authority, deployment authority, active governor appointment, AI legal-personhood claim, or production safety claim. Documentation, filenames, successful local commands, interfaces, transported messages, ceremonial language, founding titles, system preferences, repository dependencies, canonical bytes, digests, signatures, source-generation rebinds, and passing CI are not operational authorization.
 
 ## Local documentation preview
 
