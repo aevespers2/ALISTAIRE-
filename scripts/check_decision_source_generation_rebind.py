@@ -138,7 +138,7 @@ def validate_rebind(
     *,
     rebind_path: Path = DEFAULT_REBIND,
     submitted_sha: str,
-    first_parent: str,
+    ancestry_anchor: str,
 ) -> dict[str, Any]:
     exact_keys(rebind, TOP_FIELDS, "rebind")
 
@@ -152,16 +152,16 @@ def validate_rebind(
         raise ValueError("unexpected repository")
     if type(rebind["pull_request"]) is not int or rebind["pull_request"] != 1:
         raise ValueError("rebind must remain scoped to ALISTAIRE PR #1")
-    if rebind["ancestry_rule"] != "submitted commit first parent must equal rebind_parent":
+    if rebind["ancestry_rule"] != "rebind_parent must appear on submitted commit first-parent ancestry":
         raise ValueError("ancestry rule changed")
 
     submitted_sha = exact_sha(submitted_sha, "submitted SHA")
-    first_parent = exact_sha(first_parent, "first parent")
+    ancestry_anchor = exact_sha(ancestry_anchor, "observed ancestry anchor")
     rebind_parent = exact_sha(rebind["rebind_parent"], "rebind parent")
-    if submitted_sha == first_parent:
+    if submitted_sha == ancestry_anchor:
         raise ValueError("submitted SHA must be a descendant, not the rebind parent itself")
-    if first_parent != rebind_parent:
-        raise ValueError("submitted commit first parent does not equal rebind_parent")
+    if ancestry_anchor != rebind_parent:
+        raise ValueError("observed first-parent ancestry anchor does not equal rebind_parent")
 
     if d2a.get("profile_id") != "ALISTAIRE-D2A-COMMON-CONTRACT-GRAPH-001":
         raise ValueError("unexpected D2A profile")
@@ -236,7 +236,7 @@ def validate_rebind(
         "profile_id": rebind["profile_id"],
         "status": rebind["status"],
         "submitted_sha": submitted_sha,
-        "first_parent": first_parent,
+        "ancestry_anchor": ancestry_anchor,
         "rebind_parent": rebind_parent,
         "historical_source_count": len(historical),
         "rebind_sha256": hashlib.sha256(rebind_path.read_bytes()).hexdigest(),
@@ -250,7 +250,7 @@ def main() -> int:
     parser.add_argument("--d2a", default=str(DEFAULT_D2A))
     parser.add_argument("--d3", default=str(DEFAULT_D3))
     parser.add_argument("--submitted-sha", required=True)
-    parser.add_argument("--first-parent", required=True)
+    parser.add_argument("--ancestry-anchor", required=True)
     args = parser.parse_args()
 
     try:
@@ -261,7 +261,7 @@ def main() -> int:
             load_json(Path(args.d3)),
             rebind_path=rebind_path,
             submitted_sha=args.submitted_sha,
-            first_parent=args.first_parent,
+            ancestry_anchor=args.ancestry_anchor,
         )
         print(json.dumps(report, indent=2, sort_keys=True))
         return 0
