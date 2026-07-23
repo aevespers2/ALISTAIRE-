@@ -32,11 +32,11 @@ jobs:
       PYTHONDONTWRITEBYTECODE: "1"
 
     steps:
-      - name: Check out exact submitted source with ancestry
+      - name: Check out exact submitted source with first-parent ancestry
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
           ref: ${{ env.EXPECTED_HEAD }}
-          fetch-depth: 2
+          fetch-depth: 0
           persist-credentials: false
           show-progress: false
 
@@ -46,8 +46,21 @@ jobs:
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
           test -z "$(git status --porcelain)"
-          first_parent="$(git rev-parse HEAD^1)"
-          echo "FIRST_PARENT=$first_parent" >> "$GITHUB_ENV"
+          rebind_parent="$(
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(
+              Path("docs/decision-source-generation-rebind-v1.json").read_text(encoding="utf-8")
+          )
+          print(data["rebind_parent"])
+          PY
+          )"
+          test "$rebind_parent" != "$EXPECTED_HEAD"
+          git rev-list --first-parent "$EXPECTED_HEAD" | grep -Fxq "$rebind_parent"
+          immediate_parent="$(git rev-parse HEAD^1)"
+          echo "ANCESTRY_ANCHOR=$rebind_parent" >> "$GITHUB_ENV"
+          echo "IMMEDIATE_PARENT=$immediate_parent" >> "$GITHUB_ENV"
           required=(
             docs/decision-source-generation-rebind.md
             docs/decision-source-generation-rebind-v1.json
@@ -62,7 +75,8 @@ jobs:
           {
             printf 'repository=%s\n' "$GITHUB_REPOSITORY"
             printf 'submitted_sha=%s\n' "$EXPECTED_HEAD"
-            printf 'first_parent=%s\n' "$first_parent"
+            printf 'immediate_parent=%s\n' "$immediate_parent"
+            printf 'ancestry_anchor=%s\n' "$rebind_parent"
             printf 'workflow_run=%s\n' "$GITHUB_RUN_ID"
             printf 'workflow_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
           } | tee "$evidence/source-identity.txt"
@@ -83,7 +97,7 @@ jobs:
           evidence="$RUNNER_TEMP/decision-source-generation-rebind-evidence"
           python scripts/check_decision_source_generation_rebind.py \
             --submitted-sha "$EXPECTED_HEAD" \
-            --first-parent "$FIRST_PARENT" \
+            --ancestry-anchor "$ANCESTRY_ANCHOR" \
             > "$evidence/rebind-report.json" \
             2> "$evidence/rebind-errors.txt"
           status=$?
