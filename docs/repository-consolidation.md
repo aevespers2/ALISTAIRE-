@@ -9,6 +9,8 @@ Two repositories currently present the Alistaire product identity:
 
 This document records the observed evidence, decision criteria, migration options, and a recommendation. It does not itself approve the canonical repository.
 
+The closed review surface is the [D1 canonical identity decision packet](d1-canonical-identity-decision-packet.md), with machine-readable companion [`d1-canonical-identity-decision-packet-v1.json`](d1-canonical-identity-decision-packet-v1.json).
+
 ## Observed inventory
 
 ### `aevespers2/ALISTAIRE-`
@@ -129,4 +131,10 @@ Record the following in an immutable commit or reviewed issue:
 - rollback procedure;
 - approver and approval date.
 
-Until this record exists, P0 remains `BLOCKED` and no runtime or package release is authorized.
+## D1 propagation and withdrawal
+
+`D1_REBIND_REQUIRED` applies when either observed repository head, documentation candidate, provenance record, migration input, recommendation, or readiness gate changes. `D1_PACKET_WITHDRAWN` applies when this packet generation is replaced or withdrawn. Every controlled route must be reconciled before D1 can be represented as current or withdrawn.
+
+The packet remains `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`; passing validation or mergeability cannot select a canonical repository.
+
+Until an immutable decision record exists, P0 remains `BLOCKED` and no runtime or package release is authorized.
