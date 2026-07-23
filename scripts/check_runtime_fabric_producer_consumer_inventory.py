@@ -72,7 +72,12 @@ EXPECTED_GATES = {
     "EXPLICIT_HUMAN_APPROVAL", "RESULTING_STATE_VERIFIED",
 }
 EXPECTED_ROUTES = {
-    "docs/runtime-fabric-producer-consumer-inventory.md", "mkdocs.yml",
+    "docs/runtime-fabric-producer-consumer-inventory.md",
+    "mkdocs.yml",
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md",
 }
 REQUIRED_CATEGORIES = {
     "CAT-011", "CAT-012", "CAT-013", "CAT-017", "CAT-019",
