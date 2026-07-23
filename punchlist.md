@@ -1,6 +1,6 @@
 # Punch List
 
-Checked items require reviewable evidence tied to immutable commits. Filenames, diagrams, ceremonial language, repository references, successful commands, signatures, interfaces, canonical bytes, digests, or workflow configuration without an exact-head successful run are not completion or authority evidence.
+Checked items require reviewable evidence tied to immutable commits. Filenames, diagrams, ceremonial language, repository references, successful commands, signatures, interfaces, canonical bytes, digests, namespace labels, or workflow configuration without exact-head evidence are not completion or authority evidence.
 
 ## P0A — Constitutional identity and migration evidence
 
@@ -11,7 +11,7 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Prepare an approval template, compatibility-landing contract, migration-map candidate, and machine-readable manifest example.
 - [ ] Validate both complete repository histories and record exact source commits, licenses, attribution, sensitive-data review, and destination classification in one provenance manifest.
 - [ ] Decide final display name and disposition of `alistaire-qso`.
-- [ ] Approve the compatibility period, redirect/archive or bounded-role outcome, support/security notices, and rollback.
+- [ ] Approve compatibility period, redirect/archive or bounded-role outcome, support/security notices, and rollback.
 - [ ] Record D1 at an immutable commit.
 
 ## P0G — Governance and security adoption
@@ -45,7 +45,7 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 - [x] Prepare a non-authorizing [D2 decision packet](docs/d2-neutral-contract-steward-decision-packet.md) and machine-readable profile.
 - [x] Compare dedicated-repository, split-custody, and federated-stewardship candidate models without selecting one.
-- [x] Close twenty required decision fields and ten readiness gates for scope, precedence, identifiers, namespaces, schemas, reason codes, fixtures, review, release, signing, compatibility, migration, correction, continuity, and rollback.
+- [x] Close required decision fields and readiness gates for scope, precedence, identifiers, namespaces, schemas, reason codes, fixtures, review, release, signing, compatibility, migration, correction, continuity, and rollback.
 - [x] Define the steward's proposed non-operational authority boundary and prohibited promotions.
 - [x] Record self-authorizing custody, route bifurcation, semantic alias collision, source/evidence divergence, orphaned correction, rollback dead ends, and circular recovery as D2 gluing obstructions.
 - [x] Add `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` controlled propagation.
@@ -62,18 +62,36 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 - [x] Prepare a non-authorizing [D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet.md) and machine-readable profile.
 - [x] Compare strict canonical JSON, deterministic CBOR, and typed-model/canonical-envelope profiles without selecting one.
-- [x] Close sixteen primitive classes and twenty required decision fields for encoding, Unicode, numbers, ordering, time, digests, namespaces, identities, signature references, extensions, replay, migration, correction, and rollback.
-- [x] Define twelve readiness gates and nineteen hostile fixture classes.
+- [x] Close primitive classes and required decision fields for encoding, Unicode, numbers, ordering, time, digests, namespaces, identities, signature references, extensions, replay, migration, correction, and rollback.
+- [x] Define readiness gates and hostile fixture classes.
 - [x] Define two-implementation independence and exact accepted/rejected, model, byte, digest, identity, and reason-code comparison requirements.
 - [x] Add `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` controlled propagation.
 - [x] Add strict packet validation, hostile regressions, exact-head CI, deterministic evidence, and fail-closed artifact retention.
-- [ ] Obtain a successful exact-head D3 workflow run and retained artifact for the final candidate head.
+- [x] Retain successful exact-head D3 workflow evidence for the current charter candidate generation.
+- [x] Preserve historical D2A/D3 packet sources through a first-parent source-generation rebind and retain resulting-head evidence.
 - [ ] Resolve D1 and D2 before selecting a canonical profile or fixture custodian.
 - [ ] Map each accepted contract family to one profile generation and primitive set.
 - [ ] Produce positive, malformed, adversarial, unsupported-version, lossy-mapping, migration, correction, and rollback vectors.
 - [ ] Verify two independently authored language implementations produce identical accepted/rejected results, canonical bytes, digests, identities, and reason codes.
 - [ ] Complete digest-domain, namespace, identifier, confusable, replay, signature-reference, privacy, license, and accessibility review.
 - [ ] Approve migration, compatibility, deprecation, correction, withdrawal, rollback, and resulting-state verification.
+
+## P2A — Runtime/Fabric namespace and semantic-role partition
+
+- [x] Convert `BLOCKED_ROLE_COLLISION` into a bounded [decision packet](docs/runtime-fabric-namespace-partition.md) and machine-readable profile.
+- [x] Distinguish runtime event, runtime execution report, Fabric projection receipt, Fabric collaboration event, Fabric aggregate report, and portfolio disposition.
+- [x] Compare fully separate namespaces, mandatory semantic qualifiers, and separate canonical classes with bounded compatibility views without selecting a profile.
+- [x] Define mandatory producer, semantic class, source-set, ordering, replay, projection, aggregation, privacy, correction, revocation, consumer, authority-effect, and rollback fields.
+- [x] Define runtime→Fabric, Fabric→Repository `1`, and runtime→Fabric→Repository `1` witnesses.
+- [x] Define mixed-generation migration, ambiguous legacy-record quarantine, compatibility withdrawal, rollback, and failed-rollback handling.
+- [x] Add accessible Mermaid and prose-equivalent architecture explanation.
+- [ ] Inventory every exact-head producer and consumer of `qso-event-ledger` and `qso-runtime-report`.
+- [ ] Resolve D1, D2, and D3 before selecting namespace ownership or canonical identity rules.
+- [ ] Select one semantic partition profile and immutable class registry through explicit human approval.
+- [ ] Produce positive, hostile, duplicate, replay, conflict, partial-source, privacy, correction, revocation, mixed-generation, migration, rollback, and failed-rollback fixtures.
+- [ ] Validate the accepted fixtures in two independently implemented consumers or validators.
+- [ ] Complete independent security, privacy, license, accessibility, and architecture review.
+- [ ] Verify resulting producer/consumer registrations and rollback state.
 
 ## D4 — Independent authority and recovery roots
 
@@ -117,6 +135,7 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [ ] Approve QuantumStateObjects admission, lifecycle, messages, resources, freeze, receipts, correction, and rollback scope.
 - [ ] Approve QSO-FABRIC participant, composition, contradiction, experiment evidence, checkpoint, and ledger scope.
 - [ ] Approve `qsio-kernel` reference-conformance role or alternative disposition.
+- [ ] Complete P2A before assigning shared event/report identifiers or consumer registrations.
 - [ ] Assign QSO format, registry, canonicalization, hashing, mutation, lifecycle, message, ledger, checkpoint, freeze, Quietus, replay, correction, and compatibility ownership.
 - [ ] Produce genome → runtime → Fabric and runtime → Fabric → Repository `1` triple-overlap fixtures.
 
@@ -160,9 +179,9 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Add architecture, governance, portable security, integration sequencing, portfolio contract/authority matrix, consolidation, security/privacy, onboarding, and diagrams.
 - [x] Add strict MkDocs and pinned documentation dependencies.
 - [x] Add exact-head read-only validation and checksummed artifact workflow.
-- [ ] Validate this exact pull-request head with `mkdocs build --strict` and retain artifact/digest.
-- [ ] Review links, terminology, diagrams, accessibility, authority references, repository names, matrix ownership claims, and evidence classifications.
-- [ ] Specify deterministic constitutional, matrix, canonical-byte, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
+- [ ] Validate this exact focused pull-request head with `mkdocs build --strict` and retain artifact/digest.
+- [ ] Review links, terminology, diagrams, accessibility, authority references, repository names, matrix ownership claims, semantic-class claims, and evidence classifications.
+- [ ] Specify deterministic constitutional, matrix, canonical-byte, runtime/Fabric partition, portable-trust, QSO, evidence, review, payment, engineering, incident, recovery, and publication fixtures.
 - [ ] Complete independent security/privacy, governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered documentation archives, provenance manifest, contract registry snapshot, approval record, and SHA-256 manifests.
 - [ ] Verify Pages settings, public/private boundaries, rollback, cache invalidation, and claim withdrawal.
@@ -170,47 +189,48 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 ## Evidence log
 
+### 2026-07-23 — Runtime/Fabric namespace partition milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Branch: `docs/runtime-fabric-namespace-partition-20260723`
+- Result: `REVIEW` pending focused exact-head workflow evidence.
+- Added: six independent semantic classes, three unselected partition profiles, mandatory envelope fields, accessible architecture diagram and prose alternative, pairwise/triple-overlap witnesses, migration, correction, revocation, rollback, failed-rollback, and FYSA-120 mapping.
+- Authority effect: none; no namespace, schema, owner, producer, consumer, runtime, Fabric, Repository `1`, release, publication, deployment, or operational authority is selected.
+- Limitations: D1–D3, exact producer/consumer inventory, profile selection, independent validators, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
+- Rollback: close or revert the focused documentation branch; preserve the packet as historical evidence without changing canonical or operational state.
+
+### 2026-07-23 — Decision source-generation rebind milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Result: `REBOUND_TO_PARENT_NON_AUTHORIZING` with focused and resulting-head workflow evidence retained.
+- Added: historical D2A/D3 tuple preservation, first-parent integration binding, stale-generation invalidation, rollback, hostile regressions, and always-retained failure evidence.
+- Authority effect: none.
+
 ### 2026-07-23 — D3 canonical bytes and identity readiness milestone
 
 - Repository: `aevespers2/ALISTAIRE-`
-- Branch: `docs/d3-canonical-bytes-readiness`
-- Result: `REVIEW` pending exact-head workflow evidence.
-- Added: three unselected canonicalization profiles, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, independent cross-language witness requirements, migration and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
-- Propagation: `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` must reach every controlled route.
-- Authority effect: none; no canonical encoding, digest, namespace, identifier, signature scheme, registry, consumer, compatibility decision, merge, release, publication, deployment, or operational authority is selected.
-- Limitations: D1, D2, profile selection, neutral fixture custody, two independent implementations, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
-- Rollback: close or revert the focused candidate; preserve the failed or superseded packet as historical evidence without changing operational or canonical state.
+- Result: `REVIEW` with focused and resulting-head evidence retained.
+- Added: three unselected canonicalization profiles, primitive classes, decision fields, gates, hostile fixture classes, independent cross-language witness requirements, migration and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
+- Authority effect: none; no canonical encoding, digest, namespace, identifier, signature scheme, registry, consumer, compatibility decision, release, publication, deployment, or operational authority is selected.
 
 ### 2026-07-23 — D2 neutral contract steward readiness milestone
 
 - Repository: `aevespers2/ALISTAIRE-`
-- Branch: `docs/d2-neutral-contract-steward-readiness`
 - Result: `REVIEW` with focused and resulting-head evidence retained.
-- Added: three neutral stewardship models, twenty required decision fields, ten gates, non-operational authority boundary, obstruction and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
-- Propagation: `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` must reach every controlled route.
-- Authority effect: none; no steward, contract, registry, key, signature, capability, device/runtime disposition, merge, release, publication, deployment, or recovery authority is selected.
-- Limitations: D1, ownership reconciliation, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
-- Rollback: close or revert the focused candidate; preserve the failed or superseded packet as historical evidence without changing operational or canonical state.
+- Added: neutral stewardship models, required decision fields, gates, non-operational authority boundary, obstruction and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
+- Authority effect: none.
 
 ### 2026-07-21 — Portfolio contract and authority matrix milestone
 
 - Repository: `aevespers2/ALISTAIRE-`
-- Branch: `docs/consolidation-charter-20260720`
-- Result: `REVIEW`
+- Result: `REVIEW`.
 - Added: constitutional repository matrix, independent record-family catalog, pairwise contract edges, triple-overlap witnesses, obstruction taxonomy, homology-like gluing checks, current obstruction summary, and minimum synthetic acceptance slice.
-- Authority effect: none; the matrix does not accept an owner, activate a registry, issue credentials, admit a runtime, inspect a device, authorize a payment, merge, release, publish, deploy, or create canonical state.
-- Limitations: exact-head reconciliation across repository candidates, D1–D5 approval, record-family owners, shared fixtures, named incident/recovery roles, and protected-branch acceptance remain incomplete.
-- Rollback: revert the matrix and coordination commits or close the candidate; no operational or canonical state changes.
+- Authority effect: none.
 
 ### 2026-07-21 — Portable security and integration sequencing milestone
 
-- Repository: `aevespers2/ALISTAIRE-`
-- Branch: `docs/consolidation-charter-20260720`
-- Result: `REVIEW`
 - Added: portable security foundation, systemic-cycle analysis, D1–D5 decision cut, acceptance DAG, sequenced integration phases, adapter boundaries, gluing-witness requirements, and aligned architecture, governance, Pages, task chain, release plan, punch list, and changelog.
-- Authority effect: none; no device inspection, credential, capability, runtime, remediation, payment, merge, release, publication, deployment, or canonical-state authority was created.
-- Limitations: exact-head validation, D1–D5 approval, neutral contract steward, Repository `1` authority, shared fixtures, named incident/recovery owners, and protected-branch acceptance remain incomplete.
-- Rollback: revert these documentation commits or close the candidate; no operational or canonical state changes.
+- Authority effect: none.
 
 ### 2026-07-20 — Governance consolidation candidate
 
