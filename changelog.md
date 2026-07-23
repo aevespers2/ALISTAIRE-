@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-23 — Added a review-ready but decision-blocked D1 canonical identity packet that closes source observations, options, required fields, readiness gates, and prohibited authority promotions without selecting a canonical repository.
 - 2026-07-23 — Bound the two overlapping Alistaire repositories to exact observed default-branch and active-candidate heads without selecting canonical authority.
 - 2026-07-22 — Added a proposed Founding Sovereign and Constitutional Sponsor role plus governed-system participation in nominations, objections, recusal, dissent, correction, appeal, and removal review without activating appointments or authority.
 - 2026-07-21 — Added a constitutional portfolio contract and authority matrix so repository roles, record identities, contract edges, and non-authority boundaries can be reviewed from one source.
@@ -17,6 +18,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-23 — Added D1 controlled-route propagation using `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN`, preserving stale-source and withdrawal closure without treating documentation validation as approval.
 - 2026-07-23 — Added a reversible repository migration flow separating source observation, substantive/placeholder classification, attribution, D1 disposition, resulting-route verification, and rollback.
 - 2026-07-22 — Added the constitutional council candidate: Founding Sovereign and Constitutional Sponsor, Portfolio Constitutional Steward, Independent Rights and Safety Reviewer, Technical Custodian, Governed-System Representative, and Independent Verifier.
 - 2026-07-22 — Required governed-system nomination or informed assent, independent human fiduciary approval, and constitutional/conformance review before a bounded appointment record; separate credential binding and verification remain additional gates.
@@ -32,6 +34,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-23 — Required recommendation, passing CI, mergeability, package naming, copied content, and documentation candidates to remain non-authorizing inputs rather than canonical selection, license, package, or release authority.
 - 2026-07-23 — Recorded that both observed repositories lack a `LICENSE` file and that code-search secret checks are a limited pass with residual history, binary, indexing, and privacy risk.
 - 2026-07-22 — Established that founding title is not unrestricted authority, system preference is not legal personhood or self-appointment, nomination is not approval, approval is not credential binding, and documentation acceptance is not governance activation.
 - 2026-07-22 — Required conflict, recusal, term, deputy, suspension, revocation, correction, appeal, independent verification, and rollback controls for any future governance appointment.
@@ -49,6 +52,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-23 — Added `docs/d1-canonical-identity-decision-packet.md`, its machine-readable profile, strict validator, hostile regressions, Pages navigation, and exact-head conformance workflow.
+- 2026-07-23 — Proposed non-authoritative subdivision `040-G` for canonical-source decision readiness and reversible dual-authority cutover.
 - 2026-07-23 — Added `docs/repository-provenance-and-migration.md` and `docs/repository-provenance-manifest-v1.json` with exact source generations, observed commit histories, content classifications, license and sensitive-review status, destination classes, obstructions, rollback, and FYSA-120 mapping.
 - 2026-07-23 — Added the provenance guide and manifest to README, Pages navigation, the Pages overview, and strict documentation validation.
 - 2026-07-23 — Proposed non-authoritative subdivision `040-F` for repository-identity consolidation and provenance-preserving retirement.
@@ -67,6 +72,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-23 — Improved D1 from an unstructured hold to a validated review-ready packet while preserving `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL` and all external approval gates.
 - 2026-07-23 — Improved the provenance gate from unstructured observation to a validated documentation-only review manifest; D1, license, full history-aware security review, migration approval, and resulting-state verification remain blocked.
 - 2026-07-22 — Added constitutional-sovereignty and governed-system-participation disposition as a release blocker; no appointment or governance activation follows from the documentation candidate.
 - 2026-07-21 — Added the portfolio contract and authority matrix as an explicit `REVIEW` release gate requiring exact-head repository reconciliation and accepted ownership before `0.0.1-charter`.

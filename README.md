@@ -13,6 +13,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Consolidated governance and security charter](docs/governance-charter.md)
 - [Constitutional sovereignty and governed-system participation](docs/constitutional-sovereignty-and-system-participation.md)
 - [Repository consolidation decision](docs/repository-consolidation.md)
+- [D1 canonical identity decision packet](docs/d1-canonical-identity-decision-packet.md)
+- [Machine-readable D1 decision packet](docs/d1-canonical-identity-decision-packet-v1.json)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
 - [Machine-readable repository provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
@@ -22,6 +24,12 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Release plan](release.md)
 - [Punch list](punchlist.md)
 - [Changelog](changelog.md)
+
+## D1 decision readiness
+
+The D1 packet closes the review vocabulary, source observations, decision options, required immutable fields, readiness gates, controlled routes, and rollback conditions without silently choosing a repository. Its present disposition is `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`.
+
+`D1_REBIND_REQUIRED` means an observed repository head, documentation candidate, provenance record, migration input, or recommendation changed and every controlled route must be reconciled. `D1_PACKET_WITHDRAWN` means this packet generation is no longer current and must not be represented as an active decision basis.
 
 ## Governance doctrine
 
