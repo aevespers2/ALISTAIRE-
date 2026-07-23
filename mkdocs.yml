@@ -6,6 +6,7 @@ edit_uri: edit/main/docs/
 strict: true
 extra:
   runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
+  runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
 theme:
   name: material
   features:
@@ -22,6 +23,8 @@ nav:
       - D2A common-contract ownership graph: d2a-common-contract-ownership-graph.md
       - Machine-readable D2A graph: d2a-common-contract-ownership-graph-v1.json
       - Runtime/Fabric namespace partition: runtime-fabric-namespace-partition.md
+      - Runtime/Fabric producer and consumer inventory: runtime-fabric-producer-consumer-inventory.md
+      - Machine-readable runtime/Fabric inventory: runtime-fabric-producer-consumer-inventory-v1.json
       - Machine-readable runtime/Fabric partition: runtime-fabric-namespace-partition-v1.json
       - D3 canonical bytes and identity packet: d3-canonical-bytes-identity-decision-packet.md
       - Machine-readable D3 packet: d3-canonical-bytes-identity-decision-packet-v1.json

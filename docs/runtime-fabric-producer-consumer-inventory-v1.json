@@ -1,0 +1,270 @@
+{
+  "profile_id": "ALISTAIRE-RUNTIME-FABRIC-PRODUCER-CONSUMER-INVENTORY-001",
+  "profile_version": "1.0.0-candidate",
+  "status": "OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS",
+  "authority_effect": "NONE",
+  "observed_at": "2026-07-23",
+  "scope": "Exact-head, documentation-only inventory of candidate producers, consumers, registries, and internal record surfaces related to the legacy qso-event-ledger and qso-runtime-report labels.",
+  "legacy_labels": [
+    "qso-event-ledger",
+    "qso-runtime-report"
+  ],
+  "repositories": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "ref_kind": "pull_request",
+      "ref": "#1",
+      "head_sha": "174f8b32af4b20f7d197942fda7347c501a16a8e",
+      "candidate_role": "governance_decision_packet",
+      "observed_paths": [
+        "docs/runtime-fabric-namespace-partition.md",
+        "docs/runtime-fabric-namespace-partition-v1.json"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "documented_collision_only",
+        "qso-runtime-report": "documented_collision_only"
+      },
+      "semantic_classification": "ambiguous_legacy_collision_governance_only",
+      "binding_disposition": "NO_ACCEPTED_BINDING",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Defines candidate semantic classes and review gates without selecting a namespace, producer, consumer, schema, or authority."
+    },
+    {
+      "repository": "aevespers2/QSO-FABRIC",
+      "ref_kind": "pull_request",
+      "ref": "#21",
+      "head_sha": "25036a5cfcea79e204a4660ddd1af09c054935b1",
+      "candidate_role": "declaration_producer",
+      "observed_paths": [
+        "qso.manifest.json",
+        "spec/QSO-INTERFACE-COMPATIBILITY-001.md"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "declared_producer_append_only_json_v1",
+        "qso-runtime-report": "declared_producer_json_file_v1"
+      },
+      "semantic_classification": "fabric_collaboration_and_aggregate_candidates",
+      "binding_disposition": "DECLARED_NOT_ACCEPTED",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Declares producer interfaces and a synthetic compatibility profile; final payload schemas, semantic ownership, and ecosystem admission remain absent."
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "ref_kind": "pull_request",
+      "ref": "#12",
+      "head_sha": "cc9b9c7b06a1a48bbc052b8d6bacd11782285288",
+      "candidate_role": "runtime_documentation_and_synthetic_consumer",
+      "observed_paths": [
+        "docs/design-contracts.md",
+        "docs/ecosystem-interface-compatibility.md"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "documented_runtime_local_semantic_candidate",
+        "qso-runtime-report": "documented_runtime_execution_semantic_candidate"
+      },
+      "semantic_classification": "runtime_event_and_execution_report_candidates",
+      "binding_disposition": "DOCUMENTED_NOT_ACCEPTED",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Documents local runtime ledger and report meanings and independently consumes the synthetic Fabric fixture; this is not a live interface registration."
+    },
+    {
+      "repository": "aevespers2/1",
+      "ref_kind": "pull_request",
+      "ref": "#2",
+      "head_sha": "47b58fa49c8dda7f44234dab68f78673bb02d269",
+      "candidate_role": "independent_conformance_consumer",
+      "observed_paths": [
+        "docs/QSO_INTERFACE_CONFORMANCE.md",
+        "contracts/qso-interface-source-tuple-v1.json"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "synthetic_fixture_consumer_only",
+        "qso-runtime-report": "synthetic_fixture_consumer_only"
+      },
+      "semantic_classification": "declaration_level_consumer_only",
+      "binding_disposition": "CONSUMER_EVIDENCE_NOT_INTERFACE_ACCEPTANCE",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Independently reproduces synthetic reason and disposition outcomes but has no accepted namespace, payload, registration, or disposition authority."
+    },
+    {
+      "repository": "aevespers2/qsio-kernel",
+      "ref_kind": "default_branch",
+      "ref": "main",
+      "head_sha": "6468254d7703e5f771e610ed3f76bac1b7205ddb",
+      "candidate_role": "executable_reference_kernel_candidate",
+      "observed_paths": [
+        "README.md",
+        "src/qsio/qsio.py"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "exact_legacy_label_not_observed_in_reviewed_paths",
+        "qso-runtime-report": "exact_legacy_label_not_observed_in_reviewed_paths"
+      },
+      "semantic_classification": "unmapped_internal_qsio_ledger_and_outcome_records",
+      "binding_disposition": "NO_ACCEPTED_BINDING",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Implements an internal QSIO ledger, hash-bound outcomes, replay, and witnesses; no accepted mapping to either legacy interface label was observed."
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "ref_kind": "pull_request",
+      "ref": "#24",
+      "head_sha": "a56b1fa93f151ee14f3cdd4183b89a10e268e352",
+      "candidate_role": "portfolio_registry_and_governance_reference",
+      "observed_paths": [
+        "docs/interface-namespace-payload-partition-boundary.md",
+        "docs/interface-namespace-payload-partition-contract-v0.json"
+      ],
+      "label_uses": {
+        "qso-event-ledger": "documented_collision_and_registry_reference_only",
+        "qso-runtime-report": "documented_collision_and_registry_reference_only"
+      },
+      "semantic_classification": "portfolio_documentation_reference_only",
+      "binding_disposition": "NO_ACCEPTED_BINDING",
+      "accepted_producer": false,
+      "accepted_consumer": false,
+      "notes": "Records the declaration-level producer and consumer evidence and the blocked semantic collision without creating adoption or registry authority."
+    }
+  ],
+  "synthetic_consumer_closure": {
+    "producer_repository": "aevespers2/QSO-FABRIC",
+    "producer_head": "25036a5cfcea79e204a4660ddd1af09c054935b1",
+    "consumers": [
+      {
+        "repository": "aevespers2/QuantumStateObjects",
+        "head_sha": "cc9b9c7b06a1a48bbc052b8d6bacd11782285288"
+      },
+      {
+        "repository": "aevespers2/1",
+        "head_sha": "47b58fa49c8dda7f44234dab68f78673bb02d269"
+      }
+    ],
+    "disposition": "TWO_INDEPENDENT_SYNTHETIC_CONSUMERS_RECORDED_NOT_LIVE_COMPATIBILITY"
+  },
+  "graph_edges": [
+    {
+      "id": "runtime_to_fabric_projection",
+      "source": "aevespers2/QuantumStateObjects",
+      "target": "aevespers2/QSO-FABRIC",
+      "status": "BLOCKED_MISSING_ACCEPTED_MAPPING_AND_PROJECTION_RECEIPT"
+    },
+    {
+      "id": "kernel_to_runtime_contract",
+      "source": "aevespers2/qsio-kernel",
+      "target": "aevespers2/QuantumStateObjects",
+      "status": "BLOCKED_UNMAPPED_INTERNAL_LEDGER"
+    },
+    {
+      "id": "fabric_to_repository_1_disposition",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/1",
+      "status": "BLOCKED_MISSING_AUTHORITY_AND_SOURCE_SET_CONTRACT"
+    },
+    {
+      "id": "fabric_to_portfolio_registry",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/qso-field.github.io",
+      "status": "DOCUMENTED_NOT_ADOPTED"
+    },
+    {
+      "id": "charter_to_candidate_surfaces",
+      "source": "aevespers2/ALISTAIRE-",
+      "target": "portfolio_candidate_surfaces",
+      "status": "NON_AUTHORIZING_GOVERNANCE_REFERENCE"
+    }
+  ],
+  "invariants": [
+    "all_repository_observations_bind_exact_heads",
+    "synthetic_consumer_evidence_is_not_live_compatibility",
+    "internal_qsio_ledger_is_not_silently_mapped_to_legacy_labels",
+    "no_repository_is_recorded_as_an_accepted_producer_or_consumer",
+    "ambiguous_or_unobserved_legacy_uses_fail_closed",
+    "projection_is_not_independent_evidence",
+    "runtime_success_is_not_fabric_success",
+    "fabric_success_is_not_portfolio_disposition",
+    "correction_revocation_and_rollback_routes_remain_unresolved",
+    "authority_effect_remains_none"
+  ],
+  "review_gates": [
+    "D1_ACCEPTED",
+    "D2_ACCEPTED",
+    "D3_ACCEPTED",
+    "PARTITION_PROFILE_SELECTED",
+    "REPOSITORY_LOCAL_SEMANTIC_OWNERS_CONFIRMED",
+    "EXACT_DEFAULT_HEAD_INVENTORY_VERIFIED",
+    "FINAL_PAYLOAD_SCHEMAS_AND_CANONICAL_BYTES_ACCEPTED",
+    "LIVE_PRODUCER_AND_CONSUMER_REGISTRATIONS_ACCEPTED",
+    "MIGRATION_CORRECTION_REVOCATION_AND_ROLLBACK_FIXTURES_PASS",
+    "INDEPENDENT_SECURITY_PRIVACY_ACCESSIBILITY_LICENSE_AND_ARCHITECTURE_REVIEW_COMPLETE",
+    "EXPLICIT_HUMAN_APPROVAL",
+    "RESULTING_STATE_VERIFIED"
+  ],
+  "controlled_routes": [
+    "docs/runtime-fabric-producer-consumer-inventory.md",
+    "mkdocs.yml"
+  ],
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-059",
+      "CAT-070"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-A",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-B",
+      "032-D",
+      "040-A",
+      "040-B",
+      "040-C",
+      "040-D",
+      "040-E",
+      "052-A",
+      "052-B",
+      "052-E",
+      "059-A",
+      "059-B",
+      "059-E",
+      "070-A",
+      "070-B",
+      "070-C",
+      "070-E"
+    ],
+    "proposed_gap": {
+      "id": "040-L",
+      "name": "Exact-head legacy-interface archaeology and consumer-rebinding inventory",
+      "authoritative": false
+    }
+  }
+}
