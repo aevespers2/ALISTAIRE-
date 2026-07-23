@@ -7,6 +7,8 @@ strict: true
 extra:
   runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
   runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
+  runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
+  runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
   features:
@@ -25,6 +27,8 @@ nav:
       - Runtime/Fabric namespace partition: runtime-fabric-namespace-partition.md
       - Runtime/Fabric producer and consumer inventory: runtime-fabric-producer-consumer-inventory.md
       - Machine-readable runtime/Fabric inventory: runtime-fabric-producer-consumer-inventory-v1.json
+      - Runtime/Fabric default-head and owner-vacancy inventory: runtime-fabric-default-head-owner-inventory.md
+      - Machine-readable default-head and owner-vacancy inventory: runtime-fabric-default-head-owner-inventory-v1.json
       - Machine-readable runtime/Fabric partition: runtime-fabric-namespace-partition-v1.json
       - D3 canonical bytes and identity packet: d3-canonical-bytes-identity-decision-packet.md
       - Machine-readable D3 packet: d3-canonical-bytes-identity-decision-packet-v1.json
