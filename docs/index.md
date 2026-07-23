@@ -1,6 +1,6 @@
 # A.L.I.S.T.A.I.R.E. charter candidate
 
-A.L.I.S.T.A.I.R.E. is a proposed female-presenting research-agent architecture composed of interoperable Quantum State Objects and bounded supporting services. The portfolio is in a **documentation, governance-consolidation, contract-sequencing, and repository-consolidation phase**. No executable AGI, consciousness, sentience, unrestricted autonomy, device-control service, payment authority, persistent self-improvement, or production deployment is established.
+A.L.I.S.T.A.I.R.E. is a proposed female-presenting research-agent architecture composed of interoperable Quantum State Objects and bounded supporting services. The portfolio is in a **documentation, governance-consolidation, contract-sequencing, canonicalization, and repository-consolidation phase**. No executable AGI, consciousness, sentience, unrestricted autonomy, device-control service, payment authority, persistent self-improvement, or production deployment is established.
 
 ## Decision status
 
@@ -21,9 +21,19 @@ These decisions break circular dependencies without activating credentials, onli
 
 ## D2 neutral stewardship readiness
 
-The D2 decision packet now compares three bounded governance models and identifies the fields, evidence, review, correction, withdrawal, continuity, and rollback conditions needed before a neutral contract steward can be selected. The packet remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and does not select a repository, package, steward, registry, key, or accepted contract generation.
+The D2 decision packet compares three bounded governance models and identifies the fields, evidence, review, correction, withdrawal, continuity, and rollback conditions needed before a neutral contract steward can be selected. The packet remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and does not select a repository, package, steward, registry, key, or accepted contract generation.
 
 `D2_REBIND_REQUIRED` marks a moved D1 source, common-contract inventory, candidate model, ownership graph, readiness input, or recommendation. `D2_PACKET_WITHDRAWN` marks a replaced or withdrawn packet generation. Both states must propagate through every controlled documentation route.
+
+## D3 canonical bytes readiness
+
+The D3 decision packet compares strict canonical JSON, deterministic CBOR, and typed-model-with-canonical-JSON-envelope candidates without selecting one. It defines the required byte, Unicode, number, ordering, time, digest, namespace, identity, signature-reference, extension, replay, cross-language witness, migration, correction, withdrawal, and rollback decisions.
+
+Its present disposition is `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE`. No canonical encoding, digest, namespace, identity registry, signature scheme, or accepted consumer generation is established.
+
+`D3_REBIND_REQUIRED` marks a moved D1/D2 dependency, candidate profile, primitive inventory, fixture corpus, expected result, consumer set, or migration rule. `D3_PACKET_WITHDRAWN` marks a replaced or withdrawn packet generation. Both states must propagate through every controlled documentation route.
+
+Canonical bytes prove only a deterministic representation under one accepted profile. They do not prove truth, currentness, compatibility, authorization, or authority.
 
 ## Intended outcome
 
@@ -32,6 +42,7 @@ After approval, a researcher or Architect should be able to answer:
 - What is A.L.I.S.T.A.I.R.E. for, and what is explicitly outside scope?
 - Which repository is the constitutional source, and how is the non-canonical history preserved?
 - Which neutral authority owns common IDs, envelopes, canonical bytes, reason codes, compatibility, migration, and fixtures?
+- Which exact serialization, Unicode, number, timestamp, digest, namespace, record-identity, extension, and replay rules apply to each contract family?
 - How do Repositories `0` and `1` secure, recover, and maintain an owned device without self-authorization?
 - Which repository owns identity, runtime, collaboration, source evidence, temporal interpretation, domain interpretation, transport, review, payments, conformance, and publication?
 - Where do independent approval, consent, privacy, freeze, correction, revocation, recovery, and rollback apply?
@@ -70,9 +81,13 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 | [Architecture](architecture.md) | Portfolio composition, authority order, lifecycles, envelopes, gluing witnesses, freeze, and first simulation |
 | [Portable security foundation](portable-security-foundation.md) | Repository `0`/`1` device-trust mission, adapter boundaries, contracts, fixtures, loss, replacement, and recovery |
 | [Portfolio integration roadmap](portfolio-integration-roadmap.md) | Systemic cycles, D1–D5 decision cut, acceptance DAG, sequenced phases, invalidation, and rollback |
+| [Portfolio contract and authority matrix](portfolio-contract-authority-matrix.md) | Repository responsibilities, record families, pairwise edges, triple overlaps, obstructions, and non-authority boundaries |
+| [D2A common-contract ownership graph](d2a-common-contract-ownership-graph.md) | Exact-head producer/consumer graph, ownership conflicts, triple-overlap obligations, and gluing obstructions |
 | [Governance and security charter](governance-charter.md) | Constitutional hierarchy, authority map, decision classes, stewardship boundaries, portable trust, security invariants, incident command, and recovery |
 | [D2 neutral contract steward packet](d2-neutral-contract-steward-decision-packet.md) | Candidate governance models, required immutable fields, readiness gates, obstruction analysis, controlled propagation, and non-authority boundaries |
 | [Machine-readable D2 packet](d2-neutral-contract-steward-decision-packet-v1.json) | Closed D2 source tuple, models, gates, routes, prohibited promotions, rollback, and skill-tree mapping |
+| [D3 canonical bytes and identity packet](d3-canonical-bytes-identity-decision-packet.md) | Candidate canonicalization profiles, primitive vocabulary, hostile fixtures, cross-language witnesses, migration, rollback, and non-authority boundaries |
+| [Machine-readable D3 packet](d3-canonical-bytes-identity-decision-packet-v1.json) | Closed D3 source tuple, profiles, primitives, fields, gates, fixtures, routes, prohibited promotions, and skill-tree mapping |
 | [ADR-0001](adr/0001-governance-consolidation-and-cali-sanders-parker.md) | Governance-consolidation decision, alternatives, consequences, and bounded Cali Sanders Parker identity |
 | [Repository consolidation](repository-consolidation.md) | Inventory findings, decision criteria, migration options, compatibility, and recommendation |
 | [Repository provenance and migration](repository-provenance-and-migration.md) | Exact observed heads, commit histories, substance/placeholder classification, license and sensitive-data status, migration classes, rollback, and FYSA-120 mapping |
@@ -95,12 +110,14 @@ Every statement should be classified as:
 - **Revoked:** prior authority or trust has been withdrawn.
 - **Withdrawn:** a public claim or candidate is no longer supported.
 
-Repository names, documentation, empty pages, ceremonial titles, successful commands, signatures, interfaces, dependencies, and architecture diagrams are not implementation or authorization evidence.
+Repository names, documentation, empty pages, ceremonial titles, successful commands, signatures, interfaces, dependencies, architecture diagrams, canonical bytes, and digests are not implementation or authorization evidence.
 
 ## FYSA-120 capability map
 
-Repository consolidation applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040. D2 decision readiness additionally applies CAT-060 and CAT-070 for trust modeling, least privilege, continuity, authority mapping, procedure engineering, participation, oversight, and repair. Proposed subdivisions `040-F`, `040-G`, and `013-F — Contract-governance graph stewardship` remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
+Repository consolidation applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040. D2 decision readiness additionally applies CAT-060 and CAT-070 for trust modeling, least privilege, continuity, authority mapping, procedure engineering, participation, oversight, and repair. D3 adds CAT-032, CAT-052, and CAT-059 for distributed representation, replay and consistency analysis, identity-bound provenance, domain-separated evidence, verification portability, and attestation transport.
+
+Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, and **`031-Q — Cross-language canonical-byte and identity-primitive conformance`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
 
 ## Release posture
 
-The first possible release is `0.0.1-charter`. It is documentation-only and remains blocked until D1–D5, canonical repository selection, migration/provenance and compatibility planning, governance approval, neutral contract ownership, Repository `1` disposition, security/privacy review, exact-head documentation validation, pairwise/triple-overlap fixture specification, artifact hashing, rollback evidence, and explicit approval are complete.
+The first possible release is `0.0.1-charter`. It is documentation-only and remains blocked until D1–D5, canonical repository selection, migration/provenance and compatibility planning, governance approval, neutral contract ownership, canonicalization and cross-language evidence, Repository `1` disposition, security/privacy review, exact-head documentation validation, pairwise/triple-overlap fixture specification, artifact hashing, rollback evidence, and explicit approval are complete.
