@@ -25,6 +25,8 @@ nav:
       - Constitutional appointment lifecycle conformance: constitutional-appointment-lifecycle-conformance.md
   - Repository consolidation:
       - Decision and options: repository-consolidation.md
+      - D1 canonical identity decision packet: d1-canonical-identity-decision-packet.md
+      - Machine-readable D1 packet: d1-canonical-identity-decision-packet-v1.json
       - Provenance and migration guide: repository-provenance-and-migration.md
       - Machine-readable provenance manifest: repository-provenance-manifest-v1.json
   - Security and governance: security-and-governance.md
