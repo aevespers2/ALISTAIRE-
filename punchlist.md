@@ -42,12 +42,20 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 ## D2 — Neutral contract steward
 
+- [x] Prepare a non-authorizing [D2 decision packet](docs/d2-neutral-contract-steward-decision-packet.md) and machine-readable profile.
+- [x] Compare dedicated-repository, split-custody, and federated-stewardship candidate models without selecting one.
+- [x] Close twenty required decision fields and ten readiness gates for scope, precedence, identifiers, namespaces, schemas, reason codes, fixtures, review, release, signing, compatibility, migration, correction, continuity, and rollback.
+- [x] Define the steward's proposed non-operational authority boundary and prohibited promotions.
+- [x] Record self-authorizing custody, route bifurcation, semantic alias collision, source/evidence divergence, orphaned correction, rollback dead ends, and circular recovery as D2 gluing obstructions.
+- [x] Add `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` controlled propagation.
+- [x] Add strict packet validation, hostile regressions, exact-head CI, deterministic evidence, and fail-closed artifact retention.
+- [ ] Resolve D1 at an immutable head before selecting D2.
+- [ ] Inventory every common contract family and exact current candidate owner.
+- [ ] Reconcile conflicting ownership and source-precedence claims.
 - [ ] Select a neutral repository, package, or governed registry for common contracts.
-- [ ] Define its non-operational authority boundary.
-- [ ] Assign identifier, namespace, contract-family, schema, reason-code, fixture, compatibility, migration, deprecation, and withdrawal governance.
-- [ ] Define review, release, signing, key custody, compromise, correction, and rollback for the contract substrate.
-- [ ] Prohibit the steward from issuing operational capabilities, approving device/runtime state, or becoming canonical merely through dependency use.
-- [ ] Record accepted contract owners and supersession rules for the portfolio registry.
+- [ ] Approve identifier, namespace, schema, reason-code, fixture, compatibility, migration, deprecation, correction, withdrawal, and rollback governance.
+- [ ] Approve review, release, signing, key custody, compromise, continuity, dispute, recusal, license, privacy, accessibility, and evidence-retention controls.
+- [ ] Record accepted contract owners, consumer registrations, supersession rules, explicit human approval, and resulting-state verification.
 
 ## D3 — Canonical bytes and identity primitives
 
@@ -153,6 +161,17 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [ ] Record explicit human approval for `0.0.1-charter`.
 
 ## Evidence log
+
+### 2026-07-23 — D2 neutral contract steward readiness milestone
+
+- Repository: `aevespers2/ALISTAIRE-`
+- Branch: `docs/d2-neutral-contract-steward-readiness`
+- Result: `REVIEW` pending exact-head workflow evidence.
+- Added: three neutral stewardship models, twenty required decision fields, ten gates, non-operational authority boundary, obstruction and gluing analysis, controlled propagation, strict validation, hostile regressions, Pages navigation, and coordination-file alignment.
+- Propagation: `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` must reach every controlled route.
+- Authority effect: none; no steward, contract, registry, key, signature, capability, device/runtime disposition, merge, release, publication, deployment, or recovery authority is selected.
+- Limitations: D1, exact contract inventory, ownership reconciliation, security/privacy/license/accessibility review, approval, and resulting-state verification remain blocked.
+- Rollback: close or revert the focused candidate; preserve the failed or superseded packet as historical evidence without changing operational or canonical state.
 
 ### 2026-07-21 — Portfolio contract and authority matrix milestone
 
