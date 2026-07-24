@@ -18,9 +18,13 @@ A researcher or Architect can identify one constitutional source and determine:
 
 ## Current controlled planning-route state
 
-Status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
+Planning-route status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
-This task chain, `punchlist.md`, `release.md`, and `changelog.md` carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, and runtime/Fabric governance review index. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
+Portfolio authority-currentness status: `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`
+
+The [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) reconciles the authority matrix against one exact primary documentation or governance source for every owned repository. It records multiple active lineages, two non-mergeable primary documentation candidates, a stale QSO-SEEKER exact-head claim, the temporal repository's missing validation route, structural conflicts, the absence of attributable human dissent in the reviewed snapshot, and ten portfolio-level authority vacancies. The review has authority effect `NONE` and does not accept any binding.
+
+This task chain, `punchlist.md`, `release.md`, and `changelog.md` carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, runtime/Fabric governance review index, and portfolio authority-currentness review. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
 
 Validated synchronization source generation: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
@@ -36,6 +40,8 @@ Those immutable generations are historical evidence anchors, not self-referentia
 - `D2_PACKET_WITHDRAWN` marks a replaced or withdrawn D2 packet generation.
 - `D3_REBIND_REQUIRED` marks moved D1/D2 dependency, profile, primitive inventory, fixture corpus, consumer set, migration rule, or readiness evidence.
 - `D3_PACKET_WITHDRAWN` marks a replaced or withdrawn D3 packet generation.
+- `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` marks a changed repository source, head, lineage classification, mergeability state, conflict, dissent record, owner vacancy, route, or safety boundary.
+- `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN` marks a replaced or withdrawn currentness generation.
 
 No propagation marker completes acceptance until every controlled route is reconciled, exact-head evidence is retained, explicit approval is recorded, and resulting state is independently verified.
 
@@ -82,12 +88,14 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 7. Mixed-generation migration, rollback, failed rollback, and independently verified restored-state witnesses remain incomplete.
 8. Projection or aggregation may not inflate evidence or authority.
 9. Local runtime success is not Fabric success, and Fabric success is not a Repository `1` disposition.
+10. Currentness review additionally found identity bifurcation, multiple active lineages, stale exact-head metadata, non-mergeable documentation sources, missing workflow execution, source-rights custody gaps, and review/adapter authorization ambiguity.
 
 ## Active chain
 
 | Priority | Task | Depends on | Status | Acceptance criteria |
 |---|---|---|---|---|
 | P0A | Complete repository identity and migration evidence | — | REVIEW | Complete histories, provenance, licenses, sensitive-data review, destination classification, compatibility, and rollback |
+| P0M | Reconcile portfolio authority currentness | primary candidate sources | REVIEW COMPLETE / BINDINGS UNACCEPTED | All nineteen repositories, structural conflicts, no-dissent finding, and V1–V10 vacancies recorded; rebind on any source change |
 | P0-D1 | Select canonical charter identity | P0A, governance, matrix, human approval | BLOCKED | Immutable D1 record and verified resulting repository state |
 | P0-D2 | Assign neutral contract steward | D1, D2 readiness | BLOCKED | Accepted non-operational owner, location, precedence, fixtures, compatibility, correction, continuity, and rollback |
 | P0-D3 | Accept canonical bytes and identities | D2, D3 readiness | BLOCKED | Two independent implementations agree on disposition, model, bytes, digest, identity, reason code, migration, and rollback |
@@ -110,6 +118,7 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 - Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition records remain independently identified.
 - Pairwise and triple-overlap witnesses pass at immutable heads and resulting state is independently verified.
 - Incident, freeze, correction, invalidation, claim withdrawal, and rollback command are assigned and exercised.
+- Every candidate currentness statement binds the actual source head, preserves superseded evidence, and distinguishes structural conflict from attributable dissent.
 
 ## Builder rules
 
@@ -119,23 +128,25 @@ No real device inspection, external data ingestion, privileged adapter use, cred
 
 ## Evidence rules
 
-For every task, record observations, source commits, contracts, commands, tests, artifacts, hashes, roles or vacancies, privacy and authority effects, contradictions, residual risks, invalidation, migration, rollback, and failed-rollback handling. A passing workflow validates construction only; it does not establish truth, compatibility, ownership, authorization, admission, release, or deployment readiness.
+For every task, record observations, source commits, contracts, commands, tests, artifacts, hashes, roles or vacancies, privacy and authority effects, contradictions, dissent status, residual risks, invalidation, migration, rollback, and failed-rollback handling. A passing workflow validates construction only; it does not establish truth, compatibility, ownership, authorization, admission, release, or deployment readiness.
 
 ## FYSA-120 capability map
 
-Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
+Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
-Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-C`, `017-D`, `017-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, and `040-E`.
+Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-A`, `017-C`, `017-D`, `017-E`, `018-B`, `018-D`, `018-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, `040-E`, `054-B`, `054-D`, `054-E`, `064-B`, and `064-E`.
 
 Proposed non-authoritative refinements:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
 
 Taxonomy selection does not establish competence, appointment, permission, ownership, acceptance, or authority.
 
 ## Builder log
 
+- 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md), exact nineteen-repository profile, structural conflict and no-verified-dissent record, V1–V10 vacancies, hostile validator, and exact-head evidence workflow under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
 - 2026-07-24 — Recorded focused planning-route source evidence at `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration evidence at `87e9beb8586fe37a48bca738fd3f78425f9d4b04`; later descendants must revalidate rather than rewrite those historical anchors.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime options, and governance review index across all four controlled planning routes under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`. No binding or authority was accepted.
 - 2026-07-23 — Completed the governance review index, kernel-to-runtime crosswalk options, candidate-lineage disposition, default-head owner-vacancy inventory, producer-consumer inventory, namespace-partition packet, D1–D3 readiness packets, D2A graph, and source-generation rebind on the non-default charter candidate.
