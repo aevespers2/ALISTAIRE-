@@ -13,6 +13,13 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [ ] Obtain focused and resulting-head exact-source validation for this synchronization generation.
 - [ ] Rebind or withdraw this state if any controlled review surface, source generation, disposition, owner vacancy, route, or safety boundary changes.
 
+### Controlled propagation ledger
+
+- [x] Preserve `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN` as D1 stale-source and withdrawal markers.
+- [x] Preserve `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` as D2 stale-source and withdrawal markers.
+- [x] Preserve `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` as D3 stale-source and withdrawal markers.
+- [ ] Treat propagation as complete only when every controlled route agrees, exact-head evidence is retained, explicit approval exists, and resulting state is independently verified.
+
 ## P0A — Constitutional identity and migration evidence
 
 - [x] Inventory substantive coordination content in `aevespers2/ALISTAIRE-`.
