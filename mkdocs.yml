@@ -13,6 +13,7 @@ extra:
   runtime_fabric_lineage_disposition_status: CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED
   kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
   capability_roadmap_status: DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED
+  portfolio_contributor_paths_status: PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -26,6 +27,10 @@ nav:
   - Capability roadmap:
       - Roadmap guide: capability-roadmap.md
       - Machine-readable roadmap: capability-roadmap-v1.json
+  - Contributor onboarding:
+      - Portfolio contributor paths: portfolio-contributor-paths.md
+      - Machine-readable contributor paths: portfolio-contributor-paths-v1.json
+      - Developer and reviewer onboarding: development.md
   - Architecture:
       - System composition: architecture.md
       - Orchestration mode: orchestration-mode.md
@@ -66,7 +71,6 @@ nav:
       - Provenance and migration guide: repository-provenance-and-migration.md
       - Machine-readable provenance manifest: repository-provenance-manifest-v1.json
   - Security and governance: security-and-governance.md
-  - Developer onboarding: development.md
   - Diagrams: diagrams.md
 markdown_extensions:
   - admonition
