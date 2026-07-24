@@ -21,6 +21,7 @@ theme:
     - content.code.copy
 nav:
   - Home: index.md
+  - Name and identity: name-and-identity.md
   - Architecture:
       - System composition: architecture.md
       - Orchestration mode: orchestration-mode.md
