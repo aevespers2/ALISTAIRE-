@@ -6,7 +6,9 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
-- 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
+- 2026-07-24 — Reconciled the validated but conflicted forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the existing capability roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`; the preserved family-scoped roadmap now contains forty features without creating a parallel authority registry.
+- 2026-07-24 — Added the three previously missing capabilities—Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard—while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED` and authority effect `NONE`.
+- 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`; this generation is now preserved as the pre-reconciliation source state.
 - 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`; the expansion is descriptive and does not select a repository, package, contract, runtime, or authority.
 - 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`, covering one exact primary source for every owned repository without accepting any binding.
 - 2026-07-24 — Recorded multiple active lineages, two non-mergeable primary documentation candidates, QSO-SEEKER's declared-head mismatch, the temporal validation obstruction, structural conflicts, absence of attributable human dissent in the reviewed snapshot, and V1–V10 portfolio vacancies.
@@ -26,6 +28,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-24 — Preserved the existing family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace, and prohibited a second machine-readable authority source for the same capability program.
+- 2026-07-24 — Reserved `012-Q` for public technical naming and moved source-aware documentation generation to proposed subdivision `012-S`; added non-authoritative refinements `032-J`, `040-Q`, and `054-L` for gluing, restoration, and authority separation.
 - 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with every feature tied to candidate repository homes and unresolved gates rather than implied ownership.
 - 2026-07-24 — Recorded seven roadmap-level gluing obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
 - 2026-07-24 — Reconciled the portfolio authority matrix against exact primary documentation or governance sources for all nineteen repositories and separated current candidates, multiple active lineages, base conflicts, unvalidated stacks, default documentation, and stale declared-head metadata.
@@ -45,6 +49,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Required the reconciliation record to bind PR #22, its exact superseded head, the 37-to-40 delta, the three admitted feature names, identifier preservation, and the prohibition on a parallel registry.
 - 2026-07-24 — Bound each roadmap feature to gates, prohibited promotions, correction, and rollback while preserving authority effect `NONE`.
 - 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
 - 2026-07-24 — Distinguished structural conflict from verified human dissent; no attributable human dissent record was located in the reviewed currentness snapshot, and absence of recorded dissent is not approval or consensus.
@@ -68,6 +73,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Expanded the existing Pages roadmap and machine-readable profile from thirty-seven to forty reconciled capabilities while preserving the validated PR #22 source branch as historical evidence rather than publishing duplicate program pages.
+- 2026-07-24 — Extended the strict validator and hostile regressions to reject source-head substitution, parallel registries, feature-delta drift, missing reconciled features, subdivision collisions, authority inflation, and destructive rollback.
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
 - 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
 - 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
@@ -87,6 +94,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-24 — Reconciled the conflicted feature lineage only into the non-default charter candidate; no feature, owner, contract, package, release, publication, deployment, or operational gate was promoted.
 - 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
 - 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
@@ -104,15 +112,19 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ## FYSA-120 mapping
 
-This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-030`, `CAT-031`, `CAT-032`, `CAT-033`, `CAT-040`, `CAT-041`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
+This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-022`, `CAT-030`, `CAT-031`, `CAT-032`, `CAT-033`, `CAT-040`, `CAT-041`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
 Proposed non-authoritative subdivisions:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
 - `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
 - `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`;
+- `012-S — Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal`;
 - `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
+- `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`;
+- `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`;
 - `041-F — Governance-gated capability portfolio decomposition and maturity sequencing`;
+- `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`;
 - `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
 - `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
 
