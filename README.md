@@ -51,6 +51,8 @@ Machine-readable companions are published beside each decision packet.
 
 ## Controlled decision status
 
+Capability roadmap status: `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
+
 | Decision | Current disposition | What remains |
 |---|---|---|
 | D1 — Canonical charter and repository identity | `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL` | Repository identity, naming/package direction, provenance, licensing, migration, compatibility, non-canonical disposition, rollback |
@@ -58,6 +60,8 @@ Machine-readable companions are published beside each decision packet.
 | D3 — Canonical bytes and identity primitives | `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` | Canonicalization profile, primitive rules, independent cross-language witnesses, migration, rollback |
 | D4 — Independent authority and recovery roots | `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE` | Authority model, role separation, custody, issuance, revocation, checkpoints, recovery, exercises, independent resulting-state verification |
 | D5 — Portfolio incident command | `PROPOSED`; `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED` | Command model, authority source, roles or accepted vacancies, freeze domains, evidence custody, correction/revocation and claim withdrawal, rollback, restart, tabletop exercises, independently verified closure |
+
+Controlled propagation remains explicit: `D1_REBIND_REQUIRED` / `D1_PACKET_WITHDRAWN`, `D2_REBIND_REQUIRED` / `D2_PACKET_WITHDRAWN`, `D3_REBIND_REQUIRED` / `D3_PACKET_WITHDRAWN`, `D4_REBIND_REQUIRED` / `D4_PACKET_WITHDRAWN`, and `D5_REBIND_REQUIRED` / `D5_PACKET_WITHDRAWN`. These markers record changed or withdrawn documentation generations; they do not accept a decision or authorize action.
 
 Downstream implementation cannot retroactively satisfy an upstream decision. A repository, issue, workflow, dashboard, public site, key, signature, quorum, checkpoint, alert, or passing test cannot bootstrap authority.
 
