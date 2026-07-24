@@ -71,12 +71,13 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Recorded the contributor-path changelog repair as a fresh exact-head validation candidate after fail-closed workflows exposed omitted Release, Deployment, FYSA-120, and historical sections; the correction preserves all non-activation boundaries.
 - 2026-07-24 — Added Pages-ready [portfolio contributor paths](docs/portfolio-contributor-paths.md), an accessible flow diagram with prose equivalent, capability routes, nineteen repository entry paths, onboarding and gluing checklists, change control, and a machine-readable profile.
 - 2026-07-24 — Proposed non-authoritative FYSA-120 subdivisions `012-S`, `018-G`, and `011-G` for contributor routing, maintainer-vacancy-aware handoff, and accessible portfolio corridor diagrams.
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
 - 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
 - 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
-- 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and machine-readable profile.
+- 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and a machine-readable profile.
 - 2026-07-24 — Added a strict validator, hostile regressions, SHA-pinned read-only exact-head workflow, failure-path artifact retention, deterministic hashes, and final fail-closed gating for portfolio currentness.
 - 2026-07-24 — Replaced stale pending validation wording with generation-specific focused and resulting integration evidence, exact workflow runs, retained artifacts, digests, expiry, and explicit descendant revalidation requirements.
 - 2026-07-24 — Reworked `taskchain.md` into a current decision, controlled-route, obstruction, active-chain, evidence, and FYSA-120 map.
@@ -92,6 +93,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-24 — Added the contributor-path guide as documentation-only candidate content; no contributor route, owner, contract, implementation, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
 - 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
