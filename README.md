@@ -7,6 +7,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 ## Documentation
 
 - [Project overview](docs/index.md)
+- [Name and capability roadmap](docs/name-and-capability-roadmap.md)
+- [Machine-readable name and capability roadmap](docs/name-and-capability-roadmap-v1.json)
 - [Architecture and QSO composition](docs/architecture.md)
 - [Portable security foundation](docs/portable-security-foundation.md)
 - [Portfolio integration and contract acceptance roadmap](docs/portfolio-integration-roadmap.md)
@@ -35,6 +37,14 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Release plan](release.md)
 - [Punch list](punchlist.md)
 - [Changelog](changelog.md)
+
+## Name and capability roadmap
+
+The public-facing expansion candidate is:
+
+> **Adaptive Learning and Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution**
+
+The [name and capability roadmap](docs/name-and-capability-roadmap.md) defines the meaning and safety boundary of each term, groups proposed features into evidence, integration, governance, documentation, security, and planning families, maps them to repository candidates and FYSA-120 skills, and sequences them from constitutional documentation through separately authorized domain pilots. Its status is `DOCUMENTED_NAME_EXPANSION_AND_CAPABILITY_ROADMAP_UNACCEPTED`; D1 may adopt, revise, or reject it. A documented feature, interface, fixture, or repository assignment is not implementation, ownership, compatibility, acceptance, or authority.
 
 ## D1 decision readiness
 
