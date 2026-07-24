@@ -42,7 +42,7 @@ REQUIRED_BY_ROUTE = {
         "Current controlled planning-route state",
         "Material composition obstructions",
         "FYSA-120 capability map",
-        "authority effect remains none",
+        "Synchronization records documentation currentness only.",
     },
     "punchlist.md": REVIEW_DISPOSITIONS
     | {
@@ -57,16 +57,22 @@ REQUIRED_BY_ROUTE = {
         "Controlled propagation",
         "Acceptance gates",
         "Artifact requirements",
-        "authority effect `NONE`",
+        "These artifacts do not create credentials",
     },
     "changelog.md": {
-        "Controlled status ledger",
         "default-head inventory",
         "candidate-lineage dispositions",
         "kernel-to-runtime crosswalk options",
-        "authority effect `NONE`",
+        "No Pages publication",
         "012-P — Cross-document governance status indexing and controlled-route coherence",
     },
+}
+
+NON_ACTIVATION_BOUNDARY = {
+    "taskchain.md": "No real device inspection",
+    "punchlist.md": "Authority effect: `NONE`",
+    "release.md": "No release is ready",
+    "changelog.md": "No Pages publication",
 }
 
 PROHIBITED_PHRASES = {
@@ -98,6 +104,9 @@ def validate_routes(root: Path = ROOT) -> list[str]:
         for phrase in PROHIBITED_PHRASES:
             if phrase in text:
                 errors.append(f"{relative} contains prohibited promotion: {phrase}")
+        boundary = NON_ACTIVATION_BOUNDARY[relative]
+        if boundary not in text:
+            errors.append(f"{relative} lacks explicit non-activation boundary: {boundary}")
 
     if len(texts) != len(ROUTES):
         return errors
@@ -116,8 +125,6 @@ def validate_routes(root: Path = ROOT) -> list[str]:
     for relative, text in texts.items():
         if text.count(STATUS) < 1:
             errors.append(f"{relative} must contain synchronization status")
-        if "No default-branch merge" not in text and "No release is ready" not in text and "No Pages publication" not in text:
-            errors.append(f"{relative} lacks an explicit non-activation boundary")
 
     return errors
 
