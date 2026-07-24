@@ -39,11 +39,23 @@ On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
 - Use absolute repository/commit identities in evidence records.
 - Preserve uncertainty and disagreements rather than smoothing them into certainty.
 
+## Naming and terminology
+
+- On first public use, write **A.L.I.S.T.A.I.R.E. (Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution)**.
+- Use **Alistaire** afterward for the project display name; use exact repository names for source, workflow, provenance, and migration records.
+- Keep `A.L.I.S.T.A.I.R.E.`, `Alistaire`, `aevespers2/ALISTAIRE-`, `aevespers2/Alistaire-agi`, and the proposed `alistaire-qso` package identity distinct.
+- Treat “autonomous” as bounded internal inference under accepted policies and review. It never grants network, credential, device, payment, release, publication, deployment, or self-modification authority.
+- Do not shorten the project to “AI” when the abbreviation could blur identity, evidence status, or authority.
+- Give acronyms, diagrams, status codes, and symbolic notation a plain-language equivalent.
+- Preserve superseded names and meanings with provenance, rationale, migration effects, and rollback rather than silently rewriting history.
+- Follow the [name and identity guide](name-and-identity.md) for public wording and rename change control.
+
 ## Proposed documentation structure
 
 The canonical repository should maintain a small authoritative set:
 
 - project and product overview;
+- name, identity, terminology, and public style guidance;
 - repository-consolidation decision and migration manifest;
 - architecture and responsibility matrix;
 - contracts and compatibility references;
@@ -101,6 +113,14 @@ The large placeholder taxonomy in `Alistaire-agi` should become a reviewed backl
 - Are inputs, outputs, state, authority, failure modes, and owners explicit?
 - Are trust boundaries, consent, privacy, evidence, freeze, and rollback shown?
 - Are unknown or pending contracts marked as blocked?
+
+### Naming and accessibility
+
+- Is the acronym expanded correctly on first use?
+- Are project, repository, and package identities kept distinct?
+- Is “autonomous” bounded rather than presented as operational permission?
+- Do diagrams and status vocabulary have equivalent prose?
+- Would a new contributor understand how a rename is corrected, migrated, and rolled back?
 
 ### Quality
 
