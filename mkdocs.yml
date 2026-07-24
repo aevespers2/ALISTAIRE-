@@ -12,6 +12,7 @@ extra:
   runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
   runtime_fabric_lineage_disposition_status: CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED
   kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
+  systematic_feature_program_status: FEATURE_PROGRAM_SPECIFIED_IMPLEMENTATION_UNAUTHORIZED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -21,6 +22,9 @@ theme:
     - content.code.copy
 nav:
   - Home: index.md
+  - Capability program:
+      - Systematic forty-feature program: systematic-feature-program.md
+      - Machine-readable feature registry: systematic-feature-registry-v1.json
   - Architecture:
       - System composition: architecture.md
       - Orchestration mode: orchestration-mode.md
