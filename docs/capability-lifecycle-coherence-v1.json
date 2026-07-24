@@ -29,6 +29,12 @@
     "changelog.md",
     "mkdocs.yml"
   ],
+  "lifecycle_routes": [
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md"
+  ],
   "required_invariants": [
     "all lifecycle routes expose the roadmap status",
     "all lifecycle routes expose the feature-lineage disposition",
