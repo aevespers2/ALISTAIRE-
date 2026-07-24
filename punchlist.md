@@ -6,16 +6,23 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
+Portfolio authority-currentness disposition:
+
+`PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`
+
 - [x] Synchronize the default-head inventory, semantic and route owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, and governance review index across `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md`.
+- [x] Add the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) and machine-readable exact-source profile for all nineteen repositories.
+- [x] Record multiple active lineages, non-mergeable primary documentation candidates, the QSO-SEEKER declared-head mismatch, the temporal validation obstruction, structural conflicts, the no-verified-dissent finding, and V1–V10 vacancies without selecting authority.
 - [x] Preserve `UNSUPPORTED_KERNEL_RUNTIME_ROUTE` as the safe default.
 - [x] Preserve `REJECT_DIRECT_IDENTITY_ALIAS` as the rejected direct-alias option.
-- [x] State that planning-route synchronization has authority effect `NONE`.
-- [x] Obtain focused and resulting-head exact-source validation for the synchronization generation.
-- [ ] Rebind or withdraw this state if any controlled review surface, source generation, disposition, owner vacancy, route, or safety boundary changes.
+- [x] State that planning-route and portfolio-currentness synchronization have authority effect `NONE`.
+- [x] Obtain focused and resulting-head exact-source validation for the earlier planning-route synchronization generation.
+- [ ] Obtain focused and resulting-head exact-source validation for this portfolio-currentness generation.
+- [ ] Rebind or withdraw either state if any controlled review surface, source generation, disposition, owner vacancy, route, dissent record, or safety boundary changes.
 
-Validated focused source: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
+Validated focused planning-route source: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
-Validated resulting integration: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
+Validated resulting planning-route integration: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
 
 These are immutable historical evidence anchors. Every later descendant must retain fresh exact-head evidence; it must not rewrite either anchor as though it were the descendant's own identity.
 
@@ -24,6 +31,7 @@ These are immutable historical evidence anchors. Every later descendant must ret
 - [x] Preserve `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN` as D1 stale-source and withdrawal markers.
 - [x] Preserve `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` as D2 stale-source and withdrawal markers.
 - [x] Preserve `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` as D3 stale-source and withdrawal markers.
+- [x] Add `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` and `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN` for changed exact sources, classifications, conflicts, dissent records, vacancies, routes, and safety boundaries.
 - [ ] Treat propagation as complete only when every controlled route agrees, exact-head evidence is retained, explicit approval exists, and resulting state is independently verified.
 
 ## P0A — Constitutional identity and migration evidence
@@ -46,7 +54,8 @@ These are immutable historical evidence anchors. Every later descendant must ret
 - [x] Define constitutional hierarchy, decision classes, separation of duties, exact-head evidence, correction, revocation, emergency stop, recovery, rollback, and claim withdrawal.
 - [x] Add the portable device-trust doctrine and Repository `0`/`1` boundary.
 - [x] Add systemic-cycle analysis, D1–D5 minimal decision cut, acceptance DAG, and sequenced integration phases.
-- [ ] Review the hierarchy against every repository-local governance document and record conflicts and dissent.
+- [x] Compare the hierarchy against the reviewed primary repository-local governance sources and record structural conflicts, vacancies, and absence of attributable human dissent in the current snapshot.
+- [ ] Extend the review to complete repository histories, all active review records, and independently verified dissent/correction state.
 - [ ] Approve the immutable governance-charter commit.
 - [ ] Conduct and retain a portfolio freeze, evidence-preservation, bounded-restart, rollback, and claim-withdrawal tabletop exercise.
 
@@ -56,8 +65,10 @@ These are immutable historical evidence anchors. Every later descendant must ret
 - [x] Define independent identities for charter, contract, device, workspace, observation, interpretation, proposal, capability, genome, runtime, experiment, transport, receipt, disposition, review, financial, engineering, correction, revocation, recovery, and publication records.
 - [x] Record pairwise contract edges, triple-overlap witnesses, obstruction classes, and a practical homology-like gluing method without claiming completed formal topology.
 - [x] Bind observed repository heads and candidates into the D2A ownership and consumer graph without selecting authority.
-- [ ] Compare every matrix row and edge against the exact current head of each repository-local documentation candidate.
-- [ ] Resolve conflicting ownership or route claims and record dissent rather than silently choosing one.
+- [x] Compare every matrix repository row against an exact current primary documentation or governance source in the [currentness review](docs/portfolio-authority-currentness-review.md).
+- [x] Record conflicting ownership or route claims as structural conflict and preserve the explicit no-verified-human-dissent result rather than silently claiming consensus.
+- [x] Record ten portfolio-level authority and route vacancies without appointing owners.
+- [ ] Reconcile every pairwise edge and triple-overlap witness against complete repository-local histories and all current candidate lineages.
 - [ ] Assign a semantic owner, independent reviewer, correction authority, revoker, incident owner, recovery owner, and retirement path for every accepted record family.
 - [ ] Accept the matrix at an immutable charter commit.
 
@@ -116,6 +127,7 @@ Completed documentation and governance work:
 - [x] Document kernel-to-runtime Options A–D, including explicit unsupported-route preservation and rejection of direct identity aliasing.
 - [x] Create a unified governance review index with accessible diagram, prose equivalent, material-obstruction table, and sequenced reviewer onboarding.
 - [x] Synchronize all four controlled planning routes with PRs #11–#14.
+- [x] Extend the portfolio-level currentness review to the primary QSO-GENOMES, kernel, runtime, Fabric, Repository `1`, and qso-field candidate sources without selecting a semantic owner.
 
 Remaining gates:
 
@@ -155,11 +167,12 @@ Remaining gates:
 
 ## P6 — Documentation, evaluation, and publication evidence
 
-- [x] Add a substantive Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, lineage guidance, crosswalk, and review index.
+- [x] Add a substantive Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, lineage guidance, crosswalk, review index, and portfolio-currentness packet.
 - [x] Add strict MkDocs and pinned documentation dependencies.
 - [x] Add exact-head read-only validation and retained checksummed artifacts.
 - [x] Align all four controlled planning routes to the current governance-review generation.
 - [x] Validate the focused synchronization head and resulting integration head with strict build, links, terminology, controlled-route consistency, hostile regressions, and retained artifact digests.
+- [ ] Validate the portfolio-currentness focused head and resulting non-default integration head with strict construction, hostile regressions, exact-source evidence, and retained artifacts.
 - [ ] Revalidate every later descendant and bind its external exact-state evidence without self-reference.
 - [ ] Complete rendered accessibility, independent security/privacy/governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered archives, provenance manifest, contract-registry snapshot, approval record, and SHA-256 manifests.
@@ -168,14 +181,25 @@ Remaining gates:
 
 ## FYSA-120 capability map
 
-Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
+Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
 Proposed non-authoritative refinements:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
 
 ## Evidence log
+
+### 2026-07-24 — Portfolio authority currentness review
+
+- Repository: `aevespers2/ALISTAIRE-`.
+- Packet: [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) and `docs/portfolio-authority-currentness-v1.json`.
+- Result: `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
+- Coverage: nineteen repositories, exact primary sources, structural conflicts, multiple lineages, stale metadata, merge conflicts, missing validation, no verified human dissent in the reviewed snapshot, and V1–V10 vacancies.
+- Validation: pending exact focused and resulting non-default integration evidence.
+- Authority effect: `NONE`.
+- Rollback: revert or close the currentness generation, preserve its exact evidence and source tuples, and do not activate an owner, route, namespace, adapter, runtime, release, publication, deployment, credential, payment, or infrastructure change.
 
 ### 2026-07-24 — Planning-route evidence closure
 

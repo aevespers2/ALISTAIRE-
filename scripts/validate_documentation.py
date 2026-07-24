@@ -3,13 +3,14 @@
 
 This script intentionally uses only the Python standard library. It checks the
 required documentation set, local Markdown links, publication-sensitive marker
-patterns, authority-boundary language, and the repository-provenance manifest.
-It does not validate implementation, operational security, migration approval,
-or architectural acceptance.
+patterns, authority-boundary language, repository provenance, and the complete
+portfolio authority-currentness packet. It does not validate implementation,
+operational security, migration approval, or architectural acceptance.
 """
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 import sys
@@ -30,6 +31,8 @@ REQUIRED_FILES = (
     "docs/index.md",
     "docs/architecture.md",
     "docs/portfolio-contract-authority-matrix.md",
+    "docs/portfolio-authority-currentness-review.md",
+    "docs/portfolio-authority-currentness-v1.json",
     "docs/portable-security-foundation.md",
     "docs/portfolio-integration-roadmap.md",
     "docs/governance-charter.md",
@@ -41,6 +44,9 @@ REQUIRED_FILES = (
     "docs/development.md",
     "docs/diagrams.md",
     "docs/adr/0001-governance-consolidation-and-cali-sanders-parker.md",
+    "scripts/check_portfolio_authority_currentness.py",
+    "tests/test_check_portfolio_authority_currentness.py",
+    ".github/workflows/portfolio-authority-currentness.yml",
 )
 
 REQUIRED_PHRASES = {
@@ -69,6 +75,15 @@ REQUIRED_PHRASES = {
         "Pairwise compatibility is insufficient",
         "This is an engineering method, not a claim that a formal homology or cohomology computation has been completed",
         "A repository-local document may narrow its own scope but may not silently broaden constitutional authority",
+    ),
+    "docs/portfolio-authority-currentness-review.md": (
+        "PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED",
+        "Authority effect: `NONE`",
+        "### Prose equivalent",
+        "NO_VERIFIED_HUMAN_DISSENT_LOCATED_IN_REVIEWED_CURRENTNESS_SNAPSHOT",
+        "QSO-SEEKER PR #14 currently resolves to head",
+        "V1–V10",
+        "013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation",
     ),
     "docs/portable-security-foundation.md": (
         "Repository `0`",
@@ -289,6 +304,26 @@ def check_provenance_manifest() -> int:
     return errors
 
 
+def check_portfolio_authority_currentness() -> int:
+    path = ROOT / "scripts" / "check_portfolio_authority_currentness.py"
+    spec = importlib.util.spec_from_file_location("portfolio_authority_currentness", path)
+    if spec is None or spec.loader is None:
+        fail("cannot load portfolio authority currentness validator")
+        return 1
+    module = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(module)
+        report = module.validate_repository(ROOT)
+    except Exception as exc:  # Fail closed on any validator or input defect.
+        fail(f"portfolio authority currentness validation failed: {exc}")
+        return 1
+    if report.get("result") != "PASS" or report.get("repository_count") != 19:
+        fail(f"unexpected portfolio authority currentness report: {report}")
+        return 1
+    print(json.dumps(report, sort_keys=True))
+    return 0
+
+
 def main() -> int:
     errors = 0
     errors += check_required_files()
@@ -296,6 +331,7 @@ def main() -> int:
     errors += check_local_links()
     errors += check_sensitive_patterns()
     errors += check_provenance_manifest()
+    errors += check_portfolio_authority_currentness()
 
     if errors:
         fail(f"documentation validation failed with {errors} error(s)")
@@ -306,6 +342,7 @@ def main() -> int:
     print("validated local Markdown links")
     print("validated publication-sensitive marker patterns")
     print("validated repository provenance manifest")
+    print("validated nineteen-repository authority currentness packet")
     return 0
 
 

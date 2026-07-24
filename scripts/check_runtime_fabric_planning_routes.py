@@ -53,7 +53,7 @@ REQUIRED_BY_ROUTE = {
     },
     "release.md": REVIEW_DISPOSITIONS
     | {
-        "Current runtime/Fabric dispositions",
+        "Current review dispositions",
         "Controlled propagation",
         "Acceptance gates",
         "Artifact requirements",
