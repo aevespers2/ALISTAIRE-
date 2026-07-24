@@ -20,13 +20,15 @@ A researcher or Architect can identify one constitutional source and determine:
 
 Status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
-This task chain, `punchlist.md`, `release.md`, and `changelog.md` carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, and runtime/Fabric governance review index. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
+Authority-source reconciliation: `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`
+
+This task chain, `punchlist.md`, `release.md`, and `changelog.md` carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, runtime/Fabric governance review index, and nineteen-repository authority-source reconciliation. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
 
 Validated synchronization source generation: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
 Validated synchronization integration generation: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
 
-Those immutable generations are historical evidence anchors, not self-referential claims about a later descendant. Every descendant must rerun exact-head validation and retain new evidence before it may claim currentness.
+Those immutable generations are historical evidence anchors, not self-referential claims about a later descendant. Every descendant must rerun exact-head validation and retain new evidence before it may claim currentness. The authority-source reconciliation is a newer review snapshot and likewise requires focused and resulting-head evidence before any currentness claim.
 
 ### Controlled propagation ledger
 
@@ -68,6 +70,7 @@ The linked review surfaces remain independently identified:
 | [Candidate-lineage disposition](docs/runtime-fabric-lineage-disposition.md) | `CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED` |
 | [Kernel-to-runtime crosswalk options](docs/kernel-runtime-crosswalk-options.md) | `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED` |
 | [Governance review index](docs/runtime-fabric-governance-review-index.md) | `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED` |
+| [Portfolio authority-source reconciliation](docs/portfolio-authority-source-reconciliation.md) | `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED` |
 
 The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-identity aliasing remains rejected as `REJECT_DIRECT_IDENTITY_ALIAS`.
 
@@ -82,6 +85,7 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 7. Mixed-generation migration, rollback, failed rollback, and independently verified restored-state witnesses remain incomplete.
 8. Projection or aggregation may not inflate evidence or authority.
 9. Local runtime success is not Fabric success, and Fabric success is not a Repository `1` disposition.
+10. Multi-candidate lineages, stale candidate bodies, default-head movement, absent Actions evidence, and public-registry custody create source-precedence and currentness obstructions across the wider portfolio.
 
 ## Active chain
 
@@ -93,6 +97,7 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 | P0-D3 | Accept canonical bytes and identities | D2, D3 readiness | BLOCKED | Two independent implementations agree on disposition, model, bytes, digest, identity, reason code, migration, and rollback |
 | P0-D4 | Charter independent authority and recovery roots | D3 | PROPOSED | Independent issuer, approver, revoker, key custody, quarantine, checkpoint, correction, and recovery |
 | P0-D5 | Establish portfolio incident command | D1, D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery roles |
+| P0M | Reconcile portfolio authority sources | exact defaults and candidates | REVIEW / BLOCKED | Nineteen repositories, conflicting lineages, dissent, vacancies, source currentness, and rollback are recorded; focused and resulting evidence pass |
 | P1 | Approve portable device-trust contracts | D3–D5 | PROPOSED | Shared device-to-recovery fixtures and independent rollback evidence |
 | P2A | Resolve runtime/Fabric role collision | D2–D4 | REVIEW / BLOCKED | Preserve exact inventories; accept independent semantic classes, owners, namespaces, receipts, replay, correction, revocation, migration, rollback, and consumer registrations |
 | P2 | Approve declarative/runtime/Fabric/kernel contracts | D3, D4, P2A | PROPOSED | Genome→runtime→Fabric and runtime→Fabric→Repository `1` witnesses pass |
@@ -125,17 +130,19 @@ For every task, record observations, source commits, contracts, commands, tests,
 
 Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
 
-Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-C`, `017-D`, `017-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, and `040-E`.
+Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-A`, `017-C`, `017-D`, `017-E`, `018-B`, `018-D`, `018-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-C`, `040-D`, `040-E`, `052-B`, `052-E`, `059-E`, `070-A`, `070-B`, `070-C`, `070-D`, and `070-E`.
 
 Proposed non-authoritative refinements:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Multi-candidate authority-source reconciliation, dissent preservation, and vacancy closure`.
 
 Taxonomy selection does not establish competence, appointment, permission, ownership, acceptance, or authority.
 
 ## Builder log
 
+- 2026-07-24 — Reconciled exact default heads and identified candidate heads across all nineteen repositories; recorded ten material conflicts, ten explicit vacancies, six dissent sets, and source-currentness limitations without choosing an owner or architecture.
 - 2026-07-24 — Recorded focused planning-route source evidence at `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration evidence at `87e9beb8586fe37a48bca738fd3f78425f9d4b04`; later descendants must revalidate rather than rewrite those historical anchors.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime options, and governance review index across all four controlled planning routes under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`. No binding or authority was accepted.
 - 2026-07-23 — Completed the governance review index, kernel-to-runtime crosswalk options, candidate-lineage disposition, default-head owner-vacancy inventory, producer-consumer inventory, namespace-partition packet, D1–D3 readiness packets, D2A graph, and source-generation rebind on the non-default charter candidate.
