@@ -47,13 +47,6 @@ jobs:
       EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
 
     steps:
-      - name: Initialize evidence directory
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p reports/portfolio-authority-source-reconciliation
-          printf 'expected_head=%s\n' "$EXPECTED_HEAD" > reports/portfolio-authority-source-reconciliation/source-intent.txt
-
       - name: Check out exact submitted source
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
         with:
@@ -69,14 +62,15 @@ jobs:
         run: |
           set +e
           actual="$(git rev-parse HEAD 2>/dev/null)"
+          dirty="$(git status --porcelain 2>/dev/null)"
           status=0
-          if [ "$actual" != "$EXPECTED_HEAD" ]; then
-            printf 'expected=%s\nactual=%s\n' "$EXPECTED_HEAD" "$actual" > reports/portfolio-authority-source-reconciliation/source-error.txt
+          if [ "$actual" != "$EXPECTED_HEAD" ] || [ -n "$dirty" ]; then
             status=1
           fi
-          if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
-            git status --porcelain >> reports/portfolio-authority-source-reconciliation/source-error.txt
-            status=1
+          mkdir -p reports/portfolio-authority-source-reconciliation
+          printf 'expected=%s\nactual=%s\n' "$EXPECTED_HEAD" "$actual" > reports/portfolio-authority-source-reconciliation/source-intent.txt
+          if [ -n "$dirty" ]; then
+            printf '%s\n' "$dirty" > reports/portfolio-authority-source-reconciliation/source-error.txt
           fi
           printf '%s\n' "$actual" > reports/portfolio-authority-source-reconciliation/exact-head.txt
           echo "status=$status" >> "$GITHUB_OUTPUT"
@@ -156,6 +150,7 @@ jobs:
         run: |
           set -euo pipefail
           root=reports/portfolio-authority-source-reconciliation
+          mkdir -p "$root"
           python --version > "$root/python-version.txt" 2>&1 || true
           {
             printf 'source_status=%s\n' "${{ steps.source.outputs.status || 'not-run' }}"
@@ -172,7 +167,7 @@ jobs:
           else
             : > "$root/site-SHA256SUMS"
           fi
-          sha256sum docs/portfolio-authority-source-reconciliation.md docs/portfolio-authority-source-reconciliation-v1.json docs/portfolio-contract-authority-matrix.md taskchain.md punchlist.md release.md changelog.md mkdocs.yml requirements-docs.txt scripts/check_portfolio_authority_source_reconciliation.py tests/test_check_portfolio_authority_source_reconciliation.py .github/workflows/portfolio-authority-source-reconciliation.yml > "$root/source-SHA256SUMS"
+          sha256sum docs/portfolio-authority-source-reconciliation.md docs/portfolio-authority-source-reconciliation-v1.json docs/portfolio-contract-authority-matrix.md taskchain.md punchlist.md release.md changelog.md mkdocs.yml requirements-docs.txt scripts/check_portfolio-authority_source_reconciliation.py tests/test_check_portfolio_authority_source_reconciliation.py .github/workflows/portfolio-authority-source-reconciliation.yml > "$root/source-SHA256SUMS"
           find "$root" -maxdepth 1 -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum > "$root/SHA256SUMS"
 
       - name: Upload reconciliation evidence
