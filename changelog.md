@@ -15,93 +15,81 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - Feature lineage: `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`.
 - Contributor paths: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`.
 - Capability lifecycle: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
-- D4 authority and recovery readiness: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
+- D4 authority and recovery: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
+- D5 incident command: `BLOCKED_UPSTREAM_D4_AND_MISSING_INCIDENT_COMMAND_EVIDENCE`.
 - Safe kernel/runtime disposition: `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`.
 - Rejected direct-alias option: `REJECT_DIRECT_IDENTITY_ALIAS`.
 - Authority effect: `NONE`.
 
 ### Controlled propagation markers
 
-- D1 source change: `D1_REBIND_REQUIRED`; packet withdrawal: `D1_PACKET_WITHDRAWN`.
-- D2 source or stewardship change: `D2_REBIND_REQUIRED`; packet withdrawal: `D2_PACKET_WITHDRAWN`.
-- D3 profile, fixture, consumer, migration, or rollback change: `D3_REBIND_REQUIRED`; packet withdrawal: `D3_PACKET_WITHDRAWN`.
-- D4 dependency, authority candidate, role, vacancy, route, consumer, custody, exercise, recovery, or safety-boundary change: `D4_REBIND_REQUIRED`; packet withdrawal: `D4_PACKET_WITHDRAWN`.
-- Portfolio currentness change: `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED`; packet withdrawal: `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
+- D1: `D1_REBIND_REQUIRED` / `D1_PACKET_WITHDRAWN`.
+- D2: `D2_REBIND_REQUIRED` / `D2_PACKET_WITHDRAWN`.
+- D3: `D3_REBIND_REQUIRED` / `D3_PACKET_WITHDRAWN`.
+- D4: `D4_REBIND_REQUIRED` / `D4_PACKET_WITHDRAWN`.
+- D5: `D5_REBIND_REQUIRED` / `D5_PACKET_WITHDRAWN`.
+- Portfolio currentness: `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` / `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
 
 ### Runtime/Fabric controlled dispositions
 
 - Namespace partition: `BLOCKED_ROLE_COLLISION`.
 - Candidate inventory: `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
 - Default-head inventory: `DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
-- Candidate-lineage dispositions: `CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED`.
-- Kernel-to-runtime crosswalk options: `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED`.
-- Governance review index: `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED`.
+- Candidate lineage: `CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED`.
+- Kernel/runtime crosswalk: `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED`.
+- Governance review: `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED`.
 
 ### Product
 
-- 2026-07-24 — Added D4 independent-authority and recovery-roots decision readiness under `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`; no authority, capability, credential, checkpoint, or recovery operation was activated.
-- 2026-07-24 — Synchronized capability-roadmap, feature-lineage, contributor-path, and D4 state through taskchain, punchlist, release, changelog, README, and Pages.
-- 2026-07-24 — Added contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; routes do not appoint maintainers or authorize implementation.
-- 2026-07-24 — Reconciled the validated forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the family-scoped roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH` without creating a parallel registry.
-- 2026-07-24 — Added Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
-- 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`.
+- 2026-07-24 — Added D5 portfolio incident-command readiness under `BLOCKED_UPSTREAM_D4_AND_MISSING_INCIDENT_COMMAND_EVIDENCE`; no incident commander, freeze, legal hold, rollback, recovery, publication notice, claim withdrawal, or closure authority was activated.
+- 2026-07-24 — Added D4 independent-authority and recovery-root readiness under `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`; no authority, capability, credential, checkpoint, or recovery operation was activated.
+- 2026-07-24 — Synchronized capability-roadmap, feature-lineage, contributor-path, D4, and D5 state through README, Pages, task chain, punch list, release plan, changelog, and MkDocs navigation.
+- 2026-07-24 — Added contributor paths for all nineteen repositories without appointing maintainers or authorizing implementation.
+- 2026-07-24 — Reconciled the forty-feature proposal into the family-scoped roadmap without creating a parallel authority registry.
+- 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution**.
 - 2026-07-24 — Reconciled exact primary sources for all nineteen repositories while preserving active lineages, structural conflicts, dissent boundaries, and V1–V10 vacancies.
-- 2026-07-24 — Bound historical planning-route focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as generation-specific evidence.
-- 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, governance review index, safe unsupported route, and rejected direct alias across the four planning routes.
 - 2026-07-23 — Added runtime/Fabric governance, inventories, lineage, crosswalk, source rebind, and D1–D3 readiness surfaces without accepting authority.
 - 2026-07-21 — Added the portfolio contract and authority matrix, portable-security foundation, D1–D5 decision cut, acceptance DAG, integration phases, and gluing analysis.
 - 2026-07-20 — Prepared the initial evidence-bounded Pages-ready charter candidate.
 
 ### Architecture
 
-- 2026-07-24 — Compared isolated Repository `1`, split issuance/recovery roots, and federated human-reviewed quorum models without selecting one.
-- 2026-07-24 — Recorded observed Repository `1` candidate heads `432a6fafa56d4a57be7fc3918eba5ed80a6bcdcc` and `0813308061e27e8289ea8f15af7d5ccdc84b4abf` as evidence only.
-- 2026-07-24 — Formalized the Repository `0`/Repository `1` route bifurcation between `working → proposal → quarantine` and direct `working → quarantine`.
-- 2026-07-24 — Added D4 pairwise and triple-overlap witnesses for proposer, quarantine, decision, capability, execution, receipt, disposition, checkpoint, revocation, recovery, consumer acknowledgment, and independently verified resulting state.
-- 2026-07-24 — Added obstruction classes for constitutional loops, proposal/disposition collapse, root co-location, revocation orphans, checkpoint forks, compromised-root recovery, stale quorums, replay ambiguity, rollback resurrection, and unverified restoration.
-- 2026-07-24 — Repaired `cross_document_lifecycle_route_divergence`: README, Pages, and changelog exposed roadmap and contributor states while taskchain, punchlist, and release omitted them.
-- 2026-07-24 — Added an accessible lifecycle-route diagram and prose equivalent connecting roadmap, task chain, punch list, release, changelog, D1–D5, and repository-local approval.
-- 2026-07-24 — Added a repository-by-repository contributor corridor with documentation role, bounded task, FYSA skills, stop condition, exact-source precedence, and gluing checks.
-- 2026-07-24 — Preserved family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace.
-- 2026-07-24 — Reserved `012-Q` for public naming and moved source-aware documentation generation to `012-S`; retained `032-J`, `040-Q`, `054-L`, and `054-M` for gluing, restoration, authority separation, and independent recovery roots.
-- 2026-07-24 — Grouped forty capabilities into six families and stages R0–R5 with candidate homes and unresolved gates rather than implied ownership.
-- 2026-07-24 — Recorded roadmap obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
-- 2026-07-24 — Reconciled the portfolio matrix against exact sources and recorded V1–V10 vacancies.
-- 2026-07-24 — Aligned controlled planning routes to the same runtime/Fabric dispositions and generation-specific evidence model.
+- 2026-07-24 — Compared single-command with independent deputies, federated repository incident council, and tiered evidence/recovery/publication-cell models without selecting one.
+- 2026-07-24 — Defined an incident lifecycle from attributed alert through independent intake, scoped declaration, preservation, bounded freeze, root-cause and blast-radius analysis, approved repair, exact-state verification, public-claim correction or withdrawal, and independent closure.
+- 2026-07-24 — Added immutable D5 fields for severity, command roles, evidence custody, freeze scope, dependencies, consumers, credentials, data, devices, payments, publications, repair, rollback, recovery, communication, incident memory, and closure.
+- 2026-07-24 — Added D5 pairwise and triple-overlap witnesses for alert/intake, declaration/freeze, evidence/finding, repair/execution, receipt/resulting state, correction/consumer/public claims, checkpoint/recovery/witness, and closure/memory/follow-up.
+- 2026-07-24 — Added incident-command obstruction classes for authority circularity, severity divergence, freeze leakage, evidence-custody collapse, dependency blind spots, correction orphans, claim persistence, restart ambiguity, rollback resurrection, recovery self-attestation, closure mismatch, and incident-memory loss.
+- 2026-07-24 — Compared D4 isolated Repository `1`, split issuance/recovery, and federated human-reviewed quorum models without selecting one.
+- 2026-07-24 — Formalized Repository `0`/Repository `1` route bifurcation and D4 authority/recovery witnesses.
+- 2026-07-24 — Repaired lifecycle-route divergence and added accessible route diagrams with prose equivalents.
+- 2026-07-24 — Preserved family-scoped feature identifiers and grouped forty capabilities into six families and stages R0–R5.
 - 2026-07-23 — Connected `qsio-kernel → QuantumStateObjects → QSO-FABRIC → Repository 1` through one review index while retaining the route as unsupported.
-- 2026-07-23 — Recorded kernel/runtime mismatch, namespace ambiguity, missing projection receipts, source-set inflation, replay ambiguity, correction/revocation discontinuity, owner vacancy, incomplete rollback, and authority inflation.
 - 2026-07-21 — Added record-family identities, pairwise edges, triple overlaps, and practical gluing checks without claiming completed formal homology or cohomology.
 
 ### Security and governance
 
-- 2026-07-24 — Required D4 to separate proposal, review, approval, execution, evidence, key custody, revocation, checkpoint custody, and recovery duties.
-- 2026-07-24 — Required capabilities to remain scoped, attributable, expiring, replay-bounded, and revocable; documentation does not issue them.
-- 2026-07-24 — Required recovery to remain independent from a suspected root and to preserve failed-generation evidence, correction, revocation, consumer propagation, rollback, and independently witnessed restoration.
-- 2026-07-24 — Required every lifecycle route to preserve roadmap, lineage, contributor, lifecycle, D1–D5, correction, withdrawal, and rollback state without promoting documentation into implementation.
-- 2026-07-24 — Required contributors to stop when work would appoint owners, select architecture, activate policy, expand collection, handle credentials, approve releases, publish, deploy, execute payments, or mutate devices.
-- 2026-07-24 — Required feature reconciliation to preserve PR #22 exact source, the 37-to-40 delta, family identifiers, and prohibition on a parallel registry.
-- 2026-07-24 — Defined “autonomous” as bounded internal inference under accepted policy and review, never standing tool, credential, network, device, payment, publication, release, deployment, or self-modification authority.
-- 2026-07-24 — Distinguished structural conflict from verified human dissent; absence of dissent is not approval or consensus.
-- 2026-07-24 — Added correction, withdrawal, rebinding, lineage, vacancy, rollback, and descendant-revalidation rules.
-- 2026-07-24 — Required controlled planning-route agreement before documentation may claim currentness; agreement remains non-authorizing.
+- 2026-07-24 — Required D5 to separate alerting, intake, evidence custody, command, investigation, repair approval, execution, publication, recovery, and closure duties.
+- 2026-07-24 — Required freezes to remain scoped, attributable, expiring or renewable under accepted rules, and prohibited from expanding silently beyond affected repositories, contracts, consumers, data, devices, credentials, payments, or infrastructure.
+- 2026-07-24 — Required correction and revocation to reach every registered consumer, with unreachable consumers preserved as explicit obstructions.
+- 2026-07-24 — Required claim withdrawal and correction through separately governed publication channels; restored service is not public, legal, or contract closure.
+- 2026-07-24 — Required rollback not to resurrect revoked authority, withdrawn consent, stale credentials, invalidated claims, or superseded state.
+- 2026-07-24 — Required incident closure to preserve dissent, failed repairs, residual risks, exact evidence, consumer state, and an independent resulting-state witness.
+- 2026-07-24 — Required D4 separation of proposal, review, approval, execution, evidence, custody, revocation, checkpoint, and recovery duties.
+- 2026-07-24 — Required every lifecycle route to preserve roadmap, contributor, D1–D5, correction, withdrawal, and rollback state without promoting documentation into implementation.
+- 2026-07-24 — Defined “autonomous” as bounded inference under accepted policy and review, never standing operational authority.
 - 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified.
-- 2026-07-23 — Required ambiguous legacy records to remain `UNKNOWN` or quarantined and failed rollback to freeze promotion.
 - 2026-07-21 — Added release-blocking controls for self-authorizing contracts, route bifurcation, serialization mismatch, replay ambiguity, privacy downgrade, lossy projection, correction divergence, revocation gaps, circular recovery, publication failure, and rollback without an inverse.
 
 ### Documentation
 
-- 2026-07-24 — Added Pages-ready [D4 independent authority and recovery roots decision packet](docs/d4-independent-authority-recovery-roots-decision-packet.md) and [machine-readable profile](docs/d4-independent-authority-recovery-roots-decision-packet-v1.json).
-- 2026-07-24 — Added D4 candidate models, immutable decision fields, readiness gates, source observations, accessible lifecycle diagram with prose equivalent, obstruction and witness analysis, controlled propagation, reviewer onboarding, FYSA mapping, and explicit non-authority boundaries.
-- 2026-07-24 — Synchronized D4 status, links, gates, correction, withdrawal, rollback, and remaining blockers across README, Pages home, taskchain, punchlist, release, changelog, and MkDocs navigation.
-- 2026-07-24 — Added Pages-ready [capability and contributor lifecycle coherence](docs/capability-lifecycle-coherence.md), machine-readable profile, exact source tuple, status table, accessible diagram, repaired-obstruction record, remaining blockers, onboarding, change control, and rollback.
-- 2026-07-24 — Added a strict lifecycle validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic hashing, retained terminal-path evidence, and final fail-closed gating.
-- 2026-07-24 — Added proposed non-authoritative subdivision `012-U — Capability and contributor lifecycle-route synchronization, anti-divergence validation, and non-authorizing status propagation`.
-- 2026-07-24 — Added Pages-ready contributor paths, capability routes, nineteen repository entry paths, onboarding and gluing checklists, and machine-readable profile.
-- 2026-07-24 — Proposed `012-T`, `018-G`, and `011-G` for contributor routing, vacancy-aware handoff, and accessible corridor diagrams.
-- 2026-07-24 — Expanded the capability roadmap to forty reconciled features while preserving the PR #22 branch as historical evidence.
-- 2026-07-24 — Extended roadmap validation to reject source-head substitution, parallel registries, feature-delta drift, missing capabilities, subdivision collision, authority inflation, and destructive rollback.
-- 2026-07-24 — Added Pages-ready capability roadmap, public name guide, currentness guide, machine-readable profiles, strict validators, hostile tests, and retained-evidence workflows.
-- 2026-07-24 — Reworked taskchain, punchlist, release, and changelog into controlled decision routes.
+- 2026-07-24 — Added Pages-ready [D5 portfolio incident command decision packet](docs/d5-portfolio-incident-command-decision-packet.md) and [machine-readable profile](docs/d5-portfolio-incident-command-decision-packet-v1.json).
+- 2026-07-24 — Added D5 candidate models, immutable decision fields, readiness gates, observed sources, accessible lifecycle diagram with prose equivalent, obstruction and witness analysis, controlled propagation, reviewer onboarding, FYSA mapping, and explicit non-authority boundaries.
+- 2026-07-24 — Synchronized D5 status, links, gates, correction, withdrawal, rollback, and blockers across README, Pages home, task chain, punch list, release plan, changelog, and MkDocs navigation.
+- 2026-07-24 — Added Pages-ready D4 authority and recovery decision packet and machine-readable profile.
+- 2026-07-24 — Added capability and contributor lifecycle coherence, strict validation, hostile regressions, retained evidence, and rollback.
+- 2026-07-24 — Added Pages-ready contributor paths, capability routes, nineteen repository entry paths, onboarding, gluing checklists, and machine-readable profiles.
+- 2026-07-24 — Added Pages-ready capability roadmap, public name guide, currentness guide, validators, hostile tests, and retained-evidence workflows.
+- 2026-07-24 — Reworked task chain, punch list, release plan, and changelog into controlled decision routes.
 
 ### FYSA-120 refinements
 
@@ -117,5 +105,6 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`.
 - `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`.
 - `054-M — Independent authority and recovery-root separation`.
+- **`064-F — Portfolio incident command, bounded freeze, claim withdrawal, and independently witnessed closure`**.
 
-No Pages publication, default-branch merge, constitutional acceptance, authority activation, capability issuance, credential change, checkpoint restoration, release, deployment, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
+No Pages publication, default-branch merge, constitutional acceptance, authority activation, incident declaration, freeze, legal hold, claim withdrawal, capability issuance, credential change, checkpoint restoration, release, deployment, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
