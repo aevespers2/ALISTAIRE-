@@ -16,6 +16,7 @@ extra:
   portfolio_contributor_paths_status: PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED
   capability_lifecycle_coherence_status: CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED
   d4_authority_recovery_status: BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE
+  d5_incident_command_status: D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -70,6 +71,8 @@ nav:
       - Machine-readable D2 packet: d2-neutral-contract-steward-decision-packet-v1.json
       - D4 independent authority and recovery roots: d4-independent-authority-recovery-roots-decision-packet.md
       - Machine-readable D4 packet: d4-independent-authority-recovery-roots-decision-packet-v1.json
+      - D5 portfolio incident command: d5-portfolio-incident-command-decision-packet.md
+      - Machine-readable D5 packet: d5-portfolio-incident-command-decision-packet-v1.json
   - Repository consolidation:
       - Decision and options: repository-consolidation.md
       - D1 canonical identity decision packet: d1-canonical-identity-decision-packet.md
