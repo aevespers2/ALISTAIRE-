@@ -5,6 +5,7 @@ repo_url: https://github.com/aevespers2/ALISTAIRE-
 edit_uri: edit/main/docs/
 strict: true
 extra:
+  portfolio_authority_currentness_status: PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
   runtime_fabric_governance_review_status: REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED
   runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
   runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
@@ -25,6 +26,8 @@ nav:
       - Orchestration mode: orchestration-mode.md
       - Portfolio contract standard: portfolio-contract-standard.md
       - Portfolio contract and authority matrix: portfolio-contract-authority-matrix.md
+      - Portfolio authority currentness review: portfolio-authority-currentness-review.md
+      - Machine-readable authority currentness profile: portfolio-authority-currentness-v1.json
       - D2A common-contract ownership graph: d2a-common-contract-ownership-graph.md
       - Machine-readable D2A graph: d2a-common-contract-ownership-graph-v1.json
       - Runtime/Fabric governance review index: runtime-fabric-governance-review-index.md
