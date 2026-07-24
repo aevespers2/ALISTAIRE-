@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-24 — Added documentation-first contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; the paths provide bounded entry tasks and stop conditions without appointing maintainers or authorizing implementation.
 - 2026-07-24 — Reconciled the validated but conflicted forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the existing capability roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`; the preserved family-scoped roadmap now contains forty features without creating a parallel authority registry.
 - 2026-07-24 — Added the three previously missing capabilities—Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard—while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED` and authority effect `NONE`.
 - 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`; this generation is now preserved as the pre-reconciliation source state.
@@ -28,6 +29,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-24 — Added a repository-by-repository contributor corridor covering documentation role, bounded first task, FYSA-120 skills, stop condition, exact-source precedence, and cross-repository gluing checks.
 - 2026-07-24 — Preserved the existing family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace, and prohibited a second machine-readable authority source for the same capability program.
 - 2026-07-24 — Reserved `012-Q` for public technical naming and moved source-aware documentation generation to proposed subdivision `012-S`; added non-authoritative refinements `032-J`, `040-Q`, and `054-L` for gluing, restoration, and authority separation.
 - 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with every feature tied to candidate repository homes and unresolved gates rather than implied ownership.
@@ -49,6 +51,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Required contributors to stop when work would appoint owners, select architecture, activate policy, expand collection, handle credentials, approve releases, publish, deploy, execute payments, or mutate devices.
 - 2026-07-24 — Required the reconciliation record to bind PR #22, its exact superseded head, the 37-to-40 delta, the three admitted feature names, identifier preservation, and the prohibition on a parallel registry.
 - 2026-07-24 — Bound each roadmap feature to gates, prohibited promotions, correction, and rollback while preserving authority effect `NONE`.
 - 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
@@ -73,6 +76,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Added Pages-ready [portfolio contributor paths](docs/portfolio-contributor-paths.md), an accessible flow diagram with prose equivalent, capability routes, nineteen repository entry paths, onboarding and gluing checklists, change control, and a machine-readable profile.
+- 2026-07-24 — Proposed non-authoritative FYSA-120 subdivisions `012-T`, `018-G`, and `011-G` for contributor routing, maintainer-vacancy-aware handoff, and accessible portfolio corridor diagrams.
 - 2026-07-24 — Expanded the existing Pages roadmap and machine-readable profile from thirty-seven to forty reconciled capabilities while preserving the validated PR #22 source branch as historical evidence rather than publishing duplicate program pages.
 - 2026-07-24 — Extended the strict validator and hostile regressions to reject source-head substitution, parallel registries, feature-delta drift, missing reconciled features, subdivision collisions, authority inflation, and destructive rollback.
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
@@ -120,6 +125,9 @@ Proposed non-authoritative subdivisions:
 - `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
 - `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`;
 - `012-S — Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal`;
+- `012-T — Cross-repository contributor journey and documentation-first task routing`;
+- `011-G — Accessible portfolio corridor diagrams with authority and stop-condition semantics`;
+- `018-G — Maintainer-vacancy-aware onboarding and repository-local handoff continuity`;
 - `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
 - `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`;
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`;
