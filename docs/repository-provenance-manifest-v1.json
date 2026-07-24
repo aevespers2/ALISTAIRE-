@@ -1,0 +1,150 @@
+{
+  "manifest_id": "ALISTAIRE-REPOSITORY-PROVENANCE-001",
+  "version": "1.0.0-proposed",
+  "status": "DOCUMENTATION_ONLY_REVIEW",
+  "authority_effect": "none",
+  "observed_at": "2026-07-23",
+  "scope": {
+    "repositories": [
+      "aevespers2/ALISTAIRE-",
+      "aevespers2/Alistaire-agi"
+    ],
+    "purpose": "Preserve exact observed repository generations, commit lineage, substantive and placeholder content classifications, attribution, license status, open coordination surfaces, migration destinations, and rollback requirements without selecting canonical authority."
+  },
+  "repositories": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "default_branch": "main",
+      "observed_main_head": "7adbbf963616d09b4ebafea7c0963a2fac5688a9",
+      "active_candidate": {
+        "pull_request": 1,
+        "branch": "docs/consolidation-charter-20260720",
+        "head": "32c3684381b85b071adbb7dca15604a1a0c9ed99",
+        "state": "OPEN_DRAFT"
+      },
+      "observed_commits_newest_first": [
+        "7adbbf963616d09b4ebafea7c0963a2fac5688a9",
+        "83d26ae971dcfe118312a34f3ed46778d3302b58",
+        "fba7f041aae3afc0fb76a1ca50dacce7eddb2904",
+        "fa3d8313fc34ccb99b205bfbe472e7bfd9e9fcb9",
+        "bc04d1d45ddf874e45100a8d8fb478f1c91c058e",
+        "29f49f89c325e92442052a456dbcd04599f8150f",
+        "867c55a5b717eb3426f43c13638c7420a9cb6951",
+        "3279b2b6e8f6395a613cb1961f43c5861bfd4531"
+      ],
+      "substantive_content": [
+        "taskchain.md",
+        "release.md",
+        "punchlist.md",
+        "changelog.md",
+        "PR #1 documentation, governance, architecture, contract, lifecycle, recovery, validation, and Pages candidate"
+      ],
+      "placeholder_content": [],
+      "license": {
+        "status": "MISSING",
+        "path_checked": "LICENSE",
+        "effect": "No license grant is inferred; reuse and migration remain blocked pending an explicit license decision."
+      },
+      "open_issues_observed": 0,
+      "open_pull_requests_observed": [1],
+      "proposed_destination": "candidate charter-history and coordination authority, subject to D1 approval",
+      "attribution_requirement": "Preserve commit SHAs and source paths for every migrated or summarized record."
+    },
+    {
+      "repository": "aevespers2/Alistaire-agi",
+      "default_branch": "main",
+      "observed_main_head": "504222dbecb1e1e49c01d74e536de5b6fa93c39a",
+      "active_candidate": {
+        "pull_request": 2,
+        "branch": "docs/portfolio-consolidation-20260720",
+        "head": "c745403f7cf7532abd30076301ce2020dbd1e732",
+        "state": "OPEN_DRAFT"
+      },
+      "observed_commits_newest_first": [
+        "504222dbecb1e1e49c01d74e536de5b6fa93c39a",
+        "d70c4af2d2b5e40c7d06462e4ff270b4aeddf811",
+        "6a351d75deb893ac37040a93ca6edf7dbc433843",
+        "5294dd9ced84646bb409c0f8d13c4ae469e5620c",
+        "0fa9aa2c03d190fec52f93b4cca497ce5ed8d138"
+      ],
+      "substantive_content": [
+        "README.md package-name proposal",
+        "taskchain.md",
+        "release.md",
+        "changelog.md",
+        "PR #2 consolidation, migration, compatibility, gluing, onboarding, validation, and Pages candidate"
+      ],
+      "placeholder_content": [
+        "Approximately 140 empty documentation paths created by commit 5294dd9ced84646bb409c0f8d13c4ae469e5620c across AI, API, architecture, developer, diagrams, modules, protocols, QSO, reference, research, standards, and tutorial categories"
+      ],
+      "license": {
+        "status": "MISSING",
+        "path_checked": "LICENSE",
+        "effect": "No license grant is inferred; reuse and migration remain blocked pending an explicit license decision."
+      },
+      "open_issues_observed": 0,
+      "open_pull_requests_observed": [2],
+      "proposed_destination": "candidate compatibility landing, historical taxonomy, package-name proposal, and migration evidence, subject to D1 approval",
+      "attribution_requirement": "Preserve commit SHAs, PR references, and source paths; empty paths may be converted only into explicitly proposed backlog records."
+    }
+  ],
+  "classification_rules": {
+    "substantive": "Contains non-empty product, governance, architecture, migration, onboarding, validation, or release content.",
+    "placeholder": "Exists as a filename or empty page without evidence-bearing content.",
+    "historical": "Preserved for provenance but not represented as current authority.",
+    "proposed": "Candidate content requiring explicit review and approval.",
+    "blocked": "Cannot progress without an identified decision, owner, contract, evidence generation, or license."
+  },
+  "migration_classes": [
+    "RETAIN_IN_SOURCE",
+    "MIGRATE_WITH_ATTRIBUTION",
+    "SUMMARIZE_WITH_COMMIT_LINK",
+    "CONVERT_TO_BACKLOG",
+    "HISTORICAL_ONLY",
+    "REDIRECT_OR_ARCHIVE_AFTER_APPROVAL",
+    "REJECT_AS_UNSUPPORTED_CLAIM"
+  ],
+  "sensitive_data_review": {
+    "status": "LIMITED_PASS_WITH_RESIDUAL_RISK",
+    "queries": [
+      "BEGIN PRIVATE KEY",
+      "api_key password secret token"
+    ],
+    "matches": 0,
+    "limitations": "Repository code search is not a complete secret scan and may not cover binary content, deleted history, inaccessible objects, or unindexed branches. A dedicated history-aware scanner remains required before migration or publication."
+  },
+  "current_obstructions": [
+    "Canonical repository and display/package identity are not approved.",
+    "Both repositories lack an explicit LICENSE file.",
+    "The active PR candidates are independently validated but not jointly accepted or reconciled.",
+    "No approved migration manifest binds each source path to a final destination and resulting-state verification.",
+    "Support, security-reporting, compatibility-window, redirect, archive, and rollback owners remain unassigned.",
+    "The placeholder taxonomy must not be represented as implemented architecture or completed documentation."
+  ],
+  "rollback": {
+    "trigger": "Any migration loses attribution, produces competing current authorities, publishes unsupported claims, or cannot be reproduced at the recorded exact heads.",
+    "action": "Withdraw the migration candidate, restore both repositories to their last reviewed immutable heads, retain this manifest and failed-candidate evidence, and leave D1 blocked."
+  },
+  "skill_tree_mapping": [
+    {"category":"CAT-011","subdivisions":["011-A","011-B","011-E"],"use":"claim-evidence narrative, accessible diagrams, and cross-modal consistency"},
+    {"category":"CAT-012","subdivisions":["012-A","012-B","012-D","012-E"],"use":"information hierarchy, technical exposition, documentation testing, and lifecycle synchronization"},
+    {"category":"CAT-013","subdivisions":["013-C","013-E"],"use":"duplicate consolidation, canonical identifier design, provenance, and graph integrity"},
+    {"category":"CAT-017","subdivisions":["017-A","017-C","017-D","017-E"],"use":"canonical source resolution, lineage, version substitution detection, hashing, and correction propagation"},
+    {"category":"CAT-018","subdivisions":["018-A","018-B","018-C","018-D"],"use":"decision memory, classification, preservation, and onboarding transfer"},
+    {"category":"CAT-019","subdivisions":["019-B","019-C"],"use":"plain-language status and accessible public explanation"},
+    {"category":"CAT-031","subdivisions":["031-A","031-E"],"use":"threat-aware acceptance criteria and assurance-case maintenance"},
+    {"category":"CAT-040","subdivisions":["040-A","040-B","040-D","040-E"],"use":"repository archaeology, migration risk, cutover planning, and rollback continuity"}
+  ],
+  "proposed_skill_gap": {
+    "id": "040-F",
+    "name": "Repository-identity consolidation and provenance-preserving retirement",
+    "status": "PROPOSED_NON_AUTHORITATIVE",
+    "skills": [
+      "cross-repository history reconciliation",
+      "placeholder-taxonomy disposition",
+      "package-authority migration",
+      "redirect and archive verification",
+      "dual-authority rollback testing"
+    ]
+  }
+}

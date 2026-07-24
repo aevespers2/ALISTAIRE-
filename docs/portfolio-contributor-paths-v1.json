@@ -1,0 +1,46 @@
+{
+  "schema": "alistaire.portfolio-contributor-paths.v1",
+  "status": "PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED",
+  "authority_effect": "NONE",
+  "source_precedence": [
+    "repository-local accepted decision",
+    "repository-local exact candidate",
+    "portfolio currentness review",
+    "this contributor-path profile"
+  ],
+  "repositories": [
+    {"repository":"ALISTAIRE-","role":"constitutional charter and portfolio governance","first_task":"decision discoverability and cross-document status consistency","skills":["CAT-012","CAT-018","CAT-019"],"stop_condition":"D1-D5 selection or authority appointment"},
+    {"repository":"Alistaire-agi","role":"compatibility landing and migration history","first_task":"compatibility redirect archive and rollback options","skills":["CAT-012","CAT-017","CAT-040"],"stop_condition":"canonical identity or package disposition"},
+    {"repository":"0","role":"portable bootstrap and bounded maintenance orchestration","first_task":"proposal execution evidence and non-approval boundaries","skills":["CAT-012","CAT-032","CAT-054"],"stop_condition":"device mutation or capability issuance"},
+    {"repository":"1","role":"quarantine disposition capability revocation checkpoint and recovery candidate","first_task":"authority recovery custody and separation-of-duty diagrams","skills":["CAT-011","CAT-018","CAT-054"],"stop_condition":"approver key-custody or recovery appointment"},
+    {"repository":"AionUi","role":"optional review shell","first_task":"UI state versus review approval and export authority","skills":["CAT-011","CAT-012","CAT-019"],"stop_condition":"accepted review contract or deployment scope"},
+    {"repository":"Bridge","role":"domain product and candidate transport evidence profile","first_task":"separate product behavior from reusable transport and evidence contracts","skills":["CAT-012","CAT-032","CAT-040"],"stop_condition":"transport ownership or operational integration"},
+    {"repository":"datarepo-temporal-invariants","role":"temporal identity freshness replay ordering and supersession","first_task":"worked examples and failure-state explanations","skills":["CAT-012","CAT-013","CAT-031"],"stop_condition":"canonical clock source authority or disposition selection"},
+    {"repository":"grok-build-alistaire","role":"optional engineering shell","first_task":"execution-adapter boundaries evidence and rollback","skills":["CAT-012","CAT-052","CAT-054"],"stop_condition":"credentials writes merge release or deployment"},
+    {"repository":"JusticeForMe","role":"read-only host observation adapter","first_task":"privacy retention device identity and report-contract onboarding","skills":["CAT-012","CAT-019","CAT-052"],"stop_condition":"collection expansion or remediation authority"},
+    {"repository":"Misc","role":"PhantomBlock incubation and specialist observation provenance","first_task":"migration consolidation retirement and evidence preservation","skills":["CAT-017","CAT-018","CAT-040"],"stop_condition":"destination or retirement approval"},
+    {"repository":"qsio-kernel","role":"deterministic conformance and replay candidate","first_task":"reference implementation limits and fixture compatibility","skills":["CAT-012","CAT-031","CAT-032"],"stop_condition":"neutral format ownership or compatibility acceptance"},
+    {"repository":"QSO-DIGITALIS","role":"non-executing interpretation and policy projection","first_task":"interpretation outputs uncertainty and non-capability boundaries","skills":["CAT-012","CAT-019","CAT-032"],"stop_condition":"policy activation or operational authority"},
+    {"repository":"QSO-FABRIC","role":"projection collaboration experiment and aggregate evidence","first_task":"runtime-local versus Fabric records and overlap tests","skills":["CAT-011","CAT-031","CAT-032"],"stop_condition":"namespace schema custody or live composition approval"},
+    {"repository":"qso-field.github.io","role":"public documentation and portfolio interpretation layer","first_task":"candidate-lineage reconciliation and publication-readiness evidence","skills":["CAT-012","CAT-017","CAT-040"],"stop_condition":"candidate precedence publication or release approval"},
+    {"repository":"QSO-GENOMES","role":"declarative genome identity lineage policy data and compatibility","first_task":"generic envelope ownership versus genome-profile ownership","skills":["CAT-012","CAT-017","CAT-032"],"stop_condition":"namespace canonical bytes or admission authority"},
+    {"repository":"QSO-PAYMENTS","role":"economic intent policy simulation and reconciliation","first_task":"simulation test approval execution and settlement separation","skills":["CAT-012","CAT-019","CAT-054"],"stop_condition":"financial approval credentials or transaction execution"},
+    {"repository":"QSO-SEEKER","role":"source acquisition sanitization attribution and inert observation","first_task":"source-rights privacy replay and handoff documentation","skills":["CAT-012","CAT-017","CAT-052"],"stop_condition":"new collection authority or trust promotion"},
+    {"repository":"QSO-STUDIO","role":"domain-neutral review and evidence inspection","first_task":"review interaction annotation export and approval separation","skills":["CAT-011","CAT-019","CAT-054"],"stop_condition":"approval contract identity or deployment scope"},
+    {"repository":"QuantumStateObjects","role":"bounded local runtime semantics and evidence production","first_task":"lifecycle execution-report failure freeze and recovery boundaries","skills":["CAT-012","CAT-031","CAT-032"],"stop_condition":"runtime admission or Fabric Repository 1 authority"}
+  ],
+  "required_invariants": [
+    "exact candidate resolved before work",
+    "implemented tested proposed blocked unsupported superseded and withdrawn remain distinct",
+    "owner vacancies remain explicit",
+    "diagrams have prose alternatives",
+    "cross-repository composition claims expose producer consumer schema authority correction revocation migration and rollback",
+    "passing validation does not create authority",
+    "resulting candidate is revalidated after integration"
+  ],
+  "proposed_skill_subdivisions": [
+    "012-T Cross-repository contributor journey and documentation-first task routing",
+    "018-G Maintainer-vacancy-aware onboarding and repository-local handoff continuity",
+    "011-G Accessible portfolio corridor diagrams with authority and stop-condition semantics"
+  ]
+}

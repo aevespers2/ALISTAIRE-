@@ -1,0 +1,949 @@
+{
+  "schema": "alistaire.constitutional-lifecycle-snapshot-compaction.corpus.v1",
+  "profile_version": "1.0.0",
+  "status": "synthetic_only_non_operational",
+  "cases": [
+    {
+      "case_id": "healthy-compaction",
+      "description": "A committed snapshot and completed compaction converge to the fully acknowledged active state.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 4,
+      "journal": [],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 3,
+        "digest_valid": true,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 3,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "state_converged",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "torn-snapshot-full-log-replay",
+      "description": "A torn snapshot is ignored while the complete append-only journal remains available for deterministic replay.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-r1",
+          "operation": "replacement",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "1048f7fdb0e7b4d96177f17ba13a5064e3e276184cf92ca282b1d2587514e772",
+          "phase": "committed"
+        },
+        {
+          "sequence": 2,
+          "transaction_id": "tx-c1",
+          "operation": "credential_rotate",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": null,
+          "payload_digest": "f6eac51426f01fe82100dbc964122798b16e2d6b502b40b22711ab204f1aca3d",
+          "phase": "committed"
+        },
+        {
+          "sequence": 3,
+          "transaction_id": "tx-a1",
+          "operation": "acknowledge",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": "tx-c1",
+          "payload_digest": "9f84e0ee2e08b939416ba1a5d23f50046d5097f81ac3e6fd307369c93464891e",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "torn",
+        "sequence": 3,
+        "digest_valid": false,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "prepared",
+        "cutoff_sequence": 3,
+        "interruption": "before_snapshot_commit"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "full_log_replay",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "torn-snapshot-after-prune-quarantined",
+      "description": "A torn snapshot after journal pruning cannot be reconstructed and therefore fails closed in quarantine.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 4,
+      "journal": [],
+      "snapshot": {
+        "phase": "torn",
+        "sequence": 3,
+        "digest_valid": false,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 3,
+        "interruption": "after_prune_before_ack"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "snapshot_unrecoverable_after_prune",
+        "state": null
+      }
+    },
+    {
+      "case_id": "snapshot-log-divergence-quarantined",
+      "description": "A digest-valid snapshot whose state contradicts the retained journal prefix is quarantined rather than trusted.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-r4",
+          "operation": "replacement",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "37cb3cdcf7ceca8caaf9c1b13b23921f917ad5bc86ffc168616cf56cdf97ea5c",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 1,
+        "digest_valid": true,
+        "state": {
+          "sequence": 1,
+          "authority_generation": 0,
+          "credential_generation": 0,
+          "status": "inactive",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "prepared",
+        "cutoff_sequence": 1,
+        "interruption": "after_snapshot_commit_before_prune"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "snapshot_log_divergence",
+        "state": null
+      }
+    },
+    {
+      "case_id": "compaction-interrupted-before-prune-converges",
+      "description": "A committed snapshot with the unpruned journal survives interruption before pruning and reconstructs the same state.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-r5",
+          "operation": "replacement",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "cdb0a6f5261f4c4d588b10068ba9b95c2c793a70fb2722200b66ada7acc8c069",
+          "phase": "committed"
+        },
+        {
+          "sequence": 2,
+          "transaction_id": "tx-c5",
+          "operation": "credential_rotate",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": null,
+          "payload_digest": "d49f5828021c653891a384ce54749388bbb1522ae9ed37ae63b8e7cd5d994de4",
+          "phase": "committed"
+        },
+        {
+          "sequence": 3,
+          "transaction_id": "tx-a5",
+          "operation": "acknowledge",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": "tx-c5",
+          "payload_digest": "c44e394e06368c1ec653517b040f0c51dc632cd64aff666978148aa6fc48fd4d",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 3,
+        "digest_valid": true,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r5",
+            "tx-c5",
+            "tx-a5"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "prepared",
+        "cutoff_sequence": 3,
+        "interruption": "after_snapshot_commit_before_prune"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "state_converged",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r5",
+            "tx-c5",
+            "tx-a5"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "compaction-interrupted-after-prune-converges",
+      "description": "A valid committed snapshot remains authoritative after pruning and later journal entries advance deterministically.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 3,
+      "journal": [
+        {
+          "sequence": 3,
+          "transaction_id": "tx-r6-2",
+          "operation": "replacement",
+          "authority_generation": 2,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "29147b817fe8b579276ec6b37f17b499b1116f6676fc3d40894dd8e348207777",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 2,
+        "digest_valid": true,
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r6",
+            "tx-a6"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 2,
+        "interruption": "after_prune_before_ack"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "state_converged",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 2,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r6",
+            "tx-a6",
+            "tx-r6-2"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "duplicate-commit-idempotent",
+      "description": "A repeated commit with identical transaction identity and payload is accepted only as an idempotent replay.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 1,
+        "credential_generation": 0,
+        "status": "active",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-s7",
+          "operation": "suspend",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "136ce4c560576c4e24da937da08b2b0b9b33e9451ba39d6ee098cc57e001d1d8",
+          "phase": "committed"
+        },
+        {
+          "sequence": 2,
+          "transaction_id": "tx-s7",
+          "operation": "suspend",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "136ce4c560576c4e24da937da08b2b0b9b33e9451ba39d6ee098cc57e001d1d8",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "absent",
+        "sequence": 0,
+        "digest_valid": false,
+        "state": {
+          "sequence": 0,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "none",
+        "cutoff_sequence": 0,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "duplicate_commit_idempotent",
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-s7"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "conflicting-duplicate-commit-quarantined",
+      "description": "A repeated transaction identifier with different committed content is quarantined as conflicting journal history.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 1,
+        "credential_generation": 0,
+        "status": "active",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-conflict",
+          "operation": "suspend",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "f430de7bb437fc2c1ecf60c660a953f327187477920452271da21201e55e2d08",
+          "phase": "committed"
+        },
+        {
+          "sequence": 2,
+          "transaction_id": "tx-conflict",
+          "operation": "revoke",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "1a1386a53bd8a55f41891cadc03bca5f6dc597e71f76d7f932c7480484305680",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "absent",
+        "sequence": 0,
+        "digest_valid": false,
+        "state": {
+          "sequence": 0,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "none",
+        "cutoff_sequence": 0,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "conflicting_duplicate_transaction",
+        "state": null
+      }
+    },
+    {
+      "case_id": "lost-ack-preserves-pending-state",
+      "description": "A committed credential rotation remains pending when its propagation acknowledgment is lost.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 1,
+        "credential_generation": 0,
+        "status": "active",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 1,
+          "transaction_id": "tx-rotate9",
+          "operation": "credential_rotate",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": null,
+          "payload_digest": "45ed311127b914b76e659c082f7fb134f15ccfb72dc7740b17add4dfb7f13f80",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "absent",
+        "sequence": 0,
+        "digest_valid": false,
+        "state": {
+          "sequence": 0,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "none",
+        "cutoff_sequence": 0,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "pending_ack_preserved",
+        "state": {
+          "sequence": 1,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "pending_ack",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-rotate9"
+          ],
+          "pending_ack_transaction": "tx-rotate9"
+        }
+      }
+    },
+    {
+      "case_id": "suspension-survives-compaction",
+      "description": "A compacted snapshot must retain suspension state and the suspended generation without reactivating authority.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 3,
+      "journal": [],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 2,
+        "digest_valid": true,
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r10",
+            "tx-s10"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 2,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "suspension_preserved",
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r10",
+            "tx-s10"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "revocation-survives-compaction",
+      "description": "A compacted snapshot must retain revocation state and the revoked generation without authority resurrection.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 3,
+      "journal": [],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 2,
+        "digest_valid": true,
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r11",
+            "tx-v11"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 2,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "revocation_preserved",
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r11",
+            "tx-v11"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "replacement-cannot-resurrect-revoked-authority",
+      "description": "A replacement following a compacted revoked state cannot silently resurrect superseded authority.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 3,
+      "journal": [
+        {
+          "sequence": 3,
+          "transaction_id": "tx-r12",
+          "operation": "replacement",
+          "authority_generation": 2,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "a20f8188c86d3ad10b0594d62595e04ed74476f65fa66dc504f8551110c99f23",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 2,
+        "digest_valid": true,
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r11",
+            "tx-v11"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 2,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "superseded_authority_resurrection_blocked",
+        "state": null
+      }
+    },
+    {
+      "case_id": "log-sequence-gap-quarantined",
+      "description": "A missing journal sequence after the recovery base is quarantined instead of guessed or skipped.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 1,
+      "journal": [
+        {
+          "sequence": 2,
+          "transaction_id": "tx-gap13",
+          "operation": "replacement",
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "reference_transaction_id": null,
+          "payload_digest": "c9808bfa3567f370ead71f9cce89c1b73d20c001c2c2b150ce1e49331b753b46",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "absent",
+        "sequence": 0,
+        "digest_valid": false,
+        "state": {
+          "sequence": 0,
+          "authority_generation": 0,
+          "credential_generation": 0,
+          "status": "inactive",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "none",
+        "cutoff_sequence": 0,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "journal_sequence_gap",
+        "state": null
+      }
+    },
+    {
+      "case_id": "compaction-cutoff-beyond-snapshot-quarantined",
+      "description": "A compaction marker cannot claim that records beyond the committed snapshot were safely compacted.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 0,
+        "credential_generation": 0,
+        "status": "inactive",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 3,
+      "journal": [],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 2,
+        "digest_valid": true,
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r10",
+            "tx-s10"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 3,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "compaction_cutoff_beyond_snapshot",
+        "state": null
+      }
+    },
+    {
+      "case_id": "acknowledgment-after-compaction-converges",
+      "description": "An acknowledgment arriving after compaction resolves the retained pending transaction exactly once.",
+      "initial_state": {
+        "sequence": 0,
+        "authority_generation": 1,
+        "credential_generation": 0,
+        "status": "active",
+        "suspended_generations": [],
+        "revoked_generations": [],
+        "committed_transactions": [],
+        "pending_ack_transaction": null
+      },
+      "journal_floor": 2,
+      "journal": [
+        {
+          "sequence": 2,
+          "transaction_id": "tx-a15",
+          "operation": "acknowledge",
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "reference_transaction_id": "tx-c15",
+          "payload_digest": "8d5505df80197acfaf97d947d97b1ac25db93b78ddc0521045e6f9b7649a5e2d",
+          "phase": "committed"
+        }
+      ],
+      "snapshot": {
+        "phase": "committed",
+        "sequence": 1,
+        "digest_valid": true,
+        "state": {
+          "sequence": 1,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "pending_ack",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-c15"
+          ],
+          "pending_ack_transaction": "tx-c15"
+        }
+      },
+      "compaction": {
+        "phase": "committed",
+        "cutoff_sequence": 1,
+        "interruption": "none"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "acknowledgment_converged",
+        "state": {
+          "sequence": 2,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-c15",
+            "tx-a15"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    }
+  ]
+}

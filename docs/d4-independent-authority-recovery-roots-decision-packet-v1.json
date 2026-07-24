@@ -1,0 +1,160 @@
+{
+  "profile_id": "ALISTAIRE-D4-INDEPENDENT-AUTHORITY-RECOVERY-001",
+  "version": "0.1.0-proposed",
+  "status": "BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE",
+  "authority_effect": "none",
+  "base_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "pull_request": 1,
+    "head": "0a0dd2fd8a75cc40833a60da0bad5d14426ac8ca",
+    "decision": "D4"
+  },
+  "packet_generation_binding": "BOUND_TO_CHECKED_OUT_GIT_SHA_BY_VALIDATION_EVIDENCE",
+  "dependencies": [
+    {"decision": "D1", "required_state": "ACCEPTED_AT_IMMUTABLE_HEAD", "current_state": "BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL"},
+    {"decision": "D2", "required_state": "ACCEPTED_NEUTRAL_STEWARD_AND_SOURCE_PRECEDENCE", "current_state": "BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE"},
+    {"decision": "D3", "required_state": "ACCEPTED_CANONICAL_REPRESENTATIONS_WITH_INDEPENDENT_WITNESSES", "current_state": "BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE"}
+  ],
+  "purpose": "Prepare a non-authorizing decision basis for independent capability issuance, quarantine, revocation, checkpoint, correction, and recovery roots without chartering Repository 1 or activating credentials, keys, capabilities, canonical state, or restoration.",
+  "observed_candidate_sources": [
+    {"repository": "aevespers2/1", "pull_request": 2, "head": "432a6fafa56d4a57be7fc3918eba5ed80a6bcdcc", "classification": "documentation_fixture_validation_candidate"},
+    {"repository": "aevespers2/1", "pull_request": 1, "head": "0813308061e27e8289ea8f15af7d5ccdc84b4abf", "classification": "path_audit_and_token_safeguard_candidate"},
+    {"repository": "aevespers2/0", "classification": "bounded_proposal_and_evidence_candidates", "authority_effect": "none"}
+  ],
+  "candidate_models": [
+    {"id": "ISOLATED_REPOSITORY_1_AUTHORITY_ROOT", "strength": "clear quarantine disposition checkpoint and recovery boundary", "principal_risk": "self_authorizing_custody_and_circular_recovery"},
+    {"id": "SPLIT_ISSUANCE_AND_RECOVERY_ROOTS", "strength": "separates ordinary capability decisions from exceptional restoration", "principal_risk": "cross_root_deadlock_and_revocation_divergence"},
+    {"id": "FEDERATED_HUMAN_REVIEWED_QUORUM", "strength": "preserves independent review dissent and recusal", "principal_risk": "membership_freshness_capture_and_emergency_unavailability"}
+  ],
+  "required_record_families": [
+    "authority_request",
+    "quarantine_intake",
+    "authority_decision",
+    "capability",
+    "execution_receipt",
+    "canonical_disposition_candidate",
+    "correction",
+    "revocation",
+    "checkpoint",
+    "recovery_request",
+    "recovery_decision",
+    "restored_state_witness",
+    "consumer_acknowledgment",
+    "public_claim_withdrawal"
+  ],
+  "required_decision_fields": [
+    "accepted_constitutional_and_contract_generations",
+    "authority_model_repository_service_and_scope",
+    "explicit_exclusions_and_non_authority",
+    "issuer_approver_revoker_auditor_incident_and_recovery_roles_or_vacancies",
+    "separation_of_proposal_review_approval_execution_evidence_custody_and_recovery",
+    "record_family_identifiers_and_namespaces",
+    "capability_scope_target_operation_preconditions_expiration_nonce_replay_and_revocation",
+    "human_approval_quorum_recusal_dissent_appeal_emergency_and_break_glass",
+    "key_generation_storage_rotation_compromise_destruction_backup_and_succession",
+    "trusted_clock_sequence_freshness_replay_duplicate_and_idempotency",
+    "checkpoint_provenance_retention_privacy_integrity_restoration_and_supersession",
+    "correction_and_revocation_consumer_propagation",
+    "bounded_restart_failed_recovery_split_brain_partial_and_unknown_state",
+    "security_privacy_license_accessibility_legal_public_private_retention_and_audit",
+    "migration_replacement_retirement_withdrawal_rollback_and_restored_state"
+  ],
+  "readiness_gates": [
+    {"id": "D4-G01", "name": "D1 canonical identity accepted", "status": "BLOCKED"},
+    {"id": "D4-G02", "name": "D2 neutral contract stewardship accepted", "status": "BLOCKED"},
+    {"id": "D4-G03", "name": "D3 canonical representations independently witnessed", "status": "BLOCKED"},
+    {"id": "D4-G04", "name": "Repository 0 and Repository 1 route semantics reconciled or explicitly unsupported", "status": "BLOCKED"},
+    {"id": "D4-G05", "name": "authority roles vacancies and separation of duties approved", "status": "BLOCKED"},
+    {"id": "D4-G06", "name": "capability revocation checkpoint correction and recovery schemas specified", "status": "REVIEW"},
+    {"id": "D4-G07", "name": "hostile lifecycle and compromise fixtures specified", "status": "REVIEW"},
+    {"id": "D4-G08", "name": "consumer registration and correction revocation acknowledgment complete", "status": "BLOCKED"},
+    {"id": "D4-G09", "name": "key custody trusted clocks backup restoration and succession independently reviewed", "status": "BLOCKED"},
+    {"id": "D4-G10", "name": "freeze restart revocation rollback and recovery exercises succeed", "status": "BLOCKED"},
+    {"id": "D4-G11", "name": "security privacy license accessibility legal and governance review complete", "status": "BLOCKED"},
+    {"id": "D4-G12", "name": "explicit human approval recorded", "status": "BLOCKED"},
+    {"id": "D4-G13", "name": "resulting authority and consumer state independently verified", "status": "BLOCKED"}
+  ],
+  "obstruction_classes": [
+    "constitutional_loop",
+    "proposal_disposition_collapse",
+    "repository_0_repository_1_route_bifurcation",
+    "root_colocation",
+    "revocation_orphan",
+    "checkpoint_fork",
+    "compromised_root_recovery",
+    "stale_quorum_approval",
+    "clock_and_replay_ambiguity",
+    "evidence_inflation",
+    "rollback_resurrection",
+    "unverified_restoration"
+  ],
+  "required_pairwise_witnesses": [
+    "repository_0_proposer_to_repository_1_quarantine",
+    "authority_decision_to_capability_issuer",
+    "capability_to_bounded_executor",
+    "execution_receipt_to_independent_reconciliation",
+    "revocation_correction_to_registered_consumers",
+    "checkpoint_custody_to_recovery_executor",
+    "recovery_executor_to_independent_restored_state_witness"
+  ],
+  "required_triple_overlap_witnesses": [
+    "proposer_quarantine_authority_decision",
+    "authority_decision_capability_execution_receipt",
+    "receipt_disposition_checkpoint",
+    "correction_revocation_consumer_public_claim_withdrawal",
+    "checkpoint_recovery_independently_verified_resulting_state"
+  ],
+  "prohibited_promotions": [
+    "repository_existence_to_constitutional_authority",
+    "dependency_to_ownership",
+    "signature_presence_to_valid_authorization",
+    "workflow_success_to_authority_acceptance",
+    "successful_execution_to_canonical_disposition",
+    "majority_vote_to_truth",
+    "checkpoint_presence_to_safe_restoration",
+    "recovery_success_to_independent_verification",
+    "skill_mapping_to_competence_appointment_or_permission"
+  ],
+  "controlled_routes": [
+    "README.md",
+    "docs/index.md",
+    "docs/d4-independent-authority-recovery-roots-decision-packet.md",
+    "taskchain.md",
+    "release.md",
+    "punchlist.md",
+    "changelog.md"
+  ],
+  "propagation": {
+    "rebind_marker": "D4_REBIND_REQUIRED",
+    "withdrawal_marker": "D4_PACKET_WITHDRAWN",
+    "completion_rule": "Every controlled route must reconcile the same dependency generations candidate sources authority models roles vacancies routes evidence safety boundaries and disposition before currentness or withdrawal completion is claimed."
+  },
+  "skill_tree_mapping": [
+    {"category": "CAT-012", "subdivisions": ["012-A", "012-B", "012-D", "012-E"]},
+    {"category": "CAT-013", "subdivisions": ["013-A", "013-C", "013-D", "013-E"]},
+    {"category": "CAT-017", "subdivisions": ["017-A", "017-C", "017-D", "017-E"]},
+    {"category": "CAT-018", "subdivisions": ["018-B", "018-D", "018-E"]},
+    {"category": "CAT-031", "subdivisions": ["031-A", "031-D", "031-E"]},
+    {"category": "CAT-032", "subdivisions": ["032-A", "032-D", "032-E"]},
+    {"category": "CAT-040", "subdivisions": ["040-A", "040-B", "040-D", "040-E"]},
+    {"category": "CAT-052", "subdivisions": ["052-A", "052-B", "052-D", "052-E"]},
+    {"category": "CAT-054", "subdivisions": ["054-A", "054-B", "054-D", "054-E"]},
+    {"category": "CAT-059", "subdivisions": ["059-A", "059-B", "059-C", "059-E"]},
+    {"category": "CAT-064", "subdivisions": ["064-B", "064-D", "064-E"]},
+    {"category": "CAT-070", "subdivisions": ["070-A", "070-C", "070-D", "070-E"]}
+  ],
+  "proposed_subdivision_gap": {
+    "id": "054-M",
+    "name": "Independent authority and recovery-root separation",
+    "skills": [
+      "non_circular_authority_derivation",
+      "proposer_approver_executor_separation",
+      "revocation_closed_consumer_propagation",
+      "compromise_independent_recovery",
+      "checkpoint_ancestry_and_split_brain_resolution",
+      "failed_restoration_handling",
+      "independently_witnessed_resulting_state"
+    ],
+    "authority_effect": "none"
+  }
+}

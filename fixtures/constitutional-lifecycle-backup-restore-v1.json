@@ -1,0 +1,856 @@
+{
+  "schema": "alistaire.constitutional-lifecycle-backup-restore.corpus.v1",
+  "profile_version": "1.0.0",
+  "status": "synthetic_only_non_operational",
+  "cases": [
+    {
+      "case_id": "healthy-backup-restore",
+      "description": "A complete backup restores the exact active state.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "state_restored",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "stale-backup-complete-log-converges",
+      "description": "A stale backup plus the complete retained log converges.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 1,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 2,
+        "retained_events": [
+          {
+            "sequence": 2,
+            "transaction_id": "tx-c1",
+            "operation": "credential_rotate",
+            "authority_generation": 1,
+            "credential_generation": 1,
+            "reference_transaction_id": null
+          },
+          {
+            "sequence": 3,
+            "transaction_id": "tx-a1",
+            "operation": "acknowledge",
+            "authority_generation": 1,
+            "credential_generation": 1,
+            "reference_transaction_id": "tx-c1"
+          }
+        ],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "log_replay_converged",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "stale-backup-pruned-log-quarantined",
+      "description": "A stale backup cannot recover after the required log prefix was pruned.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 1,
+          "authority_generation": 1,
+          "credential_generation": 0,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 3,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_log_gap",
+        "state": null
+      }
+    },
+    {
+      "case_id": "partial-backup-quarantined",
+      "description": "A partial backup is never restored.",
+      "backup": {
+        "phase": "partial",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_incomplete",
+        "state": null
+      }
+    },
+    {
+      "case_id": "manifest-mismatch-quarantined",
+      "description": "A manifest mismatch fails closed.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": false,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_manifest_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "wrong-source-repository-quarantined",
+      "description": "A backup from another repository is rejected.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/Other",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_source_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "wrong-profile-quarantined",
+      "description": "A backup under another profile is rejected.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "other.profile",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_profile_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "backup-epoch-mismatch-quarantined",
+      "description": "A restore request cannot silently select a different backup epoch.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 4,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_epoch_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "backup-ahead-of-journal-quarantined",
+      "description": "A backup claiming state beyond the durable journal head is rejected.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 5,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-x4",
+            "tx-x5"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 4,
+        "log_floor": 6,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "backup_ahead_of_journal",
+        "state": null
+      }
+    },
+    {
+      "case_id": "revocation-preserved",
+      "description": "A restored revoked generation remains revoked.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-v1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 4,
+        "log_floor": 5,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": [
+          1
+        ]
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "revocation_preserved",
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-v1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "suspension-preserved",
+      "description": "A restored suspended generation remains suspended.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-s1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 4,
+        "log_floor": 5,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [
+          1
+        ],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "suspension_preserved",
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "suspended",
+          "suspended_generations": [
+            1
+          ],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-s1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "missing-revocation-quarantined",
+      "description": "A restore that omits required revocation state is rejected.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": [
+          1
+        ]
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "required_revocation_missing",
+        "state": null
+      }
+    },
+    {
+      "case_id": "post-restore-replay-blocked",
+      "description": "A replay of an already committed transaction is blocked without state mutation.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": "tx-c1",
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "replay_blocked",
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "unknown-replay-target-quarantined",
+      "description": "A replay claim for an unknown transaction is rejected.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 3,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 3,
+        "log_floor": 4,
+        "retained_events": [],
+        "replay_transaction_id": "tx-unknown",
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "unknown_replay_target",
+        "state": null
+      }
+    },
+    {
+      "case_id": "rollback-across-compaction-converges",
+      "description": "A permitted rollback after compaction remains explicit and pending acknowledgment.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 4,
+          "authority_generation": 2,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-r2"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 5,
+        "log_floor": 5,
+        "retained_events": [
+          {
+            "sequence": 5,
+            "transaction_id": "tx-b1",
+            "operation": "rollback",
+            "authority_generation": 1,
+            "credential_generation": 1,
+            "reference_transaction_id": null
+          }
+        ],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "rollback_pending_ack",
+        "state": {
+          "sequence": 5,
+          "authority_generation": 1,
+          "credential_generation": 1,
+          "status": "rolled_back_pending_ack",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-r2",
+            "tx-b1"
+          ],
+          "pending_ack_transaction": "tx-b1"
+        }
+      }
+    },
+    {
+      "case_id": "rollback-cannot-resurrect-revoked-authority",
+      "description": "Rollback cannot resurrect a revoked authority generation.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 4,
+          "authority_generation": 2,
+          "credential_generation": 1,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-r2"
+          ],
+          "pending_ack_transaction": null
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 5,
+        "log_floor": 5,
+        "retained_events": [
+          {
+            "sequence": 5,
+            "transaction_id": "tx-b1",
+            "operation": "rollback",
+            "authority_generation": 1,
+            "credential_generation": 1,
+            "reference_transaction_id": null
+          }
+        ],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": [
+          1
+        ]
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "revoked_authority_resurrection_blocked",
+        "state": null
+      }
+    },
+    {
+      "case_id": "lost-ack-remains-pending",
+      "description": "A restore preserves a durable pending acknowledgment state.",
+      "backup": {
+        "phase": "complete",
+        "manifest_valid": true,
+        "source_repository": "aevespers2/ALISTAIRE-",
+        "profile": "alistaire.constitutional.lifecycle",
+        "backup_epoch": 5,
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 2,
+          "status": "pending_ack",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-c2"
+          ],
+          "pending_ack_transaction": "tx-c2"
+        }
+      },
+      "restore": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "requested_epoch": 5,
+        "journal_head_sequence": 4,
+        "log_floor": 5,
+        "retained_events": [],
+        "replay_transaction_id": null,
+        "required_suspended_generations": [],
+        "required_revoked_generations": []
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "pending_ack_preserved",
+        "state": {
+          "sequence": 4,
+          "authority_generation": 1,
+          "credential_generation": 2,
+          "status": "pending_ack",
+          "suspended_generations": [],
+          "revoked_generations": [],
+          "committed_transactions": [
+            "tx-r1",
+            "tx-c1",
+            "tx-a1",
+            "tx-c2"
+          ],
+          "pending_ack_transaction": "tx-c2"
+        }
+      }
+    }
+  ]
+}

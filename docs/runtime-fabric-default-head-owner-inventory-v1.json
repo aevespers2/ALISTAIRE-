@@ -1,0 +1,394 @@
+{
+  "profile_id": "ALISTAIRE-RUNTIME-FABRIC-DEFAULT-HEAD-OWNER-INVENTORY-001",
+  "profile_version": "1.0.0-candidate",
+  "status": "DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED",
+  "authority_effect": "NONE",
+  "observed_at": "2026-07-23",
+  "scope": "Documentation-only verification of current default heads and explicit semantic-owner vacancies for the runtime/Fabric legacy-label collision.",
+  "legacy_labels": [
+    "qso-event-ledger",
+    "qso-runtime-report"
+  ],
+  "default_head_observations": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "default_branch": "main",
+      "default_head_sha": "7adbbf963616d09b4ebafea7c0963a2fac5688a9",
+      "reviewed_paths": [
+        "README.md",
+        "docs/runtime-fabric-namespace-partition.md",
+        "docs/runtime-fabric-producer-consumer-inventory.md"
+      ],
+      "present_paths": [],
+      "absent_paths": [
+        "README.md",
+        "docs/runtime-fabric-namespace-partition.md",
+        "docs/runtime-fabric-producer-consumer-inventory.md"
+      ],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [],
+      "default_head_disposition": "DEFAULT_HEAD_HAS_NO_REVIEW_SURFACE",
+      "owner_effect": "NONE",
+      "notes": "The governance and partition material exists only on the non-default charter candidate. The current default head creates no namespace, schema, registry, producer, consumer, or semantic-owner binding."
+    },
+    {
+      "repository": "aevespers2/QSO-FABRIC",
+      "default_branch": "main",
+      "default_head_sha": "bd0ac7af3b34602082db03e71055b652707c9b18",
+      "reviewed_paths": [
+        "README.md",
+        "qso.manifest.json",
+        "spec/QSO-INTERFACE-COMPATIBILITY-001.md"
+      ],
+      "present_paths": [
+        "README.md"
+      ],
+      "absent_paths": [
+        "qso.manifest.json",
+        "spec/QSO-INTERFACE-COMPATIBILITY-001.md"
+      ],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [
+        "append-only event ledger"
+      ],
+      "default_head_disposition": "GENERIC_RUNTIME_LEDGER_ONLY_NO_LEGACY_BINDING",
+      "owner_effect": "NONE",
+      "notes": "The default README describes bounded runtime output and a generic append-only event ledger. The exact producer declarations and compatibility profile remain confined to draft PR #21."
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "default_branch": "main",
+      "default_head_sha": "40efcbf8ce2bda7d6b05b3fb1f3ccf0384facc51",
+      "reviewed_paths": [
+        "README.md",
+        "docs/design-contracts.md",
+        "docs/ecosystem-interface-compatibility.md"
+      ],
+      "present_paths": [
+        "README.md"
+      ],
+      "absent_paths": [
+        "docs/design-contracts.md",
+        "docs/ecosystem-interface-compatibility.md"
+      ],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [
+        "append-only event ledger"
+      ],
+      "default_head_disposition": "GENERIC_RUNTIME_LEDGER_ONLY_NO_LEGACY_BINDING",
+      "owner_effect": "NONE",
+      "notes": "The default README documents bounded local runtime semantics and a generic event ledger. Runtime/Fabric interface interpretation and synthetic-consumer evidence remain on draft PR #12."
+    },
+    {
+      "repository": "aevespers2/1",
+      "default_branch": "main",
+      "default_head_sha": "6685872ceafdefa4961e261abb45202e664e3666",
+      "reviewed_paths": [
+        "README.md",
+        "docs/QSO_INTERFACE_CONFORMANCE.md",
+        "contracts/qso-interface-source-tuple-v1.json"
+      ],
+      "present_paths": [
+        "README.md"
+      ],
+      "absent_paths": [
+        "docs/QSO_INTERFACE_CONFORMANCE.md",
+        "contracts/qso-interface-source-tuple-v1.json"
+      ],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [
+        "append-only transition receipts",
+        "canonical receipt"
+      ],
+      "default_head_disposition": "TRUST_CORE_ROLE_ONLY_NO_LEGACY_BINDING",
+      "owner_effect": "NONE",
+      "notes": "The default README proposes conservative state and receipt responsibilities but contains no accepted runtime/Fabric interface registration. Independent synthetic-consumer evidence remains on draft PR #2."
+    },
+    {
+      "repository": "aevespers2/qsio-kernel",
+      "default_branch": "main",
+      "default_head_sha": "6468254d7703e5f771e610ed3f76bac1b7205ddb",
+      "reviewed_paths": [
+        "README.md",
+        "src/qsio/qsio.py"
+      ],
+      "present_paths": [
+        "README.md",
+        "src/qsio/qsio.py"
+      ],
+      "absent_paths": [],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [
+        "QSIO ledger",
+        "outcome records",
+        "hash-bound witnesses"
+      ],
+      "default_head_disposition": "INTERNAL_LEDGER_ONLY_UNMAPPED",
+      "owner_effect": "NONE",
+      "notes": "The kernel has executable internal QSIO records, outcomes, reason codes, witnesses, hashes, and replay behavior. No accepted mapping to either legacy label or to runtime/Fabric semantic classes is established."
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "default_branch": "main",
+      "default_head_sha": "2d7adf88ce84f01f0ff1067cef09388481f7e4ae",
+      "reviewed_paths": [
+        "index.md",
+        "docs/interface-namespace-payload-partition-boundary.md",
+        "docs/interface-namespace-payload-partition-contract-v0.json"
+      ],
+      "present_paths": [
+        "index.md"
+      ],
+      "absent_paths": [
+        "docs/interface-namespace-payload-partition-boundary.md",
+        "docs/interface-namespace-payload-partition-contract-v0.json"
+      ],
+      "exact_legacy_label_observed": false,
+      "generic_related_terms": [
+        "state-aware network layer",
+        "documentation-first GitHub Pages ecosystem"
+      ],
+      "default_head_disposition": "PUBLIC_ARCHITECTURE_ONLY_NO_LEGACY_BINDING",
+      "owner_effect": "NONE",
+      "notes": "The default branch is a public architecture landing. The namespace-partition and repository-handoff governance records remain on draft PR #24 and create no adopted registry authority."
+    }
+  ],
+  "candidate_lineage": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "pull_request": 1,
+      "candidate_head_sha": "84cdb1848449c40b54aab430a19c59e0167736dd",
+      "relation_to_default": "UNMERGED_DOCUMENTATION_AND_GOVERNANCE_CANDIDATE"
+    },
+    {
+      "repository": "aevespers2/QSO-FABRIC",
+      "pull_request": 21,
+      "candidate_head_sha": "25036a5cfcea79e204a4660ddd1af09c054935b1",
+      "relation_to_default": "UNMERGED_DECLARATION_PRODUCER_CANDIDATE"
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "pull_request": 12,
+      "candidate_head_sha": "cc9b9c7b06a1a48bbc052b8d6bacd11782285288",
+      "relation_to_default": "UNMERGED_RUNTIME_DOCUMENTATION_AND_SYNTHETIC_CONSUMER"
+    },
+    {
+      "repository": "aevespers2/1",
+      "pull_request": 2,
+      "candidate_head_sha": "47b58fa49c8dda7f44234dab68f78673bb02d269",
+      "relation_to_default": "UNMERGED_INDEPENDENT_SYNTHETIC_CONSUMER"
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "pull_request": 24,
+      "candidate_head_sha": "a56b1fa93f151ee14f3cdd4183b89a10e268e352",
+      "relation_to_default": "UNMERGED_REGISTRY_AND_HANDOFF_GOVERNANCE_CANDIDATE"
+    }
+  ],
+  "semantic_owner_vacancies": [
+    {
+      "semantic_class": "runtime_event_record",
+      "candidate_repository": "aevespers2/QuantumStateObjects",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "Runtime-local event semantics are documented only on an unmerged candidate and have no accepted canonical bytes, namespace, registration, or human appointment."
+    },
+    {
+      "semantic_class": "runtime_execution_report",
+      "candidate_repository": "aevespers2/QuantumStateObjects",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "Execution-report semantics remain candidate documentation without accepted schema ownership or operational authority."
+    },
+    {
+      "semantic_class": "fabric_projection_receipt",
+      "candidate_repository": "aevespers2/QSO-FABRIC",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "No default-head projection-receipt contract or neutral owner is accepted."
+    },
+    {
+      "semantic_class": "fabric_collaboration_event",
+      "candidate_repository": "aevespers2/QSO-FABRIC",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "Collaboration-event semantics remain an unmerged declaration-level candidate."
+    },
+    {
+      "semantic_class": "fabric_aggregate_report",
+      "candidate_repository": "aevespers2/QSO-FABRIC",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "Aggregate-report semantics have no accepted source-set, projection, correction, or custody contract."
+    },
+    {
+      "semantic_class": "portfolio_disposition",
+      "candidate_repository": "aevespers2/1",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "authority_effect": "NONE",
+      "rationale": "Repository 1 describes a conservative state role, but the charter, authority source, registration, and disposition schema remain unapproved."
+    }
+  ],
+  "route_owner_vacancies": [
+    {
+      "route": "kernel_to_runtime_mapping",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "required_before_acceptance": "Versioned semantic crosswalk, canonical bytes, loss classification, correction, revocation, migration, and rollback."
+    },
+    {
+      "route": "namespace_and_schema_registry",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "required_before_acceptance": "Accepted D1-D3 decisions, neutral stewardship, immutable registry generation, review, and rollback."
+    },
+    {
+      "route": "live_producer_and_consumer_registration",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "required_before_acceptance": "Authenticated registrations, supported-version policy, revocation, trusted time, and resulting-state verification."
+    },
+    {
+      "route": "correction_and_revocation_propagation",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "required_before_acceptance": "End-to-end invalidation of projections, aggregates, registry views, consumer state, and portfolio dispositions."
+    },
+    {
+      "route": "migration_and_rollback_coordination",
+      "accepted_owner": null,
+      "owner_status": "EXPLICIT_VACANCY",
+      "required_before_acceptance": "Mixed-generation fixtures, consumer rebinding, alias withdrawal, restored-state witnesses, and independent verification."
+    }
+  ],
+  "graph_edges": [
+    {
+      "id": "kernel_to_runtime_default_head",
+      "source": "aevespers2/qsio-kernel",
+      "target": "aevespers2/QuantumStateObjects",
+      "status": "BLOCKED_DEFAULT_HEADS_UNMAPPED"
+    },
+    {
+      "id": "runtime_to_fabric_default_head",
+      "source": "aevespers2/QuantumStateObjects",
+      "target": "aevespers2/QSO-FABRIC",
+      "status": "BLOCKED_DEFAULT_HEADS_NO_ACCEPTED_INTERFACE"
+    },
+    {
+      "id": "fabric_to_repository_1_default_head",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/1",
+      "status": "BLOCKED_DEFAULT_HEADS_NO_ACCEPTED_SOURCE_SET_OR_AUTHORITY"
+    },
+    {
+      "id": "fabric_to_registry_default_head",
+      "source": "aevespers2/QSO-FABRIC",
+      "target": "aevespers2/qso-field.github.io",
+      "status": "BLOCKED_DEFAULT_HEAD_NO_ADOPTED_REGISTRY"
+    },
+    {
+      "id": "candidate_to_default_reconciliation",
+      "source": "portfolio_candidate_heads",
+      "target": "portfolio_default_heads",
+      "status": "BLOCKED_CANDIDATES_UNMERGED_AND_UNACCEPTED"
+    }
+  ],
+  "invariants": [
+    "all_default_head_observations_bind_exact_commits",
+    "path_absence_is_qualified_and_not_repository_wide_absence",
+    "generic_ledger_or_receipt_terms_are_not_legacy_interface_bindings",
+    "candidate_documentation_is_not_default_head_state",
+    "candidate_role_is_not_semantic_ownership",
+    "all_semantic_classes_have_explicit_owner_vacancies",
+    "all_cross_repository_routes_have_explicit_owner_vacancies",
+    "no_default_head_is_recorded_as_an_accepted_producer_or_consumer",
+    "no_vacancy_is_silently_filled_by_repository_naming_or_documentation",
+    "authority_effect_remains_none"
+  ],
+  "review_gates": [
+    "CANDIDATE_HEADS_REBOUND_OR_WITHDRAWN",
+    "REPOSITORY_LOCAL_COMPLETE_USE_INVENTORIES_VERIFIED",
+    "SEMANTIC_OWNERS_APPOINTED_OR_VACANCIES_FORMALLY_ACCEPTED",
+    "D1_D2_D3_ACCEPTED",
+    "CANONICAL_PAYLOADS_IDENTITIES_AND_NAMESPACES_ACCEPTED",
+    "LIVE_REGISTRATION_GOVERNANCE_ACCEPTED",
+    "CORRECTION_REVOCATION_MIGRATION_AND_ROLLBACK_FIXTURES_PASS",
+    "INDEPENDENT_SECURITY_PRIVACY_ACCESSIBILITY_LICENSE_AND_ARCHITECTURE_REVIEW_COMPLETE",
+    "EXPLICIT_HUMAN_APPROVAL",
+    "RESULTING_DEFAULT_HEADS_AND_RESTORED_STATE_VERIFIED"
+  ],
+  "controlled_routes": [
+    "docs/runtime-fabric-default-head-owner-inventory.md",
+    "docs/runtime-fabric-default-head-owner-inventory-v1.json",
+    "mkdocs.yml"
+  ],
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-059",
+      "CAT-070"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-A",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "018-B",
+      "018-D",
+      "018-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-B",
+      "032-D",
+      "040-A",
+      "040-B",
+      "040-C",
+      "040-D",
+      "040-E",
+      "052-A",
+      "052-B",
+      "052-E",
+      "059-A",
+      "059-B",
+      "059-E",
+      "070-A",
+      "070-B",
+      "070-C",
+      "070-E"
+    ],
+    "proposed_gap": {
+      "id": "013-H",
+      "name": "Default-head semantic-owner vacancy and candidate-to-default reconciliation graph",
+      "authoritative": false
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "profile_id": "ALISTAIRE-DECISION-SOURCE-GENERATION-REBIND-001",
+  "version": "0.1.0-proposed",
+  "status": "REBOUND_TO_PARENT_NON_AUTHORIZING",
+  "authority_effect": "none",
+  "repository": "aevespers2/ALISTAIRE-",
+  "pull_request": 1,
+  "rebind_parent": "b12d1c0b02b8b9fffd639ad996c8e5008debfba1",
+  "ancestry_rule": "rebind_parent must appear on submitted commit first-parent ancestry",
+  "historical_sources": {
+    "d2a_packet_source_head": "796c6fcb7d1b3706563aa21b7a1b1c728e9866de",
+    "d2a_alistaire_candidate_head": "796c6fcb7d1b3706563aa21b7a1b1c728e9866de",
+    "d3_packet_source_head": "b4bbef24050045dd2fa7a1c57e498c84ef64604f"
+  },
+  "validated_files": [
+    "docs/d2a-common-contract-ownership-graph-v1.json",
+    "docs/d3-canonical-bytes-identity-decision-packet-v1.json"
+  ],
+  "invalidates_on": [
+    "rebind_parent_change",
+    "embedded_packet_source_change",
+    "d2a_alistaire_candidate_change",
+    "packet_identity_or_scope_change",
+    "ancestry_rule_change",
+    "correction_withdrawal_or_rollback_rule_change"
+  ],
+  "prohibited_promotions": [
+    "historical_source_to_current_portfolio_observation",
+    "passing_ci_to_decision_acceptance",
+    "mergeability_to_canonical_selection",
+    "canonical_bytes_or_digest_to_authority",
+    "documentation_to_publication_or_release_authority",
+    "skill_mapping_to_competence_or_permission"
+  ],
+  "rollback": {
+    "mode": "non_destructive_documentation_only",
+    "requirements": [
+      "preserve_failed_evidence",
+      "restore_last_reviewed_candidate_without_force_update",
+      "invalidate_derived_currentness_claims",
+      "rerun_d2a_d3_documentation_and_rebind_validation"
+    ]
+  },
+  "skill_tree_mapping": [
+    {"category": "CAT-012", "subdivisions": ["012-A", "012-B", "012-D", "012-E"]},
+    {"category": "CAT-013", "subdivisions": ["013-A", "013-C", "013-D", "013-E"]},
+    {"category": "CAT-017", "subdivisions": ["017-A", "017-C", "017-D", "017-E"]},
+    {"category": "CAT-031", "subdivisions": ["031-A", "031-B", "031-D", "031-E"]},
+    {"category": "CAT-040", "subdivisions": ["040-B", "040-D", "040-E"]},
+    {"category": "CAT-052", "subdivisions": ["052-A", "052-B", "052-D", "052-E"]},
+    {"category": "CAT-059", "subdivisions": ["059-A", "059-B", "059-C", "059-E"]},
+    {"category": "CAT-070", "subdivisions": ["070-A", "070-C", "070-D", "070-E"]}
+  ],
+  "proposed_subdivision_gap": {
+    "id": "017-F",
+    "name": "First-parent source-generation rebind and stale-evidence invalidation",
+    "skills": [
+      "immutable historical source-tuple preservation",
+      "first-parent integration ancestry validation",
+      "self-referential commit-identity avoidance",
+      "exact-head evidence lineage and stale-generation detection",
+      "controlled replacement and non-destructive rollback"
+    ],
+    "authority_effect": "none"
+  }
+}

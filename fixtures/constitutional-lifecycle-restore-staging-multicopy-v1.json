@@ -1,0 +1,1823 @@
+{
+  "schema": "alistaire.constitutional-lifecycle-restore-staging-multicopy.corpus.v1",
+  "profile_version": "1.0.0",
+  "status": "synthetic_only_non_operational",
+  "cases": [
+    {
+      "case_id": "healthy-quorum-commit",
+      "description": "Two matching copies reach quorum and commit exactly once.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_committed",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "one-copy-inaccessible-quorum-met",
+      "description": "One inaccessible copy does not block a two-copy quorum.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_committed",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "quorum-not-met",
+      "description": "A single available copy cannot satisfy a two-copy restore quorum.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_quorum_not_met",
+        "state": null
+      }
+    },
+    {
+      "case_id": "conflicting-state-same-epoch",
+      "description": "Matching epochs with divergent state fail closed.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 5,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_copy_conflict",
+        "state": null
+      }
+    },
+    {
+      "case_id": "split-epochs",
+      "description": "Available copies from different epochs cannot form one restore set.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-13",
+          "epoch": 13,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_epoch_conflict",
+        "state": null
+      }
+    },
+    {
+      "case_id": "stale-epoch-anti-rollback",
+      "description": "A quorum below the durable current epoch is rejected.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-10",
+          "epoch": 10,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-10",
+          "epoch": 10,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-10",
+          "epoch": 10,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_anti_rollback",
+        "state": null
+      }
+    },
+    {
+      "case_id": "manifest-mismatch-reduces-quorum",
+      "description": "An invalid manifest cannot count toward quorum.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": false,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_quorum_not_met",
+        "state": null
+      }
+    },
+    {
+      "case_id": "verify-only-staged",
+      "description": "Verification may stage a matching quorum without committing state.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "verify",
+        "commit_marker": false,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "staged",
+        "reason": "restore_verified_not_committed",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "interrupted-before-commit-aborts",
+      "description": "An interruption before the commit marker leaves canonical state unchanged.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "interrupted_before_commit",
+        "commit_marker": false,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "aborted",
+        "reason": "restore_interrupted_before_commit",
+        "state": null
+      }
+    },
+    {
+      "case_id": "interrupted-after-commit-recovers",
+      "description": "A durable commit marker allows deterministic recovery after acknowledgment loss.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "interrupted_after_commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_commit_recovered",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "retry-after-commit-idempotent",
+      "description": "A retry referencing the committed restore remains idempotent.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "retry",
+        "commit_marker": true,
+        "retry_of": "restore-12"
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_retry_idempotent",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "active",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "wrong-source-quarantined",
+      "description": "Copies from a different repository are rejected.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/Other",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/Other",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/Other",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_source_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "wrong-profile-quarantined",
+      "description": "Copies from a different lifecycle profile are rejected.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "other.profile",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "other.profile",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "other.profile",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_profile_mismatch",
+        "state": null
+      }
+    },
+    {
+      "case_id": "revocation-preserved",
+      "description": "A committed restore preserves revoked authority generations.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "revoked",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1,
+              3
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "revoked",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1,
+              3
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "revoked",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1,
+              3
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_committed",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "revoked",
+          "suspended_generations": [],
+          "revoked_generations": [
+            1,
+            3
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "suspension-preserved",
+      "description": "A committed restore preserves suspended authority generations.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "suspended",
+            "suspended_generations": [
+              3
+            ],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "suspended",
+            "suspended_generations": [
+              3
+            ],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "suspended",
+            "suspended_generations": [
+              3
+            ],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "converged",
+        "reason": "restore_committed",
+        "state": {
+          "sequence": 8,
+          "authority_generation": 3,
+          "credential_generation": 4,
+          "status": "suspended",
+          "suspended_generations": [
+            3
+          ],
+          "revoked_generations": [
+            1
+          ],
+          "committed_transactions": [
+            "tx-a",
+            "tx-b",
+            "tx-c"
+          ],
+          "pending_ack_transaction": null
+        }
+      }
+    },
+    {
+      "case_id": "all-copies-inaccessible",
+      "description": "No unavailable copy may contribute to quorum.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-b",
+          "copy-c"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_quorum_not_met",
+        "state": null
+      }
+    },
+    {
+      "case_id": "selected-copy-missing",
+      "description": "A requested copy identifier absent from the backup set fails closed.",
+      "copies": [
+        {
+          "copy_id": "copy-a",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-b",
+          "available": true,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        },
+        {
+          "copy_id": "copy-c",
+          "available": false,
+          "manifest_valid": true,
+          "source_repository": "aevespers2/ALISTAIRE-",
+          "profile": "alistaire.constitutional.lifecycle",
+          "set_id": "set-12",
+          "epoch": 12,
+          "state": {
+            "sequence": 8,
+            "authority_generation": 3,
+            "credential_generation": 4,
+            "status": "active",
+            "suspended_generations": [],
+            "revoked_generations": [
+              1
+            ],
+            "committed_transactions": [
+              "tx-a",
+              "tx-b",
+              "tx-c"
+            ],
+            "pending_ack_transaction": null
+          }
+        }
+      ],
+      "request": {
+        "target_repository": "aevespers2/ALISTAIRE-",
+        "expected_profile": "alistaire.constitutional.lifecycle",
+        "current_epoch": 11,
+        "minimum_quorum": 2,
+        "selected_copy_ids": [
+          "copy-a",
+          "copy-z"
+        ],
+        "phase": "commit",
+        "commit_marker": true,
+        "retry_of": null
+      },
+      "expected": {
+        "disposition": "quarantined",
+        "reason": "restore_selected_copy_missing",
+        "state": null
+      }
+    }
+  ]
+}

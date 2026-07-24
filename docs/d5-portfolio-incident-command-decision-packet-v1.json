@@ -1,0 +1,231 @@
+{
+  "schema": "alistaire.d5-portfolio-incident-command-decision-packet.v1",
+  "decision_status": "PROPOSED",
+  "documentation_status": "D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED",
+  "authority_effect": "NONE",
+  "base_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "pull_request": 1,
+    "commit": "5ed53166188d0ddddf5ef0d0dd3ba7238da67db3"
+  },
+  "candidate_models": [
+    {
+      "id": "single_human_commander_with_independent_gates",
+      "selected": false,
+      "strength": "clear accountability and rapid coordination",
+      "principal_obstruction": "concentrated judgment, unavailable commander, and command exceeding accepted authority"
+    },
+    {
+      "id": "federated_incident_cell",
+      "selected": false,
+      "strength": "cross-domain expertise and preserved disagreement",
+      "principal_obstruction": "stale membership, deadlock, unclear emergency precedence, and delayed containment"
+    },
+    {
+      "id": "domain_segmented_command_with_central_coordination",
+      "selected": false,
+      "strength": "limited blast radius across repositories, credentials, data, publication, payments, and infrastructure",
+      "principal_obstruction": "freeze gaps and inconsistent restart criteria between domains"
+    }
+  ],
+  "incident_classes": [
+    {
+      "id": "I0",
+      "name": "documentation_inconsistency",
+      "safe_default": "focused correction with prior generation and evidence preserved"
+    },
+    {
+      "id": "I1",
+      "name": "reversible_repository_health_event",
+      "safe_default": "block promotion and repair without credentials, deployment, or destructive history change"
+    },
+    {
+      "id": "I2",
+      "name": "cross_repository_contract_or_data_integrity_event",
+      "safe_default": "freeze affected integration and derived claims pending contract and witness review"
+    },
+    {
+      "id": "I3",
+      "name": "critical_authority_credential_privacy_financial_deployment_or_infrastructure_event",
+      "safe_default": "immediate human escalation and bounded protective hold with no autonomous remediation or restart"
+    }
+  ],
+  "freeze_domains": [
+    "repository_merge_and_branch_promotion",
+    "release_package_image_and_artifact_publication",
+    "github_pages_and_public_claim_surfaces",
+    "workflow_execution_and_automated_repository_mutation",
+    "contract_namespace_registry_and_producer_consumer_admission",
+    "capability_credential_key_and_authority_issuance",
+    "private_data_collection_processing_retention_and_export",
+    "payment_financial_approval_and_settlement_claims",
+    "runtime_device_deployment_and_infrastructure_operations",
+    "checkpoint_rollback_restoration_and_recovery_root_changes"
+  ],
+  "required_roles_or_vacancies": [
+    "incident_commander",
+    "deputy",
+    "evidence_custodian",
+    "freeze_coordinator",
+    "correction_and_revocation_coordinator",
+    "communications_and_claim_withdrawal_owner",
+    "rollback_commander",
+    "recovery_commander",
+    "independent_resulting_state_verifier",
+    "security_reviewer",
+    "privacy_reviewer",
+    "legal_reviewer",
+    "accessibility_reviewer",
+    "financial_reviewer"
+  ],
+  "required_record_families": [
+    "incident_record",
+    "classification_record",
+    "freeze_request",
+    "freeze_disposition",
+    "evidence_custody_record",
+    "impact_assessment",
+    "correction_record",
+    "revocation_record",
+    "claim_withdrawal_record",
+    "consumer_acknowledgment",
+    "rollback_plan",
+    "rollback_receipt",
+    "restart_plan",
+    "restart_receipt",
+    "resulting_state_witness",
+    "closure_record",
+    "corrective_action_record"
+  ],
+  "source_observations": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "object": "pull_request_1",
+      "commit": "5ed53166188d0ddddf5ef0d0dd3ba7238da67db3",
+      "classification": "current_non_default_charter_candidate"
+    },
+    {
+      "repository": "aevespers2/1",
+      "object": "pull_request_2",
+      "commit": "3920328b8d482087f82ac6a10603dd581796a45d",
+      "classification": "unaccepted_authority_disposition_checkpoint_and_recovery_candidate"
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "object": "pull_request_33",
+      "commit": "babdde39e77189cf721b0ff14181234be9ac6dc0",
+      "classification": "unapproved_public_atlas_claim_ledger_obstruction_witness_and_publication_candidate"
+    },
+    {
+      "repository": "aevespers2/0",
+      "object": "issue_9",
+      "commit": null,
+      "classification": "mutable_repository_health_deduplication_ledger_requires_snapshot_before_immutable_use"
+    }
+  ],
+  "obstruction_classes": [
+    "split_command",
+    "freeze_gap",
+    "evidence_custody_conflict",
+    "scope_inflation",
+    "consumer_orphan",
+    "claim_withdrawal_gap",
+    "cache_resurrection",
+    "rollback_without_inverse",
+    "premature_restart",
+    "self_attested_restoration",
+    "cross_domain_deadlock",
+    "stale_command",
+    "evidence_inflation",
+    "closure_without_correction"
+  ],
+  "pairwise_witnesses": [
+    "reporter_to_incident_intake",
+    "incident_intake_to_freeze_request",
+    "freeze_request_to_each_freeze_domain_owner",
+    "evidence_source_to_independent_custodian",
+    "correction_or_revocation_to_each_registered_consumer",
+    "claim_withdrawal_to_each_public_surface_cache_mirror_and_package_index",
+    "rollback_or_recovery_executor_to_checkpoint_and_pre_state_custody",
+    "bounded_restart_to_independent_resulting_state_verifier",
+    "closure_decision_to_monitoring_and_corrective_action_record"
+  ],
+  "triple_overlap_witnesses": [
+    "detection_classification_bounded_freeze",
+    "freeze_evidence_preservation_independent_cause_review",
+    "correction_or_revocation_consumer_propagation_public_claim_withdrawal",
+    "rollback_checkpoint_ancestry_independently_verified_resulting_state",
+    "restart_dependency_health_refreeze_criteria",
+    "closure_residual_risk_corrective_action_ownership"
+  ],
+  "readiness_gates": [
+    "accepted_d1_and_d4_exact_generations",
+    "selected_command_model_authority_scope_succession_recusal_and_expiry",
+    "accepted_incident_freeze_evidence_correction_revocation_withdrawal_rollback_restart_closure_and_witness_records",
+    "owner_or_explicitly_accepted_vacancy_for_each_freeze_domain",
+    "stop_mechanisms_independent_of_the_subsystem_being_stopped",
+    "evidence_custody_separate_from_suspected_subsystem_and_unilateral_disposition",
+    "correction_and_withdrawal_routes_for_consumers_caches_mirrors_packages_artifacts_registries_and_public_claims",
+    "tested_partial_failure_replay_unavailable_consumer_split_brain_failed_rollback_and_failed_restoration",
+    "completed_security_privacy_legal_licensing_accessibility_financial_communications_and_governance_review",
+    "completed_tabletop_exercise",
+    "explicit_human_approval_and_independent_resulting_state_witness"
+  ],
+  "controlled_propagation": {
+    "rebind_marker": "D5_REBIND_REQUIRED",
+    "withdrawal_marker": "D5_PACKET_WITHDRAWN",
+    "required_routes": [
+      "README.md",
+      "docs/index.md",
+      "docs/d5-portfolio-incident-command-decision-packet.md",
+      "taskchain.md",
+      "release.md",
+      "punchlist.md",
+      "changelog.md",
+      "qso-field_public_atlas_and_claim_ledger"
+    ]
+  },
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-022",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-054",
+      "CAT-059",
+      "CAT-064",
+      "CAT-070"
+    ],
+    "proposed_refinement": "064-F Portfolio incident command, freeze-domain coordination, claim withdrawal, and independently witnessed restart"
+  },
+  "prohibited_authority_effects": [
+    "incident_declaration",
+    "commander_appointment",
+    "freeze_activation",
+    "credential_action",
+    "capability_revocation",
+    "evidence_seizure",
+    "cache_purge",
+    "claim_withdrawal",
+    "package_removal",
+    "rollback",
+    "restart",
+    "restoration",
+    "repository_setting_change",
+    "merge",
+    "release",
+    "pages_publication",
+    "deployment",
+    "payment",
+    "infrastructure_change",
+    "canonical_state_mutation",
+    "destructive_history_rewrite"
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "profile_id": "ALISTAIRE-RUNTIME-FABRIC-NAMESPACE-PARTITION-001",
+  "profile_version": "1.0.0-candidate",
+  "status": "BLOCKED_ROLE_COLLISION",
+  "authority_effect": "NONE",
+  "decision_scope": "Documentation-only review packet for separating runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition record semantics.",
+  "prohibited_promotions": [
+    "canonical_namespace_selection",
+    "schema_acceptance",
+    "consumer_registration",
+    "runtime_admission",
+    "fabric_activation",
+    "repository_1_authority",
+    "credential_or_capability_creation",
+    "merge_to_default_branch",
+    "release",
+    "pages_publication",
+    "deployment",
+    "infrastructure_apply"
+  ],
+  "legacy_collisions": [
+    {
+      "label": "qso-event-ledger",
+      "candidate_meanings": [
+        "runtime_local_event",
+        "fabric_collaboration_event"
+      ]
+    },
+    {
+      "label": "qso-runtime-report",
+      "candidate_meanings": [
+        "runtime_execution_report",
+        "fabric_aggregate_report"
+      ]
+    }
+  ],
+  "required_semantic_classes": [
+    {
+      "id": "runtime_event",
+      "candidate_producer": "QuantumStateObjects",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "runtime_execution_report",
+      "candidate_producer": "QuantumStateObjects_or_bounded_executor",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "fabric_projection_receipt",
+      "candidate_producer": "QSO-FABRIC_projection_boundary",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "fabric_collaboration_event",
+      "candidate_producer": "QSO-FABRIC",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "fabric_aggregate_report",
+      "candidate_producer": "QSO-FABRIC",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "portfolio_disposition",
+      "candidate_producer": "Repository_1_or_approved_successor",
+      "authority_effect": "SEPARATE_APPROVED_AUTHORITY_REQUIRED"
+    }
+  ],
+  "candidate_profiles": [
+    {
+      "id": "A",
+      "name": "fully_separate_namespaces",
+      "selected": false,
+      "examples": [
+        "qso.runtime.event",
+        "qso.runtime.execution-report",
+        "qso.fabric.projection-receipt",
+        "qso.fabric.collaboration-event",
+        "qso.fabric.aggregate-report",
+        "qso.portfolio.disposition"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "common_envelope_mandatory_semantic_qualifiers",
+      "selected": false,
+      "required_qualifiers": [
+        "producer_domain",
+        "semantic_class",
+        "profile_version",
+        "authority_effect"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "separate_canonical_classes_with_bounded_compatibility_views",
+      "selected": false,
+      "compatibility_requirements": [
+        "explicit_projection_receipt",
+        "loss_declaration",
+        "versioned_consumer_registration",
+        "independent_withdrawal"
+      ]
+    }
+  ],
+  "mandatory_fields": [
+    "profile_id",
+    "profile_version",
+    "semantic_namespace",
+    "semantic_class",
+    "producer_id",
+    "producer_role",
+    "producer_generation",
+    "record_id",
+    "record_identity_inputs",
+    "subject_id",
+    "subject_generation",
+    "source_record_ids",
+    "source_set_digest",
+    "event_time",
+    "observation_time",
+    "trusted_time_status",
+    "local_sequence",
+    "causal_parents",
+    "ordering_scope",
+    "duplicate_disposition",
+    "replay_disposition",
+    "idempotency_key",
+    "conflict_disposition",
+    "transformation_or_aggregation_rule_id",
+    "projection_or_aggregation_receipt_id",
+    "privacy_classification",
+    "retention_classification",
+    "correction_refs",
+    "revocation_refs",
+    "supersession_refs",
+    "withdrawal_refs",
+    "consumer_profile",
+    "unsupported_version_behavior",
+    "authority_effect",
+    "rollback_target",
+    "restored_state_verification"
+  ],
+  "invariants": [
+    "runtime_success_is_not_fabric_success",
+    "fabric_success_is_not_portfolio_disposition",
+    "projection_is_not_independent_evidence",
+    "aggregate_identity_is_domain_separated_from_source_identity",
+    "authority_effect_defaults_to_none",
+    "ambiguous_legacy_records_fail_closed",
+    "correction_and_revocation_reach_all_dependents",
+    "rollback_does_not_restore_stale_or_withdrawn_state",
+    "components_do_not_define_or_approve_their_own_authority"
+  ],
+  "required_witnesses": [
+    {
+      "id": "runtime_to_fabric_projection",
+      "requirements": [
+        "recoverable_source_record",
+        "explicit_transformation_and_loss",
+        "unchanged_authority_and_certainty",
+        "duplicate_projection_not_corroboration",
+        "unsupported_input_fails_closed"
+      ]
+    },
+    {
+      "id": "fabric_aggregate_to_repository_1",
+      "requirements": [
+        "recoverable_source_set",
+        "visible_missing_corrected_revoked_private_or_conflicting_sources",
+        "aggregate_cannot_self_authorize",
+        "independent_disposition_without_source_history_rewrite"
+      ]
+    },
+    {
+      "id": "runtime_fabric_repository_1_triple_overlap",
+      "requirements": [
+        "path_independent_semantic_class",
+        "path_independent_source_set",
+        "path_independent_authority_effect",
+        "complete_correction_and_revocation_propagation",
+        "mixed_generation_rejection_or_explicit_migration",
+        "restored_state_verification"
+      ]
+    }
+  ],
+  "migration_requirements": [
+    "legacy_producer_and_consumer_inventory",
+    "use_classification",
+    "immutable_legacy_to_canonical_mapping",
+    "lossy_or_ambiguous_record_disposition",
+    "compatibility_period_and_deprecation",
+    "consumer_registration",
+    "positive_hostile_mixed_generation_replay_correction_revocation_privacy_and_rollback_fixtures",
+    "resulting_state_verification",
+    "stale_documentation_and_claim_withdrawal"
+  ],
+  "rollback_requirements": [
+    "namespace_and_profile_registry_restoration_or_invalidation",
+    "producer_and_consumer_binding_restoration_or_invalidation",
+    "compatibility_projection_withdrawal",
+    "source_set_and_receipt_index_reconciliation",
+    "derived_aggregate_and_review_view_invalidation",
+    "correction_revocation_and_withdrawal_state_reconciliation",
+    "failed_candidate_evidence_preservation",
+    "freeze_on_failed_rollback"
+  ],
+  "review_gates": [
+    "D1_ACCEPTED",
+    "D2_ACCEPTED",
+    "D3_ACCEPTED",
+    "EXACT_REPOSITORY_LOCAL_INVENTORY_COMPLETE",
+    "PARTITION_PROFILE_SELECTED",
+    "SEMANTIC_CLASSES_IMMUTABLE",
+    "SECURITY_REVIEW_COMPLETE",
+    "PRIVACY_REVIEW_COMPLETE",
+    "ACCESSIBILITY_REVIEW_COMPLETE",
+    "LICENSE_REVIEW_COMPLETE",
+    "ARCHITECTURE_REVIEW_COMPLETE",
+    "TWO_INDEPENDENT_CONSUMERS_OR_VALIDATORS_PASS",
+    "MIGRATION_AND_ROLLBACK_EVIDENCE_COMPLETE",
+    "EXPLICIT_HUMAN_APPROVAL",
+    "RESULTING_STATE_VERIFIED"
+  ],
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-070"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-A",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-B",
+      "032-D",
+      "040-B",
+      "040-D",
+      "040-E",
+      "052-A",
+      "052-B",
+      "052-E",
+      "070-A",
+      "070-B",
+      "070-C",
+      "070-E"
+    ],
+    "proposed_gap": {
+      "id": "032-F",
+      "name": "Semantic-level partition and projection integrity",
+      "authoritative": false
+    }
+  }
+}

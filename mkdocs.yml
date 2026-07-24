@@ -1,0 +1,97 @@
+site_name: Alistaire Charter
+site_description: Evidence-bounded product, architecture, portable security, governance, orchestration, and repository-consolidation documentation for the A.L.I.S.T.A.I.R.E. QSO system.
+repo_name: aevespers2/ALISTAIRE-
+repo_url: https://github.com/aevespers2/ALISTAIRE-
+edit_uri: edit/main/docs/
+strict: true
+extra:
+  portfolio_authority_currentness_status: PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
+  runtime_fabric_governance_review_status: REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED
+  runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
+  runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
+  runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
+  runtime_fabric_lineage_disposition_status: CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED
+  kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
+  capability_roadmap_status: DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED
+  portfolio_contributor_paths_status: PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED
+  capability_lifecycle_coherence_status: CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED
+  d4_authority_recovery_status: BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE
+  d5_incident_command_status: D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED
+  runtime_fabric_marker: runtime/Fabric
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Name and identity: name-and-identity.md
+  - Capability roadmap:
+      - Roadmap guide: capability-roadmap.md
+      - Machine-readable roadmap: capability-roadmap-v1.json
+      - Lifecycle coherence review: capability-lifecycle-coherence.md
+      - Machine-readable lifecycle coherence: capability-lifecycle-coherence-v1.json
+  - Contributor onboarding:
+      - Portfolio contributor paths: portfolio-contributor-paths.md
+      - Machine-readable contributor paths: portfolio-contributor-paths-v1.json
+      - Developer and reviewer onboarding: development.md
+  - Architecture:
+      - System composition: architecture.md
+      - Orchestration mode: orchestration-mode.md
+      - Portfolio contract standard: portfolio-contract-standard.md
+      - Portfolio contract and authority matrix: portfolio-contract-authority-matrix.md
+      - Portfolio authority currentness review: portfolio-authority-currentness-review.md
+      - Machine-readable authority currentness profile: portfolio-authority-currentness-v1.json
+      - D2A common-contract ownership graph: d2a-common-contract-ownership-graph.md
+      - Machine-readable D2A graph: d2a-common-contract-ownership-graph-v1.json
+      - Runtime/Fabric governance review index: runtime-fabric-governance-review-index.md
+      - Machine-readable runtime/Fabric governance review index: runtime-fabric-governance-review-index-v1.json
+      - Runtime/Fabric namespace partition: runtime-fabric-namespace-partition.md
+      - Runtime/Fabric producer and consumer inventory: runtime-fabric-producer-consumer-inventory.md
+      - Machine-readable runtime/Fabric inventory: runtime-fabric-producer-consumer-inventory-v1.json
+      - Runtime/Fabric default-head and owner-vacancy inventory: runtime-fabric-default-head-owner-inventory.md
+      - Machine-readable default-head and owner-vacancy inventory: runtime-fabric-default-head-owner-inventory-v1.json
+      - Runtime/Fabric candidate-lineage disposition: runtime-fabric-lineage-disposition.md
+      - Machine-readable candidate-lineage disposition: runtime-fabric-lineage-disposition-v1.json
+      - Kernel-to-runtime crosswalk options: kernel-runtime-crosswalk-options.md
+      - Machine-readable kernel-to-runtime crosswalk: kernel-runtime-crosswalk-options-v1.json
+      - Machine-readable runtime/Fabric partition: runtime-fabric-namespace-partition-v1.json
+      - D3 canonical bytes and identity packet: d3-canonical-bytes-identity-decision-packet.md
+      - Machine-readable D3 packet: d3-canonical-bytes-identity-decision-packet-v1.json
+      - Decision source-generation rebind: decision-source-generation-rebind.md
+      - Machine-readable source-generation rebind: decision-source-generation-rebind-v1.json
+      - Portable security foundation: portable-security-foundation.md
+      - Portfolio integration roadmap: portfolio-integration-roadmap.md
+  - Governance:
+      - Consolidated charter: governance-charter.md
+      - Constitutional sovereignty and system participation: constitutional-sovereignty-and-system-participation.md
+      - Constitutional appointment lifecycle conformance: constitutional-appointment-lifecycle-conformance.md
+      - D2 neutral contract steward decision packet: d2-neutral-contract-steward-decision-packet.md
+      - Machine-readable D2 packet: d2-neutral-contract-steward-decision-packet-v1.json
+      - D4 independent authority and recovery roots: d4-independent-authority-recovery-roots-decision-packet.md
+      - Machine-readable D4 packet: d4-independent-authority-recovery-roots-decision-packet-v1.json
+      - D5 portfolio incident command: d5-portfolio-incident-command-decision-packet.md
+      - Machine-readable D5 packet: d5-portfolio-incident-command-decision-packet-v1.json
+  - Repository consolidation:
+      - Decision and options: repository-consolidation.md
+      - D1 canonical identity decision packet: d1-canonical-identity-decision-packet.md
+      - Machine-readable D1 packet: d1-canonical-identity-decision-packet-v1.json
+      - Provenance and migration guide: repository-provenance-and-migration.md
+      - Machine-readable provenance manifest: repository-provenance-manifest-v1.json
+  - Security and governance: security-and-governance.md
+  - Diagrams: diagrams.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

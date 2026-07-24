@@ -1,0 +1,124 @@
+{
+  "profile_id": "ALISTAIRE-CAPABILITY-ROADMAP-001",
+  "version": "1.1.0",
+  "status": "DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED",
+  "authority_effect": "none",
+  "name_source": {
+    "path": "docs/name-and-identity.md",
+    "expansion": "Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution",
+    "status": "NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED"
+  },
+  "source_reconciliation": {
+    "superseded_candidate_pr": 22,
+    "superseded_head": "6c7595e81914ab680acb25088193d495db9f28f7",
+    "disposition": "RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH",
+    "feature_count_before": 37,
+    "feature_count_after": 40,
+    "added_features": [
+      "Repository Role Classifier",
+      "Portfolio Status Dashboard",
+      "Systemic Obstruction Register"
+    ],
+    "identifier_policy": "preserve_family_scoped_ids",
+    "duplicate_registry_policy": "do_not_create_parallel_authority_source"
+  },
+  "roadmap_stages": [
+    {"id": "R0", "name": "Constitutional documentation", "status": "current_blocked", "requires": ["D1", "D2", "D3", "D4", "D5"]},
+    {"id": "R1", "name": "Evidence and currentness fabric", "status": "proposed", "requires": ["R0", "canonical finding identity", "correction and withdrawal rules"]},
+    {"id": "R2", "name": "Contract compatibility substrate", "status": "proposed", "requires": ["R1", "neutral contract steward", "cross-language fixtures"]},
+    {"id": "R3", "name": "Review, authority, and recovery", "status": "proposed", "requires": ["R2", "independent authority root", "incident command", "failed-rollback evidence"]},
+    {"id": "R4", "name": "Local simulation orchestrator", "status": "proposed", "requires": ["R3", "resource-bounded simulation fixtures", "independent resulting-state review"]},
+    {"id": "R5", "name": "Separately authorized domain pilots", "status": "prohibited_without_separate_approval", "requires": ["R4", "domain acceptance packet", "privacy, security, legal, operational, and recovery approval"]}
+  ],
+  "capability_families": [
+    {"id": "F1", "name": "Knowledge, evidence, and currentness", "features": [
+      {"id": "F1-01", "name": "Portfolio Knowledge Graph", "owner_candidates": ["ALISTAIRE-", "neutral contract steward"], "blocked_by": ["D1", "D2", "D3"]},
+      {"id": "F1-02", "name": "Exact-Head Evidence Registry", "owner_candidates": ["ALISTAIRE-", "Repository 1", "qso-field.github.io"], "blocked_by": ["canonical identity", "publication custody"]},
+      {"id": "F1-03", "name": "Provenance and Lineage Explorer", "owner_candidates": ["ALISTAIRE-", "QSO-SEEKER", "QSO-STUDIO"], "blocked_by": ["canonical identifiers", "access policy"]},
+      {"id": "F1-04", "name": "Uncertainty and Confidence Ledger", "owner_candidates": ["QuantumStateObjects", "QSO-FABRIC", "ALISTAIRE-"], "blocked_by": ["semantic owner", "correction contract"]},
+      {"id": "F1-05", "name": "Semantic Diff Engine", "owner_candidates": ["neutral contract steward", "QSO-STUDIO"], "blocked_by": ["accepted schemas", "comparison rules"]},
+      {"id": "F1-06", "name": "Cross-Document Contradiction Detection", "owner_candidates": ["ALISTAIRE-"], "blocked_by": ["controlled routes", "exact-source evidence"]},
+      {"id": "F1-07", "name": "Repository Role Classifier", "owner_candidates": ["ALISTAIRE-", "repository maintainers"], "blocked_by": ["canonical repository identity", "maintainer disposition", "lineage policy"]},
+      {"id": "F1-08", "name": "Systemic Obstruction Register", "owner_candidates": ["ALISTAIRE-", "neutral contract steward"], "blocked_by": ["canonical obstruction identity", "resolution-state vocabulary", "correction propagation"]}
+    ]},
+    {"id": "F2", "name": "Contracts, composition, and integration", "features": [
+      {"id": "F2-01", "name": "Cross-Repository Contract Validator", "owner_candidates": ["neutral contract steward", "qsio-kernel"], "blocked_by": ["D2", "D3"]},
+      {"id": "F2-02", "name": "Composition and Gluing Analyzer", "owner_candidates": ["ALISTAIRE-", "QSO-FABRIC", "qsio-kernel"], "blocked_by": ["accepted record classes", "route owners"]},
+      {"id": "F2-03", "name": "Interface Compatibility Matrix", "owner_candidates": ["neutral contract steward", "ALISTAIRE-"], "blocked_by": ["live registration", "canonical contract versions"]},
+      {"id": "F2-04", "name": "Integration Readiness Gate", "owner_candidates": ["Repository 1", "ALISTAIRE-"], "blocked_by": ["D4", "D5"]},
+      {"id": "F2-05", "name": "Migration and Deprecation Planner", "owner_candidates": ["ALISTAIRE-", "affected repositories"], "blocked_by": ["D1", "migration authority"]},
+      {"id": "F2-06", "name": "Release Truth Reconciler", "owner_candidates": ["ALISTAIRE-", "qso-field.github.io"], "blocked_by": ["publication custody", "release authority"]}
+    ]},
+    {"id": "F3", "name": "Governance, ownership, and decision integrity", "features": [
+      {"id": "F3-01", "name": "Authority Boundary Engine", "owner_candidates": ["Repository 1", "ALISTAIRE-"], "blocked_by": ["D4", "D5"]},
+      {"id": "F3-02", "name": "Decision and ADR Ledger", "owner_candidates": ["ALISTAIRE-"], "blocked_by": ["D1", "retention policy"]},
+      {"id": "F3-03", "name": "Ownership and Stewardship Matrix", "owner_candidates": ["ALISTAIRE-", "neutral contract steward"], "blocked_by": ["owner appointment or explicit vacancy acceptance"]},
+      {"id": "F3-04", "name": "Human Decision Queue", "owner_candidates": ["QSO-STUDIO", "Repository 1"], "blocked_by": ["review and approval contracts"]},
+      {"id": "F3-05", "name": "Multi-Agent Review Council", "owner_candidates": ["QSO-STUDIO", "QSO-FABRIC"], "blocked_by": ["participant identity", "recusal", "dissent", "disposition rules"]},
+      {"id": "F3-06", "name": "Constitutional Core", "owner_candidates": ["ALISTAIRE-"], "blocked_by": ["D1", "D2", "D3", "D4", "D5"]}
+    ]},
+    {"id": "F4", "name": "Documentation, onboarding, and accessibility", "features": [
+      {"id": "F4-01", "name": "Documentation Autopilot", "owner_candidates": ["each repository", "ALISTAIRE- coordination"], "blocked_by": ["repository-local review", "exact-head validation"]},
+      {"id": "F4-02", "name": "Living Architecture Atlas", "owner_candidates": ["ALISTAIRE-", "qso-field.github.io"], "blocked_by": ["accepted source graph", "accessible alternatives"]},
+      {"id": "F4-03", "name": "Developer Onboarding Generator", "owner_candidates": ["each repository"], "blocked_by": ["maintainer review"]},
+      {"id": "F4-04", "name": "Public Project Narrative", "owner_candidates": ["qso-field.github.io", "ALISTAIRE-"], "blocked_by": ["publication custody", "correction custody"]},
+      {"id": "F4-05", "name": "Accessibility Assurance Layer", "owner_candidates": ["QSO-STUDIO", "AionUi", "documentation repositories"], "blocked_by": ["accessibility owner", "test criteria"]},
+      {"id": "F4-06", "name": "Contribution Path Recommender", "owner_candidates": ["ALISTAIRE-", "repository issue trackers"], "blocked_by": ["identity policy", "privacy policy", "recommendation governance"]}
+    ]},
+    {"id": "F5", "name": "Security, resilience, and repair", "features": [
+      {"id": "F5-01", "name": "Repository Health Sentinel", "owner_candidates": ["Repository 0", "ALISTAIRE-"], "blocked_by": ["read-only access", "notification policy"]},
+      {"id": "F5-02", "name": "Failure-Signature Deduplication", "owner_candidates": ["Repository 0", "ALISTAIRE-"], "blocked_by": ["canonical finding identity", "retention policy"]},
+      {"id": "F5-03", "name": "Rollback Readiness Scoring", "owner_candidates": ["Repository 1", "ALISTAIRE-"], "blocked_by": ["accepted recovery criteria"]},
+      {"id": "F5-04", "name": "Correction and Revocation Protocol", "owner_candidates": ["neutral contract steward", "Repository 1"], "blocked_by": ["canonical identity", "consumer registration"]},
+      {"id": "F5-05", "name": "Security Boundary Mapper", "owner_candidates": ["Repository 0", "Repository 1"], "blocked_by": ["D4", "D5", "approved security review"]},
+      {"id": "F5-06", "name": "Artifact Completeness Checker", "owner_candidates": ["Repository 0", "qsio-kernel"], "blocked_by": ["artifact schema", "artifact custody"]},
+      {"id": "F5-07", "name": "Portfolio Status Dashboard", "owner_candidates": ["ALISTAIRE-", "qso-field.github.io", "Repository 0"], "blocked_by": ["current evidence graph", "publication custody", "claim withdrawal authority"]}
+    ]},
+    {"id": "F6", "name": "Planning, simulation, and capability growth", "features": [
+      {"id": "F6-01", "name": "FYSA-120 Capability Router", "owner_candidates": ["ALISTAIRE-", "QSO-GENOMES"], "blocked_by": ["taxonomy versioning", "attribution rules"]},
+      {"id": "F6-02", "name": "Governance-Aware Planning Engine", "owner_candidates": ["QSO-FABRIC", "ALISTAIRE-"], "blocked_by": ["planning contracts", "authority contracts"]},
+      {"id": "F6-03", "name": "Architecture Simulation Sandbox", "owner_candidates": ["QSO-FABRIC", "qsio-kernel"], "blocked_by": ["simulation fixtures", "resource limits"]},
+      {"id": "F6-04", "name": "Invariant and Policy Language", "owner_candidates": ["neutral contract steward", "qsio-kernel"], "blocked_by": ["D2", "D3"]},
+      {"id": "F6-05", "name": "Capability Maturity Model", "owner_candidates": ["ALISTAIRE-"], "blocked_by": ["accepted evidence vocabulary"]},
+      {"id": "F6-06", "name": "Portable Evidence Bundles", "owner_candidates": ["Repository 0", "Repository 1"], "blocked_by": ["canonical bundle format", "signing custody"]},
+      {"id": "F6-07", "name": "Evidence-Based Self-Improvement", "owner_candidates": ["ALISTAIRE-", "QSO-FABRIC"], "blocked_by": ["bounded change policy", "independent review", "correction", "rollback"]}
+    ]}
+  ],
+  "material_obstructions": [
+    "canonical repository, package identity, and non-canonical disposition unresolved",
+    "neutral contract ownership absent",
+    "kernel-runtime-Fabric-disposition route unaccepted",
+    "semantic, route, source-rights, accessibility, review, incident, publication, and recovery ownership unresolved",
+    "candidate evidence cannot substitute for live producer or consumer registration",
+    "mixed-generation rollback and independently witnessed restoration incomplete",
+    "Pages custody, correction timing, accessibility certification, and claim-withdrawal authority unresolved"
+  ],
+  "fysa_120": {
+    "applied_categories": ["CAT-011", "CAT-012", "CAT-013", "CAT-017", "CAT-018", "CAT-019", "CAT-022", "CAT-030", "CAT-031", "CAT-032", "CAT-033", "CAT-040", "CAT-041", "CAT-052", "CAT-054", "CAT-059", "CAT-064", "CAT-070"],
+    "proposed_refinements": [
+      {"id": "012-R", "name": "Capability-roadmap information architecture and cross-document feature-status coherence", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "012-S", "name": "Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "013-L", "name": "Evidence-linked feature-to-repository capability and obstruction graphing", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "032-J", "name": "Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "040-Q", "name": "Restored-state verification and failed-rollback evidence across mixed generations", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "041-F", "name": "Governance-gated capability portfolio decomposition and maturity sequencing", "status": "PROPOSED_NON_AUTHORITATIVE"},
+      {"id": "054-L", "name": "Machine-enforced separation between recommendation, approval, credential binding, and execution", "status": "PROPOSED_NON_AUTHORITATIVE"}
+    ]
+  },
+  "prohibited_promotions": [
+    "documentation to canonical acceptance",
+    "feature listing to implementation",
+    "repository assignment to ownership",
+    "workflow success to trust or authority",
+    "interface existence to compatibility",
+    "simulation to production readiness",
+    "autonomy language to unrestricted permission"
+  ],
+  "rollback": {
+    "restore_last_validated_documentation_generation": true,
+    "preserve_superseded_generation": true,
+    "propagate_correction_or_withdrawal": true,
+    "revalidate_controlled_routes": true,
+    "destructive_history_rewrite": false
+  }
+}
