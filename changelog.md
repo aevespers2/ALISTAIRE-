@@ -6,6 +6,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-24 — Reconciled exact default heads and identified current candidate heads across all nineteen owned repositories under `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`; no owner, architecture, contract, release, or authority was selected.
+- 2026-07-24 — Recorded ten material cross-repository conflicts, ten explicit ownership vacancies, six dissent sets, and candidate-currentness limitations, including QSO-GENOMES default movement, QSO-SEEKER resulting-head reconfirmation, datarepo Actions absence, and divergent qso-field and QSO-FABRIC candidates.
 - 2026-07-24 — Closed the planning-route evidence state by binding focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as immutable historical evidence anchors, with later descendants required to revalidate rather than impersonate those identities.
 - 2026-07-24 — Synchronized the current default-head inventory, semantic and route owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, governance review index, safe unsupported route, and rejected direct-alias option across `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
 - 2026-07-24 — Preserved `UNSUPPORTED_KERNEL_RUNTIME_ROUTE` as the safe disposition and `REJECT_DIRECT_IDENTITY_ALIAS` as the rejected direct-alias option; no namespace, owner, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority was accepted.
@@ -22,6 +24,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-24 — Added a nineteen-repository authority-source graph separating default heads, candidate heads, local role claims, conflict/dissent records, explicit vacancies, human review gates, and blocked or unsupported routes.
+- 2026-07-24 — Identified wider portfolio gluing obstructions: identity overlap, authority cycles, route bifurcation, missing producer outputs, lossy projections, absent triple-overlap witnesses, and stale-currentness promotion.
 - 2026-07-24 — Aligned the four controlled planning routes to the same six runtime/Fabric review-surface dispositions, the same non-authorizing next gates, and the same generation-specific evidence model.
 - 2026-07-23 — Connected the governed route `qsio-kernel → QuantumStateObjects → QSO-FABRIC → Repository 1` through one review index without claiming that the route is supported.
 - 2026-07-23 — Recorded nine material gluing obstructions: kernel/runtime semantic mismatch, namespace and identity ambiguity, missing projection receipt, source-set and duplicate inflation, ordering and replay ambiguity, correction and revocation discontinuity, semantic and route owner vacancy, migration and rollback incompleteness, and authority inflation.
@@ -37,6 +41,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Required source snapshots to preserve multiple lineages, dissent, evidence limitations, correction, withdrawal, migration, and rollback rather than silently selecting an owner or treating a moved head as current.
 - 2026-07-24 — Recorded exact source, run, artifact, digest, expiry, integration, and descendant-revalidation boundaries for planning-route evidence; passing evidence remains non-authorizing.
 - 2026-07-24 — Required controlled planning-route agreement before the documentation candidate may claim planning currentness; agreement remains non-authorizing.
 - 2026-07-24 — Required focused and resulting-head validation before the synchronization generation may be treated as validated documentation evidence.
@@ -55,10 +60,12 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Added a Pages-ready authority-source reconciliation guide, accessible Mermaid graph with prose equivalent, exact machine-readable profile, fail-closed validator, hostile regressions, and read-only exact-head evidence workflow.
+- 2026-07-24 — Updated MkDocs navigation and synchronized `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` with the new source, conflict, dissent, vacancy, and rollback state.
 - 2026-07-24 — Replaced stale pending validation wording with generation-specific focused and resulting integration evidence, exact workflow runs, retained artifacts, digests, expiry, and explicit descendant revalidation requirements.
 - 2026-07-24 — Reworked `taskchain.md` into a current decision, controlled-route, obstruction, active-chain, evidence, and FYSA-120 map.
 - 2026-07-24 — Reworked `punchlist.md` to distinguish completed documentation/governance milestones from unresolved constitutional, ownership, registration, security, migration, rollback, approval, and resulting-state gates.
-- 2026-07-24 — Reworked `release.md` so current candidate contents, review dispositions, acceptance gates, controlled propagation, artifact requirements, validation targets, rollback criteria, and blockers agree with PRs #11–#14.
+- 2026-07-24 — Reworked `release.md` so current candidate contents, review dispositions, acceptance gates, controlled propagation, artifact requirements, validation targets, rollback criteria, and blockers agree with PRs #11–#14 and the authority-source reconciliation.
 - 2026-07-24 — Updated the runtime/Fabric governance review validator and hostile regressions to fail closed when any controlled planning route loses required dispositions, safety defaults, authority boundaries, or synchronization state.
 - 2026-07-23 — Added accessible Mermaid diagrams with prose equivalents for partitioning, inventories, lineage, crosswalk, and governance review.
 - 2026-07-23 — Added exact-head read-only workflows, strict MkDocs construction, local-link and terminology validation, deterministic hashing, hostile regressions, and retained evidence.
@@ -69,7 +76,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
-- 2026-07-24 — Changed documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact focused and resulting integration generations only; no release gate was promoted.
+- 2026-07-24 — Added authority-source reconciliation as `REVIEW / BLOCKED`; focused and resulting exact-head evidence remain required and no release gate was promoted.
+- 2026-07-24 — Changed documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact planning-route generations only; no release gate was promoted.
 - 2026-07-24 — Added `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` as a documentation-currentness state, not a release or acceptance state.
 - 2026-07-24 — Updated release gates to include current default-head owner vacancies, candidate-lineage disposition, kernel/runtime unsupported-route preservation, live producer/consumer registration, projection receipts, correction/revocation propagation, mixed-generation rollback, and restored-state verification.
 - 2026-07-23 — Added runtime/Fabric review surfaces as `REVIEW / BLOCKED` release gates while preserving D1–D5 and all independent review requirements.
@@ -88,7 +96,8 @@ This documentation generation applies `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`
 Proposed non-authoritative subdivisions:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Multi-candidate authority-source reconciliation, dissent preservation, and vacancy closure`.
 
 ## 2026-07-16
 
