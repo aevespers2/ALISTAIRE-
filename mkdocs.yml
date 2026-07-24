@@ -9,6 +9,7 @@ extra:
   runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
   runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
   runtime_fabric_lineage_disposition_status: CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED
+  kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -32,6 +33,8 @@ nav:
       - Machine-readable default-head and owner-vacancy inventory: runtime-fabric-default-head-owner-inventory-v1.json
       - Runtime/Fabric candidate-lineage disposition: runtime-fabric-lineage-disposition.md
       - Machine-readable candidate-lineage disposition: runtime-fabric-lineage-disposition-v1.json
+      - Kernel-to-runtime crosswalk options: kernel-runtime-crosswalk-options.md
+      - Machine-readable kernel-to-runtime crosswalk: kernel-runtime-crosswalk-options-v1.json
       - Machine-readable runtime/Fabric partition: runtime-fabric-namespace-partition-v1.json
       - D3 canonical bytes and identity packet: d3-canonical-bytes-identity-decision-packet.md
       - Machine-readable D3 packet: d3-canonical-bytes-identity-decision-packet-v1.json

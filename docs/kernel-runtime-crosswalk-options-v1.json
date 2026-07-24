@@ -1,0 +1,177 @@
+{
+  "profile_id": "ALISTAIRE-KERNEL-RUNTIME-CROSSWALK-OPTIONS-001",
+  "version": 1,
+  "status": "KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED",
+  "authority_effect": "none",
+  "safe_default": "UNSUPPORTED_KERNEL_RUNTIME_ROUTE",
+  "observed_generations": [
+    {
+      "repository": "aevespers2/qsio-kernel",
+      "ref": "main",
+      "head": "6468254d7703e5f771e610ed3f76bac1b7205ddb",
+      "paths": ["src/qsio/types.py", "src/qsio/qsio.py"],
+      "role": "internal_kernel_ledger_source"
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "ref": "main",
+      "head": "40efcbf8ce2bda7d6b05b3fb1f3ccf0384facc51",
+      "paths": [],
+      "role": "accepted_default_head_without_crosswalk_binding"
+    },
+    {
+      "repository": "aevespers2/QuantumStateObjects",
+      "ref": "docs/pages-architecture-onboarding",
+      "head": "cc9b9c7b06a1a48bbc052b8d6bacd11782285288",
+      "paths": [],
+      "role": "runtime_documentation_candidate"
+    },
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "ref": "docs/consolidation-charter-20260720",
+      "head": "b31f9f3385ebf05576bd55bde36e4d42158f2adb",
+      "paths": [
+        "docs/runtime-fabric-default-head-owner-inventory.md",
+        "docs/runtime-fabric-lineage-disposition.md"
+      ],
+      "role": "non_authorizing_governance_parent"
+    }
+  ],
+  "semantic_classes": [
+    "kernel_interaction_record",
+    "runtime_event",
+    "runtime_execution_report",
+    "projection_receipt",
+    "fabric_record",
+    "portfolio_disposition"
+  ],
+  "options": [
+    {
+      "id": "A",
+      "name": "explicitly_unsupported_route",
+      "disposition": "UNSUPPORTED_KERNEL_RUNTIME_ROUTE",
+      "selectable_now": true,
+      "authority_effect": "none"
+    },
+    {
+      "id": "B",
+      "name": "read_only_projection_adapter",
+      "disposition": "DOCUMENTED_NOT_SELECTED",
+      "selectable_now": false,
+      "requires_projection_receipt": true,
+      "authority_effect": "none"
+    },
+    {
+      "id": "C",
+      "name": "neutral_qualified_envelope",
+      "disposition": "DOCUMENTED_NOT_SELECTED",
+      "selectable_now": false,
+      "requires": ["D2", "D3"],
+      "authority_effect": "none"
+    },
+    {
+      "id": "D",
+      "name": "direct_identity_aliasing",
+      "disposition": "REJECT_DIRECT_IDENTITY_ALIAS",
+      "selectable_now": false,
+      "authority_effect": "none"
+    }
+  ],
+  "kernel_fields": [
+    "qsio_id",
+    "qsi",
+    "pre_state_hashes",
+    "proposed_transitions",
+    "accepted_transitions",
+    "witnesses",
+    "outcome",
+    "reason_codes",
+    "parent_qsio_hashes",
+    "created_at",
+    "content_hash"
+  ],
+  "projection_receipt_required_fields": [
+    "receipt_id",
+    "profile_version",
+    "projector_identity",
+    "projector_generation",
+    "source_repository",
+    "source_ref",
+    "source_commit",
+    "source_path",
+    "source_record_id",
+    "source_digest",
+    "source_semantic_class",
+    "target_repository",
+    "target_namespace",
+    "target_semantic_class",
+    "target_schema_version",
+    "target_record_ids",
+    "disposition",
+    "field_transformations",
+    "omitted_fields",
+    "ordering_result",
+    "replay_result",
+    "duplicate_result",
+    "conflict_result",
+    "evidence_refs",
+    "privacy_classification",
+    "retention_classification",
+    "correction_refs",
+    "revocation_refs",
+    "authority_effect",
+    "rollback_target",
+    "restoration_verification_state"
+  ],
+  "acceptance_gates": [
+    "D1_ACCEPTED",
+    "D2_STEWARD_ACCEPTED",
+    "D3_CANONICAL_PROFILE_ACCEPTED",
+    "COMPLETE_LOCAL_USE_INVENTORY",
+    "SEMANTIC_AND_ROUTE_OWNERS_OR_ACCEPTED_VACANCIES",
+    "VERSIONED_SOURCE_TARGET_SCHEMAS_AND_VOCABULARIES",
+    "TWO_INDEPENDENT_VALIDATORS",
+    "SECURITY_PRIVACY_LICENSE_ACCESSIBILITY_RETENTION_INCIDENT_REVIEW",
+    "CONSUMER_REGISTRATION_AND_REMOVAL_GOVERNANCE",
+    "MIGRATION_CORRECTION_REVOCATION_WITHDRAWAL_ROLLBACK_RESTORATION_EVIDENCE",
+    "EXPLICIT_HUMAN_APPROVAL",
+    "RESULTING_DEFAULT_HEAD_EVIDENCE"
+  ],
+  "prohibited_promotions": [
+    "namespace_selection",
+    "schema_acceptance",
+    "producer_admission",
+    "consumer_admission",
+    "adapter_activation",
+    "runtime_admission",
+    "fabric_activation",
+    "portfolio_disposition_authority",
+    "release",
+    "pages_publication",
+    "deployment",
+    "credential_change",
+    "infrastructure_apply",
+    "destructive_history_rewrite"
+  ],
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-059",
+      "CAT-070"
+    ],
+    "proposed_gap": {
+      "id": "040-N",
+      "name": "Internal-ledger to runtime-record crosswalk, loss accounting, and unsupported-route preservation",
+      "authoritative": false
+    }
+  }
+}
