@@ -33,17 +33,21 @@ Contributor-path status: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASS
 
 Capability and contributor lifecycle status: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
+D4 authority and recovery readiness: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`
+
 Authority effect: `NONE`
 
-The [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) reconciles the authority matrix against one exact primary documentation or governance source for every owned repository. The [capability roadmap](docs/capability-roadmap.md) records forty proposed capabilities and their gates. The [portfolio contributor paths](docs/portfolio-contributor-paths.md) record bounded documentation-first entry routes for all nineteen repositories. The [lifecycle coherence review](docs/capability-lifecycle-coherence.md) ensures these states propagate through this task chain, `punchlist.md`, `release.md`, and `changelog.md`.
+The [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) reconciles the authority matrix against one exact primary documentation or governance source for every owned repository. The [capability roadmap](docs/capability-roadmap.md) records forty proposed capabilities and their gates. The [portfolio contributor paths](docs/portfolio-contributor-paths.md) record bounded documentation-first entry routes for all nineteen repositories. The [lifecycle coherence review](docs/capability-lifecycle-coherence.md) ensures these states propagate through this task chain, `punchlist.md`, `release.md`, and `changelog.md`. The [D4 decision packet](docs/d4-independent-authority-recovery-roots-decision-packet.md) records authority and recovery models, candidate sources, route conflicts, readiness gates, witnesses, correction, revocation, rollback, and restoration without selecting or activating an authority.
 
-Synchronization records documentation currentness only. It does not accept a repository identity, feature, contract, semantic owner, maintainer, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, payment, device mutation, or infrastructure authority.
+Synchronization records documentation currentness only. It does not accept a repository identity, feature, contract, semantic owner, maintainer, namespace, producer, consumer, adapter, runtime, authority root, release, publication, deployment, credential, payment, device mutation, or infrastructure authority.
 
 Validated historical planning-route source generation: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
 Validated historical planning-route integration generation: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
 
 Capability-lifecycle coherence source generation: `docs/consolidation-charter-20260720@2953ef6ba8ee86eafdddcf56222c91cbb296bcb7`.
+
+D4 packet base generation: `docs/consolidation-charter-20260720@0a0dd2fd8a75cc40833a60da0bad5d14426ac8ca`.
 
 These immutable generations are historical evidence anchors, not self-referential claims about descendants. Every descendant must rerun exact-head validation and retain new evidence before it may claim currentness.
 
@@ -52,6 +56,7 @@ These immutable generations are historical evidence anchors, not self-referentia
 - `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN` govern D1 source and packet change.
 - `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` govern D2 dependencies and stewardship evidence.
 - `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` govern canonicalization profiles, fixtures, consumers, migration, and rollback.
+- `D4_REBIND_REQUIRED` and `D4_PACKET_WITHDRAWN` govern D1–D3 dependencies, authority candidates, roles, vacancies, routes, consumers, custody, exercises, recovery, and safety boundaries.
 - `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` and `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN` govern repository-source, head, lineage, conflict, dissent, vacancy, route, and safety-boundary changes.
 - Capability and contributor lifecycle coherence must be rebound or withdrawn when roadmap status, feature lineage, repository routes, stop conditions, owner vacancies, or any controlled lifecycle file changes.
 
@@ -65,7 +70,7 @@ No propagation marker completes acceptance until every controlled route agrees, 
 | D2 — Neutral contract steward | `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` | Approve a non-operational steward, source precedence, identifiers, schemas, fixtures, compatibility, correction, continuity, and rollback |
 | D2A — Common-contract graph | `REVIEW_OBSERVED_HEADS_UNRESOLVED_OWNERSHIP` | Reconcile observed owners, consumers, conflicts, and required overlap witnesses |
 | D3 — Canonical bytes and identity primitives | `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` | Select and independently reproduce one canonicalization profile, primitive set, fixture corpus, migration, and rollback |
-| D4 — Independent authority and recovery roots | `PROPOSED` | Charter Repository `1` or successor; assign issuers, approvers, revokers, key custody, emergency stop, recovery quorum, and evidence preservation |
+| D4 — Independent authority and recovery roots | `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE` | Review the [D4 packet](docs/d4-independent-authority-recovery-roots-decision-packet.md); select and charter an independent model, roles, custody, issuance, revocation, quarantine, checkpoint, recovery, witnesses, exercises, and rollback |
 | D5 — Portfolio incident command | `PROPOSED` | Name freeze, evidence, bounded restart, rollback, invalidation, claim-withdrawal, and recovery owners |
 
 No downstream implementation or successful workflow can mark these decisions accepted retroactively.
@@ -99,6 +104,10 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 8. Projection or aggregation may not inflate evidence or authority.
 9. Local runtime success is not Fabric success, and Fabric success is not a Repository `1` disposition.
 10. Capability and contributor documents were previously route-divergent; that documentation gluing failure is now repaired, but the underlying architectural route remains unsupported.
+11. Repository `0` and Repository `1` preserve conflicting `working → proposal → quarantine` and direct `working → quarantine` candidate routes.
+12. Authority issuance, approval, execution, evidence, revocation, checkpoint custody, and recovery are not yet separated into accepted trust domains.
+13. Recovery could become circular if a suspected authority root alone authorizes its own restoration.
+14. Correction or revocation cannot be considered closed until every consumer and public claim acknowledges it.
 
 ## Active chain
 
@@ -110,7 +119,7 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 | P0-D1 | Select canonical charter identity | P0A, governance, matrix, human approval | BLOCKED | Immutable D1 record and verified resulting repository state |
 | P0-D2 | Assign neutral contract steward | D1, D2 readiness | BLOCKED | Accepted non-operational owner, location, precedence, fixtures, compatibility, correction, continuity, and rollback |
 | P0-D3 | Accept canonical bytes and identities | D2, D3 readiness | BLOCKED | Two independent implementations agree on disposition, model, bytes, digest, identity, reason code, migration, and rollback |
-| P0-D4 | Charter independent authority and recovery roots | D3 | PROPOSED | Independent issuer, approver, revoker, key custody, quarantine, checkpoint, correction, and recovery |
+| P0-D4 | Charter independent authority and recovery roots | D3, D4 readiness | REVIEW / BLOCKED | Select a model; reconcile Repository `0`/`1`; assign or accept vacancies; validate separation, capabilities, revocation, checkpoints, recovery, exercises, rollback, and resulting state |
 | P0-D5 | Establish portfolio incident command | D1, D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery roles |
 | P1 | Approve portable device-trust contracts | D3–D5 | PROPOSED | Shared device-to-recovery fixtures and independent rollback evidence |
 | P2A | Resolve runtime/Fabric role collision | D2–D4 | REVIEW / BLOCKED | Accept independent semantic classes, owners, namespaces, receipts, replay, correction, revocation, migration, rollback, and registrations |
@@ -128,13 +137,13 @@ The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-ident
 - Canonical bytes, identities, clocks, replay domains, reason codes, and extensions pass independent cross-language fixtures.
 - Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition records remain independently identified.
 - Pairwise and triple-overlap witnesses pass at immutable heads and resulting state is independently verified.
-- Every controlled lifecycle route reports the same roadmap and contributor status without promoting documentation into implementation.
+- Every controlled lifecycle route reports the same roadmap, contributor, and D4 readiness status without promoting documentation into implementation or authority.
 
 ## Builder rules
 
 Builders execute only `READY` tasks. While D1–D5 remain unaccepted, permitted work is limited to read-only inventory, documentation, validation, neutral contract proposals, fixture specifications, isolated local tests, and evidence preservation.
 
-No real device inspection, external data ingestion, privileged adapter use, credential handling, remediation, payment, deployment, capability issuance, publication, or capability claim is authorized.
+No real device inspection, external data ingestion, privileged adapter use, credential handling, remediation, payment, deployment, capability issuance, publication, authority activation, checkpoint restoration, or capability claim is authorized.
 
 ## Evidence rules
 
@@ -158,12 +167,14 @@ Proposed non-authoritative refinements include:
 - `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
 - `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`;
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`;
-- `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`.
+- `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`;
+- `054-M — Independent authority and recovery-root separation`.
 
 Taxonomy selection does not establish competence, appointment, permission, ownership, acceptance, or authority.
 
 ## Builder log
 
+- 2026-07-24 — Added the D4 independent-authority and recovery-roots decision packet, machine-readable profile, candidate-source observations, route-conflict analysis, authority/recovery witnesses, correction/revocation closure, rollback requirements, and FYSA refinement `054-M` without selecting or activating authority.
 - 2026-07-24 — Added capability and contributor lifecycle coherence, machine-readable status propagation, accessible route diagram, hostile validation, rollback, and FYSA refinement `012-U` without accepting a binding.
 - 2026-07-24 — Added and reconciled the forty-feature capability roadmap and documentation-first contributor paths for all nineteen repositories.
 - 2026-07-24 — Reconciled portfolio authority currentness and synchronized the runtime/Fabric planning routes under non-authorizing controlled dispositions.

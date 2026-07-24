@@ -15,6 +15,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - Feature lineage: `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`.
 - Contributor paths: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`.
 - Capability lifecycle: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
+- D4 authority and recovery readiness: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
 - Safe kernel/runtime disposition: `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`.
 - Rejected direct-alias option: `REJECT_DIRECT_IDENTITY_ALIAS`.
 - Authority effect: `NONE`.
@@ -24,6 +25,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - D1 source change: `D1_REBIND_REQUIRED`; packet withdrawal: `D1_PACKET_WITHDRAWN`.
 - D2 source or stewardship change: `D2_REBIND_REQUIRED`; packet withdrawal: `D2_PACKET_WITHDRAWN`.
 - D3 profile, fixture, consumer, migration, or rollback change: `D3_REBIND_REQUIRED`; packet withdrawal: `D3_PACKET_WITHDRAWN`.
+- D4 dependency, authority candidate, role, vacancy, route, consumer, custody, exercise, recovery, or safety-boundary change: `D4_REBIND_REQUIRED`; packet withdrawal: `D4_PACKET_WITHDRAWN`.
 - Portfolio currentness change: `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED`; packet withdrawal: `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
 
 ### Runtime/Fabric controlled dispositions
@@ -37,7 +39,8 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Product
 
-- 2026-07-24 — Synchronized capability-roadmap, feature-lineage, and contributor-path state through taskchain, punchlist, release, and changelog under `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
+- 2026-07-24 — Added D4 independent-authority and recovery-roots decision readiness under `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`; no authority, capability, credential, checkpoint, or recovery operation was activated.
+- 2026-07-24 — Synchronized capability-roadmap, feature-lineage, contributor-path, and D4 state through taskchain, punchlist, release, changelog, README, and Pages.
 - 2026-07-24 — Added contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; routes do not appoint maintainers or authorize implementation.
 - 2026-07-24 — Reconciled the validated forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the family-scoped roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH` without creating a parallel registry.
 - 2026-07-24 — Added Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
@@ -51,11 +54,16 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Architecture
 
+- 2026-07-24 — Compared isolated Repository `1`, split issuance/recovery roots, and federated human-reviewed quorum models without selecting one.
+- 2026-07-24 — Recorded observed Repository `1` candidate heads `432a6fafa56d4a57be7fc3918eba5ed80a6bcdcc` and `0813308061e27e8289ea8f15af7d5ccdc84b4abf` as evidence only.
+- 2026-07-24 — Formalized the Repository `0`/Repository `1` route bifurcation between `working → proposal → quarantine` and direct `working → quarantine`.
+- 2026-07-24 — Added D4 pairwise and triple-overlap witnesses for proposer, quarantine, decision, capability, execution, receipt, disposition, checkpoint, revocation, recovery, consumer acknowledgment, and independently verified resulting state.
+- 2026-07-24 — Added obstruction classes for constitutional loops, proposal/disposition collapse, root co-location, revocation orphans, checkpoint forks, compromised-root recovery, stale quorums, replay ambiguity, rollback resurrection, and unverified restoration.
 - 2026-07-24 — Repaired `cross_document_lifecycle_route_divergence`: README, Pages, and changelog exposed roadmap and contributor states while taskchain, punchlist, and release omitted them.
 - 2026-07-24 — Added an accessible lifecycle-route diagram and prose equivalent connecting roadmap, task chain, punch list, release, changelog, D1–D5, and repository-local approval.
 - 2026-07-24 — Added a repository-by-repository contributor corridor with documentation role, bounded task, FYSA skills, stop condition, exact-source precedence, and gluing checks.
 - 2026-07-24 — Preserved family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace.
-- 2026-07-24 — Reserved `012-Q` for public naming and moved source-aware documentation generation to `012-S`; retained `032-J`, `040-Q`, and `054-L` for gluing, restoration, and authority separation.
+- 2026-07-24 — Reserved `012-Q` for public naming and moved source-aware documentation generation to `012-S`; retained `032-J`, `040-Q`, `054-L`, and `054-M` for gluing, restoration, authority separation, and independent recovery roots.
 - 2026-07-24 — Grouped forty capabilities into six families and stages R0–R5 with candidate homes and unresolved gates rather than implied ownership.
 - 2026-07-24 — Recorded roadmap obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
 - 2026-07-24 — Reconciled the portfolio matrix against exact sources and recorded V1–V10 vacancies.
@@ -66,6 +74,9 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Security and governance
 
+- 2026-07-24 — Required D4 to separate proposal, review, approval, execution, evidence, key custody, revocation, checkpoint custody, and recovery duties.
+- 2026-07-24 — Required capabilities to remain scoped, attributable, expiring, replay-bounded, and revocable; documentation does not issue them.
+- 2026-07-24 — Required recovery to remain independent from a suspected root and to preserve failed-generation evidence, correction, revocation, consumer propagation, rollback, and independently witnessed restoration.
 - 2026-07-24 — Required every lifecycle route to preserve roadmap, lineage, contributor, lifecycle, D1–D5, correction, withdrawal, and rollback state without promoting documentation into implementation.
 - 2026-07-24 — Required contributors to stop when work would appoint owners, select architecture, activate policy, expand collection, handle credentials, approve releases, publish, deploy, execute payments, or mutate devices.
 - 2026-07-24 — Required feature reconciliation to preserve PR #22 exact source, the 37-to-40 delta, family identifiers, and prohibition on a parallel registry.
@@ -79,6 +90,9 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Documentation
 
+- 2026-07-24 — Added Pages-ready [D4 independent authority and recovery roots decision packet](docs/d4-independent-authority-recovery-roots-decision-packet.md) and [machine-readable profile](docs/d4-independent-authority-recovery-roots-decision-packet-v1.json).
+- 2026-07-24 — Added D4 candidate models, immutable decision fields, readiness gates, source observations, accessible lifecycle diagram with prose equivalent, obstruction and witness analysis, controlled propagation, reviewer onboarding, FYSA mapping, and explicit non-authority boundaries.
+- 2026-07-24 — Synchronized D4 status, links, gates, correction, withdrawal, rollback, and remaining blockers across README, Pages home, taskchain, punchlist, release, changelog, and MkDocs navigation.
 - 2026-07-24 — Added Pages-ready [capability and contributor lifecycle coherence](docs/capability-lifecycle-coherence.md), machine-readable profile, exact source tuple, status table, accessible diagram, repaired-obstruction record, remaining blockers, onboarding, change control, and rollback.
 - 2026-07-24 — Added a strict lifecycle validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic hashing, retained terminal-path evidence, and final fail-closed gating.
 - 2026-07-24 — Added proposed non-authoritative subdivision `012-U — Capability and contributor lifecycle-route synchronization, anti-divergence validation, and non-authorizing status propagation`.
@@ -102,5 +116,6 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`.
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`.
 - `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`.
+- `054-M — Independent authority and recovery-root separation`.
 
-No Pages publication, default-branch merge, release, deployment, credential change, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
+No Pages publication, default-branch merge, constitutional acceptance, authority activation, capability issuance, credential change, checkpoint restoration, release, deployment, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.

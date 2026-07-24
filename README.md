@@ -31,6 +31,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Machine-readable D2 decision packet](docs/d2-neutral-contract-steward-decision-packet-v1.json)
 - [D3 canonical bytes and identity decision packet](docs/d3-canonical-bytes-identity-decision-packet.md)
 - [Machine-readable D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet-v1.json)
+- [D4 independent authority and recovery roots decision packet](docs/d4-independent-authority-recovery-roots-decision-packet.md)
+- [Machine-readable D4 decision packet](docs/d4-independent-authority-recovery-roots-decision-packet-v1.json)
 - [Decision source-generation rebind](docs/decision-source-generation-rebind.md)
 - [Machine-readable source-generation rebind](docs/decision-source-generation-rebind-v1.json)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
@@ -72,6 +74,14 @@ The D3 packet compares strict canonical JSON, deterministic CBOR, and typed-mode
 `D3_REBIND_REQUIRED` means a D1/D2 dependency, candidate profile, primitive inventory, contract-family mapping, fixture corpus, expected result, consumer, or migration rule moved. `D3_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn. Neither state is complete until every controlled documentation route agrees.
 
 Canonical bytes establish a deterministic representation only. They do not establish truth, currentness, semantic compatibility, authorization, consumer admission, or operational authority.
+
+## D4 decision readiness
+
+The [D4 packet](docs/d4-independent-authority-recovery-roots-decision-packet.md) compares isolated Repository `1`, split issuance/recovery, and federated human-reviewed quorum models without selecting one. It defines required authority roles and vacancies, capability and revocation fields, key and checkpoint custody, quarantine and recovery lifecycles, pairwise and triple-overlap witnesses, hostile obstruction classes, correction propagation, rollback, and independently witnessed restoration.
+
+Its present disposition is `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`. Repository `1` remains an observed candidate, not an accepted constitutional authority. `D4_REBIND_REQUIRED` means a D1–D3 dependency, authority candidate, role, vacancy, route, record family, consumer, custody rule, exercise result, recommendation, or safety boundary moved. `D4_PACKET_WITHDRAWN` means the packet generation was replaced or withdrawn.
+
+A repository, key, quorum, signature, workflow, checkpoint, or successful recovery cannot bootstrap authority or substitute for explicit human approval and independent resulting-state verification.
 
 ## Decision source-generation rebind
 
@@ -149,7 +159,7 @@ The first eligible candidate is `0.0.1-charter`, a documentation-only release co
 3. approved or revised founding-sovereignty and governed-system-participation model;
 4. neutral contract-steward and canonical-byte decisions;
 5. approved runtime/Fabric semantic partition and migration plan;
-6. Repository `0`/`1` portable-security boundary and acceptance sequence;
+6. Repository `0`/`1` portable-security boundary, D4 authority/recovery decision, and acceptance sequence;
 7. QSO, evidence, review, payment, and adapter responsibility map;
 8. bounded learning, persistence, tool, credential, privacy, freeze, shutdown, recovery, and rollback policies;
 9. deterministic pairwise and triple-overlap fixture specification;
