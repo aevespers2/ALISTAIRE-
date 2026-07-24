@@ -24,6 +24,17 @@ This task chain, `punchlist.md`, `release.md`, and `changelog.md` now carry the 
 
 Current charter-candidate generation: `7c7fb139e522cafaaca8bef75855d59b285672ea` on `docs/consolidation-charter-20260720`.
 
+### Controlled propagation ledger
+
+- `D1_REBIND_REQUIRED` marks moved D1 source, migration, provenance, compatibility, approval, or recommendation evidence.
+- `D1_PACKET_WITHDRAWN` marks a replaced or withdrawn D1 packet generation.
+- `D2_REBIND_REQUIRED` marks moved D1 dependency, contract-family inventory, candidate model, ownership graph, readiness evidence, or recommendation.
+- `D2_PACKET_WITHDRAWN` marks a replaced or withdrawn D2 packet generation.
+- `D3_REBIND_REQUIRED` marks moved D1/D2 dependency, profile, primitive inventory, fixture corpus, consumer set, migration rule, or readiness evidence.
+- `D3_PACKET_WITHDRAWN` marks a replaced or withdrawn D3 packet generation.
+
+No propagation marker completes acceptance until every controlled route is reconciled, exact-head evidence is retained, explicit approval is recorded, and resulting state is independently verified.
+
 ## Constitutional decision set
 
 | Decision | Status | Acceptance requirement |
