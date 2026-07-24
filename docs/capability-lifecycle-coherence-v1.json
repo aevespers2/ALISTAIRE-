@@ -1,0 +1,136 @@
+{
+  "profile_id": "ALISTAIRE-CAPABILITY-LIFECYCLE-COHERENCE-001",
+  "version": "1.0.0",
+  "status": "CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED",
+  "authority_effect": "none",
+  "source_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "branch": "docs/consolidation-charter-20260720",
+    "head": "2953ef6ba8ee86eafdddcf56222c91cbb296bcb7",
+    "role": "historical_input_not_descendant_identity"
+  },
+  "controlled_statuses": {
+    "name": "NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED",
+    "capability_roadmap": "DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED",
+    "feature_lineage": "RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH",
+    "contributor_paths": "PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED",
+    "lifecycle_coherence": "CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED"
+  },
+  "controlled_routes": [
+    "README.md",
+    "docs/index.md",
+    "docs/capability-roadmap.md",
+    "docs/capability-roadmap-v1.json",
+    "docs/portfolio-contributor-paths.md",
+    "docs/portfolio-contributor-paths-v1.json",
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md",
+    "mkdocs.yml"
+  ],
+  "required_invariants": [
+    "all lifecycle routes expose the roadmap status",
+    "all lifecycle routes expose the feature-lineage disposition",
+    "all lifecycle routes expose the contributor-path status",
+    "all lifecycle routes expose the lifecycle-coherence status",
+    "documentation state does not create implementation authority",
+    "owner vacancies remain explicit",
+    "D1-D5 remain unresolved unless independently approved",
+    "unsupported runtime routes remain unsupported",
+    "corrections and withdrawals propagate to every controlled route",
+    "focused and resulting descendants retain distinct exact-head evidence"
+  ],
+  "repaired_obstruction": {
+    "class": "cross_document_lifecycle_route_divergence",
+    "before": "README Pages and changelog exposed capability and contributor states while taskchain punchlist and release omitted them",
+    "after": "all controlled lifecycle routes expose one non-authorizing state set",
+    "architectural_effect": "documentation_only",
+    "operational_effect": "none"
+  },
+  "remaining_obstructions": [
+    "D1 canonical identity unresolved",
+    "D2 neutral contract stewardship unresolved",
+    "D3 canonical representation unresolved",
+    "D4 independent authority and recovery unresolved",
+    "D5 incident command unresolved",
+    "kernel runtime Fabric disposition route unsupported",
+    "publication and accessibility custody unaccepted"
+  ],
+  "prohibited_promotions": [
+    "roadmap listing to implementation",
+    "candidate repository home to ownership",
+    "contributor path to appointment",
+    "documentation validation to acceptance",
+    "workflow success to authority",
+    "lifecycle synchronization to release readiness",
+    "diagrammed route to supported integration"
+  ],
+  "authority_flags": {
+    "canonical_repository_selected": false,
+    "contract_owner_appointed": false,
+    "maintainer_appointed": false,
+    "implementation_authorized": false,
+    "pages_publication_authorized": false,
+    "release_authorized": false,
+    "credential_use_authorized": false,
+    "deployment_authorized": false,
+    "payment_execution_authorized": false,
+    "device_mutation_authorized": false
+  },
+  "rollback": {
+    "restore_last_validated_documentation_generation": true,
+    "preserve_superseded_generation": true,
+    "propagate_correction_or_withdrawal": true,
+    "revalidate_all_controlled_routes": true,
+    "destructive_history_rewrite": false
+  },
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "018-B",
+      "018-D",
+      "018-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-D",
+      "040-A",
+      "040-B",
+      "040-E"
+    ],
+    "proposed_refinements": [
+      {
+        "id": "012-U",
+        "name": "Capability and contributor lifecycle-route synchronization, anti-divergence validation, and non-authorizing status propagation",
+        "status": "PROPOSED_NON_AUTHORITATIVE"
+      }
+    ]
+  }
+}
