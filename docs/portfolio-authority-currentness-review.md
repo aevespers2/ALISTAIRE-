@@ -8,17 +8,18 @@ Authority effect: `NONE`
 
 This packet reconciles the A.L.I.S.T.A.I.R.E. portfolio against exact repository and pull-request identities while preserving correction history, non-authorizing evidence, ownership vacancies, and rollback. It reviews all nineteen owned repositories without appointing an owner, accepting a contract, activating a runtime, publishing Pages, issuing a capability, approving a payment, releasing software, or deploying infrastructure.
 
-The machine-readable companion is [`portfolio-authority-currentness-v1.json`](portfolio-authority-currentness-v1.json).
+The machine-readable packet consists of the immutable base profile [`portfolio-authority-currentness-v1.json`](portfolio-authority-currentness-v1.json) and the bounded correction overlay [`portfolio-authority-currentness-correction-v2.json`](portfolio-authority-currentness-correction-v2.json). The overlay changes only the QSO-GENOMES exact-source tuple and preserves the earlier generation as historical evidence.
 
 ## Snapshot and correction model
 
-The packet uses a self-reference-safe snapshot model. Its exact ALISTAIRE source generation is `39357f4d4df76bf969e08dc8c2c3212766345bce`, the parent from which this focused correction branch was created. The descendant commit that contains this packet must be validated independently and recorded in pull-request evidence; the packet does not claim its own unknown future SHA.
+The packet uses a self-reference-safe snapshot model. Its exact ALISTAIRE source generation is `39357f4d4df76bf969e08dc8c2c3212766345bce`, the parent from which the focused currentness correction lineage began. The descendant commit that contains this packet must be validated independently and recorded in pull-request evidence; the packet does not claim its own unknown future SHA.
 
 Changed tuples are corrected rather than silently overwritten:
 
-1. QSO-SEEKER's historical metadata/body mismatch is preserved in `correction_history`, while the current body and actual head now agree.
+1. QSO-SEEKER's historical metadata/body mismatch is preserved in `correction_history`, while the current body and actual head agree.
 2. JusticeForMe is rebound to its accessibility-integrated candidate, while resulting-head workflow evidence remains explicitly pending.
-3. ALISTAIRE is represented as a snapshot parent generation rather than a self-current descendant.
+3. QSO-GENOMES is rebound from planning synchronization head `c29bd681bab680e467903784527776d284469a3d` to accessibility-integrated documentation head `75d675d274b504965836aadf8e0792d606d6c3fb`; both generations remain attributable.
+4. ALISTAIRE is represented as a snapshot parent generation rather than a self-current descendant.
 
 ## Portfolio corridors
 
@@ -53,7 +54,7 @@ The charter identity corridor feeds portable trust, QSO semantics, and source-ev
 | `aevespers2/1` | PR #2 `47b58fa49c8dda7f44234dab68f78673bb02d269` | multiple active lineages | D4 authority and custody decision required |
 | `aevespers2/JusticeForMe` | PR #5 `33db861320c29e71059ec390cbdafe04c8f8793d` | conflicting; resulting validation pending | reconcile `main`; preserve accessibility evidence; decide role and certification ownership |
 | `aevespers2/Misc` | PR #2 `5e4229641faac822868673127d305554a269d28a` | current mergeable draft | select promotion, consolidation, or retirement |
-| `aevespers2/QSO-GENOMES` | PR #15 `c29bd681bab680e467903784527776d284469a3d` | multiple active lineages | reconcile PRs #2, #12, #13, and #15 |
+| `aevespers2/QSO-GENOMES` | PR #15 `75d675d274b504965836aadf8e0792d606d6c3fb` | multiple active lineages; corrected current documentation candidate | preserve superseded `c29bd681bab680e467903784527776d284469a3d`; reconcile PRs #2, #12, #13, and #15 |
 | `aevespers2/qsio-kernel` | PR #1 `980e981952fd1c2c7c5b4a30b8e30664dcc6f6bc` | current mergeable draft | preserve unsupported kernel/runtime route |
 | `aevespers2/QuantumStateObjects` | PR #12 `cc9b9c7b06a1a48bbc052b8d6bacd11782285288` | multiple active lineages | reconcile PRs #7, #10, and #12; resolve Fabric collision |
 | `aevespers2/QSO-FABRIC` | PR #20 `40434e3e2694d0bd772289264061e4de34d899ee` | multiple active lineages | reconcile PRs #20, #21, and #23 before interface selection |
@@ -77,13 +78,21 @@ Four workflows passed at the corrected head: Source Review Record `30063199339`,
 
 ### 2. JusticeForMe rebound with evidence qualification
 
-JusticeForMe PR #5 now resolves to `33db861320c29e71059ec390cbdafe04c8f8793d`, integrating the focused accessibility milestone from `4f685c7f1721f8ed34532b3b948f01ec849bde66`. The focused workflow passed, but no resulting-head workflow or commit status is exposed. The current state is therefore `current_candidate_resulting_validation_pending`, not validated-resulting or merge-ready.
+JusticeForMe PR #5 resolves to `33db861320c29e71059ec390cbdafe04c8f8793d`, integrating the focused accessibility milestone from `4f685c7f1721f8ed34532b3b948f01ec849bde66`. The focused workflow passed, but no resulting-head workflow or commit status is exposed. The current state is therefore `current_candidate_resulting_validation_pending`, not validated-resulting or merge-ready.
 
-### 3. ALISTAIRE self-reference boundary
+### 3. QSO-GENOMES correction overlay
 
-The prior packet treated an earlier candidate generation as current. This corrected packet binds its exact parent generation and requires the descendant commit to prove itself through attached workflows and retained evidence. A snapshot may describe its source and correction rules; it may not manufacture its own future commit identity.
+QSO-GENOMES PR #15 advanced from synchronization generation `c29bd681bab680e467903784527776d284469a3d` to accessibility-integrated documentation generation `75d675d274b504965836aadf8e0792d606d6c3fb`. The older generation remains valid evidence for its own planning-route synchronization only; it is not the current PR head.
 
-### 4. Unchanged material blockers
+At the corrected head, Documentation run `30065914753`, Capability Evidence and Self-Edit Review run `30065914758`, and Consent Capacity Lock run `30065914798` succeeded. Artifacts `8586223512`, `8586223517`, and `8586221536` retain the corresponding evidence. These results validate exact-source construction and review controls only. They do not admit a genome, approve identity migration, certify capability or accessibility, accept a generic QSO format, authorize runtime/Fabric projection, or permit publication or release.
+
+The correction overlay preserves the unresolved gluing obstruction: PRs #2, #12, #13, and #15 still encode divergent compatibility, identity-migration, reconciliation, and documentation lineages. No accepted immutable compatibility head, namespace owner, canonical bytes, admission authority, correction/revocation route, mixed-generation rollback, or resulting-state witness exists.
+
+### 4. ALISTAIRE self-reference boundary
+
+The base packet binds a parent generation. This correction overlay binds the exact base-packet generation `0fdf5accfd9525820e94321321ea4c3f1db24c14` and one external repository correction. The descendant commit containing the overlay must prove itself through attached workflows and retained evidence. A snapshot may describe its source and correction rules; it may not manufacture its own future commit identity.
+
+### 5. Unchanged material blockers
 
 Repository `0` and JusticeForMe remain non-mergeable. `datarepo-temporal-invariants` still lacks an accepted validation route. Alistaire-agi, Repository `1`, QSO-GENOMES, QuantumStateObjects, QSO-FABRIC, and qso-field.github.io retain multiple active lineages. These unchanged obstructions are preserved without being misrepresented as newly resolved.
 
@@ -112,9 +121,9 @@ Future dissent must retain repository, pull request or issue, exact head, review
 
 ## Obstruction and gluing analysis
 
-The portfolio still does not form a path-independent composition. The highest-impact obstructions are constitutional identity bifurcation; multiple active lineages without accepted precedence; historical stale-head metadata and self-reference-safe snapshot rebinding; non-mergeable or unvalidated documentation sources; semantic and route-owner vacancies; the runtime-local/Fabric-level record-role collision; unsupported kernel-to-runtime mapping; absent source-rights, privacy, retention, and publication custody; ambiguous review, financial, and engineering authorization; and incomplete correction, revocation, migration, rollback, and independently verified restoration.
+The portfolio still does not form a path-independent composition. The highest-impact obstructions are constitutional identity bifurcation; multiple active lineages without accepted precedence; correction-linked exact-head metadata and self-reference-safe snapshot composition; non-mergeable or unvalidated documentation sources; semantic and route-owner vacancies; the runtime-local/Fabric-level record-role collision; unsupported kernel-to-runtime mapping; absent source-rights, privacy, retention, and publication custody; ambiguous review, financial, and engineering authorization; and incomplete correction, revocation, migration, rollback, and independently verified restoration.
 
-In the portfolio's topological analogy, each repository is a local section and each accepted contract is an overlap map. The corrected tuples repair local source identity, but they do not supply missing overlap maps. Pairwise fixture agreement therefore cannot close a cycle or establish global authority.
+In the portfolio's topological analogy, each repository is a local section and each accepted contract is an overlap map. Correcting a source tuple repairs local identity but does not supply a missing overlap map. Pairwise fixture agreement, documentation, passing workflows, or correction overlays therefore cannot close a cycle or establish global authority.
 
 ## Required review sequence
 
@@ -128,7 +137,7 @@ In the portfolio's topological analogy, each repository is a local section and e
 
 ## Maintainer onboarding
 
-A maintainer updating this packet should fetch the current default head and every materially active candidate; compare pull-request metadata with body-declared heads; preserve superseded tuples and workflow evidence; classify sibling lineages; record narrow responsibilities and explicit non-authorities; separate structural conflict from attributable dissent; update the JSON profile, guide, validator, hostile tests, planning references, and changelog together when the controlled status changes; and retain rollback to the prior exact packet generation.
+A maintainer updating this packet should fetch the current default head and every materially active candidate; compare pull-request metadata with body-declared heads; preserve superseded tuples and workflow evidence; use a bounded correction overlay when replacing an immutable base snapshot; classify sibling lineages; record narrow responsibilities and explicit non-authorities; separate structural conflict from attributable dissent; update the base profile or overlay, guide, validator, hostile tests, planning references, and changelog together when the controlled status changes; and retain rollback to the prior exact packet generation.
 
 ## Accessibility
 
@@ -146,13 +155,19 @@ Applied nodes:
 - CAT-040-A/B/D/E for lineage archaeology, migration risk, compatibility, and rollback;
 - CAT-054-B/D/E for least-privilege workflow controls, repair resilience, and retained assurance evidence.
 
-Established proposed subdivision:
+Established proposed subdivisions:
+
 **013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation**
 
-New non-authoritative refinement:
 **013-J — Correction-linked exact-source rebinding and self-reference-safe portfolio snapshots**
 
-Taxonomy membership and document validation do not establish competence, appointment, permission, ownership, acceptance, or authority.
+New non-authoritative refinement:
+
+**013-K — Correction-overlay composition for exact-source portfolio snapshots**
+
+This refinement covers applying a narrow, independently validated correction to an immutable portfolio snapshot while preserving the superseded tuple, evidence scope, unchanged obstructions, and rollback route.
+
+Taxonomy membership and document validation do not establish competence, appointment, permission, ownership, acceptance, certification, or authority.
 
 ## Safety boundary
 
