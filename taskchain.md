@@ -20,9 +20,13 @@ A researcher or Architect can identify one constitutional source and determine:
 
 Status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
-This task chain, `punchlist.md`, `release.md`, and `changelog.md` now carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, and runtime/Fabric governance review index. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
+This task chain, `punchlist.md`, `release.md`, and `changelog.md` carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, and runtime/Fabric governance review index. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
 
-Current charter-candidate generation: `7c7fb139e522cafaaca8bef75855d59b285672ea` on `docs/consolidation-charter-20260720`.
+Validated synchronization source generation: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
+
+Validated synchronization integration generation: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
+
+Those immutable generations are historical evidence anchors, not self-referential claims about a later descendant. Every descendant must rerun exact-head validation and retain new evidence before it may claim currentness.
 
 ### Controlled propagation ledger
 
@@ -123,12 +127,16 @@ Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-
 
 Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-C`, `017-D`, `017-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, and `040-E`.
 
-Proposed non-authoritative refinement: `012-P — Cross-document governance status indexing and controlled-route coherence`.
+Proposed non-authoritative refinements:
+
+- `012-P — Cross-document governance status indexing and controlled-route coherence`;
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
 
 Taxonomy selection does not establish competence, appointment, permission, ownership, acceptance, or authority.
 
 ## Builder log
 
+- 2026-07-24 — Recorded focused planning-route source evidence at `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration evidence at `87e9beb8586fe37a48bca738fd3f78425f9d4b04`; later descendants must revalidate rather than rewrite those historical anchors.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime options, and governance review index across all four controlled planning routes under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`. No binding or authority was accepted.
 - 2026-07-23 — Completed the governance review index, kernel-to-runtime crosswalk options, candidate-lineage disposition, default-head owner-vacancy inventory, producer-consumer inventory, namespace-partition packet, D1–D3 readiness packets, D2A graph, and source-generation rebind on the non-default charter candidate.
 - 2026-07-21 — Added the portfolio contract and authority matrix, portable-security foundation, systemic-cycle analysis, D1–D5 decision cut, acceptance DAG, and sequenced integration phases.

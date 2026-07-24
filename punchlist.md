@@ -10,8 +10,14 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - [x] Preserve `UNSUPPORTED_KERNEL_RUNTIME_ROUTE` as the safe default.
 - [x] Preserve `REJECT_DIRECT_IDENTITY_ALIAS` as the rejected direct-alias option.
 - [x] State that planning-route synchronization has authority effect `NONE`.
-- [ ] Obtain focused and resulting-head exact-source validation for this synchronization generation.
+- [x] Obtain focused and resulting-head exact-source validation for the synchronization generation.
 - [ ] Rebind or withdraw this state if any controlled review surface, source generation, disposition, owner vacancy, route, or safety boundary changes.
+
+Validated focused source: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
+
+Validated resulting integration: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
+
+These are immutable historical evidence anchors. Every later descendant must retain fresh exact-head evidence; it must not rewrite either anchor as though it were the descendant's own identity.
 
 ### Controlled propagation ledger
 
@@ -153,7 +159,8 @@ Remaining gates:
 - [x] Add strict MkDocs and pinned documentation dependencies.
 - [x] Add exact-head read-only validation and retained checksummed artifacts.
 - [x] Align all four controlled planning routes to the current governance-review generation.
-- [ ] Validate this exact focused pull-request head and resulting integration head with strict build, links, terminology, controlled-route consistency, hostile regressions, and retained artifact digests.
+- [x] Validate the focused synchronization head and resulting integration head with strict build, links, terminology, controlled-route consistency, hostile regressions, and retained artifact digests.
+- [ ] Revalidate every later descendant and bind its external exact-state evidence without self-reference.
 - [ ] Complete rendered accessibility, independent security/privacy/governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered archives, provenance manifest, contract-registry snapshot, approval record, and SHA-256 manifests.
 - [ ] Verify Pages settings, public/private boundaries, rollback, cache invalidation, and claim withdrawal.
@@ -163,18 +170,34 @@ Remaining gates:
 
 Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
 
-Proposed non-authoritative refinement: `012-P — Cross-document governance status indexing and controlled-route coherence`.
+Proposed non-authoritative refinements:
+
+- `012-P — Cross-document governance status indexing and controlled-route coherence`;
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
 
 ## Evidence log
 
+### 2026-07-24 — Planning-route evidence closure
+
+- Repository: `aevespers2/ALISTAIRE-`.
+- Focused source: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
+- Focused planning-route run: `30061158220`; artifact `8584576342`; digest `sha256:9ba2f96db92fa8e432da9e29cfe4796fd6db11bf2ee73791a5ce9f3208608d40`.
+- Focused documentation run: `30061158226`; artifact `8584576635`; digest `sha256:c6c573c3008508c624f4e5800754f2167ebc8bf81b780593df0e572d860dbb47`.
+- Resulting integration: `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`.
+- Resulting planning-route run: `30061227370`; artifact `8584601280`; digest `sha256:d13c165cff93456e19db713916fd10adef216ae85dc829c0485ab85812684afb`.
+- Resulting documentation run: `30061227374`; artifact `8584600811`; digest `sha256:c5418a13330cdf1f1cba1380121d1ffbae03a13042dca98631950befccd40f55`.
+- Expiration: `2026-08-23`.
+- Result: focused and resulting integration validation passed; later descendants require fresh evidence.
+- Authority effect: `NONE`.
+- Rollback: revert or close the evidence-closure generation, preserve both validated anchors as historical evidence, and do not activate a route, owner, namespace, adapter, runtime, release, publication, deployment, credential, or infrastructure change.
+
 ### 2026-07-24 — Controlled planning-route synchronization
 
-- Repository: `aevespers2/ALISTAIRE-`
-- Source candidate: `docs/consolidation-charter-20260720@7c7fb139e522cafaaca8bef75855d59b285672ea`
-- Result: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` pending focused and resulting-head validation.
+- Repository: `aevespers2/ALISTAIRE-`.
+- Historical integration parent: `docs/consolidation-charter-20260720@7c7fb139e522cafaaca8bef75855d59b285672ea`.
+- Result: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
 - Added: direct synchronization of PRs #11–#14 into task, punch-list, release, and changelog routes; current default-head inventory, owner vacancies, lineage dispositions, crosswalk options, safe unsupported route, rejected alias option, review-index state, material obstructions, and next gates.
 - Authority effect: `NONE`.
-- Rollback: revert or close this focused documentation generation and preserve the earlier planning routes as historical evidence; do not activate a route, owner, namespace, adapter, runtime, release, publication, deployment, credential, or infrastructure change.
 
 ### 2026-07-23 — Runtime/Fabric governance packet sequence
 
