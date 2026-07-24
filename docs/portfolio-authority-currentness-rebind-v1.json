@@ -1,0 +1,133 @@
+{
+  "profile_id": "ALISTAIRE-PORTFOLIO-CURRENTNESS-REBIND-v1",
+  "status": "PORTFOLIO_CURRENTNESS_REBIND_COMPLETED_STALE_TUPLES_PRESERVED_BINDINGS_UNACCEPTED",
+  "reviewed_at": "2026-07-24",
+  "authority_effect": "NONE",
+  "scope": "documentation-governance-source-correction-and-currentness-rebinding-only",
+  "supersedes_snapshot_findings_only": true,
+  "source_policy": {
+    "previous_tuple_preserved": true,
+    "self_referential_head_claims_prohibited": true,
+    "candidate_evidence_is_non_authorizing": true,
+    "passing_ci_is_non_authorizing": true,
+    "descendant_revalidation_required": true,
+    "rollback_rule": "Revert this addendum and preserve both old and new tuples if a rebind is disproven; do not activate ownership, contracts, publication, release, deployment, credentials, runtime, payments, or infrastructure."
+  },
+  "rebindings": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "pull_request": 1,
+      "previous_sha": "38213e4e57dd1b03e434cc9cfb0da3c4e0d25477",
+      "new_sha": "39357f4d4df76bf969e08dc8c2c3212766345bce",
+      "source_role": "reviewed_parent_generation",
+      "currentness": "parent_generation_bound_descendant_revalidation_required",
+      "reason": "PR #17 was integrated into the non-default charter candidate after the original snapshot. This addendum binds the exact reviewed parent and does not claim its own not-yet-created commit.",
+      "evidence": {
+        "pr": 17,
+        "focused_run": 30064117726,
+        "resulting_run": 30064178689
+      },
+      "descendant_revalidation_required": true,
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "aevespers2/JusticeForMe",
+      "pull_request": 5,
+      "previous_sha": "aa530d2747275a89995679c63056141e57e9bcf6",
+      "new_sha": "33db861320c29e71059ec390cbdafe04c8f8793d",
+      "source_role": "current_candidate",
+      "currentness": "current_candidate_with_base_conflict_resulting_validation_pending",
+      "reason": "The exact-artifact accessibility milestone was integrated into the documentation candidate. Focused validation passed; resulting-head workflow visibility remains pending.",
+      "evidence": {
+        "focused_head": "4f685c7f1721f8ed34532b3b948f01ec849bde66",
+        "focused_run": 30064082995,
+        "resulting_validation": "PENDING"
+      },
+      "descendant_revalidation_required": true,
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "aevespers2/QSO-GENOMES",
+      "pull_request": 15,
+      "previous_sha": "c29bd681bab680e467903784527776d284469a3d",
+      "new_sha": "75d675d274b504965836aadf8e0792d606d6c3fb",
+      "source_role": "current_candidate",
+      "currentness": "multiple_active_lineages_current_documentation_head_rebound",
+      "reason": "The exact-artifact accessibility and review-evidence milestone advanced the documentation candidate and independently revalidated its complete workflow matrix.",
+      "evidence": {
+        "documentation_run": 30065914753,
+        "capability_review_run": 30065914758,
+        "consent_run": 30065914798
+      },
+      "descendant_revalidation_required": true,
+      "authority_effect": "NONE"
+    },
+    {
+      "repository": "aevespers2/QSO-SEEKER",
+      "pull_request": 14,
+      "previous_sha": "3a4db281d9900d58066af602a807a2d16b2acf69",
+      "previous_body_declared_sha": "1038a3497712fc270195adcaed05b4cc1c9696eb",
+      "new_sha": "5ddb831250d537622035f04e0e30488ec4fdd15a",
+      "current_body_declared_sha": "5ddb831250d537622035f04e0e30488ec4fdd15a",
+      "source_role": "current_candidate",
+      "currentness": "declared_head_mismatch_resolved_exact_head_revalidated",
+      "reason": "The stale PR-body claim was corrected, source-review defects were repaired, the daily benchmark record was reconciled, and all four required exact-head workflows passed.",
+      "evidence": {
+        "source_review_run": 30063199339,
+        "documentation_run": 30063199370,
+        "security_run": 30063199359,
+        "consent_run": 30063199341
+      },
+      "descendant_revalidation_required": true,
+      "authority_effect": "NONE"
+    }
+  ],
+  "unchanged_material_obstructions": [
+    "constitutional identity bifurcation",
+    "multiple active lineages without accepted precedence",
+    "non-mergeable or unvalidated review sources",
+    "semantic and route owner vacancies",
+    "runtime and Fabric record-role collision",
+    "unsupported kernel-to-runtime mapping",
+    "source-rights, privacy, retention, publication, review, accessibility, financial, and engineering authority vacancies",
+    "incomplete correction, revocation, migration, rollback, and independently verified restoration"
+  ],
+  "planning_route_compatibility": {
+    "base_status": "PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED",
+    "propagation_marker": "PORTFOLIO_CURRENTNESS_REBIND_REQUIRED",
+    "effect": "The addendum corrects source identities and evidence status only. It does not accept bindings or alter D1-D5."
+  },
+  "fysa_120": {
+    "source": "FYSA-120 category/subdivision JSON files",
+    "selected": {
+      "CAT-011": ["011-B", "011-E"],
+      "CAT-012": ["012-A", "012-B", "012-D", "012-E"],
+      "CAT-013": ["013-A", "013-C", "013-D", "013-E"],
+      "CAT-017": ["017-A", "017-C", "017-D", "017-E"],
+      "CAT-018": ["018-B", "018-D", "018-E"],
+      "CAT-019": ["019-B", "019-C", "019-D"],
+      "CAT-031": ["031-A", "031-D", "031-E"],
+      "CAT-040": ["040-A", "040-B", "040-D", "040-E"],
+      "CAT-054": ["054-B", "054-D", "054-E"],
+      "CAT-064": ["064-B", "064-E"]
+    },
+    "evidence_level": "applied",
+    "transferability": "high for exact-source documentation correction; moderate for broader authority reconciliation",
+    "proposed_subdivision": "017-H — Exact-source correction ledger and non-self-referential currentness rebinding",
+    "authority_boundary": "Taxonomy selection and artifact validation do not establish competence, appointment, ownership, permission, acceptance, or authority."
+  },
+  "safety_boundaries": {
+    "default_branch_merge": false,
+    "pages_publication": false,
+    "contract_acceptance": false,
+    "owner_appointment": false,
+    "runtime_activation": false,
+    "credential_change": false,
+    "capability_issuance": false,
+    "payment_execution": false,
+    "release": false,
+    "deployment": false,
+    "infrastructure_apply": false,
+    "destructive_history_rewrite": false
+  }
+}
