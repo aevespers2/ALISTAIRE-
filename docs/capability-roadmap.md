@@ -10,6 +10,20 @@ This roadmap extends the established [name and identity guide](name-and-identity
 
 The roadmap records desired capabilities, candidate repository relationships, maturity order, obstructions, and evidence requirements. It does not implement a feature, select a canonical repository, appoint an owner, accept a contract, grant credentials, publish Pages, promote a release, authorize deployment, or expand operational scope.
 
+## Forty-feature reconciliation
+
+The current roadmap reconciles the validated but conflicted feature-program candidate from PR #22 at exact head `6c7595e81914ab680acb25088193d495db9f28f7`. That source generation is preserved as historical evidence and is not treated as a second authority registry.
+
+The earlier roadmap contained thirty-seven distinct features organized by six family-scoped identifiers. The PR #22 proposal contained forty features under a competing flat `F01`–`F40` identifier namespace. Reconciliation preserves the existing family-scoped identifiers, adds only the three missing capabilities, and records the source lineage rather than replacing or silently rewriting it:
+
+- `F1-07` — Repository Role Classifier;
+- `F1-08` — Systemic Obstruction Register;
+- `F5-07` — Portfolio Status Dashboard.
+
+The public-naming subdivision `012-Q` remains assigned to acronym semantics and non-authorizing identity guidance. The source-aware documentation-generation capability is therefore proposed as `012-S`, preventing one identifier from carrying two incompatible meanings.
+
+Reconciliation status: `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`.
+
 ## Architectural cycle
 
 ```mermaid
@@ -39,6 +53,8 @@ A.L.I.S.T.A.I.R.E. begins with attributed inert evidence. A portfolio graph rela
 | Uncertainty and Confidence Ledger | Distinguish observed, inferred, disputed, stale, unsupported, corrected, and withdrawn claims | `QuantumStateObjects`; `QSO-FABRIC`; `ALISTAIRE-` | semantic owner and correction contract |
 | Semantic Diff Engine | Explain contract, authority, invariant, and downstream meaning changes | neutral steward; `QSO-STUDIO` | accepted schemas and comparison rules |
 | Cross-Document Contradiction Detection | Find conflicts among READMEs, architecture, task chains, releases, punch lists, changelogs, schemas, and workflows | `ALISTAIRE-` | controlled routes and exact-source evidence |
+| Repository Role Classifier | Distinguish canonical implementations, candidates, incubators, governance surfaces, archives, and deprecated lineages without appointing owners | `ALISTAIRE-`; repository maintainers | canonical identity, maintainer disposition, and lineage policy |
+| Systemic Obstruction Register | Preserve missing interfaces, incompatible identities, absent owners, broken routes, and unresolved migrations with exact resolution state | `ALISTAIRE-`; neutral steward | canonical obstruction identity, resolution vocabulary, and correction propagation |
 
 ### 2. Contracts, composition, and integration
 
@@ -83,6 +99,7 @@ A.L.I.S.T.A.I.R.E. begins with attributed inert evidence. A portfolio graph rela
 | Correction and Revocation Protocol | Propagate corrections, superseded evidence, revoked artifacts, withdrawn claims, and consumer invalidation | neutral steward; Repository `1` | canonical identity and consumer registration |
 | Security Boundary Mapper | Identify trust zones, credential paths, privileged workflows, untrusted inputs, and supply-chain exposure | Repository `0`; Repository `1` | D4–D5 and approved review |
 | Artifact Completeness Checker | Verify logs, environment, tests, manifests, hashes, reports, and failure evidence for the exact head | Repository `0`; `qsio-kernel` | artifact schema and custody |
+| Portfolio Status Dashboard | Present repository health, documentation completeness, workflow state, integration readiness, ownership gaps, and skill coverage only from current evidence | `ALISTAIRE-`; `qso-field.github.io`; Repository `0` | evidence graph, publication custody, and claim-withdrawal authority |
 
 ### 6. Planning, simulation, and capability growth
 
@@ -129,15 +146,19 @@ These findings do not authorize implementation around missing decisions.
 | Capability and obstruction graph | `013-A`, `013-C`, `013-D`, `013-E`, `017-C`, `017-D`, `017-E`, `018-B`, `018-D` |
 | Cross-repository architecture and gluing | `030-A`, `030-B`, `030-C`, `030-D`, `030-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, `040-E` |
 | Agent planning and constitutional boundaries | `041-A`, `041-B`, `041-D`, `041-E`, `070-A`, `070-B`, `070-C`, `070-E` |
-| Security, privacy, provenance, rollback, and assurance | `031-A`, `031-D`, `031-E`, `033-A`, `033-E`, `054-A`, `054-B`, `054-D`, `054-E` |
+| Security, privacy, provenance, rollback, and assurance | `022-A`, `022-C`, `022-D`, `022-E`, `031-A`, `031-D`, `031-E`, `033-A`, `033-E`, `052-B`, `052-E`, `054-A`, `054-B`, `054-D`, `054-E`, `059-D`, `059-E`, `064-B`, `064-E` |
 
 Taxonomy mapping is descriptive and establishes no competence, appointment, ownership, acceptance, or authority.
 
 ### Proposed non-authoritative refinements
 
 - **`012-R — Capability-roadmap information architecture and cross-document feature-status coherence`**
+- **`012-S — Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal`**
 - **`013-L — Evidence-linked feature-to-repository capability and obstruction graphing`**
+- **`032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`**
+- **`040-Q — Restored-state verification and failed-rollback evidence across mixed generations`**
 - **`041-F — Governance-gated capability portfolio decomposition and maturity sequencing`**
+- **`054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`**
 
 ## Change control and rollback
 
