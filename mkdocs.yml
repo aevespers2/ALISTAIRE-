@@ -14,6 +14,7 @@ extra:
   kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
   capability_roadmap_status: DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED
   portfolio_contributor_paths_status: PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED
+  capability_lifecycle_coherence_status: CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -27,6 +28,8 @@ nav:
   - Capability roadmap:
       - Roadmap guide: capability-roadmap.md
       - Machine-readable roadmap: capability-roadmap-v1.json
+      - Lifecycle coherence review: capability-lifecycle-coherence.md
+      - Machine-readable lifecycle coherence: capability-lifecycle-coherence-v1.json
   - Contributor onboarding:
       - Portfolio contributor paths: portfolio-contributor-paths.md
       - Machine-readable contributor paths: portfolio-contributor-paths-v1.json
