@@ -10,6 +10,8 @@ Capability roadmap status: `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
 
 The constitutional participation candidate uses the project-bound title **Founding Sovereign and Constitutional Sponsor**. Founding title is not unchecked authority, and system preference is not legal personhood or self-appointment.
 
+Controlled propagation preserves `D1_REBIND_REQUIRED` / `D1_PACKET_WITHDRAWN`, `D2_REBIND_REQUIRED` / `D2_PACKET_WITHDRAWN`, `D3_REBIND_REQUIRED` / `D3_PACKET_WITHDRAWN`, `D4_REBIND_REQUIRED` / `D4_PACKET_WITHDRAWN`, and `D5_REBIND_REQUIRED` / `D5_PACKET_WITHDRAWN`.
+
 ## Documentation
 
 ### Start here
