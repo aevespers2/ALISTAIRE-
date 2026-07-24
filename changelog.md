@@ -4,158 +4,89 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ## Unreleased
 
+### Controlled states
+
+- Planning routes: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
+- Portfolio currentness: `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
+- Public name: `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`.
+- Capability roadmap: `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
+- Feature-lineage reconciliation: `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`.
+- Contributor paths: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`.
+- Capability and contributor lifecycle: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
+- Safe kernel/runtime disposition: `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`.
+- Rejected direct-alias option: `REJECT_DIRECT_IDENTITY_ALIAS`.
+- Authority effect: `NONE`.
+
 ### Product
 
+- 2026-07-24 — Synchronized the capability roadmap, feature-lineage reconciliation, and contributor paths across `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` under `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
 - 2026-07-24 — Added documentation-first contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; the paths provide bounded entry tasks and stop conditions without appointing maintainers or authorizing implementation.
-- 2026-07-24 — Reconciled the validated but conflicted forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the existing capability roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`; the preserved family-scoped roadmap now contains forty features without creating a parallel authority registry.
-- 2026-07-24 — Added the three previously missing capabilities—Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard—while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED` and authority effect `NONE`.
-- 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`; this generation is now preserved as the pre-reconciliation source state.
-- 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`; the expansion is descriptive and does not select a repository, package, contract, runtime, or authority.
-- 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`, covering one exact primary source for every owned repository without accepting any binding.
-- 2026-07-24 — Recorded multiple active lineages, two non-mergeable primary documentation candidates, QSO-SEEKER's declared-head mismatch, the temporal validation obstruction, structural conflicts, absence of attributable human dissent in the reviewed snapshot, and V1–V10 portfolio vacancies.
-- 2026-07-24 — Closed the planning-route evidence state by binding focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as immutable historical evidence anchors, with later descendants required to revalidate rather than impersonate those identities.
-- 2026-07-24 — Synchronized the current default-head inventory, semantic and route owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, governance review index, safe unsupported route, and rejected direct-alias option across `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md` under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
-- 2026-07-24 — Preserved `UNSUPPORTED_KERNEL_RUNTIME_ROUTE` as the safe disposition and `REJECT_DIRECT_IDENTITY_ALIAS` as the rejected direct-alias option; no namespace, owner, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority was accepted.
-- 2026-07-23 — Added a unified runtime/Fabric governance review index with controlled disposition `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED`.
-- 2026-07-23 — Added kernel-to-runtime crosswalk Options A–D, including an explicitly unsupported route, a read-only projection candidate, a neutral qualified-envelope candidate, and rejection of direct identity aliasing.
-- 2026-07-23 — Added candidate-lineage disposition and exact-head preservation rules without treating preserved candidate evidence as current acceptance.
-- 2026-07-23 — Verified current default heads and recorded semantic and route owner vacancies without appointing owners.
-- 2026-07-23 — Added the exact-head runtime/Fabric candidate producer-consumer inventory and preserved `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
-- 2026-07-23 — Added a review-ready but decision-blocked runtime/Fabric namespace-partition packet preserving `BLOCKED_ROLE_COLLISION`.
-- 2026-07-23 — Added the source-generation rebind and D1, D2, D2A, and D3 decision-readiness surfaces without accepting constitutional or contract authority.
+- 2026-07-24 — Reconciled the validated but conflicted forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the existing capability roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`; the family-scoped roadmap contains forty features without creating a parallel authority registry.
+- 2026-07-24 — Added Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED` and authority effect `NONE`.
+- 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`.
+- 2026-07-24 — Added the portfolio authority currentness review for all nineteen repositories without accepting a binding.
+- 2026-07-24 — Preserved multiple active lineages, stale metadata, structural conflicts, absence of attributable human dissent in the reviewed snapshot, and V1–V10 vacancies.
+- 2026-07-24 — Closed the historical planning-route evidence state by binding focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as immutable evidence anchors.
+- 2026-07-24 — Synchronized the default-head inventory, semantic and route owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, governance review index, safe unsupported route, and rejected direct-alias option across the four planning routes.
+- 2026-07-23 — Added runtime/Fabric governance, inventories, lineage, crosswalk, source rebind, and D1–D3 decision-readiness surfaces without accepting authority.
 - 2026-07-21 — Added the portfolio contract and authority matrix, portable-security foundation, D1–D5 decision cut, acceptance DAG, integration phases, and practical gluing analysis.
-- 2026-07-20 — Prepared an evidence-bounded Pages-ready charter candidate while preserving the canonical-repository hold and all runtime non-goals.
-- 2026-07-20 — Established A.L.I.S.T.A.I.R.E. as the unifying portfolio objective and defined the bounded Cali Sanders Parker governance-coherence and security-stewardship function.
+- 2026-07-20 — Prepared the initial evidence-bounded Pages-ready charter candidate.
 
 ### Architecture
 
+- 2026-07-24 — Repaired `cross_document_lifecycle_route_divergence`: README, Pages, and changelog previously exposed roadmap and contributor states while taskchain, punchlist, and release omitted them. All controlled lifecycle routes now expose one non-authorizing state set.
+- 2026-07-24 — Added an accessible lifecycle-route diagram and prose equivalent connecting roadmap, task chain, punch list, release plan, changelog, D1–D5, and repository-local approval.
 - 2026-07-24 — Added a repository-by-repository contributor corridor covering documentation role, bounded first task, FYSA-120 skills, stop condition, exact-source precedence, and cross-repository gluing checks.
-- 2026-07-24 — Preserved the existing family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace, and prohibited a second machine-readable authority source for the same capability program.
-- 2026-07-24 — Reserved `012-Q` for public technical naming and moved source-aware documentation generation to proposed subdivision `012-S`; added non-authoritative refinements `032-J`, `040-Q`, and `054-L` for gluing, restoration, and authority separation.
-- 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with every feature tied to candidate repository homes and unresolved gates rather than implied ownership.
+- 2026-07-24 — Preserved family-scoped feature identifiers instead of adopting the conflicting flat `F01`–`F40` namespace.
+- 2026-07-24 — Reserved `012-Q` for public naming and moved source-aware documentation generation to `012-S`; retained refinements `032-J`, `040-Q`, and `054-L` for gluing, restoration, and authority separation.
+- 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with candidate repository homes and unresolved gates rather than implied ownership.
 - 2026-07-24 — Recorded seven roadmap-level gluing obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
-- 2026-07-24 — Reconciled the portfolio authority matrix against exact primary documentation or governance sources for all nineteen repositories and separated current candidates, multiple active lineages, base conflicts, unvalidated stacks, default documentation, and stale declared-head metadata.
-- 2026-07-24 — Added V1–V10 vacancies for constitutional identity, neutral contracts, canonical representation, independent authority, incident command, runtime semantics, Fabric routes, source rights, review/accessibility approval, and optional-adapter authorization.
-- 2026-07-24 — Aligned the four controlled planning routes to the same six runtime/Fabric review-surface dispositions, the same non-authorizing next gates, and the same generation-specific evidence model.
-- 2026-07-23 — Connected the governed route `qsio-kernel → QuantumStateObjects → QSO-FABRIC → Repository 1` through one review index without claiming that the route is supported.
-- 2026-07-23 — Recorded nine material gluing obstructions: kernel/runtime semantic mismatch, namespace and identity ambiguity, missing projection receipt, source-set and duplicate inflation, ordering and replay ambiguity, correction and revocation discontinuity, semantic and route owner vacancy, migration and rollback incompleteness, and authority inflation.
-- 2026-07-23 — Separated kernel interaction records, runtime events, runtime execution reports, Fabric projection receipts, Fabric collaboration/aggregate records, and portfolio dispositions.
-- 2026-07-23 — Required field-level crosswalk dispositions of exact, transform, project, unsupported, unknown, or lossy-rejected rather than name-based equivalence.
-- 2026-07-23 — Required producer and semantic-class binding, source sets, projection and aggregation receipts, ordering, replay, duplicate/conflict handling, correction/revocation propagation, privacy, retention, migration, rollback, and restored-state evidence.
-- 2026-07-23 — Bound candidate generations, default heads, synthetic consumers, registry references, and unmapped kernel records while preserving their distinct evidence classes.
-- 2026-07-23 — Added D3 canonicalization candidates and hostile fixture requirements; no profile was selected.
-- 2026-07-23 — Added D2 neutral-steward candidates and D2A common-contract graphing; no steward or contract owner was selected.
-- 2026-07-21 — Added independent record-family identities, pairwise edges, triple-overlap witnesses, obstruction taxonomy, and engineering gluing checks without claiming completed formal homology or cohomology.
-- 2026-07-21 — Added the Portable Security Foundation and Portfolio Integration and Contract Acceptance Roadmap.
-- 2026-07-20 — Added initial responsibility, lifecycle, message-envelope, conflict, bounded-learning, freeze, shutdown, recovery, and simulation documentation.
+- 2026-07-24 — Reconciled the portfolio authority matrix against exact primary sources and recorded V1–V10 vacancies.
+- 2026-07-24 — Aligned controlled planning routes to the same runtime/Fabric review dispositions and generation-specific evidence model.
+- 2026-07-23 — Connected `qsio-kernel → QuantumStateObjects → QSO-FABRIC → Repository 1` through one review index while retaining the route as unsupported.
+- 2026-07-23 — Recorded kernel/runtime mismatch, namespace ambiguity, missing projection receipt, source-set inflation, replay ambiguity, correction/revocation discontinuity, owner vacancy, incomplete rollback, and authority-inflation obstructions.
+- 2026-07-23 — Required field-level crosswalk dispositions of exact, transform, project, unsupported, unknown, or lossy-rejected.
+- 2026-07-21 — Added independent record-family identities, pairwise edges, triple overlaps, and engineering gluing checks without claiming completed formal homology or cohomology.
 
 ### Security and governance
 
+- 2026-07-24 — Required every lifecycle route to preserve roadmap, feature-lineage, contributor-path, lifecycle-coherence, D1–D5, correction, withdrawal, and rollback state without promoting documentation into implementation.
 - 2026-07-24 — Required contributors to stop when work would appoint owners, select architecture, activate policy, expand collection, handle credentials, approve releases, publish, deploy, execute payments, or mutate devices.
-- 2026-07-24 — Required the reconciliation record to bind PR #22, its exact superseded head, the 37-to-40 delta, the three admitted feature names, identifier preservation, and the prohibition on a parallel registry.
-- 2026-07-24 — Bound each roadmap feature to gates, prohibited promotions, correction, and rollback while preserving authority effect `NONE`.
-- 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
-- 2026-07-24 — Distinguished structural conflict from verified human dissent; no attributable human dissent record was located in the reviewed currentness snapshot, and absence of recorded dissent is not approval or consensus.
-- 2026-07-24 — Added exact source correction, withdrawal, rebinding, lineage classification, vacancy preservation, and rollback rules to prevent stale or conflicting documentation from creating authority.
-- 2026-07-24 — Recorded exact source, run, artifact, digest, expiry, integration, and descendant-revalidation boundaries for planning-route evidence; passing evidence remains non-authorizing.
-- 2026-07-24 — Required controlled planning-route agreement before the documentation candidate may claim planning currentness; agreement remains non-authorizing.
-- 2026-07-24 — Required focused and resulting-head validation before the synchronization generation may be treated as validated documentation evidence.
-- 2026-07-24 — Preserved `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN`, `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN`, and `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` across controlled routes; propagation markers do not complete acceptance.
-- 2026-07-24 — Added `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` and `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN` for source, head, classification, mergeability, conflict, dissent, vacancy, route, or safety-boundary changes.
-- 2026-07-23 — Required declaration, documentation, synthetic fixture consumption, registry reference, internal-record implementation, passing CI, and inventory inclusion to remain non-authorizing evidence classes.
-- 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified; transport, rendering, hashing, signing, or successful processing cannot collapse semantic class or authority effect.
-- 2026-07-23 — Required projection and aggregation to preserve source identities, transformations, losses, privacy, duplicate treatment, correction, revocation, withdrawal, and rollback; projected evidence is not independent corroboration.
-- 2026-07-23 — Required ambiguous legacy `qso-event-ledger` and `qso-runtime-report` records to remain `UNKNOWN` or quarantined.
-- 2026-07-23 — Required failed rollback to freeze promotion, preserve attempted states, mark affected consumers, and prohibit silent fallback.
-- 2026-07-23 — Required canonical bytes, digests, namespaces, profile versions, replay domains, reason codes, and consumer expectations to remain independently bound.
-- 2026-07-23 — Prohibited parser success, same bytes, signature presence, repository names, dependency use, registry inclusion, package naming, recommendation, passing CI, or mergeability from creating truth, compatibility, ownership, authority, or admission.
-- 2026-07-23 — Preserved source-generation ancestry and always-retained evidence before final fail-closed validation.
-- 2026-07-22 — Required nomination, approval, credential binding, review, recusal, dissent, correction, appeal, removal, and rollback to remain separate governance events.
-- 2026-07-21 — Added release-blocking controls for self-authorizing contracts, route bifurcation, serialization mismatch, replay ambiguity, privacy downgrade, duplicate confidence, lossy projection, correction divergence, revocation gaps, circular recovery, publication boundary failure, and rollback without an inverse.
-- 2026-07-20 — Established deny-by-default capability, consent/capacity, privacy, memory, threat, review, incident, and release-blocking guidance.
+- 2026-07-24 — Required roadmap reconciliation to preserve PR #22 exact source, the 37-to-40 delta, family identifiers, and prohibition on a parallel registry.
+- 2026-07-24 — Defined “autonomous” as bounded internal inference under accepted policy and review, never standing tool, credential, network, device, payment, publication, release, deployment, or self-modification authority.
+- 2026-07-24 — Distinguished structural conflict from verified human dissent; absence of recorded dissent is not approval or consensus.
+- 2026-07-24 — Added correction, withdrawal, rebinding, lineage, vacancy, rollback, and descendant-revalidation rules.
+- 2026-07-24 — Required controlled planning-route agreement before documentation may claim planning currentness; agreement remains non-authorizing.
+- 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified.
+- 2026-07-23 — Required ambiguous legacy records to remain `UNKNOWN` or quarantined and failed rollback to freeze promotion.
+- 2026-07-21 — Added release-blocking controls for self-authorizing contracts, route bifurcation, serialization mismatch, replay ambiguity, privacy downgrade, lossy projection, correction divergence, revocation gaps, circular recovery, publication failure, and rollback without an inverse.
 
 ### Documentation
 
-- 2026-07-24 — Added Pages-ready [portfolio contributor paths](docs/portfolio-contributor-paths.md), an accessible flow diagram with prose equivalent, capability routes, nineteen repository entry paths, onboarding and gluing checklists, change control, and a machine-readable profile.
-- 2026-07-24 — Proposed non-authoritative FYSA-120 subdivisions `012-T`, `018-G`, and `011-G` for contributor routing, maintainer-vacancy-aware handoff, and accessible portfolio corridor diagrams.
-- 2026-07-24 — Expanded the existing Pages roadmap and machine-readable profile from thirty-seven to forty reconciled capabilities while preserving the validated PR #22 source branch as historical evidence rather than publishing duplicate program pages.
-- 2026-07-24 — Extended the strict validator and hostile regressions to reject source-head substitution, parallel registries, feature-delta drift, missing reconciled features, subdivision collisions, authority inflation, and destructive rollback.
-- 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
-- 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
-- 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
-- 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and machine-readable profile.
-- 2026-07-24 — Added a strict validator, hostile regressions, SHA-pinned read-only exact-head workflow, failure-path artifact retention, deterministic hashes, and final fail-closed gating for portfolio currentness.
-- 2026-07-24 — Replaced stale pending validation wording with generation-specific focused and resulting integration evidence, exact workflow runs, retained artifacts, digests, expiry, and explicit descendant revalidation requirements.
-- 2026-07-24 — Reworked `taskchain.md` into a current decision, controlled-route, obstruction, active-chain, evidence, and FYSA-120 map.
-- 2026-07-24 — Reworked `punchlist.md` to distinguish completed documentation/governance milestones from unresolved constitutional, ownership, registration, security, migration, rollback, approval, and resulting-state gates.
-- 2026-07-24 — Reworked `release.md` so current candidate contents, review dispositions, acceptance gates, controlled propagation, artifact requirements, validation targets, rollback criteria, and blockers agree with PRs #11–#14 and the new portfolio-currentness packet.
-- 2026-07-24 — Updated the runtime/Fabric governance review validator and hostile regressions to fail closed when any controlled planning route loses required dispositions, safety defaults, authority boundaries, or synchronization state.
-- 2026-07-23 — Added accessible Mermaid diagrams with prose equivalents for partitioning, inventories, lineage, crosswalk, and governance review.
-- 2026-07-23 — Added exact-head read-only workflows, strict MkDocs construction, local-link and terminology validation, deterministic hashing, hostile regressions, and retained evidence.
-- 2026-07-23 — Added Pages guides and machine-readable profiles for D1, D2, D2A, D3, source-generation rebind, namespace partition, candidate inventory, default-head inventory, lineage disposition, kernel/runtime crosswalk, and governance review index.
-- 2026-07-23 — Proposed non-authoritative subdivisions `013-H`, `040-M`, `040-N`, and `012-P` for owner-vacancy graphs, lineage disposition, semantic crosswalks, and controlled-route coherence.
-- 2026-07-21 — Added the portfolio matrix, portable-security foundation, integration roadmap, rendered-site checks, reproducible archives, Pages overview, and cross-document authority boundaries.
-- 2026-07-20 — Added the polished root README, project overview, architecture, security/governance, onboarding, diagrams, pinned toolchain, and initial exact-head validation workflow.
+- 2026-07-24 — Added Pages-ready [capability and contributor lifecycle coherence](docs/capability-lifecycle-coherence.md), machine-readable profile, exact source tuple, status table, accessible diagram, repaired-obstruction record, remaining blockers, onboarding, change control, and rollback.
+- 2026-07-24 — Added a strict lifecycle validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic hashing, retained terminal-path evidence, and final fail-closed gating.
+- 2026-07-24 — Added proposed non-authoritative subdivision `012-U — Capability and contributor lifecycle-route synchronization, anti-divergence validation, and non-authorizing status propagation`.
+- 2026-07-24 — Added Pages-ready portfolio contributor paths, capability routes, nineteen repository entry paths, onboarding and gluing checklists, and machine-readable profile.
+- 2026-07-24 — Proposed `012-T`, `018-G`, and `011-G` for contributor routing, vacancy-aware handoff, and accessible corridor diagrams.
+- 2026-07-24 — Expanded the Pages roadmap to forty reconciled capabilities while preserving the validated PR #22 branch as historical evidence.
+- 2026-07-24 — Extended roadmap validation to reject source-head substitution, parallel registries, feature-delta drift, missing capabilities, subdivision collision, authority inflation, and destructive rollback.
+- 2026-07-24 — Added the Pages-ready capability roadmap, machine-readable profile, accessible cycle, maturity sequence, obstruction analysis, change control, and rollback guidance.
+- 2026-07-24 — Added the Pages-ready name and identity guide with bounded term meanings, repository/package/display-name separation, accessible diagram, public style rules, onboarding, migration, and rollback.
+- 2026-07-24 — Added the Pages-ready currentness guide, exact-source register, vacancy table, gluing analysis, reviewer onboarding, validator, hostile tests, and retained evidence workflow.
+- 2026-07-24 — Reworked taskchain, punchlist, release, and changelog into controlled decision routes.
 
-### Release
+### FYSA-120 refinements
 
-- 2026-07-24 — Reconciled the conflicted feature lineage only into the non-default charter candidate; no feature, owner, contract, package, release, publication, deployment, or operational gate was promoted.
-- 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
-- 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
-- 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
-- 2026-07-24 — Changed planning-route documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact focused and resulting integration generations only; no release gate was promoted.
-- 2026-07-24 — Added `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` as a documentation-currentness state, not a release or acceptance state.
-- 2026-07-24 — Updated release gates to include current default-head owner vacancies, candidate-lineage disposition, kernel/runtime unsupported-route preservation, live producer/consumer registration, projection receipts, correction/revocation propagation, mixed-generation rollback, and restored-state verification.
-- 2026-07-23 — Added runtime/Fabric review surfaces as `REVIEW / BLOCKED` release gates while preserving D1–D5 and all independent review requirements.
-- 2026-07-23 — Added the D1–D3 readiness packets and source-generation rebind as review evidence only.
-- 2026-07-21 — Required D1–D5, neutral contracts, canonical-byte fixtures, Repository `1` authority, portable trust, pairwise/triple-overlap evidence, incident command, privacy, provenance, accessibility, approval, and publication rollback before `0.0.1-charter`.
-- 2026-07-20 — No canonical identity, package, Pages publication, runtime, or release was approved.
-
-### Deployment
-
-- No Pages publication, active governance appointment, package deployment, device agent, host monitor, remediation service, external adapter, payment service, persistent runtime, credential change, infrastructure apply, or production deployment is authorized by this documentation candidate.
-
-## FYSA-120 mapping
-
-This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-022`, `CAT-030`, `CAT-031`, `CAT-032`, `CAT-033`, `CAT-040`, `CAT-041`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
-
-Proposed non-authoritative subdivisions:
-
-- `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
-- `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`;
-- `012-S — Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal`;
-- `012-T — Cross-repository contributor journey and documentation-first task routing`;
-- `011-G — Accessible portfolio corridor diagrams with authority and stop-condition semantics`;
-- `018-G — Maintainer-vacancy-aware onboarding and repository-local handoff continuity`;
-- `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
-- `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`;
-- `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`;
-- `041-F — Governance-gated capability portfolio decomposition and maturity sequencing`;
-- `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `012-P — Cross-document governance status indexing and controlled-route coherence`.
+- `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`.
+- `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`.
+- `012-S — Source-aware documentation generation with accessibility alternatives and stale-claim withdrawal`.
+- `012-T — Cross-repository contributor journey and documentation-first task routing`.
+- `012-U — Capability and contributor lifecycle-route synchronization, anti-divergence validation, and non-authorizing status propagation`.
 - `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
+- `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`.
+- `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`.
+- `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`.
+- `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`.
 
-## 2026-07-16
-
-### Product decision
-
-- Established the repository's first product-level directive: define Alistaire as a female-presenting, QSO-composed agent architecture with explicit evidence, safety, lifecycle, evaluation, and inter-repository contract boundaries.
-- Classified the first candidate as documentation-only. No executable AGI, consciousness, sentience, autonomy, device security, or production-readiness claim is supported.
-- Preserved QSO-GENOMES contract completion and the QuantumStateObjects runnable baseline as upstream research priorities.
-
-### Scope conflict
-
-- A second overlapping repository, `aevespers2/Alistaire-agi`, was created with the same product identity and a broad documentation tree.
-- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
-- Required approval of canonical repository, package/display name, migration, compatibility, redirect/archive, preserved history, and rollback before substantive runtime decomposition.
-
-### Evidence state
-
-- `ALISTAIRE-` contains the established product directive and sequencing documentation.
-- `Alistaire-agi` contains package-name, compatibility, migration, and historical taxonomy candidates; these do not establish canonical authority.
-- Runtime, device control, deployment, release evidence, AGI capability, autonomous learning, and operational readiness remain `UNKNOWN` or not implemented.
-
-### Release
-
-- No release was promoted. The only eligible near-term candidate remains a documentation-only repository-consolidation, governance, and product-charter decision.
+No Pages publication, default-branch merge, release, deployment, credential change, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
