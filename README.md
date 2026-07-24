@@ -6,6 +6,10 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 
 > **Current status: constitutional decisions D1–D5 remain blocked.** `aevespers2/ALISTAIRE-` and `aevespers2/Alistaire-agi` still overlap. The portfolio requires an approved canonical repository and migration, neutral contract stewardship, canonical representation and identity rules, runtime/Fabric semantic separation, independent authority and recovery roots, and portfolio incident command before consequential implementation can be promoted.
 
+Capability roadmap status: `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
+
+The constitutional participation candidate uses the project-bound title **Founding Sovereign and Constitutional Sponsor**. Founding title is not unchecked authority, and system preference is not legal personhood or self-appointment.
+
 ## Documentation
 
 ### Start here
