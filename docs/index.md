@@ -8,6 +8,12 @@ A.L.I.S.T.A.I.R.E. is a proposed female-presenting research-agent architecture c
 
 The [name and identity guide](name-and-identity.md) defines every term, separates the display name from repository and package identities, provides public writing rules, and explains why “autonomous” means bounded internal inference rather than standing operational authority. The expansion is descriptive and does not resolve D1, select a canonical repository, or accept a package or contract.
 
+## Capability roadmap
+
+The [capability roadmap](capability-roadmap.md) turns the portfolio’s desired features into a bounded architecture and review sequence. It defines thirty-seven proposed capabilities across six families, maps candidate repository homes and unresolved gates, sequences stages R0–R5, records seven material composition obstructions, and requires correction and rollback rather than silent promotion.
+
+Its status is `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`. Documentation, repository assignment, interfaces, fixtures, branches, workflows, and passing tests do not establish implementation, ownership, compatibility, trust, acceptance, release, Pages publication, deployment, credentials, or operational authority.
+
 ## Decision status
 
 **Blocked:** two repositories currently overlap as the constitutional identity:
@@ -94,6 +100,8 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 | Guide | Purpose |
 |---|---|
 | [Name and identity](name-and-identity.md) | Acronym expansion, bounded term meanings, repository/package/display-name separation, public style rules, accessible diagram, onboarding, and rename change control |
+| [Capability roadmap](capability-roadmap.md) | Thirty-seven proposed features, six capability families, candidate repository homes, staged maturity, composition obstructions, rollback, and FYSA-120 mapping |
+| [Machine-readable capability roadmap](capability-roadmap-v1.json) | Closed feature IDs, owner candidates, gates, stages, obstructions, prohibited promotions, rollback, and skill mapping |
 | [Architecture](architecture.md) | Portfolio composition, authority order, lifecycles, envelopes, gluing witnesses, freeze, and first simulation |
 | [Portable security foundation](portable-security-foundation.md) | Repository `0`/`1` device-trust mission, adapter boundaries, contracts, fixtures, loss, replacement, and recovery |
 | [Portfolio integration roadmap](portfolio-integration-roadmap.md) | Systemic cycles, D1–D5 decision cut, acceptance DAG, sequenced phases, invalidation, and rollback |
@@ -139,7 +147,9 @@ The runtime/Fabric partition additionally applies CAT-011-B/E, CAT-012-A/B/D/E, 
 
 The name and identity guide additionally applies CAT-007-C/D/E, CAT-011-A/B/E, CAT-012-A/B/D/E, CAT-018-B/D/E, CAT-019-B/C/D, CAT-031-A/D/E, and CAT-040-A/D/E.
 
-Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, **`032-F — Semantic-level partition and projection integrity`**, and **`012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
+The capability roadmap additionally applies CAT-030, CAT-033, CAT-041, and CAT-054 for cross-field integration, privacy governance, agent orchestration, and supply-chain assurance.
+
+Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, **`032-F — Semantic-level partition and projection integrity`**, **`012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`**, **`012-R — Capability-roadmap information architecture and cross-document feature-status coherence`**, **`013-L — Evidence-linked feature-to-repository capability and obstruction graphing`**, and **`041-F — Governance-gated capability portfolio decomposition and maturity sequencing`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
 
 ## Release posture
 

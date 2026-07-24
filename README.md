@@ -10,6 +10,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 
 - [Project overview](docs/index.md)
 - [Name and identity](docs/name-and-identity.md)
+- [Capability roadmap](docs/capability-roadmap.md)
+- [Machine-readable capability roadmap](docs/capability-roadmap-v1.json)
 - [Architecture and QSO composition](docs/architecture.md)
 - [Portable security foundation](docs/portable-security-foundation.md)
 - [Portfolio integration and contract acceptance roadmap](docs/portfolio-integration-roadmap.md)
@@ -38,6 +40,12 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Release plan](release.md)
 - [Punch list](punchlist.md)
 - [Changelog](changelog.md)
+
+## Capability roadmap
+
+The [capability roadmap](docs/capability-roadmap.md) organizes thirty-seven proposed features into six families covering evidence, integration, governance, documentation, security, and bounded planning. It maps each feature to candidate repository homes, unresolved gates, stages R0–R5, material composition obstructions, rollback obligations, and FYSA-120 skills.
+
+Its controlled status is `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`. A feature list, candidate repository assignment, interface, fixture, branch, workflow, or passing test is not implementation, ownership, compatibility, trust, acceptance, release, publication, deployment, or operational authority.
 
 ## D1 decision readiness
 

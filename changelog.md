@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
 - 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`; the expansion is descriptive and does not select a repository, package, contract, runtime, or authority.
 - 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`, covering one exact primary source for every owned repository without accepting any binding.
 - 2026-07-24 — Recorded multiple active lineages, two non-mergeable primary documentation candidates, QSO-SEEKER's declared-head mismatch, the temporal validation obstruction, structural conflicts, absence of attributable human dissent in the reviewed snapshot, and V1–V10 portfolio vacancies.
@@ -25,6 +26,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with every feature tied to candidate repository homes and unresolved gates rather than implied ownership.
+- 2026-07-24 — Recorded seven roadmap-level gluing obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
 - 2026-07-24 — Reconciled the portfolio authority matrix against exact primary documentation or governance sources for all nineteen repositories and separated current candidates, multiple active lineages, base conflicts, unvalidated stacks, default documentation, and stale declared-head metadata.
 - 2026-07-24 — Added V1–V10 vacancies for constitutional identity, neutral contracts, canonical representation, independent authority, incident command, runtime semantics, Fabric routes, source rights, review/accessibility approval, and optional-adapter authorization.
 - 2026-07-24 — Aligned the four controlled planning routes to the same six runtime/Fabric review-surface dispositions, the same non-authorizing next gates, and the same generation-specific evidence model.
@@ -42,6 +45,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Bound each roadmap feature to gates, prohibited promotions, correction, and rollback while preserving authority effect `NONE`.
 - 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
 - 2026-07-24 — Distinguished structural conflict from verified human dissent; no attributable human dissent record was located in the reviewed currentness snapshot, and absence of recorded dissent is not approval or consensus.
 - 2026-07-24 — Added exact source correction, withdrawal, rebinding, lineage classification, vacancy preservation, and rollback rules to prevent stale or conflicting documentation from creating authority.
@@ -64,6 +68,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
+- 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
 - 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
 - 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and machine-readable profile.
 - 2026-07-24 — Added a strict validator, hostile regressions, SHA-pinned read-only exact-head workflow, failure-path artifact retention, deterministic hashes, and final fail-closed gating for portfolio currentness.
@@ -81,6 +87,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
 - 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
 - 2026-07-24 — Changed planning-route documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact focused and resulting integration generations only; no release gate was promoted.
@@ -97,12 +104,15 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ## FYSA-120 mapping
 
-This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
+This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-030`, `CAT-031`, `CAT-032`, `CAT-033`, `CAT-040`, `CAT-041`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
 Proposed non-authoritative subdivisions:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
 - `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
+- `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`;
+- `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
+- `041-F — Governance-gated capability portfolio decomposition and maturity sequencing`;
 - `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
 - `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
 
