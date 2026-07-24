@@ -2,6 +2,12 @@
 
 A.L.I.S.T.A.I.R.E. is a proposed female-presenting research-agent architecture composed of interoperable Quantum State Objects and bounded supporting services. The portfolio is in a **documentation, governance-consolidation, contract-sequencing, canonicalization, semantic-partition, and repository-consolidation phase**. No executable AGI, consciousness, sentience, unrestricted autonomy, device-control service, payment authority, persistent self-improvement, or production deployment is established.
 
+## Name
+
+**A.L.I.S.T.A.I.R.E.** expands to **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution**.
+
+The [name and identity guide](name-and-identity.md) defines every term, separates the display name from repository and package identities, provides public writing rules, and explains why “autonomous” means bounded internal inference rather than standing operational authority. The expansion is descriptive and does not resolve D1, select a canonical repository, or accept a package or contract.
+
 ## Decision status
 
 **Blocked:** two repositories currently overlap as the constitutional identity:
@@ -87,6 +93,7 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 
 | Guide | Purpose |
 |---|---|
+| [Name and identity](name-and-identity.md) | Acronym expansion, bounded term meanings, repository/package/display-name separation, public style rules, accessible diagram, onboarding, and rename change control |
 | [Architecture](architecture.md) | Portfolio composition, authority order, lifecycles, envelopes, gluing witnesses, freeze, and first simulation |
 | [Portable security foundation](portable-security-foundation.md) | Repository `0`/`1` device-trust mission, adapter boundaries, contracts, fixtures, loss, replacement, and recovery |
 | [Portfolio integration roadmap](portfolio-integration-roadmap.md) | Systemic cycles, D1–D5 decision cut, acceptance DAG, sequenced phases, invalidation, and rollback |
@@ -130,7 +137,9 @@ Repository consolidation applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CA
 
 The runtime/Fabric partition additionally applies CAT-011-B/E, CAT-012-A/B/D/E, CAT-013-A/C/D/E, CAT-017-C/D/E, CAT-019-B/C/D, CAT-031-A/D/E, CAT-032-A/B/D, CAT-040-B/D/E, CAT-052-A/B/E, and CAT-070-A/B/C/E.
 
-Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, and **`032-F — Semantic-level partition and projection integrity`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
+The name and identity guide additionally applies CAT-007-C/D/E, CAT-011-A/B/E, CAT-012-A/B/D/E, CAT-018-B/D/E, CAT-019-B/C/D, CAT-031-A/D/E, and CAT-040-A/D/E.
+
+Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, **`032-F — Semantic-level partition and projection integrity`**, and **`012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
 
 ## Release posture
 
