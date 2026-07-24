@@ -8,7 +8,7 @@ Planning-route status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
 No release is ready. `aevespers2/ALISTAIRE-` contains the established product directive and expanded Pages-ready charter candidate. `aevespers2/Alistaire-agi` retains overlapping identity, package-name, compatibility, migration, and taxonomy material. D1 remains blocked on one immutable canonical-repository and migration decision.
 
-The current non-default charter candidate is `docs/consolidation-charter-20260720@7c7fb139e522cafaaca8bef75855d59b285672ea`. This exact candidate is documentation and governance evidence only.
+The validated planning-route source generation is `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`. Its validated integration generation is `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`. These exact generations are historical documentation and governance evidence only. A later descendant must retain fresh exact-head evidence rather than treating either anchor as its own identity.
 
 ## Candidate contents
 
@@ -96,7 +96,7 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 | Live producer/consumer registration | BLOCKED | Exact identities, payloads, source sets, receipts, ordering, replay, correction, revocation, privacy, and rollback |
 | D4 independent authority | BLOCKED | Repository `1` or successor, issuer/revoker, key custody, approvals, quarantine, checkpoint, correction, and recovery |
 | D5 incident command | BLOCKED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery roles with tabletop evidence |
-| Documentation validation | PENDING | Focused and resulting heads pass strict build, links, terminology, all packet validators, hostile regressions, planning-route coherence, and retained artifact checks |
+| Documentation validation | PASS / REVALIDATE ON CHANGE | Focused source `3b507047...` and resulting integration `87e9beb...` passed strict build, terminology, packet validators, hostile regressions, planning-route coherence, and retained artifact checks; each descendant must rerun |
 | Security/privacy/license/accessibility | PARTIAL | Proposed controls exist; independent review, owners, rendered evidence, retention decisions, and exercises remain absent |
 | Publication | BLOCKED | Accepted source versions, public/private review, licenses, accessibility, Pages settings, artifacts, checksums, approval, cache invalidation, and rollback |
 
@@ -121,6 +121,22 @@ Canonical bytes, digests, signatures, namespaces, projection receipts, aggregate
 - D5 incident-command, freeze/restart, evidence-preservation, invalidation, rollback, and tabletop evidence.
 - Security/privacy threat model, license record, accessibility evidence, source/rendered archive, approval record, and publication rollback proof.
 - Exact-head strict documentation output and deterministic SHA-256 manifests.
+
+## Validated planning-route evidence
+
+Focused source generation:
+
+- head `3b507047d2fd9dcf4cad00e0675be9caf127e23a`;
+- planning-route run `30061158220`, artifact `8584576342`, digest `sha256:9ba2f96db92fa8e432da9e29cfe4796fd6db11bf2ee73791a5ce9f3208608d40`;
+- documentation run `30061158226`, artifact `8584576635`, digest `sha256:c6c573c3008508c624f4e5800754f2167ebc8bf81b780593df0e572d860dbb47`.
+
+Resulting integration generation:
+
+- head `87e9beb8586fe37a48bca738fd3f78425f9d4b04`;
+- planning-route run `30061227370`, artifact `8584601280`, digest `sha256:d13c165cff93456e19db713916fd10adef216ae85dc829c0485ab85812684afb`;
+- documentation run `30061227374`, artifact `8584600811`, digest `sha256:c5418a13330cdf1f1cba1380121d1ffbae03a13042dca98631950befccd40f55`.
+
+All four retained artifacts expire `2026-08-23`. Evidence is non-authorizing and generation-specific. It must be superseded or rebound when controlled content or ancestry changes.
 
 ## Validation target
 
@@ -173,10 +189,14 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 
 Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
 
-Proposed non-authoritative subdivision: `012-P — Cross-document governance status indexing and controlled-route coherence`.
+Proposed non-authoritative subdivisions:
+
+- `012-P — Cross-document governance status indexing and controlled-route coherence`;
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
 
 ## Release log
 
+- 2026-07-24 — Closed the planning-route evidence state by recording focused source `3b507047...`, resulting integration `87e9beb...`, exact workflow runs, retained artifact identifiers, digests, expiry, and descendant revalidation requirements without creating release authority.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, lineage dispositions, kernel/runtime crosswalk options, governance review index, safe unsupported route, rejected direct-alias option, blockers, and release gates across all four controlled planning routes. No binding or authority was accepted.
 - 2026-07-23 — Added the governance review index, kernel/runtime crosswalk, candidate-lineage disposition, default-head inventory, candidate inventory, namespace-partition packet, source-generation rebind, D1–D3 readiness packets, and D2A graph on the non-default charter candidate.
 - 2026-07-21 — Added the portfolio contract and authority matrix, portable-security foundation, D1–D5 decision cut, acceptance DAG, integration phases, obstruction taxonomy, and gluing-witness requirements.
