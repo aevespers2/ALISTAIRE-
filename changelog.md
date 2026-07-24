@@ -77,7 +77,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
 - 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
 - 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
-- 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and machine-readable profile.
+- 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and a machine-readable profile.
 - 2026-07-24 — Added a strict validator, hostile regressions, SHA-pinned read-only exact-head workflow, failure-path artifact retention, deterministic hashes, and final fail-closed gating for portfolio currentness.
 - 2026-07-24 — Replaced stale pending validation wording with generation-specific focused and resulting integration evidence, exact workflow runs, retained artifacts, digests, expiry, and explicit descendant revalidation requirements.
 - 2026-07-24 — Reworked `taskchain.md` into a current decision, controlled-route, obstruction, active-chain, evidence, and FYSA-120 map.
@@ -137,7 +137,7 @@ Proposed non-authoritative subdivisions:
 ### Scope conflict
 
 - A second overlapping repository, `aevespers2/Alistaire-agi`, was created with the same product identity and a broad documentation tree.
-- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection` to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
+- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
 - Required approval of canonical repository, package/display name, migration, compatibility, redirect/archive, preserved history, and rollback before substantive runtime decomposition.
 
 ### Evidence state
