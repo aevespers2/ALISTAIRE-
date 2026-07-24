@@ -53,6 +53,14 @@ The D3 packet compares strict canonical JSON, deterministic CBOR, and typed-mode
 
 Canonical bytes prove deterministic representation under an accepted profile only; they do not prove truth, currentness, semantic compatibility, authorization, consumer admission, or authority.
 
+## D4 independent authority and recovery readiness
+
+The [D4 decision packet](d4-independent-authority-recovery-roots-decision-packet.md) compares an isolated Repository `1` root, split issuance and recovery roots, and a federated human-reviewed quorum without selecting one. It records the current Repository `0`/Repository `1` route conflict, required roles and vacancies, capability and revocation fields, key and checkpoint custody, pairwise and triple-overlap witnesses, correction propagation, failed recovery, rollback, and independently witnessed restoration.
+
+Status: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
+
+Repository `1` remains an observed candidate, not an accepted authority. `D4_REBIND_REQUIRED` marks a changed dependency, candidate source, authority model, role, vacancy, route, consumer, custody rule, exercise result, recommendation, or safety boundary. `D4_PACKET_WITHDRAWN` marks a replaced or withdrawn generation. A repository, key, quorum, signature, workflow, checkpoint, or successful restoration cannot bootstrap constitutional authority.
+
 ## Runtime/Fabric semantic partition
 
 The portfolio graph records `BLOCKED_ROLE_COLLISION`. `QuantumStateObjects` needs runtime-local event and execution records; `QSO-FABRIC` needs projection, collaboration, experiment, and aggregate-evidence records. Reusing labels across these levels can hide source sets, collapse identity, inflate evidence, and break correction or rollback.
@@ -95,6 +103,8 @@ Consequential authority must be explicitly granted, narrowly scoped, revocable, 
 | [Machine-readable contributor paths](portfolio-contributor-paths-v1.json) | Repository roles, task candidates, stop conditions, invariants |
 | [Lifecycle coherence](capability-lifecycle-coherence.md) | Cross-document status synchronization, repaired obstruction, diagram, onboarding, rollback |
 | [Machine-readable lifecycle coherence](capability-lifecycle-coherence-v1.json) | Exact source, routes, invariants, authority flags, obstructions, rollback |
+| [D4 authority and recovery readiness](d4-independent-authority-recovery-roots-decision-packet.md) | Authority models, roles, capability lifecycle, route conflict, recovery, witnesses, rollback |
+| [Machine-readable D4 packet](d4-independent-authority-recovery-roots-decision-packet-v1.json) | Candidate sources, gates, obstruction classes, witnesses, propagation, FYSA mapping |
 | [Architecture](architecture.md) | Composition, lifecycles, envelopes, witnesses, freeze, simulation |
 | [Portfolio contract matrix](portfolio-contract-authority-matrix.md) | Responsibilities, records, edges, overlaps, obstructions, non-authority boundaries |
 | [Portfolio currentness](portfolio-authority-currentness-review.md) | Exact sources, lineages, conflicts, dissent boundary, vacancies, corrections |
@@ -112,8 +122,8 @@ Classify consequential statements as **Observed**, **Implemented**, **Verified**
 
 ## FYSA-120 capability map
 
-Applied categories include `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`. Proposed refinements include `012-P`, `012-Q`, `012-R`, `012-S`, `012-T`, `012-U`, `013-I`, `013-L`, `032-J`, `040-Q`, and `054-L`. Taxonomy mapping establishes neither competence, appointment, ownership, acceptance, nor authority.
+Applied categories include `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`. Proposed refinements include `012-P`, `012-Q`, `012-R`, `012-S`, `012-T`, `012-U`, `013-I`, `013-L`, `032-J`, `040-Q`, `054-L`, and `054-M`. Taxonomy mapping establishes neither competence, appointment, ownership, acceptance, nor authority.
 
 ## Release posture
 
-The first possible release is `0.0.1-charter`. It remains blocked until D1–D5, canonical identity, migration/provenance, governance approval, neutral contract ownership, canonicalization and cross-language evidence, runtime/Fabric partition, Repository `1` disposition, security/privacy/accessibility review, exact-head validation, overlap fixtures, artifact hashing, rollback evidence, and explicit approval are complete.
+The first possible release is `0.0.1-charter`. It remains blocked until D1–D5, canonical identity, migration/provenance, governance approval, neutral contract ownership, canonicalization and cross-language evidence, runtime/Fabric partition, D4 independent authority and recovery disposition, security/privacy/accessibility review, exact-head validation, overlap fixtures, artifact hashing, rollback evidence, and explicit approval are complete.
