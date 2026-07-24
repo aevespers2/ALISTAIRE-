@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`; the expansion is descriptive and does not select a repository, package, contract, runtime, or authority.
 - 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`, covering one exact primary source for every owned repository without accepting any binding.
 - 2026-07-24 — Recorded multiple active lineages, two non-mergeable primary documentation candidates, QSO-SEEKER's declared-head mismatch, the temporal validation obstruction, structural conflicts, absence of attributable human dissent in the reviewed snapshot, and V1–V10 portfolio vacancies.
 - 2026-07-24 — Closed the planning-route evidence state by binding focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as immutable historical evidence anchors, with later descendants required to revalidate rather than impersonate those identities.
@@ -41,6 +42,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
 - 2026-07-24 — Distinguished structural conflict from verified human dissent; no attributable human dissent record was located in the reviewed currentness snapshot, and absence of recorded dissent is not approval or consensus.
 - 2026-07-24 — Added exact source correction, withdrawal, rebinding, lineage classification, vacancy preservation, and rollback rules to prevent stale or conflicting documentation from creating authority.
 - 2026-07-24 — Recorded exact source, run, artifact, digest, expiry, integration, and descendant-revalidation boundaries for planning-route evidence; passing evidence remains non-authorizing.
@@ -62,6 +64,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
 - 2026-07-24 — Added a Pages-ready currentness guide, accessible Mermaid diagram and prose equivalent, exact-source register, material findings, vacancy table, gluing analysis, reviewer onboarding, accessibility requirements, change control, and machine-readable profile.
 - 2026-07-24 — Added a strict validator, hostile regressions, SHA-pinned read-only exact-head workflow, failure-path artifact retention, deterministic hashes, and final fail-closed gating for portfolio currentness.
 - 2026-07-24 — Replaced stale pending validation wording with generation-specific focused and resulting integration evidence, exact workflow runs, retained artifacts, digests, expiry, and explicit descendant revalidation requirements.
@@ -78,6 +81,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
 - 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
 - 2026-07-24 — Changed planning-route documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact focused and resulting integration generations only; no release gate was promoted.
 - 2026-07-24 — Added `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` as a documentation-currentness state, not a release or acceptance state.
@@ -93,11 +97,12 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ## FYSA-120 mapping
 
-This documentation generation applies `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
+This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
 Proposed non-authoritative subdivisions:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
+- `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
 - `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
 - `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
 

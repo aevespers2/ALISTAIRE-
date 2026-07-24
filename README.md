@@ -1,5 +1,7 @@
 # Alistaire
 
+**A.L.I.S.T.A.I.R.E.** means **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution**. In this charter, “autonomous” means bounded internal inference under accepted policy and review—not standing authority to use credentials, tools, networks, payments, devices, releases, or deployments.
+
 Alistaire is a **documentation-first research architecture** for composing a bounded agent system from interoperable Quantum State Objects (QSOs). This repository is the candidate product, architecture, governance, and security charter authority; it does **not** contain or claim a verified AGI runtime, consciousness, autonomous learning, production deployment, or unrestricted tool authority.
 
 > **Current status: blocked on constitutional identity and contract acceptance.** `aevespers2/ALISTAIRE-` and `aevespers2/Alistaire-agi` overlap. One canonical repository, package/display direction, migration plan, and non-canonical disposition must be approved. The portfolio also requires a neutral contract steward, canonical byte/identity rules, a runtime/Fabric semantic partition, independent authority and recovery roots, portfolio incident command, and explicit disposition of the proposed founding-sovereignty and governed-system-participation model before consequential implementation can be promoted.
@@ -7,6 +9,7 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 ## Documentation
 
 - [Project overview](docs/index.md)
+- [Name and identity](docs/name-and-identity.md)
 - [Architecture and QSO composition](docs/architecture.md)
 - [Portable security foundation](docs/portable-security-foundation.md)
 - [Portfolio integration and contract acceptance roadmap](docs/portfolio-integration-roadmap.md)
