@@ -39,6 +39,7 @@ Machine-readable companions are published beside each decision packet.
 - [Runtime/Fabric namespace partition](docs/runtime-fabric-namespace-partition.md)
 - [Decision source-generation rebind](docs/decision-source-generation-rebind.md)
 - [Repository provenance and migration guide](docs/repository-provenance-and-migration.md)
+- [Machine-readable provenance manifest](docs/repository-provenance-manifest-v1.json)
 - [Security, privacy, and governance](docs/security-and-governance.md)
 
 ### Controlled lifecycle records
@@ -59,6 +60,8 @@ Machine-readable companions are published beside each decision packet.
 | D5 — Portfolio incident command | `PROPOSED`; `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED` | Command model, authority source, roles or accepted vacancies, freeze domains, evidence custody, correction/revocation and claim withdrawal, rollback, restart, tabletop exercises, independently verified closure |
 
 Downstream implementation cannot retroactively satisfy an upstream decision. A repository, issue, workflow, dashboard, public site, key, signature, quorum, checkpoint, alert, or passing test cannot bootstrap authority.
+
+The constitutional-participation candidate uses the title **Founding Sovereign and Constitutional Sponsor**, but founding title is not unchecked authority and system preference is not legal personhood or self-appointment. It remains an unaccepted governance proposal rather than an active office, credential, or command role.
 
 ## D4 and D5 readiness boundaries
 
@@ -95,7 +98,7 @@ Execution success is evidence, not automatic canonical acceptance. Unsupported o
 
 | Repository or component | Candidate responsibility | Explicit boundary |
 |---|---|---|
-| `ALISTAIRE-` | Constitutional charter, product scope, ownership map, evidence vocabulary, release gates | No automatic runtime, incident, or operational authority |
+| `ALISTAIRE-` | Constitutional charter, product scope, ownership map, evidence vocabulary, release gates | No automatic runtime or operational authority; incident command also remains unassigned |
 | `Alistaire-agi` | Compatibility landing, historical taxonomy, package-name and migration evidence pending disposition | Must not publish a competing authority or package identity |
 | Repository `0` | Bootstrap, maintenance orchestration, proposals, tests, evidence | Cannot approve proposals, mint authority, merge, release, deploy, or declare incidents by itself |
 | Repository `1` | Quarantine, capability, canonical disposition, revocation, checkpoint, and recovery candidate | Must be independently chartered; cannot bootstrap or recover its own authority unilaterally |
