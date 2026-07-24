@@ -16,6 +16,8 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - Contributor paths: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`.
 - Capability lifecycle: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
 - D4 authority and recovery readiness: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
+- D5 decision status: `PROPOSED`.
+- D5 documentation status: `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED`.
 - Safe kernel/runtime disposition: `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`.
 - Rejected direct-alias option: `REJECT_DIRECT_IDENTITY_ALIAS`.
 - Authority effect: `NONE`.
@@ -26,6 +28,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - D2 source or stewardship change: `D2_REBIND_REQUIRED`; packet withdrawal: `D2_PACKET_WITHDRAWN`.
 - D3 profile, fixture, consumer, migration, or rollback change: `D3_REBIND_REQUIRED`; packet withdrawal: `D3_PACKET_WITHDRAWN`.
 - D4 dependency, authority candidate, role, vacancy, route, consumer, custody, exercise, recovery, or safety-boundary change: `D4_REBIND_REQUIRED`; packet withdrawal: `D4_PACKET_WITHDRAWN`.
+- D5 dependency, command candidate, role, vacancy, freeze domain, consumer, public surface, custody, exercise, or safety-boundary change: `D5_REBIND_REQUIRED`; packet withdrawal: `D5_PACKET_WITHDRAWN`.
 - Portfolio currentness change: `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED`; packet withdrawal: `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
 
 ### Runtime/Fabric controlled dispositions
@@ -39,6 +42,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Product
 
+- 2026-07-24 — Added D5 portfolio incident-command decision readiness under decision status `PROPOSED` and documentation status `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED`; no command, freeze, correction, revocation, rollback, restart, or closure authority was activated.
 - 2026-07-24 — Added D4 independent-authority and recovery-roots decision readiness under `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`; no authority, capability, credential, checkpoint, or recovery operation was activated.
 - 2026-07-24 — Synchronized capability-roadmap, feature-lineage, contributor-path, and D4 state through taskchain, punchlist, release, changelog, README, and Pages.
 - 2026-07-24 — Added contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; routes do not appoint maintainers or authorize implementation.
@@ -54,6 +58,10 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Architecture
 
+- 2026-07-24 — Compared single human commander, federated incident cell, and domain-segmented command models without selecting one.
+- 2026-07-24 — Defined incident classes I0–I3, ten independently scoped freeze domains, command roles or vacancies, evidence custody, correction and revocation propagation, public-claim withdrawal, rollback, bounded restart, and independently verified closure.
+- 2026-07-24 — Added D5 pairwise and triple-overlap witnesses across detection, classification, freeze, evidence, correction, consumer propagation, public claims, rollback, checkpoint ancestry, restart, re-freeze, closure, and corrective action.
+- 2026-07-24 — Recorded D5 obstruction classes for split command, freeze gaps, evidence-custody conflict, scope inflation, consumer orphans, claim-withdrawal gaps, cache resurrection, rollback without an inverse, premature restart, self-attested restoration, cross-domain deadlock, stale command, evidence inflation, and closure without correction.
 - 2026-07-24 — Compared isolated Repository `1`, split issuance/recovery roots, and federated human-reviewed quorum models without selecting one.
 - 2026-07-24 — Recorded observed Repository `1` candidate heads `432a6fafa56d4a57be7fc3918eba5ed80a6bcdcc` and `0813308061e27e8289ea8f15af7d5ccdc84b4abf` as evidence only.
 - 2026-07-24 — Formalized the Repository `0`/Repository `1` route bifurcation between `working → proposal → quarantine` and direct `working → quarantine`.
@@ -74,6 +82,8 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Security and governance
 
+- 2026-07-24 — Required D5 command scope, expiry, succession, recusal, evidence custody, domain-specific freeze, consumer correction closure, public-claim withdrawal, failed rollback, bounded restart, re-freeze criteria, and independent resulting-state verification.
+- 2026-07-24 — Required critical incidents involving credentials, private data, payments, deployments, infrastructure, or recovery roots to escalate to human command without autonomous remediation or restart.
 - 2026-07-24 — Required D4 to separate proposal, review, approval, execution, evidence, key custody, revocation, checkpoint custody, and recovery duties.
 - 2026-07-24 — Required capabilities to remain scoped, attributable, expiring, replay-bounded, and revocable; documentation does not issue them.
 - 2026-07-24 — Required recovery to remain independent from a suspected root and to preserve failed-generation evidence, correction, revocation, consumer propagation, rollback, and independently witnessed restoration.
@@ -90,6 +100,8 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Documentation
 
+- 2026-07-24 — Added Pages-ready [D5 portfolio incident-command decision packet](docs/d5-portfolio-incident-command-decision-packet.md) and [machine-readable profile](docs/d5-portfolio-incident-command-decision-packet-v1.json).
+- 2026-07-24 — Added D5 command models, incident classes, freeze domains, required records, current source observations, accessible lifecycle diagram with prose equivalent, obstruction and witness analysis, controlled propagation, reviewer onboarding, tabletop gates, FYSA mapping, and explicit non-authority boundaries.
 - 2026-07-24 — Added Pages-ready [D4 independent authority and recovery roots decision packet](docs/d4-independent-authority-recovery-roots-decision-packet.md) and [machine-readable profile](docs/d4-independent-authority-recovery-roots-decision-packet-v1.json).
 - 2026-07-24 — Added D4 candidate models, immutable decision fields, readiness gates, source observations, accessible lifecycle diagram with prose equivalent, obstruction and witness analysis, controlled propagation, reviewer onboarding, FYSA mapping, and explicit non-authority boundaries.
 - 2026-07-24 — Synchronized D4 status, links, gates, correction, withdrawal, rollback, and remaining blockers across README, Pages home, taskchain, punchlist, release, changelog, and MkDocs navigation.
@@ -117,5 +129,6 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`.
 - `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`.
 - `054-M — Independent authority and recovery-root separation`.
+- `064-F — Portfolio incident command, freeze-domain coordination, claim withdrawal, and independently witnessed restart`.
 
-No Pages publication, default-branch merge, constitutional acceptance, authority activation, capability issuance, credential change, checkpoint restoration, release, deployment, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
+No Pages publication, default-branch merge, constitutional acceptance, incident declaration, authority activation, capability issuance, credential change, freeze, claim withdrawal, rollback, restart, checkpoint restoration, release, deployment, payment execution, device mutation, infrastructure apply, or destructive history rewrite occurred.
