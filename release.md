@@ -6,9 +6,13 @@ Status: `BLOCKED — D1–D5, CANONICAL IDENTITY, PORTFOLIO MATRIX, NEUTRAL CONT
 
 Planning-route status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
+Authority-source status: `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`
+
 No release is ready. `aevespers2/ALISTAIRE-` contains the established product directive and expanded Pages-ready charter candidate. `aevespers2/Alistaire-agi` retains overlapping identity, package-name, compatibility, migration, and taxonomy material. D1 remains blocked on one immutable canonical-repository and migration decision.
 
 The validated planning-route source generation is `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`. Its validated integration generation is `docs/consolidation-charter-20260720@87e9beb8586fe37a48bca738fd3f78425f9d4b04`. These exact generations are historical documentation and governance evidence only. A later descendant must retain fresh exact-head evidence rather than treating either anchor as its own identity.
+
+The authority-source reconciliation is a newer review snapshot based on `docs/consolidation-charter-20260720@38213e4e57dd1b03e434cc9cfb0da3c4e0d25477`; its focused and resulting-head evidence must be retained before currentness can be claimed.
 
 ## Candidate contents
 
@@ -17,6 +21,7 @@ The candidate includes:
 - consolidated governance and security charter;
 - portable device-security foundation for Repositories `0` and `1`;
 - portfolio contract and authority matrix;
+- nineteen-repository authority-source reconciliation with exact default and candidate tuples, conflicts, dissent, vacancies, and source-currentness limitations;
 - independent record-family identity catalog;
 - pairwise contract edges and triple-overlap witnesses;
 - obstruction taxonomy and practical homology-like gluing checks;
@@ -35,7 +40,7 @@ The candidate includes:
 
 These artifacts do not create credentials, enroll or inspect devices, activate Repository `1`, establish a live contract or identity registry, select canonical bytes or namespaces, appoint owners, authorize adapters, execute payments, merge to `main`, release, publish, deploy, or claim production security.
 
-## Current runtime/Fabric dispositions
+## Current runtime/Fabric and authority-source dispositions
 
 | Surface | Disposition |
 |---|---|
@@ -46,6 +51,7 @@ These artifacts do not create credentials, enroll or inspect devices, activate R
 | Kernel/runtime crosswalk | `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED` |
 | Governance review index | `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED` |
 | Controlled planning routes | `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` |
+| Portfolio authority sources | `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED` |
 
 The safe default is `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct identity aliasing remains rejected as `REJECT_DIRECT_IDENTITY_ALIAS`.
 
@@ -53,7 +59,7 @@ The safe default is `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct identity aliasing
 
 - Scheme: Semantic Versioning only after D1 canonical identity approval.
 - First eligible candidate: `0.0.1-charter` in the approved canonical repository.
-- `charter` denotes documentation, governance, contract sequencing, authority matrices, canonicalization proposals, namespace-partition proposals, inventories, lineage dispositions, crosswalks, and fixture specifications only.
+- `charter` denotes documentation, governance, contract sequencing, authority matrices, canonicalization proposals, namespace-partition proposals, inventories, lineage dispositions, crosswalks, source reconciliation, and fixture specifications only.
 - The label must not imply executable AGI, consciousness, sentience, autonomous learning, device security, host monitoring, payment authority, interface compatibility, or production readiness.
 - The non-canonical repository must not publish a competing charter or package identity.
 - `alistaire-qso` remains proposed until D1 disposition.
@@ -68,6 +74,7 @@ The documentation-only candidate may include:
 - constitutional hierarchy, governance roles, decision classes, security invariants, incident command, emergency stop, correction, revocation, recovery, and rollback;
 - bounded Cali Sanders Parker stewardship and prohibition on ceremonial, conversational, interface, dependency, or model-output authority escalation;
 - repository responsibilities, record families, pairwise edges, triple overlaps, obstructions, owners or vacancies, correction, revocation, migration, recovery, and non-authority boundaries;
+- exact repository-source tuples, candidate-currentness limitations, conflicts, dissent, and vacancy records;
 - neutral contract-steward and canonical-byte decisions;
 - Repository `0`/`1` portable-security architecture and approved contract specifications;
 - declarative genome, runtime, Fabric, kernel, projection, aggregate, and portfolio-disposition mappings;
@@ -86,6 +93,7 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 | D1 canonical identity | BLOCKED | Immutable canonical repository/name/package, migration, provenance, license, compatibility, non-canonical disposition, monitoring, and rollback |
 | Governance charter | REVIEW | Accept or revise hierarchy, Cali boundaries, authority map, portable trust, decision classes, security invariants, incident command, and recovery |
 | Portfolio matrix | REVIEW | Reconcile every repository role, non-role, record family, edge, overlap, correction/revocation path, obstruction, owner or vacancy, and rollback obligation against exact heads |
+| Authority-source reconciliation | REVIEW / BLOCKED | Re-fetch nineteen defaults and current candidates, reconcile moved or omitted lineages, preserve dissent, close source-currentness limitations, and validate focused and resulting heads |
 | D2 neutral steward readiness | REVIEW | Candidate models, fields, gates, non-authority boundary, controlled propagation, strict validation, and retained evidence |
 | D2 neutral steward decision | BLOCKED | Accepted non-operational steward, precedence, location, compatibility, migration, deprecation, correction, fixtures, continuity, and rollback |
 | D3 canonical-byte readiness | REVIEW | Candidate profiles, primitives, gates, hostile classes, independent-language requirements, controlled propagation, and evidence |
@@ -96,7 +104,7 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 | Live producer/consumer registration | BLOCKED | Exact identities, payloads, source sets, receipts, ordering, replay, correction, revocation, privacy, and rollback |
 | D4 independent authority | BLOCKED | Repository `1` or successor, issuer/revoker, key custody, approvals, quarantine, checkpoint, correction, and recovery |
 | D5 incident command | BLOCKED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery roles with tabletop evidence |
-| Documentation validation | PASS / REVALIDATE ON CHANGE | Focused source `3b507047...` and resulting integration `87e9beb...` passed strict build, terminology, packet validators, hostile regressions, planning-route coherence, and retained artifact checks; each descendant must rerun |
+| Documentation validation | PASS / REVALIDATE ON CHANGE | Planning-route focused source `3b507047...` and integration `87e9beb...` passed; the newer authority-source generation must independently pass focused and resulting validation |
 | Security/privacy/license/accessibility | PARTIAL | Proposed controls exist; independent review, owners, rendered evidence, retention decisions, and exercises remain absent |
 | Publication | BLOCKED | Accepted source versions, public/private review, licenses, accessibility, Pages settings, artifacts, checksums, approval, cache invalidation, and rollback |
 
@@ -106,6 +114,7 @@ Runtime code, real device inspection, external data ingestion, persistent learni
 - `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN` govern D2 dependencies, ownership graph, candidate models, and recommendations.
 - `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` govern D3 dependencies, profiles, fixtures, consumers, migrations, and recommendations.
 - Runtime/Fabric review surfaces must be replaced or rebound when source heads, paths, roles, semantic classifications, owner vacancies, graph edges, crosswalk options, review gates, correction routes, withdrawal routes, migration, or rollback rules change.
+- The authority-source snapshot must be replaced or rebound when a default head, candidate head, pull-request state, evidence claim, repository identity, role, conflict, vacancy, dissent set, or safety boundary changes.
 - Every controlled planning route must carry the same current dispositions before a release candidate may describe the route as synchronized.
 
 Canonical bytes, digests, signatures, namespaces, projection receipts, aggregate reports, registry entries, synthetic agreement, workflow success, or inventory inclusion do not establish truth, currentness, compatibility, authorization, ownership, admission, or operational authority.
@@ -114,6 +123,7 @@ Canonical bytes, digests, signatures, namespaces, projection receipts, aggregate
 
 - D1 immutable decision and migration/provenance/compatibility manifest.
 - Accepted portfolio matrix with exact source-head reconciliation and recorded conflicts.
+- Authority-source profile with all nineteen defaults, identified candidates, evidence limitations, conflicts, dissent, explicit vacancies, correction, withdrawal, and rollback.
 - D2 steward decision and resulting-state verification.
 - D3 positive and hostile fixture corpus, independent implementations, exact bytes/digests/identities/reason codes, migration, and rollback evidence.
 - Runtime/Fabric semantic partition, exact inventories, accepted class registry, kernel/runtime crosswalk, source-set and projection receipts, consumer registration, correction/revocation propagation, mixed-generation fixtures, and rollback/restoration evidence.
@@ -145,10 +155,10 @@ The documentation workflows must:
 1. check out and assert the exact submitted head;
 2. use read-only repository permission and no persisted credentials;
 3. install only pinned documentation dependencies;
-4. require all decision packets, inventories, lineage, crosswalk, governance index, planning routes, architecture, security, onboarding, and diagrams;
+4. require all decision packets, inventories, lineage, crosswalk, governance index, authority-source profile, planning routes, architecture, security, onboarding, and diagrams;
 5. run packet validators, hostile regressions, local-link checks, and `mkdocs build --strict`;
-6. validate terminology, prohibited claims, public/private boundaries, record-family distinctions, controlled propagation, and planning-route consistency;
-7. hash rendered site, source documentation, requirements, configuration, scripts, tests, and workflow;
+6. validate terminology, prohibited claims, public/private boundaries, record-family distinctions, controlled propagation, source-currentness, dissent preservation, and planning-route consistency;
+7. hash rendered site, source documentation, requirements, configuration, scripts, tests, and workflows;
 8. retain evidence tied to the exact head on success or failure;
 9. fail closed after evidence retention if any validation stage fails.
 
@@ -165,6 +175,7 @@ Withdraw or rebind the candidate if:
 - canonical bytes, semantic namespaces, identities, clocks, replay, correction, or revocation remain ambiguous;
 - kernel, runtime, projection, aggregate, and disposition records cannot be distinguished;
 - an inventory treats declaration, documentation, fixtures, registry references, internal records, or passing CI as accepted live binding;
+- a source snapshot omits moved candidates, silently collapses dissent, assigns an owner, or promotes stale evidence;
 - projection or aggregation inflates evidence or authority;
 - independent implementations disagree;
 - a migration broadens scope, certainty, precision, or authority or lacks a restored-state witness;
@@ -179,7 +190,8 @@ Restore the last reviewed documentation state, preserve failed-candidate evidenc
 
 - D1–D5 remain unapproved.
 - Canonical repository, display/package identity, license, compatibility, migration, public notice, and rollback remain unresolved.
-- The portfolio matrix, governance charter, contract owners, semantic owners, route owners, and consumer registrations remain review candidates.
+- The portfolio matrix, governance charter, contract owners, semantic owners, route owners, consumer registrations, and authority-source bindings remain review candidates.
+- Multi-candidate lineages in Alistaire-agi, datarepo, QSO-FABRIC, qso-field, QSO-GENOMES, QSO-SEEKER, and QuantumStateObjects require reconciliation or withdrawal.
 - No accepted canonical-byte profile, namespace partition, live registry, kernel/runtime mapping, projection receipt, or restored-state witness exists.
 - Repository `1` or successor is not chartered or independently validated.
 - Device identity, adapters, privacy, retention, key custody, incident command, and portable-trust fixtures remain unresolved.
@@ -192,10 +204,12 @@ Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-
 Proposed non-authoritative subdivisions:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Multi-candidate authority-source reconciliation, dissent preservation, and vacancy closure`.
 
 ## Release log
 
+- 2026-07-24 — Reconciled exact default heads and identified current candidate heads across all nineteen repositories; recorded ten conflicts, ten explicit vacancies, six dissent sets, and currentness limitations without selecting authority or promoting a release gate.
 - 2026-07-24 — Closed the planning-route evidence state by recording focused source `3b507047...`, resulting integration `87e9beb...`, exact workflow runs, retained artifact identifiers, digests, expiry, and descendant revalidation requirements without creating release authority.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, lineage dispositions, kernel/runtime crosswalk options, governance review index, safe unsupported route, rejected direct-alias option, blockers, and release gates across all four controlled planning routes. No binding or authority was accepted.
 - 2026-07-23 — Added the governance review index, kernel/runtime crosswalk, candidate-lineage disposition, default-head inventory, candidate inventory, namespace-partition packet, source-generation rebind, D1–D3 readiness packets, and D2A graph on the non-default charter candidate.
