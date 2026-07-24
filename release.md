@@ -13,6 +13,8 @@ Status: `BLOCKED — D1–D5, CANONICAL IDENTITY, PORTFOLIO MATRIX, NEUTRAL CONT
 - D5 incident command: `BLOCKED_UPSTREAM_D4_AND_MISSING_INCIDENT_COMMAND_EVIDENCE`
 - Authority effect: `NONE`
 
+Authoritative review: [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md).
+
 No release is ready. The roadmap implements no capability; contributor paths appoint no maintainer; D4 charters no authority; D5 appoints no incident commander, orders no freeze, and withdraws no claim.
 
 Historical evidence anchors:
