@@ -47,7 +47,10 @@ class CapabilityRoadmapTests(unittest.TestCase):
     def test_current_repository_passes(self) -> None:
         report = MODULE.validate_repository(ROOT)
         self.assertEqual(report["result"], "PASS")
-        self.assertEqual(report["feature_count"], 37)
+        self.assertEqual(report["version"], "1.1.0")
+        self.assertEqual(report["feature_count"], 40)
+        self.assertEqual(report["source_head"], MODULE.EXPECTED_SOURCE_HEAD)
+        self.assertEqual(report["source_disposition"], MODULE.EXPECTED_SOURCE_DISPOSITION)
 
     def test_duplicate_json_key_is_rejected(self) -> None:
         temporary, root = self.make_copy()
@@ -81,9 +84,9 @@ class CapabilityRoadmapTests(unittest.TestCase):
         temporary, root = self.make_copy()
         self.addCleanup(temporary.cleanup)
         profile = self.load_profile(root)
-        profile["capability_families"][0]["features"].pop()
+        profile["capability_families"][1]["features"].pop()
         self.write_profile(root, profile)
-        self.assert_rejected(root, "expected 37 features")
+        self.assert_rejected(root, "expected 40 features")
 
     def test_ownerless_feature_is_rejected(self) -> None:
         temporary, root = self.make_copy()
@@ -115,6 +118,52 @@ class CapabilityRoadmapTests(unittest.TestCase):
         path = root / "README.md"
         path.write_text(path.read_text(encoding="utf-8").replace(MODULE.EXPECTED_STATUS, "REMOVED"), encoding="utf-8")
         self.assert_rejected(root, "README.md is missing required phrase")
+
+    def test_superseded_source_head_substitution_is_rejected(self) -> None:
+        temporary, root = self.make_copy()
+        self.addCleanup(temporary.cleanup)
+        profile = self.load_profile(root)
+        profile["source_reconciliation"]["superseded_head"] = "0" * 40
+        self.write_profile(root, profile)
+        self.assert_rejected(root, "superseded source head substitution")
+
+    def test_parallel_registry_policy_is_rejected(self) -> None:
+        temporary, root = self.make_copy()
+        self.addCleanup(temporary.cleanup)
+        profile = self.load_profile(root)
+        profile["source_reconciliation"]["duplicate_registry_policy"] = "allow_parallel_registry"
+        self.write_profile(root, profile)
+        self.assert_rejected(root, "parallel authority registry is prohibited")
+
+    def test_reuse_of_public_naming_subdivision_is_rejected(self) -> None:
+        temporary, root = self.make_copy()
+        self.addCleanup(temporary.cleanup)
+        profile = self.load_profile(root)
+        for item in profile["fysa_120"]["proposed_refinements"]:
+            if item["id"] == "012-S":
+                item["id"] = "012-Q"
+        self.write_profile(root, profile)
+        self.assert_rejected(root, "proposed refinement set changed")
+
+    def test_missing_reconciled_feature_is_rejected(self) -> None:
+        temporary, root = self.make_copy()
+        self.addCleanup(temporary.cleanup)
+        profile = self.load_profile(root)
+        for family in profile["capability_families"]:
+            for feature in family["features"]:
+                if feature["name"] == "Portfolio Status Dashboard":
+                    feature["name"] = "Substituted Dashboard"
+        self.write_profile(root, profile)
+        self.assert_rejected(root, "one or more reconciled features are missing")
+
+    def test_reconciled_feature_delta_must_match_source_record(self) -> None:
+        temporary, root = self.make_copy()
+        self.addCleanup(temporary.cleanup)
+        profile = self.load_profile(root)
+        profile["source_reconciliation"]["added_features"].remove("Systemic Obstruction Register")
+        profile["source_reconciliation"]["added_features"].append("Unrelated Feature")
+        self.write_profile(root, profile)
+        self.assert_rejected(root, "reconciled feature delta changed")
 
 
 if __name__ == "__main__":
