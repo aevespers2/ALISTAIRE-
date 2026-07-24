@@ -110,7 +110,7 @@ This review located contradictory candidate claims, overlapping responsibilities
 
 Future dissent must retain repository, pull request or issue, exact head, reviewer identity and role, statement, scope, timestamp, resolution state, and correction or withdrawal linkage. Absence of recorded dissent is not approval or consensus.
 
-## Authority and route vacancies
+## Authority and route vacancies (V1–V10)
 
 | Vacancy | Missing accountable function | Blocking effect |
 |---|---|---|
