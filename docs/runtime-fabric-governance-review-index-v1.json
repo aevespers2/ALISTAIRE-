@@ -1,0 +1,192 @@
+{
+  "profile_id": "ALISTAIRE-RUNTIME-FABRIC-GOVERNANCE-REVIEW-INDEX-001",
+  "profile_version": "1.0.0-candidate",
+  "status": "REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED",
+  "authority_effect": "NONE",
+  "source_generation": {
+    "repository": "aevespers2/ALISTAIRE-",
+    "ref": "docs/consolidation-charter-20260720",
+    "head_sha": "215a0068999105bebe6aab81614ee1a95e3f47b1",
+    "binding_kind": "historical_parent_input_not_self_reference"
+  },
+  "route": [
+    "aevespers2/qsio-kernel",
+    "aevespers2/QuantumStateObjects",
+    "aevespers2/QSO-FABRIC",
+    "aevespers2/1"
+  ],
+  "review_surfaces": [
+    {
+      "id": "namespace_partition",
+      "path": "docs/runtime-fabric-namespace-partition.md",
+      "disposition": "BLOCKED_ROLE_COLLISION",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "candidate_inventory",
+      "path": "docs/runtime-fabric-producer-consumer-inventory.md",
+      "disposition": "OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "default_head_inventory",
+      "path": "docs/runtime-fabric-default-head-owner-inventory.md",
+      "disposition": "DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "lineage_disposition",
+      "path": "docs/runtime-fabric-lineage-disposition.md",
+      "disposition": "CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED",
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "kernel_runtime_crosswalk",
+      "path": "docs/kernel-runtime-crosswalk-options.md",
+      "disposition": "KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED",
+      "authority_effect": "NONE"
+    }
+  ],
+  "safe_default": "UNSUPPORTED_KERNEL_RUNTIME_ROUTE",
+  "rejected_option": "REJECT_DIRECT_IDENTITY_ALIAS",
+  "semantic_classes": [
+    "kernel_interaction_record",
+    "runtime_event",
+    "runtime_execution_report",
+    "fabric_projection_receipt",
+    "fabric_collaboration_or_aggregate_record",
+    "portfolio_disposition"
+  ],
+  "material_obstructions": [
+    "kernel_runtime_semantic_mismatch",
+    "namespace_and_identity_ambiguity",
+    "missing_projection_receipt",
+    "source_set_and_duplicate_inflation",
+    "ordering_and_replay_ambiguity",
+    "correction_and_revocation_discontinuity",
+    "semantic_and_route_owner_vacancy",
+    "migration_and_rollback_incompleteness",
+    "authority_inflation"
+  ],
+  "review_sequence": [
+    "CONFIRM_EXACT_SOURCES",
+    "RESOLVE_D1_AND_D2",
+    "RESOLVE_D3",
+    "CONFIRM_SEMANTIC_AND_ROUTE_OWNERS_OR_ACCEPTED_VACANCIES",
+    "SELECT_CROSSWALK_OR_PRESERVE_UNSUPPORTED_ROUTE",
+    "BUILD_HOSTILE_FIXTURES",
+    "VALIDATE_TWO_INDEPENDENT_CONSUMERS",
+    "COMPLETE_SECURITY_PRIVACY_RETENTION_LICENSE_ACCESSIBILITY_INCIDENT_REVIEW",
+    "RECORD_HUMAN_APPROVAL_AND_VERIFY_RESULTING_STATE"
+  ],
+  "controlled_planning_routes": [
+    "taskchain.md",
+    "punchlist.md",
+    "release.md",
+    "changelog.md"
+  ],
+  "invariants": [
+    "review_surfaces_remain_independently_identified",
+    "passing_validation_is_not_interface_acceptance",
+    "fixture_agreement_is_not_live_compatibility",
+    "repository_name_is_not_semantic_ownership",
+    "preserved_lineage_is_not_current_acceptance",
+    "unsupported_route_remains_safe_until_all_gates_pass",
+    "direct_identity_aliasing_remains_rejected",
+    "local_runtime_success_is_not_fabric_success",
+    "fabric_success_is_not_portfolio_disposition",
+    "projection_is_not_independent_corroboration",
+    "correction_revocation_and_rollback_must_propagate_end_to_end",
+    "authority_effect_remains_none"
+  ],
+  "invalidation_triggers": [
+    "source_packet_changed",
+    "exact_head_changed",
+    "disposition_changed",
+    "owner_or_vacancy_changed",
+    "semantic_class_changed",
+    "graph_edge_changed",
+    "acceptance_gate_changed",
+    "planning_route_changed",
+    "migration_rule_changed",
+    "correction_or_revocation_route_changed",
+    "rollback_rule_changed",
+    "fysa_mapping_changed"
+  ],
+  "prohibited_promotions": [
+    "namespace_selection",
+    "schema_acceptance",
+    "owner_appointment",
+    "producer_or_consumer_admission",
+    "registry_activation",
+    "adapter_activation",
+    "runtime_admission",
+    "fabric_activation",
+    "portfolio_disposition_authority",
+    "default_branch_merge",
+    "release",
+    "pages_publication",
+    "deployment",
+    "credential_change",
+    "infrastructure_apply",
+    "destructive_history_rewrite"
+  ],
+  "fysa_120": {
+    "categories": [
+      "CAT-011",
+      "CAT-012",
+      "CAT-013",
+      "CAT-017",
+      "CAT-018",
+      "CAT-019",
+      "CAT-031",
+      "CAT-032",
+      "CAT-040",
+      "CAT-052",
+      "CAT-059",
+      "CAT-070"
+    ],
+    "subdivisions": [
+      "011-B",
+      "011-E",
+      "012-A",
+      "012-B",
+      "012-D",
+      "012-E",
+      "013-A",
+      "013-C",
+      "013-D",
+      "013-E",
+      "017-C",
+      "017-D",
+      "017-E",
+      "018-B",
+      "018-D",
+      "018-E",
+      "019-B",
+      "019-C",
+      "019-D",
+      "031-A",
+      "031-D",
+      "031-E",
+      "032-A",
+      "032-B",
+      "032-D",
+      "040-A",
+      "040-B",
+      "040-D",
+      "040-E",
+      "052-B",
+      "052-E",
+      "059-E",
+      "070-A",
+      "070-B",
+      "070-E"
+    ],
+    "proposed_gap": {
+      "id": "012-P",
+      "name": "Cross-document governance status indexing and controlled-route coherence",
+      "authoritative": false
+    }
+  }
+}
