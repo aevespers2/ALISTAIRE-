@@ -11,6 +11,8 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 - Contributor paths: `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`
 - Capability lifecycle: `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 - D4 authority and recovery readiness: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`
+- D5 decision status: `PROPOSED`
+- D5 documentation status: `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED`
 - Authority effect: `NONE`
 
 Authoritative review: [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md).
@@ -24,10 +26,11 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - [x] Add strict validation, hostile regressions, retained evidence, correction, withdrawal, and rollback rules.
 - [x] Carry roadmap, lineage, contributor, and lifecycle statuses through task, punch-list, release, and changelog routes.
 - [x] Add the Pages-ready D4 independent-authority and recovery-roots packet and machine-readable profile without selecting or activating authority.
-- [ ] Obtain focused exact-head validation for the D4 readiness candidate.
+- [x] Add the Pages-ready D5 portfolio incident-command packet and machine-readable profile without appointing command or activating a freeze.
+- [ ] Obtain focused exact-head validation for the current D5 readiness candidate.
 - [ ] Merge only into the non-default charter candidate after every attached workflow succeeds.
 - [ ] Revalidate the resulting candidate and record its artifact and digest.
-- [ ] Rebind or withdraw on any source, route, owner-vacancy, stop-condition, authority candidate, custody rule, exercise result, or safety-boundary change.
+- [ ] Rebind or withdraw on any source, route, owner-vacancy, stop-condition, authority candidate, command candidate, freeze domain, custody rule, exercise result, or safety-boundary change.
 
 Historical planning-route source: `3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
@@ -37,6 +40,8 @@ Lifecycle-coherence source: `2953ef6ba8ee86eafdddcf56222c91cbb296bcb7`.
 
 D4 packet base generation: `0a0dd2fd8a75cc40833a60da0bad5d14426ac8ca`.
 
+D5 packet base generation: `5ed53166188d0ddddf5ef0d0dd3ba7238da67db3`.
+
 Every descendant requires fresh exact-head evidence and must not impersonate an earlier generation.
 
 ## Controlled propagation ledger
@@ -45,6 +50,7 @@ Every descendant requires fresh exact-head evidence and must not impersonate an 
 - [x] Preserve `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN`.
 - [x] Preserve `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN`.
 - [x] Add `D4_REBIND_REQUIRED` and `D4_PACKET_WITHDRAWN` for changed D1–D3 dependencies, authority candidates, roles, vacancies, routes, consumers, custody, exercises, recovery, and safety boundaries.
+- [x] Add `D5_REBIND_REQUIRED` and `D5_PACKET_WITHDRAWN` for changed D1–D4 dependencies, command candidates, roles, vacancies, freeze domains, consumers, public surfaces, custody, exercises, and safety boundaries.
 - [x] Preserve `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED` and `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
 - [x] Propagate roadmap and contributor correction or withdrawal to every lifecycle route.
 - [ ] Treat propagation as complete only after route agreement, exact-head evidence, explicit approval, and independent resulting-state verification.
@@ -64,6 +70,7 @@ Every descendant requires fresh exact-head evidence and must not impersonate an 
 - [x] Record that ceremony, prompts, signatures, UI state, successful commands, dependencies, and transported messages cannot create authority.
 - [x] Add the Repository `0`/`1` portable-trust boundary and D1–D5 decision cut.
 - [x] Prepare D4 authority and recovery models, readiness gates, obstruction classes, role/vacancy fields, witness requirements, and reviewer onboarding.
+- [x] Prepare D5 command models, incident classes, freeze domains, evidence-custody rules, correction and claim-withdrawal closure, rollback and restart witnesses, tabletop gates, and reviewer onboarding.
 - [ ] Approve the immutable governance charter.
 - [ ] Conduct a freeze, evidence-preservation, bounded-restart, rollback, claim-withdrawal, revocation, and recovery tabletop exercise.
 
@@ -93,7 +100,7 @@ Every descendant requires fresh exact-head evidence and must not impersonate an 
 | D2 | `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` | Neutral steward, precedence, fixtures, correction, continuity, rollback |
 | D3 | `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` | Canonical bytes, identities, reason codes, cross-language witnesses |
 | D4 | `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE` | Select and charter a model; reconcile Repository `0`/`1`; assign roles or accepted vacancies; approve custody, issuance, revocation, quarantine, checkpoints, recovery, witnesses, exercises, rollback, and resulting-state verification |
-| D5 | `PROPOSED` | Incident, freeze, evidence, restart, rollback, invalidation, claim withdrawal |
+| D5 | `PROPOSED`; `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED` | Select command model, authority source, roles or accepted vacancies, freeze domains, evidence custody, correction/revocation and claim-withdrawal closure, rollback, restart, tabletop exercises, and independently verified closure |
 
 ### D4 readiness checklist
 
@@ -110,6 +117,23 @@ Every descendant requires fresh exact-head evidence and must not impersonate an 
 - [ ] Accept capability, revocation, correction, checkpoint, recovery, clock, replay, and consumer contracts.
 - [ ] Complete independent security, privacy, legal, license, accessibility, and governance review.
 - [ ] Run compromise, stale-quorum, revocation, checkpoint-fork, failed-recovery, rollback, and restoration exercises.
+- [ ] Record explicit human approval and independently verified resulting state.
+
+### D5 readiness checklist
+
+- [x] Compare single-commander, federated-cell, and domain-segmented command models without selecting one.
+- [x] Define incident classes I0–I3 and ten independently scoped freeze domains.
+- [x] Define command, evidence-custody, correction, revocation, claim-withdrawal, rollback, restart, resulting-state, closure, and corrective-action records.
+- [x] Bind current ALISTAIRE-, Repository `1`, qso-field, and mutable Repository `0` ledger observations without promoting them into authority.
+- [x] Define pairwise and triple-overlap witnesses for detection, freeze, evidence, correction, public claims, rollback, restart, re-freeze, closure, and corrective action.
+- [x] Document split-command, freeze-gap, custody-conflict, scope-inflation, consumer-orphan, claim-withdrawal, cache-resurrection, rollback, restart, restoration, deadlock, stale-command, evidence-inflation, and closure obstructions.
+- [ ] Accept D1 and D4 dependencies.
+- [ ] Select a command model, constitutional source, scope, succession, recusal, expiry, and appeal rules.
+- [ ] Assign incident, evidence, freeze, correction, withdrawal, rollback, recovery, verification, security, privacy, legal, accessibility, financial, and communications roles—or explicitly accept vacancies.
+- [ ] Accept incident, freeze, custody, correction, revocation, withdrawal, rollback, restart, witness, closure, and corrective-action contracts.
+- [ ] Verify correction and withdrawal reach every registered consumer, cache, mirror, package index, artifact, registry, and public claim.
+- [ ] Complete security, privacy, legal, license, accessibility, financial, communications, and governance review.
+- [ ] Run false-positive, credential-exposure, contract-drift, public-claim, consumer-orphan, failed-rollback, and compromised-recovery-root tabletop exercises.
 - [ ] Record explicit human approval and independently verified resulting state.
 
 ## P2A — Runtime/Fabric namespace and semantic-role partition
@@ -141,9 +165,9 @@ Completed:
 
 ## P6 — Documentation, evaluation, and publication
 
-- [x] Add Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, currentness, roadmap, contributor paths, lifecycle coherence, and D4 readiness.
+- [x] Add Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, currentness, roadmap, contributor paths, lifecycle coherence, D4 readiness, and D5 readiness.
 - [x] Add strict MkDocs, pinned dependencies, exact-head validation, hostile tests, and retained checksummed artifacts.
-- [ ] Complete focused and resulting D4 exact-head validation.
+- [ ] Complete focused and resulting D5 exact-head validation.
 - [ ] Complete rendered accessibility, independent security/privacy/governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered archives, provenance manifest, registry snapshot, approval record, and SHA-256 manifests.
 - [ ] Verify Pages settings, public/private boundaries, cache invalidation, claim withdrawal, and rollback.
@@ -151,7 +175,7 @@ Completed:
 
 ## FYSA-120 capability map
 
-Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
+Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-022`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
 
 Established and proposed non-authoritative refinements include:
 
@@ -166,18 +190,28 @@ Established and proposed non-authoritative refinements include:
 - `032-J — Pairwise and triple-overlap contract gluing with explicit loss and unsupported-route witnesses`;
 - `040-Q — Restored-state verification and failed-rollback evidence across mixed generations`;
 - `054-L — Machine-enforced separation between recommendation, approval, credential binding, and execution`;
-- `054-M — Independent authority and recovery-root separation`.
+- `054-M — Independent authority and recovery-root separation`;
+- `064-F — Portfolio incident command, freeze-domain coordination, claim withdrawal, and independently witnessed restart`.
 
 Taxonomy selection establishes neither competence, appointment, ownership, permission, acceptance, nor authority.
 
 ## Evidence log
+
+### 2026-07-24 — D5 portfolio incident-command readiness
+
+- Base source: `docs/consolidation-charter-20260720@5ed53166188d0ddddf5ef0d0dd3ba7238da67db3`.
+- Decision result: `PROPOSED`.
+- Documentation result: `D5_INCIDENT_COMMAND_PACKET_DOCUMENTED_COMMAND_UNASSIGNED`.
+- Added: packet, machine-readable profile, three command models, incident classes, freeze domains, required roles and records, current source observations, accessible lifecycle diagram, obstruction register, pairwise and triple-overlap witnesses, reviewer onboarding, tabletop gates, rollback, restart, and `064-F`.
+- Validation: focused and resulting evidence pending for the final synchronized head.
+- Authority effect: `NONE`.
 
 ### 2026-07-24 — D4 independent authority and recovery roots readiness
 
 - Base source: `docs/consolidation-charter-20260720@0a0dd2fd8a75cc40833a60da0bad5d14426ac8ca`.
 - Result: `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`.
 - Added: decision packet, machine-readable profile, three candidate models, Repository `0`/`1` route-conflict analysis, authority and recovery obstruction register, pairwise and triple-overlap witnesses, reviewer onboarding, correction, revocation, rollback, and `054-M`.
-- Validation: focused and resulting evidence pending.
+- Validation: focused and resulting evidence passed at their recorded generations; descendants revalidate.
 - Authority effect: `NONE`.
 
 ### 2026-07-24 — Capability and contributor lifecycle coherence
