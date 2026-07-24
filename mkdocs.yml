@@ -12,6 +12,7 @@ extra:
   runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
   runtime_fabric_lineage_disposition_status: CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED
   kernel_runtime_crosswalk_status: KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED
+  capability_roadmap_status: DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED
   runtime_fabric_marker: runtime/Fabric
 theme:
   name: material
@@ -22,6 +23,9 @@ theme:
 nav:
   - Home: index.md
   - Name and identity: name-and-identity.md
+  - Capability roadmap:
+      - Roadmap guide: capability-roadmap.md
+      - Machine-readable roadmap: capability-roadmap-v1.json
   - Architecture:
       - System composition: architecture.md
       - Orchestration mode: orchestration-mode.md
