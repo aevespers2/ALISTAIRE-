@@ -1,0 +1,191 @@
+{
+  "schema": "alistaire.d5-portfolio-incident-command-decision-packet.v1",
+  "status": "BLOCKED_UPSTREAM_D4_AND_MISSING_INCIDENT_COMMAND_EVIDENCE",
+  "authority_effect": "NONE",
+  "decision": {
+    "id": "D5",
+    "name": "Portfolio incident, freeze, rollback, and claim-withdrawal command",
+    "selected_model": null,
+    "dependencies": ["D1", "D2", "D3", "D4"]
+  },
+  "candidate_models": [
+    {
+      "id": "single-command-independent-deputies",
+      "selected": false,
+      "strength": "clear escalation and accountable coordination",
+      "principal_obstructions": ["capture", "unavailable commander", "over-broad freeze", "evidence and recovery concentration"]
+    },
+    {
+      "id": "federated-repository-incident-council",
+      "selected": false,
+      "strength": "repository-local expertise and distributed review",
+      "principal_obstructions": ["deadlock", "severity divergence", "incomplete propagation", "ambiguous final authority"]
+    },
+    {
+      "id": "tiered-independent-evidence-recovery-publication-cells",
+      "selected": false,
+      "strength": "separation among investigation restoration and public claims",
+      "principal_obstructions": ["interface complexity", "quorum and succession complexity", "cross-cell state disagreement"]
+    }
+  ],
+  "required_roles_or_vacancies": [
+    "incident commander",
+    "deputy commander",
+    "evidence custodian",
+    "security lead",
+    "privacy lead",
+    "recovery owner",
+    "publication owner",
+    "legal reviewer",
+    "accessibility reviewer",
+    "independent closure witness"
+  ],
+  "incident_states": [
+    "OBSERVED",
+    "NON_INCIDENT_PRESERVED",
+    "HELD_PENDING_EVIDENCE",
+    "DECLARED",
+    "PRESERVATION_ORDERED",
+    "PARTIALLY_FROZEN",
+    "FROZEN",
+    "UNDER_ANALYSIS",
+    "REPAIR_PROPOSED",
+    "REPAIR_APPROVED",
+    "REPAIR_EXECUTED",
+    "ROLLBACK_FAILED",
+    "RECOVERY_IN_PROGRESS",
+    "RESULTING_STATE_UNVERIFIED",
+    "CLAIMS_WITHDRAWAL_PENDING",
+    "CLOSURE_REVIEW",
+    "CLOSED_WITH_RESIDUAL_RISK",
+    "CLOSED"
+  ],
+  "required_record_families": [
+    "alert",
+    "intake",
+    "incident declaration",
+    "preservation order",
+    "freeze order",
+    "evidence item",
+    "finding",
+    "correction",
+    "revocation",
+    "rollback",
+    "recovery",
+    "publication notice",
+    "consumer acknowledgment",
+    "closure decision"
+  ],
+  "readiness_gates": [
+    "D1 through D4 accepted at immutable generations",
+    "incident authority independent from suspected component",
+    "roles vacancies and separation of duties accepted",
+    "severity declaration freeze escalation succession dissent and appeal rules accepted",
+    "evidence custody privacy retention legal hold and contested-history procedures reviewed",
+    "cross-repository blast-radius inventories reproducible",
+    "correction and revocation reach all registered consumers or remain explicit obstructions",
+    "public claims can be withdrawn corrected and reinstated only through exact-generation review",
+    "freeze restart rollback failed-rollback recovery and closure exercises succeed",
+    "recovery and closure independently witnessed",
+    "security privacy licensing accessibility legal records and communications review complete",
+    "explicit human approval and verified resulting state exist"
+  ],
+  "observed_sources": [
+    {
+      "repository": "aevespers2/ALISTAIRE-",
+      "surface": "pull_request",
+      "number": 1,
+      "exact_head": "5ed53166188d0ddddf5ef0d0dd3ba7238da67db3",
+      "accepted": false
+    },
+    {
+      "repository": "aevespers2/0",
+      "surface": "default_branch",
+      "exact_head": "350dbd525d9e084a83638cd4ea25db497cbfeafb",
+      "accepted_as_incident_authority": false
+    },
+    {
+      "repository": "aevespers2/1",
+      "surface": "pull_request",
+      "number": 2,
+      "exact_head": "3920328b8d482087f82ac6a10603dd581796a45d",
+      "accepted": false
+    },
+    {
+      "repository": "aevespers2/qso-field.github.io",
+      "surface": "pull_request",
+      "number": 33,
+      "exact_head": "babdde39e77189cf721b0ff14181234be9ac6dc0",
+      "accepted": false
+    },
+    {
+      "repository": "aevespers2/JusticeForMe",
+      "surface": "default_branch",
+      "exact_head": "d3f6a48f092f6523230397c51dc4ad1871fe9591",
+      "accepted_as_incident_authority": false
+    }
+  ],
+  "obstruction_classes": [
+    "authority circularity",
+    "severity divergence",
+    "freeze leakage",
+    "evidence custody collapse",
+    "dependency blind spot",
+    "correction orphan",
+    "claim persistence",
+    "restart ambiguity",
+    "rollback resurrection",
+    "recovery self-attestation",
+    "closure mismatch",
+    "incident-memory loss"
+  ],
+  "pairwise_witnesses": [
+    "alert source to independent incident intake",
+    "incident declaration to scoped preservation and freeze order",
+    "evidence custody to root-cause finding",
+    "approved repair to bounded executor",
+    "executor receipt to independent resulting-state verification",
+    "correction or revocation to every registered consumer",
+    "public-claim withdrawal to publication surface",
+    "restored state to independent closure decision"
+  ],
+  "triple_overlap_witnesses": [
+    "alert to declaration to preservation order",
+    "freeze to dependency inventory to consumer notification",
+    "root-cause finding to approved repair to execution receipt",
+    "correction or revocation to consumer acknowledgment to public-claim withdrawal",
+    "rollback checkpoint to recovery execution to independent restored-state witness",
+    "closure decision to retained incident memory to follow-up governance"
+  ],
+  "controlled_propagation": {
+    "rebind_marker": "D5_REBIND_REQUIRED",
+    "withdrawal_marker": "D5_PACKET_WITHDRAWN",
+    "required_routes": ["README", "Pages home", "D5 packet", "task chain", "release plan", "punch list", "changelog"]
+  },
+  "skills": [
+    "CAT-011",
+    "CAT-012",
+    "CAT-013",
+    "CAT-017",
+    "CAT-018",
+    "CAT-019",
+    "CAT-031",
+    "CAT-032",
+    "CAT-040",
+    "CAT-052",
+    "CAT-054",
+    "CAT-059",
+    "CAT-064",
+    "CAT-070"
+  ],
+  "proposed_skill_subdivision": "064-F Portfolio incident command bounded freeze claim withdrawal and independently witnessed closure",
+  "authority_boundary": [
+    "no constitutional decision",
+    "no incident commander appointment",
+    "no freeze or legal hold",
+    "no capability revocation or credential change",
+    "no repair approval rollback or recovery",
+    "no public notice or claim withdrawal",
+    "no merge release publication deployment payment infrastructure change or destructive history rewrite"
+  ]
+}
