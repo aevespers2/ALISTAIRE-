@@ -6,12 +6,16 @@ Checked items require reviewable evidence tied to immutable commits. Filenames, 
 
 `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
 
+Authority-source reconciliation: `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`
+
 - [x] Synchronize the default-head inventory, semantic and route owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, and governance review index across `taskchain.md`, `punchlist.md`, `release.md`, and `changelog.md`.
 - [x] Preserve `UNSUPPORTED_KERNEL_RUNTIME_ROUTE` as the safe default.
 - [x] Preserve `REJECT_DIRECT_IDENTITY_ALIAS` as the rejected direct-alias option.
 - [x] State that planning-route synchronization has authority effect `NONE`.
 - [x] Obtain focused and resulting-head exact-source validation for the synchronization generation.
-- [ ] Rebind or withdraw this state if any controlled review surface, source generation, disposition, owner vacancy, route, or safety boundary changes.
+- [x] Reconcile all nineteen repository default heads and identified current candidate heads; record conflicts, evidence limitations, dissent, and vacancies without choosing an owner or architecture.
+- [ ] Validate the focused authority-source reconciliation head and resulting integration head with retained artifacts.
+- [ ] Rebind or withdraw either state if any controlled review surface, source generation, disposition, owner vacancy, route, or safety boundary changes.
 
 Validated focused source: `docs/planning-route-sync-20260724@3b507047d2fd9dcf4cad00e0675be9caf127e23a`.
 
@@ -46,7 +50,8 @@ These are immutable historical evidence anchors. Every later descendant must ret
 - [x] Define constitutional hierarchy, decision classes, separation of duties, exact-head evidence, correction, revocation, emergency stop, recovery, rollback, and claim withdrawal.
 - [x] Add the portable device-trust doctrine and Repository `0`/`1` boundary.
 - [x] Add systemic-cycle analysis, D1–D5 minimal decision cut, acceptance DAG, and sequenced integration phases.
-- [ ] Review the hierarchy against every repository-local governance document and record conflicts and dissent.
+- [x] Review the hierarchy against identified repository-local governance candidates and record material conflicts and dissent in the authority-source reconciliation packet.
+- [ ] Revalidate moved or omitted source histories and close all source-currentness limitations.
 - [ ] Approve the immutable governance-charter commit.
 - [ ] Conduct and retain a portfolio freeze, evidence-preservation, bounded-restart, rollback, and claim-withdrawal tabletop exercise.
 
@@ -56,8 +61,11 @@ These are immutable historical evidence anchors. Every later descendant must ret
 - [x] Define independent identities for charter, contract, device, workspace, observation, interpretation, proposal, capability, genome, runtime, experiment, transport, receipt, disposition, review, financial, engineering, correction, revocation, recovery, and publication records.
 - [x] Record pairwise contract edges, triple-overlap witnesses, obstruction classes, and a practical homology-like gluing method without claiming completed formal topology.
 - [x] Bind observed repository heads and candidates into the D2A ownership and consumer graph without selecting authority.
-- [ ] Compare every matrix row and edge against the exact current head of each repository-local documentation candidate.
-- [ ] Resolve conflicting ownership or route claims and record dissent rather than silently choosing one.
+- [x] Compare every matrix row against exact current default heads and identified repository-local candidates in [the authority-source reconciliation](docs/portfolio-authority-source-reconciliation.md).
+- [x] Identify conflicting ownership and route claims and preserve six dissent sets rather than silently choosing one.
+- [x] Record ten explicit ownership vacancies with authority effect `NONE`.
+- [ ] Re-fetch every source tuple, reconcile omitted histories, and classify moved, merged, superseded, withdrawn, or newly opened candidates.
+- [ ] Resolve conflicts through D1–D5 and explicit review while preserving dissent.
 - [ ] Assign a semantic owner, independent reviewer, correction authority, revoker, incident owner, recovery owner, and retirement path for every accepted record family.
 - [ ] Accept the matrix at an immutable charter commit.
 
@@ -155,11 +163,12 @@ Remaining gates:
 
 ## P6 — Documentation, evaluation, and publication evidence
 
-- [x] Add a substantive Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, lineage guidance, crosswalk, and review index.
+- [x] Add a substantive Pages-ready overview, architecture, governance, security, onboarding, diagrams, decision packets, inventories, lineage guidance, crosswalk, review index, and portfolio authority-source reconciliation.
 - [x] Add strict MkDocs and pinned documentation dependencies.
 - [x] Add exact-head read-only validation and retained checksummed artifacts.
 - [x] Align all four controlled planning routes to the current governance-review generation.
 - [x] Validate the focused synchronization head and resulting integration head with strict build, links, terminology, controlled-route consistency, hostile regressions, and retained artifact digests.
+- [ ] Validate the authority-source reconciliation focused and resulting heads.
 - [ ] Revalidate every later descendant and bind its external exact-state evidence without self-reference.
 - [ ] Complete rendered accessibility, independent security/privacy/governance, prohibited-claim, and source-license review.
 - [ ] Generate source/rendered archives, provenance manifest, contract-registry snapshot, approval record, and SHA-256 manifests.
@@ -173,9 +182,19 @@ Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-
 Proposed non-authoritative refinements:
 
 - `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`.
+- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
+- `013-I — Multi-candidate authority-source reconciliation, dissent preservation, and vacancy closure`.
 
 ## Evidence log
+
+### 2026-07-24 — Portfolio authority-source reconciliation
+
+- Repository: `aevespers2/ALISTAIRE-`.
+- Source base: `docs/consolidation-charter-20260720@38213e4e57dd1b03e434cc9cfb0da3c4e0d25477`.
+- Result: nineteen default heads, twenty-one identified candidate tuples, ten conflicts, ten explicit vacancies, and six dissent sets recorded under `PORTFOLIO_AUTHORITY_SOURCES_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
+- Evidence state: focused and resulting-head validation pending.
+- Authority effect: `NONE`.
+- Rollback: close or revert the focused documentation generation, preserve its source profile as historical evidence, invalidate derived currentness claims, and leave every owner, route, release, publication, runtime, credential, payment, and infrastructure authority disabled.
 
 ### 2026-07-24 — Planning-route evidence closure
 
