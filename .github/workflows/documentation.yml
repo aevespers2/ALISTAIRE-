@@ -12,6 +12,7 @@ on:
       - "fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
+      - "scripts/check_portfolio_authority_currentness.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
       - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "scripts/check_constitutional_lifecycle_snapshot_compaction.py"
@@ -25,6 +26,7 @@ on:
       - "punchlist.md"
       - "changelog.md"
       - ".github/workflows/documentation.yml"
+      - ".github/workflows/portfolio-authority-currentness.yml"
   push:
     branches: [main]
     paths:
@@ -37,6 +39,7 @@ on:
       - "fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json"
       - "scripts/validate_documentation.py"
       - "scripts/validate_rendered_site.py"
+      - "scripts/check_portfolio_authority_currentness.py"
       - "scripts/check_constitutional_appointment_lifecycle.py"
       - "scripts/check_constitutional_lifecycle_transaction_journal.py"
       - "scripts/check_constitutional_lifecycle_snapshot_compaction.py"
@@ -50,14 +53,15 @@ on:
       - "punchlist.md"
       - "changelog.md"
       - ".github/workflows/documentation.yml"
+      - ".github/workflows/portfolio-authority-currentness.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: documentation-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: documentation-${{ github.workflow }}-${{ github.event.pull_request.head.sha || github.sha }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -95,7 +99,12 @@ jobs:
           cache-dependency-path: requirements-docs.txt
 
       - name: Validate charter documentation surface
-        run: python scripts/validate_documentation.py
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p reports/documentation
+          python scripts/validate_documentation.py 2>&1 \
+            | tee reports/documentation/documentation-validation.txt
 
       - name: Validate synthetic appointment lifecycle
         shell: bash
@@ -152,7 +161,12 @@ jobs:
             --report reports/documentation/restore-staging-multicopy-validation.json
 
       - name: Run documentation and lifecycle regression tests
-        run: python -m unittest discover -s tests -p "test_*.py" -v
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p reports/documentation
+          python -m unittest discover -s tests -p "test_*.py" -v 2>&1 \
+            | tee reports/documentation/regression-tests.txt
 
       - name: Install pinned documentation dependencies
         run: python -m pip install --requirement requirements-docs.txt
@@ -212,17 +226,21 @@ jobs:
             fixtures/constitutional-lifecycle-restore-staging-multicopy-v1.json \
             scripts/validate_documentation.py \
             scripts/validate_rendered_site.py \
+            scripts/check_portfolio_authority_currentness.py \
             scripts/check_constitutional_appointment_lifecycle.py \
             scripts/check_constitutional_lifecycle_transaction_journal.py \
             scripts/check_constitutional_lifecycle_snapshot_compaction.py \
             scripts/check_constitutional_lifecycle_backup_restore.py \
             scripts/check_constitutional_lifecycle_restore_staging_multicopy.py \
+            tests/test_check_portfolio_authority_currentness.py \
             tests/test_validate_rendered_site.py \
             tests/test_check_constitutional_appointment_lifecycle.py \
             tests/test_check_constitutional_lifecycle_transaction_journal.py \
             tests/test_check_constitutional_lifecycle_snapshot_compaction.py \
             tests/test_check_constitutional_lifecycle_backup_restore.py \
             tests/test_check_constitutional_lifecycle_restore_staging_multicopy.py \
+            .github/workflows/documentation.yml \
+            .github/workflows/portfolio-authority-currentness.yml \
             > reports/documentation/SHA256SUMS
           if [ -f reports/documentation/site.tar.gz ]; then
             sha256sum reports/documentation/site.tar.gz \
