@@ -19,6 +19,14 @@ The immediate work is not runtime implementation. It is acceptance or revision o
 
 These decisions break circular dependencies without activating credentials, online services, enrolled devices, autonomous execution, or deployment.
 
+## Name and capability roadmap
+
+The public-facing acronym expansion candidate is:
+
+> **Adaptive Learning and Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution**
+
+The [name and capability roadmap](name-and-capability-roadmap.md) defines each term's intended meaning and explicit boundary, groups thirty-seven proposed features into six capability families, maps them to candidate repositories and FYSA-120 subdivisions, sequences them through stages R0–R5, and records identity, contract, semantic, ownership, evidence, recovery, and publication obstructions. Its status is `DOCUMENTED_NAME_EXPANSION_AND_CAPABILITY_ROADMAP_UNACCEPTED`; it creates no canonical naming, implementation, ownership, publication, release, or operational authority.
+
 ## D2 neutral stewardship readiness
 
 The D2 decision packet compares three bounded governance models and identifies the fields, evidence, review, correction, withdrawal, continuity, and rollback conditions needed before a neutral contract steward can be selected. The packet remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` and does not select a repository, package, steward, registry, key, or accepted contract generation.
@@ -87,6 +95,8 @@ Consequential authority remains explicitly granted, narrowly scoped, revocable, 
 
 | Guide | Purpose |
 |---|---|
+| [Name and capability roadmap](name-and-capability-roadmap.md) | Public-facing acronym expansion, feature families, repository candidates, staged maturity, obstructions, rollback, and FYSA-120 mapping |
+| [Machine-readable name and capability roadmap](name-and-capability-roadmap-v1.json) | Closed roadmap identity, terms, stages, feature graph, gates, prohibited promotions, skill mapping, and rollback rules |
 | [Architecture](architecture.md) | Portfolio composition, authority order, lifecycles, envelopes, gluing witnesses, freeze, and first simulation |
 | [Portable security foundation](portable-security-foundation.md) | Repository `0`/`1` device-trust mission, adapter boundaries, contracts, fixtures, loss, replacement, and recovery |
 | [Portfolio integration roadmap](portfolio-integration-roadmap.md) | Systemic cycles, D1–D5 decision cut, acceptance DAG, sequenced phases, invalidation, and rollback |
@@ -128,9 +138,11 @@ Repository names, documentation, empty pages, ceremonial titles, successful comm
 
 Repository consolidation applies CAT-011, CAT-012, CAT-013, CAT-017, CAT-018, CAT-019, CAT-031, and CAT-040. D2 decision readiness additionally applies CAT-060 and CAT-070 for trust modeling, least privilege, continuity, authority mapping, procedure engineering, participation, oversight, and repair. D3 adds CAT-032, CAT-052, and CAT-059 for distributed representation, replay and consistency analysis, identity-bound provenance, domain-separated evidence, verification portability, and attestation transport.
 
+The name and capability roadmap additionally applies CAT-030 for cross-disciplinary integration, CAT-033 for privacy governance, CAT-041 for agent architecture and orchestration, and CAT-054 for secure supply-chain boundaries and retained assurance evidence.
+
 The runtime/Fabric partition additionally applies CAT-011-B/E, CAT-012-A/B/D/E, CAT-013-A/C/D/E, CAT-017-C/D/E, CAT-019-B/C/D, CAT-031-A/D/E, CAT-032-A/B/D, CAT-040-B/D/E, CAT-052-A/B/E, and CAT-070-A/B/C/E.
 
-Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, and **`032-F — Semantic-level partition and projection integrity`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
+Proposed subdivisions `040-F`, `040-G`, `013-F`, `013-G`, `031-Q`, `017-F`, **`032-F — Semantic-level partition and projection integrity`**, **`012-Q — Public identity expansion, capability-roadmap architecture, and cross-document naming coherence`**, **`013-L — Evidence-linked feature-to-repository capability and obstruction graphing`**, and **`041-F — Governance-gated capability portfolio decomposition and maturity sequencing`** remain non-authoritative taxonomy gaps rather than competence, appointment, or permission claims.
 
 ## Release posture
 
