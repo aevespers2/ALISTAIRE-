@@ -19,6 +19,22 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - Rejected direct-alias option: `REJECT_DIRECT_IDENTITY_ALIAS`.
 - Authority effect: `NONE`.
 
+### Controlled propagation markers
+
+- D1 source change: `D1_REBIND_REQUIRED`; packet withdrawal: `D1_PACKET_WITHDRAWN`.
+- D2 source or stewardship change: `D2_REBIND_REQUIRED`; packet withdrawal: `D2_PACKET_WITHDRAWN`.
+- D3 profile, fixture, consumer, migration, or rollback change: `D3_REBIND_REQUIRED`; packet withdrawal: `D3_PACKET_WITHDRAWN`.
+- Portfolio currentness change: `PORTFOLIO_CURRENTNESS_REBIND_REQUIRED`; packet withdrawal: `PORTFOLIO_CURRENTNESS_PACKET_WITHDRAWN`.
+
+### Runtime/Fabric controlled dispositions
+
+- Namespace partition: `BLOCKED_ROLE_COLLISION`.
+- Candidate inventory: `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
+- Default-head inventory: `DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`.
+- Candidate-lineage dispositions: `CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED`.
+- Kernel-to-runtime crosswalk options: `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED`.
+- Governance review index: `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED`.
+
 ### Product
 
 - 2026-07-24 — Synchronized capability-roadmap, feature-lineage, and contributor-path state through taskchain, punchlist, release, and changelog under `CAPABILITY_AND_CONTRIBUTOR_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`.
@@ -26,7 +42,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 - 2026-07-24 — Reconciled the validated forty-feature proposal at exact source `6c7595e81914ab680acb25088193d495db9f28f7` into the family-scoped roadmap under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH` without creating a parallel registry.
 - 2026-07-24 — Added Repository Role Classifier, Systemic Obstruction Register, and Portfolio Status Dashboard while retaining `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
 - 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`.
-- 2026-07-24 — Reconciled exact primary documentation or governance sources for all nineteen repositories while preserving active lineages, structural conflicts, dissent boundaries, and V1–V10 vacancies.
+- 2026-07-24 — Reconciled exact primary sources for all nineteen repositories while preserving active lineages, structural conflicts, dissent boundaries, and V1–V10 vacancies.
 - 2026-07-24 — Bound historical planning-route focused source `3b507047d2fd9dcf4cad00e0675be9caf127e23a` and resulting integration `87e9beb8586fe37a48bca738fd3f78425f9d4b04` as generation-specific evidence.
 - 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime crosswalk options, governance review index, safe unsupported route, and rejected direct alias across the four planning routes.
 - 2026-07-23 — Added runtime/Fabric governance, inventories, lineage, crosswalk, source rebind, and D1–D3 readiness surfaces without accepting authority.
