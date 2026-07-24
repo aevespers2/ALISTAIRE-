@@ -41,6 +41,7 @@ Authoritative review: [portfolio authority currentness review](docs/portfolio-au
 
 ### Product
 
+- 2026-07-24 — Preserved validated feature-source head `6c7595e81914ab680acb25088193d495db9f28f7` under `RECONCILED_INTO_EXISTING_ROADMAP_PRESERVE_SOURCE_BRANCH`; the source remains historical evidence rather than a parallel authority registry.
 - 2026-07-24 — Added D5 portfolio incident-command readiness under `BLOCKED_UPSTREAM_D4_AND_MISSING_INCIDENT_COMMAND_EVIDENCE`; no incident commander, freeze, legal hold, rollback, recovery, publication notice, claim withdrawal, or closure authority was activated.
 - 2026-07-24 — Added D4 independent-authority and recovery-root readiness under `BLOCKED_UPSTREAM_D3_AND_MISSING_INDEPENDENT_AUTHORITY_EVIDENCE`; no authority, capability, credential, checkpoint, or recovery operation was activated.
 - 2026-07-24 — Synchronized capability-roadmap, feature-lineage, contributor-path, D4, and D5 state through README, Pages, task chain, punch list, release plan, changelog, and MkDocs navigation.
