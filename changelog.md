@@ -6,6 +6,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Product
 
+- 2026-07-24 — Added documentation-first contributor paths for all nineteen repositories under `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; the paths provide bounded entry tasks and stop conditions without appointing maintainers or authorizing implementation.
 - 2026-07-24 — Added a staged portfolio of thirty-seven proposed capabilities across evidence, integration, governance, documentation, security, and bounded-planning families under `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`.
 - 2026-07-24 — Defined A.L.I.S.T.A.I.R.E. as **Adaptive Learning & Intelligence System for Trustworthy Autonomous Inference, Reasoning, and Evolution** under `NAME_EXPANSION_DOCUMENTED_CANONICAL_REPOSITORY_UNSELECTED`; the expansion is descriptive and does not select a repository, package, contract, runtime, or authority.
 - 2026-07-24 — Added the [portfolio authority currentness review](docs/portfolio-authority-currentness-review.md) under `PORTFOLIO_AUTHORITY_CURRENTNESS_RECONCILED_CONFLICTS_DISSENT_AND_VACANCIES_RECORDED_BINDINGS_UNACCEPTED`, covering one exact primary source for every owned repository without accepting any binding.
@@ -26,6 +27,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Architecture
 
+- 2026-07-24 — Added a repository-by-repository contributor corridor covering documentation role, bounded first task, FYSA-120 skills, stop condition, exact-source precedence, and cross-repository gluing checks.
 - 2026-07-24 — Grouped the capability roadmap into six families and stages R0–R5, with every feature tied to candidate repository homes and unresolved gates rather than implied ownership.
 - 2026-07-24 — Recorded seven roadmap-level gluing obstructions covering identity, contracts, semantics, ownership, evidence, recovery, and publication.
 - 2026-07-24 — Reconciled the portfolio authority matrix against exact primary documentation or governance sources for all nineteen repositories and separated current candidates, multiple active lineages, base conflicts, unvalidated stacks, default documentation, and stale declared-head metadata.
@@ -45,6 +47,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Security and governance
 
+- 2026-07-24 — Required contributors to stop when work would appoint owners, select architecture, activate policy, expand collection, handle credentials, approve releases, publish, deploy, execute payments, or mutate devices.
 - 2026-07-24 — Bound each roadmap feature to gates, prohibited promotions, correction, and rollback while preserving authority effect `NONE`.
 - 2026-07-24 — Defined “autonomous” in the public name as bounded internal inference under accepted policy and review, never as standing credential, tool, network, device, payment, publication, release, deployment, or self-modification authority.
 - 2026-07-24 — Distinguished structural conflict from verified human dissent; no attributable human dissent record was located in the reviewed currentness snapshot, and absence of recorded dissent is not approval or consensus.
@@ -68,6 +71,8 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Added Pages-ready [portfolio contributor paths](docs/portfolio-contributor-paths.md), an accessible flow diagram with prose equivalent, capability routes, nineteen repository entry paths, onboarding and gluing checklists, change control, and a machine-readable profile.
+- 2026-07-24 — Proposed non-authoritative FYSA-120 subdivisions `012-S`, `018-G`, and `011-G` for contributor routing, maintainer-vacancy-aware handoff, and accessible portfolio corridor diagrams.
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
 - 2026-07-24 — Added a strict capability-roadmap validator, hostile regressions, SHA-pinned read-only exact-head workflow, deterministic evidence, and final fail-closed gating.
 - 2026-07-24 — Added the Pages-ready [name and identity guide](docs/name-and-identity.md) with the full acronym, bounded term meanings, repository/package/display-name separation, an accessible Mermaid diagram and prose equivalent, public style rules, onboarding checkpoints, rename change control, and FYSA-120 mapping.
@@ -78,64 +83,3 @@ All notable product, architecture, documentation, governance, release, and deplo
 - 2026-07-24 — Reworked `punchlist.md` to distinguish completed documentation/governance milestones from unresolved constitutional, ownership, registration, security, migration, rollback, approval, and resulting-state gates.
 - 2026-07-24 — Reworked `release.md` so current candidate contents, review dispositions, acceptance gates, controlled propagation, artifact requirements, validation targets, rollback criteria, and blockers agree with PRs #11–#14 and the new portfolio-currentness packet.
 - 2026-07-24 — Updated the runtime/Fabric governance review validator and hostile regressions to fail closed when any controlled planning route loses required dispositions, safety defaults, authority boundaries, or synchronization state.
-- 2026-07-23 — Added accessible Mermaid diagrams with prose equivalents for partitioning, inventories, lineage, crosswalk, and governance review.
-- 2026-07-23 — Added exact-head read-only workflows, strict MkDocs construction, local-link and terminology validation, deterministic hashing, hostile regressions, and retained evidence.
-- 2026-07-23 — Added Pages guides and machine-readable profiles for D1, D2, D2A, D3, source-generation rebind, namespace partition, candidate inventory, default-head inventory, lineage disposition, kernel/runtime crosswalk, and governance review index.
-- 2026-07-23 — Proposed non-authoritative subdivisions `013-H`, `040-M`, `040-N`, and `012-P` for owner-vacancy graphs, lineage disposition, semantic crosswalks, and controlled-route coherence.
-- 2026-07-21 — Added the portfolio matrix, portable-security foundation, integration roadmap, rendered-site checks, reproducible archives, Pages overview, and cross-document authority boundaries.
-- 2026-07-20 — Added the polished root README, project overview, architecture, security/governance, onboarding, diagrams, pinned toolchain, and initial exact-head validation workflow.
-
-### Release
-
-- 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
-- 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
-- 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
-- 2026-07-24 — Changed planning-route documentation validation from `PENDING` to `PASS / REVALIDATE ON CHANGE` for the exact focused and resulting integration generations only; no release gate was promoted.
-- 2026-07-24 — Added `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED` as a documentation-currentness state, not a release or acceptance state.
-- 2026-07-24 — Updated release gates to include current default-head owner vacancies, candidate-lineage disposition, kernel/runtime unsupported-route preservation, live producer/consumer registration, projection receipts, correction/revocation propagation, mixed-generation rollback, and restored-state verification.
-- 2026-07-23 — Added runtime/Fabric review surfaces as `REVIEW / BLOCKED` release gates while preserving D1–D5 and all independent review requirements.
-- 2026-07-23 — Added the D1–D3 readiness packets and source-generation rebind as review evidence only.
-- 2026-07-21 — Required D1–D5, neutral contracts, canonical-byte fixtures, Repository `1` authority, portable trust, pairwise/triple-overlap evidence, incident command, privacy, provenance, accessibility, approval, and publication rollback before `0.0.1-charter`.
-- 2026-07-20 — No canonical identity, package, Pages publication, runtime, or release was approved.
-
-### Deployment
-
-- No Pages publication, active governance appointment, package deployment, device agent, host monitor, remediation service, external adapter, payment service, persistent runtime, credential change, infrastructure apply, or production deployment is authorized by this documentation candidate.
-
-## FYSA-120 mapping
-
-This documentation generation applies `CAT-007`, `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-030`, `CAT-031`, `CAT-032`, `CAT-033`, `CAT-040`, `CAT-041`, `CAT-052`, `CAT-054`, `CAT-059`, `CAT-064`, and `CAT-070`.
-
-Proposed non-authoritative subdivisions:
-
-- `012-P — Cross-document governance status indexing and controlled-route coherence`;
-- `012-Q — Public technical naming, acronym semantics, and non-authorizing identity guidance`;
-- `012-R — Capability-roadmap information architecture and cross-document feature-status coherence`;
-- `013-L — Evidence-linked feature-to-repository capability and obstruction graphing`;
-- `041-F — Governance-gated capability portfolio decomposition and maturity sequencing`;
-- `017-G — Non-self-referential planning-route evidence closure and descendant currentness`;
-- `013-I — Cross-repository authority-currentness, conflict, dissent, and vacancy reconciliation`.
-
-## 2026-07-16
-
-### Product decision
-
-- Established the repository's first product-level directive: define Alistaire as a female-presenting, QSO-composed agent architecture with explicit evidence, safety, lifecycle, evaluation, and inter-repository contract boundaries.
-- Classified the first candidate as documentation-only. No executable AGI, consciousness, sentience, autonomy, device security, or production-readiness claim is supported.
-- Preserved QSO-GENOMES contract completion and the QuantumStateObjects runnable baseline as upstream research priorities.
-
-### Scope conflict
-
-- A second overlapping repository, `aevespers2/Alistaire-agi`, was created with the same product identity and a broad documentation tree.
-- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
-- Required approval of canonical repository, package/display name, migration, compatibility, redirect/archive, preserved history, and rollback before substantive runtime decomposition.
-
-### Evidence state
-
-- `ALISTAIRE-` contains the established product directive and sequencing documentation.
-- `Alistaire-agi` contains package-name, compatibility, migration, and historical taxonomy candidates; these do not establish canonical authority.
-- Runtime, device control, deployment, release evidence, AGI capability, autonomous learning, and operational readiness remain `UNKNOWN` or not implemented.
-
-### Release
-
-- No release was promoted. The only eligible near-term candidate remains a documentation-only repository-consolidation, governance, and product-charter decision.
