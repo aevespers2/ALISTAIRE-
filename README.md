@@ -12,6 +12,8 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 - [Name and identity](docs/name-and-identity.md)
 - [Capability roadmap](docs/capability-roadmap.md)
 - [Machine-readable capability roadmap](docs/capability-roadmap-v1.json)
+- [Portfolio contributor paths](docs/portfolio-contributor-paths.md)
+- [Machine-readable contributor path profile](docs/portfolio-contributor-paths-v1.json)
 - [Architecture and QSO composition](docs/architecture.md)
 - [Portable security foundation](docs/portable-security-foundation.md)
 - [Portfolio integration and contract acceptance roadmap](docs/portfolio-integration-roadmap.md)
@@ -43,9 +45,13 @@ Alistaire is a **documentation-first research architecture** for composing a bou
 
 ## Capability roadmap
 
-The [capability roadmap](docs/capability-roadmap.md) organizes thirty-seven proposed features into six families covering evidence, integration, governance, documentation, security, and bounded planning. It maps each feature to candidate repository homes, unresolved gates, stages R0–R5, material composition obstructions, rollback obligations, and FYSA-120 skills.
+The [capability roadmap](docs/capability-roadmap.md) organizes forty proposed features into six families covering evidence, integration, governance, documentation, security, and bounded planning. It maps each feature to candidate repository homes, unresolved gates, stages R0–R5, material composition obstructions, rollback obligations, and FYSA-120 skills.
 
 Its controlled status is `DOCUMENTED_CAPABILITY_ROADMAP_UNACCEPTED`. A feature list, candidate repository assignment, interface, fixture, branch, workflow, or passing test is not implementation, ownership, compatibility, trust, acceptance, release, publication, deployment, or operational authority.
+
+## Contributor paths
+
+The [portfolio contributor paths](docs/portfolio-contributor-paths.md) provide documentation-first entry routes for all nineteen repositories, including bounded first tasks, FYSA-120 capability selections, explicit owner vacancies, stop conditions, cross-repository gluing checks, and correction and rollback rules. Their controlled status is `PORTFOLIO_CONTRIBUTOR_PATHS_DOCUMENTED_OWNERSHIP_UNASSIGNED`; routing work does not appoint maintainers or authorize implementation.
 
 ## D1 decision readiness
 
