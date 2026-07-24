@@ -4,168 +4,121 @@
 
 Resolve the constitutional identity conflict between `aevespers2/ALISTAIRE-` and `aevespers2/Alistaire-agi`, then accept or revise the minimum governance and contract decisions required to compose the A.L.I.S.T.A.I.R.E. portfolio without circular authority.
 
-The charter must define product scope, portable device trust, repository responsibilities, neutral contract ownership, canonical bytes and identities, independent authority and recovery roots, incident command, evaluation criteria, security boundaries, and evidence rules without claiming that AGI, consciousness, production autonomy, device security, financial authority, or deployment readiness already exists.
+The charter must define product scope, repository responsibilities, neutral contract ownership, canonical bytes and identities, independent authority and recovery roots, incident command, evaluation criteria, security boundaries, and evidence rules. It must not claim that AGI, consciousness, production autonomy, device security, financial authority, deployment readiness, or interface compatibility already exists.
 
 ## Intended user outcome
 
-A researcher or Architect can identify one constitutional source and understand:
+A researcher or Architect can identify one constitutional source and determine:
 
 - what A.L.I.S.T.A.I.R.E. is intended to do and what remains prohibited;
-- how Repositories `0` and `1` establish portable device trust and recovery;
-- which repository owns each declarative, runtime, evidence, transport, review, payment, engineering, conformance, and publication surface;
-- which record families remain independently identified;
-- which neutral contracts precede operational authority;
-- how proposals, capabilities, execution, receipts, reconciliation, correction, revocation, incident response, and rollback remain distinct;
-- what pairwise and triple-overlap evidence is required before components glue together.
+- which repository owns or explicitly does not own each record family and route;
+- which decisions and exact-head evidence remain current, historical, superseded, withdrawn, blocked, or unsupported;
+- why local validation, fixture agreement, documentation, transport, projection, aggregation, or signing cannot create operational authority;
+- which pairwise and triple-overlap witnesses are required before components compose.
+
+## Current controlled planning-route state
+
+Status: `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`
+
+This task chain, `punchlist.md`, `release.md`, and `changelog.md` now carry the same governance state for the default-head inventory, candidate-lineage disposition, kernel-to-runtime crosswalk, and runtime/Fabric governance review index. Synchronization records documentation currentness only. It does not accept a repository identity, contract, semantic owner, namespace, producer, consumer, adapter, runtime, release, publication, deployment, credential, or infrastructure authority.
+
+Current charter-candidate generation: `7c7fb139e522cafaaca8bef75855d59b285672ea` on `docs/consolidation-charter-20260720`.
 
 ## Constitutional decision set
 
 | Decision | Status | Acceptance requirement |
 |---|---|---|
-| D1 — Canonical charter and repository identity | BLOCKED / REVIEW READY | Complete and approve the [D1 decision packet](docs/d1-canonical-identity-decision-packet.md) at an immutable head: canonical source, display/package direction, migration, provenance, license, compatibility, non-canonical disposition, owners, monitoring, and rollback |
-| D2 — Neutral contract steward | BLOCKED / REVIEW READY | Complete and approve the [D2 decision packet](docs/d2-neutral-contract-steward-decision-packet.md): non-operational steward model, location, scope, precedence, identifiers, schemas, reason codes, fixtures, review/release separation, compatibility, migration, correction, continuity, and rollback |
-| D3 — Canonical bytes and identity primitives | BLOCKED / REVIEW READY | Complete and approve the [D3 decision packet](docs/d3-canonical-bytes-identity-decision-packet.md): serialization profile, Unicode, numbers, ordering, time, digests, namespaces, record identity, extensions, replay domains, independent language witnesses, migration, correction, and rollback |
-| D4 — Independent authority and recovery roots | PROPOSED | Charter Repository `1` or successor; assign issuers, revokers, approval sources, key custody, emergency stop, recovery quorum, and evidence preservation |
-| D5 — Portfolio incident command | PROPOSED | Name incident, freeze, bounded-restart, rollback, cache invalidation, correction propagation, and claim-withdrawal owners |
+| D1 — Canonical charter and repository identity | `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL` | Approve one canonical source, display/package direction, migration, provenance, license, compatibility, non-canonical disposition, monitoring, and rollback through the [D1 packet](docs/d1-canonical-identity-decision-packet.md) |
+| D2 — Neutral contract steward | `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE` | Approve a non-operational steward, source precedence, identifiers, schemas, fixtures, compatibility, correction, continuity, and rollback through the [D2 packet](docs/d2-neutral-contract-steward-decision-packet.md) |
+| D2A — Common-contract graph | `REVIEW_OBSERVED_HEADS_UNRESOLVED_OWNERSHIP` | Reconcile observed owners, consumers, conflicts, and required overlap witnesses in the [D2A graph](docs/d2a-common-contract-ownership-graph.md) |
+| D3 — Canonical bytes and identity primitives | `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE` | Select and independently reproduce one canonicalization profile, primitive set, fixture corpus, migration, and rollback through the [D3 packet](docs/d3-canonical-bytes-identity-decision-packet.md) |
+| D4 — Independent authority and recovery roots | `PROPOSED` | Charter Repository `1` or successor; assign issuers, approvers, revokers, key custody, emergency stop, recovery quorum, and evidence preservation |
+| D5 — Portfolio incident command | `PROPOSED` | Name freeze, evidence, bounded restart, rollback, invalidation, claim-withdrawal, and recovery owners |
 
-No downstream implementation can mark these decisions accepted retroactively.
+No downstream implementation or successful workflow can mark these decisions accepted retroactively.
 
-## D1 review state
+## Runtime/Fabric controlled route
 
-The D1 packet closes the source observations, options, required decision fields, readiness gates, prohibited promotions, controlled routes, and rollback conditions. Its current disposition remains `BLOCKED_MISSING_DECISION_EVIDENCE_AND_APPROVAL`.
+The governed route is:
 
-- `D1_REBIND_REQUIRED` — an observed source, candidate, provenance input, migration input, recommendation, or readiness gate moved.
-- `D1_PACKET_WITHDRAWN` — the packet generation was replaced or withdrawn.
+`qsio-kernel internal QSIO ledger → QuantumStateObjects runtime records → QSO-FABRIC projection/collaboration/aggregate records → Repository 1 disposition`
 
-Neither state is complete until every controlled route is reconciled.
+The linked review surfaces remain independently identified:
 
-## D2 review state
+| Review surface | Controlled disposition |
+|---|---|
+| [Namespace and semantic-role partition](docs/runtime-fabric-namespace-partition.md) | `BLOCKED_ROLE_COLLISION` |
+| [Candidate producer-consumer inventory](docs/runtime-fabric-producer-consumer-inventory.md) | `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS` |
+| [Current default-head and owner-vacancy inventory](docs/runtime-fabric-default-head-owner-inventory.md) | `DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED` |
+| [Candidate-lineage disposition](docs/runtime-fabric-lineage-disposition.md) | `CANDIDATE_LINEAGES_CLASSIFIED_REBIND_WITHDRAW_OR_ACCEPT_REQUIRED` |
+| [Kernel-to-runtime crosswalk options](docs/kernel-runtime-crosswalk-options.md) | `KERNEL_RUNTIME_CROSSWALK_OPTIONS_DOCUMENTED_UNSELECTED` |
+| [Governance review index](docs/runtime-fabric-governance-review-index.md) | `REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED` |
 
-The D2 packet closes three neutral stewardship models, twenty required immutable fields, ten readiness gates, non-operational authority boundaries, contract-graph obstructions, controlled routes, and rollback conditions without selecting a steward. Its current disposition remains `BLOCKED_UPSTREAM_D1_AND_MISSING_STEWARD_EVIDENCE`.
+The safe default remains `UNSUPPORTED_KERNEL_RUNTIME_ROUTE`. Direct record-identity aliasing remains rejected as `REJECT_DIRECT_IDENTITY_ALIAS`.
 
-- `D2_REBIND_REQUIRED` — D1, the contract-family inventory, candidate model, ownership graph, readiness evidence, or recommendation moved.
-- `D2_PACKET_WITHDRAWN` — the packet generation was replaced or withdrawn.
+## Material composition obstructions
 
-Neither state is complete until README, Pages, task chain, release plan, punch list, and changelog agree.
-
-## D3 review state
-
-The D3 packet closes three candidate canonicalization profiles, sixteen primitive classes, twenty decision fields, twelve readiness gates, nineteen hostile fixture classes, independent cross-language witness requirements, controlled routes, migration, correction, withdrawal, and rollback without selecting a profile or claiming conformance. Its current disposition remains `BLOCKED_UPSTREAM_D2_AND_MISSING_CROSS_LANGUAGE_EVIDENCE`.
-
-- `D3_REBIND_REQUIRED` — D1/D2, the profile set, primitive inventory, contract-family mapping, fixture corpus, expected results, consumers, migration rules, or readiness evidence moved.
-- `D3_PACKET_WITHDRAWN` — the packet generation was replaced or withdrawn.
-
-Neither state is complete until every controlled route agrees. Canonical bytes and digests do not establish truth, compatibility, currentness, authorization, consumer admission, or operational authority.
-
-## Decision source-generation rebind state
-
-The D2A and D3 embedded source tuples remain immutable historical evidence. The [source-generation rebind](docs/decision-source-generation-rebind.md) records their integration into exact charter-candidate parent `b12d1c0b02b8b9fffd639ad996c8e5008debfba1` and requires every focused or resulting validation head to prove that this anchor remains on its first-parent ancestry.
-
-The rebind remains `REBOUND_TO_PARENT_NON_AUTHORIZING`. It must be replaced whenever the integration parent, embedded packet sources, D2A ALISTAIRE candidate observation, packet scope, ancestry rule, correction route, withdrawal route, or rollback rule changes. Passing validation does not accept D1–D3, update the portfolio observation date, resolve ownership, select canonical bytes, or authorize merge to `main`, release, publication, deployment, credentials, or runtime authority.
-
-## Runtime/Fabric namespace-partition state
-
-The [runtime/Fabric namespace-partition packet](docs/runtime-fabric-namespace-partition.md) narrows `BLOCKED_ROLE_COLLISION` between runtime-local event and execution records in `QuantumStateObjects` and projection, collaboration, and aggregate records in `QSO-FABRIC`.
-
-The packet defines six independent semantic classes, three unselected partition profiles, mandatory envelope fields, pairwise and triple-overlap witnesses, mixed-generation migration, correction/revocation propagation, rollback, failed-rollback handling, and review gates. It remains a non-authorizing proposal. No namespace, schema, owner, producer, consumer, runtime admission, Fabric activation, Repository `1` authority, release, publication, or deployment is selected.
-
-## Runtime/Fabric producer-consumer inventory state
-
-The [runtime/Fabric producer-consumer inventory](docs/runtime-fabric-producer-consumer-inventory.md) records six exact candidate generations spanning `ALISTAIRE-`, `QSO-FABRIC`, `QuantumStateObjects`, Repository `1`, `qsio-kernel`, and `qso-field.github.io`. Its controlled disposition is `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`.
-
-The inventory distinguishes declaration producers, runtime documentation, synthetic consumers, portfolio registry references, and unmapped internal QSIO ledger records. It confirms two independent synthetic consumers of the reviewed Fabric fixture while explicitly withholding live compatibility, namespace ownership, semantic ownership, producer or consumer admission, portfolio disposition authority, and operational activation. The route remains discontinuous at kernel→runtime mapping, runtime→Fabric projection receipts, Fabric→Repository `1` source-set and authority contracts, correction/revocation propagation, mixed-generation migration, and restored-state rollback.
-
-The inventory generation must be replaced or rebound when any observed exact head, path, candidate role, legacy-label use, semantic classification, graph edge, consumer set, review gate, controlled route, or disposition changes. Passing validation does not accept any binding or authorize implementation.
-
-## MVP scope
-
-The first candidate is documentation-only and must define:
-
-- canonical repository, display/package identity, compatibility period, migration, redirect/archive, provenance, license, and rollback;
-- product purpose, users, use cases, product modes, non-goals, and prohibited claims;
-- constitutional hierarchy, governance classes, authority assignments, human approvals, and Cali Sanders Parker stewardship boundaries;
-- one portfolio contract and authority matrix identifying repository responsibilities, record families, pairwise edges, triple overlaps, obstruction classes, and non-authority boundaries;
-- Repository `0` as candidate portable bootstrap/maintenance and proposal plane;
-- Repository `1` or successor as candidate independent quarantine, capability, canonical-state, revocation, checkpoint, and recovery authority;
-- approved QSO, source/evidence, transport, review, payment, engineering, conformance, and publication boundaries;
-- lifecycle, privacy, consent, freeze, shutdown, correction, revocation, recovery, and rollback;
-- deterministic pairwise and triple-overlap compatibility witnesses;
-- one consolidated documentation and onboarding route.
-
-## Priority
-
-**P0 — BLOCKED on D1 and governance adoption.**
-
-The candidate supplies consolidation evidence, D1, D2, and D3 review packets, governance doctrine, portable security foundation, portfolio authority map, contract matrix, systemic-cycle analysis, decision cut, acceptance DAG, integration phases, security boundaries, onboarding, diagrams, an exact-parent source-generation rebind, a runtime/Fabric semantic-partition packet, and an exact-head producer-consumer inventory. It does not approve D1–D5, activate Repository `1`, establish a live registry, issue credentials, inspect a device, enable remediation, approve payment, merge into `main`, release, publish, or deploy.
-
-## Success criteria
-
-- One canonical charter repository and package/display direction are approved.
-- Useful history from both repositories is preserved with attribution and rollback.
-- The D1 packet is complete, validated, explicitly approved, and resulting repository settings are independently verified.
-- The portfolio contract and authority matrix is reconciled against every repository-local charter.
-- A neutral non-operational contract steward is assigned through an immutable D2 decision.
-- Canonical bytes, identities, digests, clocks, replay domains, reason codes, and extension rules pass cross-language fixtures.
-- Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition records have independently accepted semantic classes and identities.
-- Repository `1` or successor is independently chartered.
-- Incident, freeze, correction, invalidation, claim withdrawal, and rollback command are assigned.
-- Every repository and record family has a narrow responsibility, semantic owner, correction/revocation rules, unsupported-state behavior, and rollback obligation.
-- Pairwise and triple-overlap witnesses pass at immutable heads.
-
-## Non-goals
-
-- Implementing or deploying an unrestricted autonomous agent.
-- Claiming consciousness, sentience, AGI, human-equivalent cognition, universal compromise detection, or guaranteed device security.
-- Inspecting or controlling devices without ownership or explicit permission.
-- Traffic interception, exploitation, retaliation, counter-intrusion, or surveillance.
-- Silent self-modification, credential discovery, remote writes, remediation, deployment, publication, or payments.
-- Allowing prompts, ceremony, roleplay, relationships, signatures, interfaces, successful commands, dependencies, recommendations, canonical bytes, digests, source-generation rebinds, namespace labels, projection receipts, aggregates, or passing CI to grant authority.
-- Reimplementing subsystem responsibilities inside the charter repository.
-- Shipping production before contracts, fixtures, security review, incident command, and rollback evidence exist.
+1. Kernel interaction records combine requests, state hashes, transitions, witnesses, outcomes, ancestry, time, and content hashes and are not identical to runtime events or execution reports.
+2. Legacy `qso-event-ledger` and `qso-runtime-report` labels do not identify one accepted semantic class or namespace.
+3. No accepted projection receipt binds source identities, transformations, losses, privacy effects, duplicates, corrections, revocations, and consumer reachability.
+4. Source-set, ordering, replay, idempotency, conflict, and partial-state rules remain unaccepted.
+5. Semantic owners and route owners remain vacant or unapproved.
+6. Candidate, fixture, registry-reference, and default-head evidence cannot substitute for live producer or consumer registration.
+7. Mixed-generation migration, rollback, failed rollback, and independently verified restored-state witnesses remain incomplete.
+8. Projection or aggregation may not inflate evidence or authority.
+9. Local runtime success is not Fabric success, and Fabric success is not a Repository `1` disposition.
 
 ## Active chain
 
 | Priority | Task | Depends on | Status | Acceptance criteria |
 |---|---|---|---|---|
-| P0A | Complete repository identity and migration evidence | — | REVIEW | Exact source histories, provenance, classification, license state, path migration, attribution, compatibility, owner vacancies, security review, and rollback are recorded |
-| P0-D1R | Validate D1 decision readiness | P0A | REVIEW | Packet schema, exact source tuples, options, required fields, readiness gates, controlled routes, hostile regressions, exact-head workflow, and retained artifact pass without selecting authority |
-| P0G | Review and adopt governance and security charter | P0A | REVIEW | Hierarchy, Cali boundaries, authority map, portable trust, decision classes, security invariants, emergency governance, and recovery are accepted |
-| P0M | Reconcile and accept portfolio contract and authority matrix | P0G | REVIEW | Every repository and record family has one accepted role, non-role, owner, edge contract, correction/revocation rule, rollback obligation, and witness |
-| P0-D1 | Select canonical charter and repository identity | P0-D1R, P0G, P0M, human approval | BLOCKED | Immutable D1 decision, package/display direction, migration/provenance, license, non-canonical disposition, compatibility, monitoring, and rollback |
-| P0-D2R | Validate D2 neutral stewardship readiness | P0M | REVIEW | Closed candidate models, fields, readiness gates, non-authority rules, controlled routes, obstruction analysis, hostile regressions, exact-head workflow, and retained artifact pass without selecting a steward |
-| P0-D2 | Assign neutral contract steward | P0-D1, P0-D2R | BLOCKED | Non-operational owner, namespace, package/repository location, compatibility, migration, deprecation, fixtures, correction, continuity, and rollback |
-| P0-D3R | Validate D3 canonical-byte decision readiness | P0-D2R, D2A graph | REVIEW | Closed candidate profiles, primitives, fields, gates, hostile fixtures, cross-language witness requirements, controlled routes, exact-head workflow, and retained artifact pass without selecting a profile |
-| P0-D3B | Validate decision source-generation rebind | D2A and D3 integration parent | REVIEW | Historical packet sources match, ALISTAIRE candidate observation matches, exact first-parent ancestry passes, hostile regressions and strict documentation validation pass, retained artifact exists, and no authority is promoted |
-| P0-D3 | Accept canonical bytes and identity primitives | P0-D2, P0-D3R | BLOCKED | Two independent implementations agree on accepted/rejected disposition, normalized model, bytes, digest, identity, and reason code; migrations and rollback are verified |
-| P0-D4 | Charter independent authority and recovery roots | P0-D3 | PROPOSED | Repository `1` or successor, issuer/revoker, approvals, key custody, quarantine, correction, checkpoint, and recovery tests |
-| P0-D5 | Establish portfolio incident command | P0-D1, P0-D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery owners with tabletop evidence |
-| P1 | Approve portable device trust contracts | P0-D3, P0-D4, P0-D5 | PROPOSED | Shared device-to-recovery fixtures pass |
-| P2A | Resolve runtime/Fabric namespace and semantic-role collision | P0-D2, P0-D3, P0-D4 | REVIEW / BLOCKED | Preserve the exact-head inventory; select independent semantic classes and namespaces; bind producers, source sets, projection and aggregation receipts, ordering, replay, correction, revocation, migration, rollback, and Repository `1` disposition witnesses |
-| P2 | Approve declarative and runtime contracts | P0-D3, P0-D4, P2A | PROPOSED | Genome/runtime/Fabric/kernel mappings and triple-overlap fixtures pass |
-| P3 | Approve source evidence and transport contracts | P0-D3, P0-D4 | PROPOSED | Source/temporal/interpretation/transport/disposition/correction fixtures pass |
-| P4 | Approve review and independent approval contracts | P1–P3, P0-D4 | PROPOSED | UI interactions cannot create approval and lifecycle states render consistently |
-| P5 | Review optional high-consequence adapters | P4, P0-D5 | PROPOSED | Financial and engineering authority remain separate, disabled, revocable, and evidence-bound |
-| P6 | Produce evidence-aligned publication candidate | P1–P5 | PROPOSED | Accepted versions, public/private review, licenses, accessibility, checksums, rollback, and explicit approval |
+| P0A | Complete repository identity and migration evidence | — | REVIEW | Complete histories, provenance, licenses, sensitive-data review, destination classification, compatibility, and rollback |
+| P0-D1 | Select canonical charter identity | P0A, governance, matrix, human approval | BLOCKED | Immutable D1 record and verified resulting repository state |
+| P0-D2 | Assign neutral contract steward | D1, D2 readiness | BLOCKED | Accepted non-operational owner, location, precedence, fixtures, compatibility, correction, continuity, and rollback |
+| P0-D3 | Accept canonical bytes and identities | D2, D3 readiness | BLOCKED | Two independent implementations agree on disposition, model, bytes, digest, identity, reason code, migration, and rollback |
+| P0-D4 | Charter independent authority and recovery roots | D3 | PROPOSED | Independent issuer, approver, revoker, key custody, quarantine, checkpoint, correction, and recovery |
+| P0-D5 | Establish portfolio incident command | D1, D4 | PROPOSED | Named freeze, evidence, restart, rollback, invalidation, claim-withdrawal, and recovery roles |
+| P1 | Approve portable device-trust contracts | D3–D5 | PROPOSED | Shared device-to-recovery fixtures and independent rollback evidence |
+| P2A | Resolve runtime/Fabric role collision | D2–D4 | REVIEW / BLOCKED | Preserve exact inventories; accept independent semantic classes, owners, namespaces, receipts, replay, correction, revocation, migration, rollback, and consumer registrations |
+| P2 | Approve declarative/runtime/Fabric/kernel contracts | D3, D4, P2A | PROPOSED | Genome→runtime→Fabric and runtime→Fabric→Repository `1` witnesses pass |
+| P3 | Approve source-evidence and transport contracts | D3, D4 | PROPOSED | Source→temporal→interpretation→transport→disposition fixtures pass |
+| P4 | Approve review and independent approval contracts | P1–P3, D4 | PROPOSED | Rendering, interaction, annotation, or session state cannot create approval |
+| P5 | Review optional engineering and financial adapters | P4, D5 | PROPOSED | Independent authority, disabled-by-default activation, revocation, evidence, privacy, incident, and rollback |
+| P6 | Produce evidence-aligned publication candidate | P1–P5 | PROPOSED | Accepted versions, licenses, accessibility, public/private review, checksums, approval, and rollback |
+
+## Success criteria
+
+- One canonical charter repository and package/display direction are explicitly approved.
+- Useful history from both Alistaire repositories is preserved with attribution and rollback.
+- Every accepted repository, record family, and route has one narrow responsibility, non-role, semantic owner, reviewer, correction/revocation path, migration rule, and rollback obligation.
+- Canonical bytes, identities, clocks, replay domains, reason codes, and extensions pass independent cross-language fixtures.
+- Runtime-local, Fabric projection, Fabric aggregate, and portfolio-disposition records remain independently identified.
+- Pairwise and triple-overlap witnesses pass at immutable heads and resulting state is independently verified.
+- Incident, freeze, correction, invalidation, claim withdrawal, and rollback command are assigned and exercised.
 
 ## Builder rules
 
 Builders execute only `READY` tasks. While D1–D5 remain unaccepted, permitted work is limited to read-only inventory, documentation, validation, neutral contract proposals, fixture specifications, isolated local tests, and evidence preservation.
 
-No real device inspection, external data ingestion, privileged adapter use, credential handling, remediation, payment, deployment, capability issuance, or capability claim is authorized.
+No real device inspection, external data ingestion, privileged adapter use, credential handling, remediation, payment, deployment, capability issuance, publication, or capability claim is authorized.
 
 ## Evidence rules
 
-For every task, record observations, source commits, contracts, commands, tests, artifacts, hashes, roles or vacancies, privacy and authority effects, contradictions, residual risks, invalidation, migration, rollback, and failed-rollback handling.
+For every task, record observations, source commits, contracts, commands, tests, artifacts, hashes, roles or vacancies, privacy and authority effects, contradictions, residual risks, invalidation, migration, rollback, and failed-rollback handling. A passing workflow validates construction only; it does not establish truth, compatibility, ownership, authorization, admission, release, or deployment readiness.
+
+## FYSA-120 capability map
+
+Applied categories: `CAT-011`, `CAT-012`, `CAT-013`, `CAT-017`, `CAT-018`, `CAT-019`, `CAT-031`, `CAT-032`, `CAT-040`, `CAT-052`, `CAT-059`, and `CAT-070`.
+
+Applied subdivisions include `011-B`, `011-E`, `012-A`, `012-B`, `012-D`, `012-E`, `013-A`, `013-C`, `013-D`, `013-E`, `017-C`, `017-D`, `017-E`, `019-B`, `019-C`, `019-D`, `031-A`, `031-D`, `031-E`, `032-A`, `032-B`, `032-D`, `040-A`, `040-B`, `040-D`, and `040-E`.
+
+Proposed non-authoritative refinement: `012-P — Cross-document governance status indexing and controlled-route coherence`.
+
+Taxonomy selection does not establish competence, appointment, permission, ownership, acceptance, or authority.
 
 ## Builder log
 
-- 2026-07-23 — Synchronized the exact-head runtime/Fabric producer-consumer inventory into task, punch-list, release, and changelog control routes; bound six observed candidate generations, two synthetic consumers, five graph edges, unresolved gluing routes, and the non-authorizing disposition `OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS`. No producer, consumer, namespace, semantic owner, registry, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
-- 2026-07-23 — Added the runtime/Fabric namespace-partition decision packet and machine-readable profile, separating runtime event, runtime execution, Fabric projection, Fabric collaboration, Fabric aggregate, and Repository `1` disposition semantics; defined three unselected partition profiles, mandatory fields, pairwise/triple-overlap witnesses, migration, correction, revocation, rollback, failed rollback, accessibility, and FYSA-120 mapping. No namespace, schema, owner, runtime, Fabric, Repository `1`, release, publication, or deployment authority was selected.
-- 2026-07-23 — Integrated the validated D3 documentation into the non-default charter candidate and added a separate first-parent source-generation rebind, machine-readable manifest, fail-closed validator, hostile regressions, Pages guide, and retained-evidence workflow. Historical packet tuples were preserved; no canonical decision or authority was created.
-- 2026-07-23 — Added the D3 canonical bytes and identity decision-readiness packet, three unselected profile candidates, sixteen primitive classes, twenty decision fields, twelve gates, nineteen hostile fixture classes, cross-language witness requirements, controlled propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical profile, registry, identity, digest, signature scheme, or authority was selected.
-- 2026-07-23 — Added the D2A exact-head common-contract ownership and consumer graph across all nineteen repositories, preserving conflicting roles and material gluing obstructions without selecting authority.
-- 2026-07-23 — Added the D2 neutral contract steward decision-readiness packet, machine-readable profile, three candidate models, twenty required fields, ten readiness gates, controlled propagation, obstruction analysis, strict validation, hostile regressions, and exact-head evidence workflow. No steward or contract authority was selected.
-- 2026-07-23 — Added the D1 canonical identity decision-readiness packet, machine-readable profile, closed review fields, readiness gates, controlled-route propagation, strict validation, hostile regressions, and exact-head evidence workflow. No canonical repository or migration authority was selected.
-- 2026-07-23 — Added repository provenance and migration conformance across the two overlapping Alistaire repositories.
-- 2026-07-21 — Added the portfolio contract and authority matrix, portable security foundation, systemic-cycle analysis, D1–D5 decision cut, acceptance DAG, and sequenced integration phases.
+- 2026-07-24 — Synchronized the default-head inventory, owner vacancies, candidate-lineage dispositions, kernel-to-runtime options, and governance review index across all four controlled planning routes under `PLANNING_ROUTES_SYNCHRONIZED_BINDINGS_UNACCEPTED`. No binding or authority was accepted.
+- 2026-07-23 — Completed the governance review index, kernel-to-runtime crosswalk options, candidate-lineage disposition, default-head owner-vacancy inventory, producer-consumer inventory, namespace-partition packet, D1–D3 readiness packets, D2A graph, and source-generation rebind on the non-default charter candidate.
+- 2026-07-21 — Added the portfolio contract and authority matrix, portable-security foundation, systemic-cycle analysis, D1–D5 decision cut, acceptance DAG, and sequenced integration phases.
 - 2026-07-20 — Consolidated governance and prepared the initial Pages-ready charter candidate. P0 remains blocked pending explicit constitutional approval.
