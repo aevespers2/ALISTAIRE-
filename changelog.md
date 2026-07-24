@@ -71,6 +71,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Documentation
 
+- 2026-07-24 — Recorded the contributor-path changelog repair as a fresh exact-head validation candidate after fail-closed workflows exposed omitted Release, Deployment, FYSA-120, and historical sections; the correction preserves all non-activation boundaries.
 - 2026-07-24 — Added Pages-ready [portfolio contributor paths](docs/portfolio-contributor-paths.md), an accessible flow diagram with prose equivalent, capability routes, nineteen repository entry paths, onboarding and gluing checklists, change control, and a machine-readable profile.
 - 2026-07-24 — Proposed non-authoritative FYSA-120 subdivisions `012-S`, `018-G`, and `011-G` for contributor routing, maintainer-vacancy-aware handoff, and accessible portfolio corridor diagrams.
 - 2026-07-24 — Added a Pages-ready [capability roadmap](docs/capability-roadmap.md), machine-readable profile, accessible Mermaid cycle and prose equivalent, feature tables, maturity sequence, obstruction analysis, change control, and rollback guidance.
@@ -92,6 +93,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 ### Release
 
+- 2026-07-24 — Added the contributor-path guide as documentation-only candidate content; no contributor route, owner, contract, implementation, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Added the capability roadmap as documentation-only candidate content; no feature, owner, contract, release, publication, or deployment gate was promoted.
 - 2026-07-24 — Kept all D1–D5, canonical identity, contract, security, accessibility, publication, and release gates unchanged while documenting the public name.
 - 2026-07-24 — Added the portfolio-currentness gate as `REVIEW COMPLETE / BINDINGS UNACCEPTED`; exact-head validation for this focused generation and resulting non-default integration remains required before the documentation claim is current.
@@ -135,7 +137,7 @@ Proposed non-authoritative subdivisions:
 ### Scope conflict
 
 - A second overlapping repository, `aevespers2/Alistaire-agi`, was created with the same product identity and a broad documentation tree.
-- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
+- Changed P0 from `READY` charter work to `BLOCKED` canonical-repository selection` to avoid parallel charters, duplicated implementation, contradictory package identity, and provenance loss.
 - Required approval of canonical repository, package/display name, migration, compatibility, redirect/archive, preserved history, and rollback before substantive runtime decomposition.
 
 ### Evidence state
