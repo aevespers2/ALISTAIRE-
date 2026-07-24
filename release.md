@@ -40,7 +40,7 @@ The candidate includes:
 
 These artifacts do not create credentials, enroll or inspect devices, activate Repository `1`, establish a live contract or identity registry, select canonical bytes or namespaces, appoint owners, authorize adapters, execute payments, merge to `main`, release, publish, deploy, or claim production security.
 
-## Current review dispositions
+## Current runtime/Fabric dispositions
 
 | Surface | Disposition |
 |---|---|
