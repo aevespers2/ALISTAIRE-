@@ -38,6 +38,7 @@ All notable product, architecture, documentation, governance, release, and deplo
 
 - 2026-07-24 — Required controlled planning-route agreement before the documentation candidate may claim planning currentness; agreement remains non-authorizing.
 - 2026-07-24 — Required focused and resulting-head validation before the synchronization generation may be treated as validated documentation evidence.
+- 2026-07-24 — Preserved `D1_REBIND_REQUIRED` and `D1_PACKET_WITHDRAWN`, `D2_REBIND_REQUIRED` and `D2_PACKET_WITHDRAWN`, and `D3_REBIND_REQUIRED` and `D3_PACKET_WITHDRAWN` across controlled routes; propagation markers do not complete acceptance.
 - 2026-07-23 — Required declaration, documentation, synthetic fixture consumption, registry reference, internal-record implementation, passing CI, and inventory inclusion to remain non-authorizing evidence classes.
 - 2026-07-23 — Required runtime-local, projection, aggregate, and disposition records to remain independently identified; transport, rendering, hashing, signing, or successful processing cannot collapse semantic class or authority effect.
 - 2026-07-23 — Required projection and aggregation to preserve source identities, transformations, losses, privacy, duplicate treatment, correction, revocation, withdrawal, and rollback; projected evidence is not independent corroboration.
