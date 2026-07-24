@@ -5,6 +5,7 @@ repo_url: https://github.com/aevespers2/ALISTAIRE-
 edit_uri: edit/main/docs/
 strict: true
 extra:
+  runtime_fabric_governance_review_status: REVIEW_INDEX_COMPLETE_BINDINGS_UNACCEPTED
   runtime_fabric_partition_status: BLOCKED_ROLE_COLLISION
   runtime_fabric_inventory_status: OBSERVED_CANDIDATE_INVENTORY_RECORDED_BLOCKED_UNACCEPTED_BINDINGS
   runtime_fabric_default_head_owner_status: DEFAULT_HEADS_VERIFIED_OWNER_VACANCIES_RECORDED_BINDINGS_UNACCEPTED
@@ -26,6 +27,8 @@ nav:
       - Portfolio contract and authority matrix: portfolio-contract-authority-matrix.md
       - D2A common-contract ownership graph: d2a-common-contract-ownership-graph.md
       - Machine-readable D2A graph: d2a-common-contract-ownership-graph-v1.json
+      - Runtime/Fabric governance review index: runtime-fabric-governance-review-index.md
+      - Machine-readable runtime/Fabric governance review index: runtime-fabric-governance-review-index-v1.json
       - Runtime/Fabric namespace partition: runtime-fabric-namespace-partition.md
       - Runtime/Fabric producer and consumer inventory: runtime-fabric-producer-consumer-inventory.md
       - Machine-readable runtime/Fabric inventory: runtime-fabric-producer-consumer-inventory-v1.json
